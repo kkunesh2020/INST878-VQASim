@@ -1,0 +1,655 @@
+{
+  "input": {
+    "participant": "P3",
+    "source": "diary",
+    "interaction": 16,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P3/diary_data/P3.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P3/diary_data/P3_images/image_16_1.jpg",
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P3/diary_data/P3_images/image_16_6.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "The image shows a box of medication on a white surface. The box is for \"Coricidin HBP,\" which is a cold and flu medication specifically for people with high blood pressure. The box is divided into two sections: one for \"Cold & Flu Day\" and the other for \"Cold & Flu Night.\" The day section is orange, and the night section is blue. The box mentions \"Maximum Strength\" and \"Cold Relief for People with High Blood Pressure.\" There are also mentions of symptoms it addresses, such as body aches, fever, cough, and runny nose. A hand with pink nail polish is holding the box. In the background, there is another box with a green and orange design, but the details are not clear.",
+    "question_category": "Reading, Unanswerable",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user is handling a medication box, possibly trying to identify it or check instructions. The box is partially open and the hand position suggests active manipulation, which may indicate urgency (e.g., feeling unwell and needing medication quickly). The setting appears to be a home or private indoor space, and the user may be alone, relying on a VQA system due to uncertainty about the medication."
+      },
+      {
+        "context_id": 2,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "daily living task",
+        "rationale": "The user could be double-checking medication with a family member or caregiver, possibly as part of a routine (e.g., organizing or confirming which medication to take). The presence of another box in the background suggests sorting or comparing items. The user may be using the VQA system for confirmation, not out of urgency."
+      },
+      {
+        "context_id": 3,
+        "location": "indoor",
+        "time_pressure": "in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user might be in a new environment (e.g., visiting someone or in a hotel) and needs to quickly identify medication, possibly due to sudden symptoms. The unfamiliarity with both the environment and the medication could prompt rapid use of a VQA system, especially if packaging is similar to other products."
+      },
+      {
+        "context_id": 4,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "unfamiliar people",
+        "activity_type": "professional",
+        "rationale": "The user could be in a healthcare or community support setting, such as a clinic or group home, where they are being assisted by staff or volunteers. The unfamiliarity with the medication and people suggests a professional context, possibly during a medication review or health check."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user is handling a medication box, possibly trying to identify it or check instructions. The box is partially open and the hand position suggests active manipulation, which may indicate urgency (e.g., feeling unwell and needing medication quickly). The setting appears to be a home or private indoor space, and the user may be alone, relying on a VQA system due to uncertainty about the medication."
+        },
+        {
+          "context_id": 2,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "daily living task",
+          "rationale": "The user could be double-checking medication with a family member or caregiver, possibly as part of a routine (e.g., organizing or confirming which medication to take). The presence of another box in the background suggests sorting or comparing items. The user may be using the VQA system for confirmation, not out of urgency."
+        },
+        {
+          "context_id": 3,
+          "location": "indoor",
+          "time_pressure": "in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user might be in a new environment (e.g., visiting someone or in a hotel) and needs to quickly identify medication, possibly due to sudden symptoms. The unfamiliarity with both the environment and the medication could prompt rapid use of a VQA system, especially if packaging is similar to other products."
+        },
+        {
+          "context_id": 4,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "unfamiliar people",
+          "activity_type": "professional",
+          "rationale": "The user could be in a healthcare or community support setting, such as a clinic or group home, where they are being assisted by staff or volunteers. The unfamiliarity with the medication and people suggests a professional context, possibly during a medication review or health check."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Reading",
+        "description": "Extract the medication name and key information from the box (e.g., dosage, active ingredients, warnings).",
+        "confidence": "high",
+        "rationale": "The user may need to confirm what medication they are holding and how to use it safely, especially since the box is partially visible and may be hard to read due to glare, rotation, or hand placement."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Identification",
+        "description": "Determine if this is the correct medication for high blood pressure and cold/flu symptoms.",
+        "confidence": "medium",
+        "rationale": "The box mentions 'HBP' and 'Cold Relief for People with High Blood Pressure,' suggesting the user may want to confirm it is safe for their condition."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Verification",
+        "description": "Verify if the medication is for day or night use, or if both types are included.",
+        "confidence": "medium",
+        "rationale": "The packaging references 'DAY' and 'NIGHT' formulations, and the user may want to avoid taking the wrong one at the wrong time."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Reading",
+        "description": "Read the expiration date or lot number from the box.",
+        "confidence": "medium",
+        "rationale": "The user may need to check if the medication is still safe to use, but the relevant text may be obscured or not visible in the images."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Description",
+        "description": "Describe the appearance of the box and any distinguishing features to help the user differentiate it from other medications.",
+        "confidence": "medium",
+        "rationale": "The user may have multiple similar boxes and need a description to distinguish between them, especially since another box is partially visible in the background."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Failure-aware",
+        "description": "Clarify or correct the AI if the extracted text or medication identification seems incomplete, misleading, or inconsistent with what the user expects.",
+        "confidence": "high",
+        "rationale": "Given the possibility of glare, hand obstruction, or partial views, the AI might misread or miss key information, prompting the user to ask for clarification or correction."
+      },
+      {
+        "task_id": 7,
+        "task_type": "Localization",
+        "description": "Locate and identify the correct side of the box to open for accessing the medication.",
+        "confidence": "low",
+        "rationale": "The user's hand is positioned near an opening, suggesting they may want to confirm how to open the box, but this is less certain than reading or identification tasks."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Reading",
+          "description": "Extract the medication name and key information from the box (e.g., dosage, active ingredients, warnings).",
+          "confidence": "high",
+          "rationale": "The user may need to confirm what medication they are holding and how to use it safely, especially since the box is partially visible and may be hard to read due to glare, rotation, or hand placement."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Identification",
+          "description": "Determine if this is the correct medication for high blood pressure and cold/flu symptoms.",
+          "confidence": "medium",
+          "rationale": "The box mentions 'HBP' and 'Cold Relief for People with High Blood Pressure,' suggesting the user may want to confirm it is safe for their condition."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Verification",
+          "description": "Verify if the medication is for day or night use, or if both types are included.",
+          "confidence": "medium",
+          "rationale": "The packaging references 'DAY' and 'NIGHT' formulations, and the user may want to avoid taking the wrong one at the wrong time."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Reading",
+          "description": "Read the expiration date or lot number from the box.",
+          "confidence": "medium",
+          "rationale": "The user may need to check if the medication is still safe to use, but the relevant text may be obscured or not visible in the images."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Description",
+          "description": "Describe the appearance of the box and any distinguishing features to help the user differentiate it from other medications.",
+          "confidence": "medium",
+          "rationale": "The user may have multiple similar boxes and need a description to distinguish between them, especially since another box is partially visible in the background."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Failure-aware",
+          "description": "Clarify or correct the AI if the extracted text or medication identification seems incomplete, misleading, or inconsistent with what the user expects.",
+          "confidence": "high",
+          "rationale": "Given the possibility of glare, hand obstruction, or partial views, the AI might misread or miss key information, prompting the user to ask for clarification or correction."
+        },
+        {
+          "task_id": 7,
+          "task_type": "Localization",
+          "description": "Locate and identify the correct side of the box to open for accessing the medication.",
+          "confidence": "low",
+          "rationale": "The user's hand is positioned near an opening, suggesting they may want to confirm how to open the box, but this is less certain than reading or identification tasks."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "{'rank': 1, 'response': 'Can you read the expiration date on this box?', 'response_target': 'expiration date', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': 'Expiration dates are critical for medication safety, and they are often hard to locate or read, especially with glare or partial views. The user is likely to prioritize this question, especially if feeling unwell or unfamiliar with the box.'}",
+      "{'rank': 2, 'response': 'Is this the day or night medicine?', 'response_target': 'day/night formulation', 'task_type': 'Verification', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.93, 'rationale': 'The box contains both day and night formulations, and the user may need to confirm which one they are about to take to avoid mistakes, especially if in a hurry or not feeling well.'}",
+      "{'rank': 3, 'response': 'What are the active ingredients in this medication?', 'response_target': 'active ingredients', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.9, 'rationale': \"Knowing the active ingredients is essential for safety, especially for someone with high blood pressure or other health conditions. The user may not trust the AI's summary and want the specific list.\"}",
+      "{'rank': 4, 'response': 'Can you tell me if this is safe for high blood pressure?', 'response_target': 'medication suitability for high blood pressure', 'task_type': 'Identification', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.88, 'rationale': \"The user may want explicit confirmation that this medication is appropriate for their condition, not just rely on the box's branding.\"}",
+      "{'rank': 5, 'response': 'Can you read the dosage instructions?', 'response_target': 'dosage instructions', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': 'Dosage instructions are often small and easy to miss, but critical for correct use. The user may need this information if they are unfamiliar with the medication.'}",
+      "{'rank': 6, 'response': 'Is there a warning or side effects section visible?', 'response_target': 'warnings/side effects', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.8, 'rationale': 'Warnings and side effects are important for safe use, and the user may want to double-check for anything relevant to their health.'}",
+      "{'rank': 7, 'response': 'Can you describe what the other box in the background is?', 'response_target': 'background box', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 2, 'plausibility_score': 0.75, 'rationale': \"If the user is sorting or comparing medications, they may want to know what the other box is, especially if they can't distinguish by touch.\"}",
+      "{'rank': 8, 'response': 'Is there a lot number visible on the box?', 'response_target': 'lot number', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.7, 'rationale': 'Lot numbers are sometimes needed for recalls or tracking, and can be hard to find or read.'}",
+      "{'rank': 9, 'response': 'Can you confirm if both day and night pills are included in this box?', 'response_target': 'contents (day/night pills)', 'task_type': 'Verification', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.65, 'rationale': \"The user may want to make sure the box contains both types, especially if they are unfamiliar with the packaging or can't see inside.\"}",
+      "{'rank': 10, 'response': 'Is there anything important I might have missed on the box?', 'response_target': 'general box information', 'task_type': 'Failure-aware', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.6, 'rationale': 'Given possible AI or image limitations, the user may ask for a catch-all check for missed details, though this is less specific and thus less likely than targeted questions.'}"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Can you read the expiration date on this box?",
+        "response_target": "expiration date",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.95,
+        "rationale": "Expiration dates are critical for medication safety, and they are often hard to locate or read, especially with glare or partial views. The user is likely to prioritize this question, especially if feeling unwell or unfamiliar with the box."
+      },
+      {
+        "rank": 2,
+        "response": "Is this the day or night medicine?",
+        "response_target": "day/night formulation",
+        "task_type": "Verification",
+        "associated_task_id": 3,
+        "associated_context_id": 1,
+        "plausibility_score": 0.93,
+        "rationale": "The box contains both day and night formulations, and the user may need to confirm which one they are about to take to avoid mistakes, especially if in a hurry or not feeling well."
+      },
+      {
+        "rank": 3,
+        "response": "What are the active ingredients in this medication?",
+        "response_target": "active ingredients",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.9,
+        "rationale": "Knowing the active ingredients is essential for safety, especially for someone with high blood pressure or other health conditions. The user may not trust the AI's summary and want the specific list."
+      },
+      {
+        "rank": 4,
+        "response": "Can you tell me if this is safe for high blood pressure?",
+        "response_target": "medication suitability for high blood pressure",
+        "task_type": "Identification",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.88,
+        "rationale": "The user may want explicit confirmation that this medication is appropriate for their condition, not just rely on the box's branding."
+      },
+      {
+        "rank": 5,
+        "response": "Can you read the dosage instructions?",
+        "response_target": "dosage instructions",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.85,
+        "rationale": "Dosage instructions are often small and easy to miss, but critical for correct use. The user may need this information if they are unfamiliar with the medication."
+      },
+      {
+        "rank": 6,
+        "response": "Is there a warning or side effects section visible?",
+        "response_target": "warnings/side effects",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.8,
+        "rationale": "Warnings and side effects are important for safe use, and the user may want to double-check for anything relevant to their health."
+      },
+      {
+        "rank": 7,
+        "response": "Can you describe what the other box in the background is?",
+        "response_target": "background box",
+        "task_type": "Description",
+        "associated_task_id": 5,
+        "associated_context_id": 2,
+        "plausibility_score": 0.75,
+        "rationale": "If the user is sorting or comparing medications, they may want to know what the other box is, especially if they can't distinguish by touch."
+      },
+      {
+        "rank": 8,
+        "response": "Is there a lot number visible on the box?",
+        "response_target": "lot number",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.7,
+        "rationale": "Lot numbers are sometimes needed for recalls or tracking, and can be hard to find or read."
+      },
+      {
+        "rank": 9,
+        "response": "Can you confirm if both day and night pills are included in this box?",
+        "response_target": "contents (day/night pills)",
+        "task_type": "Verification",
+        "associated_task_id": 3,
+        "associated_context_id": 1,
+        "plausibility_score": 0.65,
+        "rationale": "The user may want to make sure the box contains both types, especially if they are unfamiliar with the packaging or can't see inside."
+      },
+      {
+        "rank": 10,
+        "response": "Is there anything important I might have missed on the box?",
+        "response_target": "general box information",
+        "task_type": "Failure-aware",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 0.6,
+        "rationale": "Given possible AI or image limitations, the user may ask for a catch-all check for missed details, though this is less specific and thus less likely than targeted questions."
+      }
+    ],
+    "raw_output": {
+      "ranked_questions": [
+        {
+          "rank": 1,
+          "response": "Can you read the expiration date on this box?",
+          "response_target": "expiration date",
+          "task_type": "Reading",
+          "associated_task_id": 4,
+          "associated_context_id": 1,
+          "plausibility_score": 0.95,
+          "rationale": "Expiration dates are critical for medication safety, and they are often hard to locate or read, especially with glare or partial views. The user is likely to prioritize this question, especially if feeling unwell or unfamiliar with the box."
+        },
+        {
+          "rank": 2,
+          "response": "Is this the day or night medicine?",
+          "response_target": "day/night formulation",
+          "task_type": "Verification",
+          "associated_task_id": 3,
+          "associated_context_id": 1,
+          "plausibility_score": 0.93,
+          "rationale": "The box contains both day and night formulations, and the user may need to confirm which one they are about to take to avoid mistakes, especially if in a hurry or not feeling well."
+        },
+        {
+          "rank": 3,
+          "response": "What are the active ingredients in this medication?",
+          "response_target": "active ingredients",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 0.9,
+          "rationale": "Knowing the active ingredients is essential for safety, especially for someone with high blood pressure or other health conditions. The user may not trust the AI's summary and want the specific list."
+        },
+        {
+          "rank": 4,
+          "response": "Can you tell me if this is safe for high blood pressure?",
+          "response_target": "medication suitability for high blood pressure",
+          "task_type": "Identification",
+          "associated_task_id": 2,
+          "associated_context_id": 1,
+          "plausibility_score": 0.88,
+          "rationale": "The user may want explicit confirmation that this medication is appropriate for their condition, not just rely on the box's branding."
+        },
+        {
+          "rank": 5,
+          "response": "Can you read the dosage instructions?",
+          "response_target": "dosage instructions",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 0.85,
+          "rationale": "Dosage instructions are often small and easy to miss, but critical for correct use. The user may need this information if they are unfamiliar with the medication."
+        },
+        {
+          "rank": 6,
+          "response": "Is there a warning or side effects section visible?",
+          "response_target": "warnings/side effects",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 0.8,
+          "rationale": "Warnings and side effects are important for safe use, and the user may want to double-check for anything relevant to their health."
+        },
+        {
+          "rank": 7,
+          "response": "Can you describe what the other box in the background is?",
+          "response_target": "background box",
+          "task_type": "Description",
+          "associated_task_id": 5,
+          "associated_context_id": 2,
+          "plausibility_score": 0.75,
+          "rationale": "If the user is sorting or comparing medications, they may want to know what the other box is, especially if they can't distinguish by touch."
+        },
+        {
+          "rank": 8,
+          "response": "Is there a lot number visible on the box?",
+          "response_target": "lot number",
+          "task_type": "Reading",
+          "associated_task_id": 4,
+          "associated_context_id": 1,
+          "plausibility_score": 0.7,
+          "rationale": "Lot numbers are sometimes needed for recalls or tracking, and can be hard to find or read."
+        },
+        {
+          "rank": 9,
+          "response": "Can you confirm if both day and night pills are included in this box?",
+          "response_target": "contents (day/night pills)",
+          "task_type": "Verification",
+          "associated_task_id": 3,
+          "associated_context_id": 1,
+          "plausibility_score": 0.65,
+          "rationale": "The user may want to make sure the box contains both types, especially if they are unfamiliar with the packaging or can't see inside."
+        },
+        {
+          "rank": 10,
+          "response": "Is there anything important I might have missed on the box?",
+          "response_target": "general box information",
+          "task_type": "Failure-aware",
+          "associated_task_id": 6,
+          "associated_context_id": 1,
+          "plausibility_score": 0.6,
+          "rationale": "Given possible AI or image limitations, the user may ask for a catch-all check for missed details, though this is less specific and thus less likely than targeted questions."
+        }
+      ]
+    }
+  },
+  "response_target_agent": {
+    "response_target": "medication usage directions",
+    "task_type": "Reading",
+    "confidence": "medium",
+    "rationale": "The participant's question asks for the directions for taking the medication, which is a request to read specific instructions from the packaging. However, the AI-generated description does not mention the presence or visibility of the directions, and the images primarily show the front and top of the box, which typically do not contain detailed usage instructions. Given the possibility that the relevant text may not be visible or legible in the provided images, there is some uncertainty about whether the requested information can be found, but the intent is clearly to read the directions.",
+    "raw_output": {
+      "response_target": "medication usage directions",
+      "task_type": "Reading",
+      "confidence": "medium",
+      "rationale": "The participant's question asks for the directions for taking the medication, which is a request to read specific instructions from the packaging. However, the AI-generated description does not mention the presence or visibility of the directions, and the images primarily show the front and top of the box, which typically do not contain detailed usage instructions. Given the possibility that the relevant text may not be visible or legible in the provided images, there is some uncertainty about whether the requested information can be found, but the intent is clearly to read the directions."
+    }
+  },
+  "final_ranked_questions": [
+    "{'rank': 1, 'response': 'Can you read the expiration date on this box?', 'response_target': 'expiration date', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': 'Expiration dates are critical for medication safety, and they are often hard to locate or read, especially with glare or partial views. The user is likely to prioritize this question, especially if feeling unwell or unfamiliar with the box.'}",
+    "{'rank': 2, 'response': 'Is this the day or night medicine?', 'response_target': 'day/night formulation', 'task_type': 'Verification', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.93, 'rationale': 'The box contains both day and night formulations, and the user may need to confirm which one they are about to take to avoid mistakes, especially if in a hurry or not feeling well.'}",
+    "{'rank': 3, 'response': 'What are the active ingredients in this medication?', 'response_target': 'active ingredients', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.9, 'rationale': \"Knowing the active ingredients is essential for safety, especially for someone with high blood pressure or other health conditions. The user may not trust the AI's summary and want the specific list.\"}",
+    "{'rank': 4, 'response': 'Can you tell me if this is safe for high blood pressure?', 'response_target': 'medication suitability for high blood pressure', 'task_type': 'Identification', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.88, 'rationale': \"The user may want explicit confirmation that this medication is appropriate for their condition, not just rely on the box's branding.\"}",
+    "{'rank': 5, 'response': 'Can you read the dosage instructions?', 'response_target': 'dosage instructions', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': 'Dosage instructions are often small and easy to miss, but critical for correct use. The user may need this information if they are unfamiliar with the medication.'}",
+    "{'rank': 6, 'response': 'Is there a warning or side effects section visible?', 'response_target': 'warnings/side effects', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.8, 'rationale': 'Warnings and side effects are important for safe use, and the user may want to double-check for anything relevant to their health.'}",
+    "{'rank': 7, 'response': 'Can you describe what the other box in the background is?', 'response_target': 'background box', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 2, 'plausibility_score': 0.75, 'rationale': \"If the user is sorting or comparing medications, they may want to know what the other box is, especially if they can't distinguish by touch.\"}",
+    "{'rank': 8, 'response': 'Is there a lot number visible on the box?', 'response_target': 'lot number', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.7, 'rationale': 'Lot numbers are sometimes needed for recalls or tracking, and can be hard to find or read.'}",
+    "{'rank': 9, 'response': 'Can you confirm if both day and night pills are included in this box?', 'response_target': 'contents (day/night pills)', 'task_type': 'Verification', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.65, 'rationale': \"The user may want to make sure the box contains both types, especially if they are unfamiliar with the packaging or can't see inside.\"}",
+    "{'rank': 10, 'response': 'Is there anything important I might have missed on the box?', 'response_target': 'general box information', 'task_type': 'Failure-aware', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.6, 'rationale': 'Given possible AI or image limitations, the user may ask for a catch-all check for missed details, though this is less specific and thus less likely than targeted questions.'}"
+  ],
+  "ground_truth_question": "What are the directions for taking the",
+  "comparison": {
+    "ground_truth": "What are the directions for taking the",
+    "ground_truth_response_target": "medication usage directions",
+    "ground_truth_task_type": "Reading",
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Can you read the expiration date on this box?",
+        "generated_response_target": "expiration date",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "medication usage directions",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 2,
+        "generated_question": "Is this the day or night medicine?",
+        "generated_response_target": "day/night formulation",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "medication usage directions",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 3,
+        "generated_question": "What are the active ingredients in this medication?",
+        "generated_response_target": "active ingredients",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "medication usage directions",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 4,
+        "generated_question": "Can you tell me if this is safe for high blood pressure?",
+        "generated_response_target": "medication suitability for high blood pressure",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "medication usage directions",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 5,
+        "generated_question": "Can you read the dosage instructions?",
+        "generated_response_target": "dosage instructions",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "medication usage directions",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 6,
+        "generated_question": "Is there a warning or side effects section visible?",
+        "generated_response_target": "warnings/side effects",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "medication usage directions",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 7,
+        "generated_question": "Can you describe what the other box in the background is?",
+        "generated_response_target": "background box",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "medication usage directions",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 8,
+        "generated_question": "Is there a lot number visible on the box?",
+        "generated_response_target": "lot number",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "medication usage directions",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 9,
+        "generated_question": "Can you confirm if both day and night pills are included in this box?",
+        "generated_response_target": "contents (day/night pills)",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "medication usage directions",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 10,
+        "generated_question": "Is there anything important I might have missed on the box?",
+        "generated_response_target": "general box information",
+        "generated_task_type": "Failure-aware",
+        "ground_truth_response_target": "medication usage directions",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "What are the directions for taking the",
+        "generated_response_target": "medication usage directions",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "medication usage directions",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 1,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "NA-w-text"
+      ],
+      "question_category": "Reading, Unanswerable",
+      "in_a_hurry": "no",
+      "indoor_outdoor": "indoor",
+      "familiarity_of_environment": "yes",
+      "familiarity_of_item": "yes",
+      "surrounding_environment": "alone",
+      "environment_setting": "leisure",
+      "interaction_length": "4",
+      "task_completed": "No"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P3_images/image_16_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows a box of medication on a white surface. The box is for \"Coricidin HBP,\" which is a cold and flu medication specifically for people with high blood pressure. The box is divided into two sections: one for \"Cold & Flu Day\" and the other for \"Cold & Flu Night.\" The day section is orange, and the night section is blue. The box mentions \"Maximum Strength\" and \"Cold Relief for People with High Blood Pressure.\" There are also mentions of symptoms it addresses, such as body aches, fever, cough, and runny nose. A hand with pink nail polish is holding the box. In the background, there is another box with a green and orange design, but the details are not clear.",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "User:What are the directions for taking the",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 4,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image does not clearly show the directions for taking the medication. You might need to look for the specific section on the box that lists the dosage instructions or check the leaflet inside the box. If you need detailed guidance, I recommend pressing the \"Call a volunteer\" button for assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 5,
+        "text_usr": "User:What are the instructions for taking the medication?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 6,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P3_images/image_16_6.jpg"
+      },
+      {
+        "turn": 7,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image does not clearly show the instructions for taking the medication. You might need to look for the specific section on the box that lists the dosage instructions or check the leaflet inside the box. If you need detailed guidance, I recommend pressing the \"Call a volunteer\" button for assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 8,
+        "text_usr": "User:What is the name of the medication?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 9,
+        "text_usr": null,
+        "text_ai": "Be My AI:The name of the medication is \"Coricidin HBP.\"",
+        "local_image_path": null
+      }
+    ]
+  }
+}

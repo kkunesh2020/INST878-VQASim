@@ -1,0 +1,672 @@
+{
+  "input": {
+    "participant": "P3",
+    "source": "diary",
+    "interaction": 3,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P3/diary_data/P3.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P3/diary_data/P3_images/image_3_1.jpg",
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P3/diary_data/P3_images/image_3_6.jpg",
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P3/diary_data/P3_images/image_3_11.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "The image shows a box of a food product on a patterned rug. The box is labeled \"Whole & Simple\" and \"Mediterranean Style Chicken Quinoa Bowl.\" It mentions that it contains brown rice, spinach, red bell peppers, and sun-dried tomatoes. The product is made in Canada. There is an image of the dish on the box, showing a bowl filled with quinoa, chicken pieces, and vegetables. The rug in the background has a blue and white zigzag pattern with fringes on the edge.",
+    "question_category": "Reading, Unanswerable",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user is likely at home (indicated by the rug and couch), possibly trying to prepare a meal. The multiple images of the food package suggest uncertainty about the product or instructions, perhaps because it is a new or unfamiliar item. The user may be in a hurry to get food ready, leading to quick, imperfect photos for reading instructions."
+      },
+      {
+        "context_id": 2,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "leisure",
+        "rationale": "The user could be preparing a meal with family or friends in a relaxed setting. The repeated photos may be to double-check ingredients or instructions, possibly for a group meal. The familiar environment and object suggest this is a routine or social activity, not rushed."
+      },
+      {
+        "context_id": 3,
+        "location": "indoor",
+        "time_pressure": "in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user may be in a new place (e.g., visiting someone or in a temporary living situation) and trying to quickly figure out how to prepare a packaged meal. The multiple images suggest difficulty capturing all needed information at once, possibly due to unfamiliarity with both the environment and the product."
+      },
+      {
+        "context_id": 4,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "unfamiliar people",
+        "activity_type": "professional",
+        "rationale": "The user could be in a group setting such as a cooking class or a support group for BLV individuals, trying to document or understand the packaging for a demonstration or shared activity. The presence of others (possibly unfamiliar) and the need to capture readable information from the package could explain the multiple, partial images."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user is likely at home (indicated by the rug and couch), possibly trying to prepare a meal. The multiple images of the food package suggest uncertainty about the product or instructions, perhaps because it is a new or unfamiliar item. The user may be in a hurry to get food ready, leading to quick, imperfect photos for reading instructions."
+        },
+        {
+          "context_id": 2,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "leisure",
+          "rationale": "The user could be preparing a meal with family or friends in a relaxed setting. The repeated photos may be to double-check ingredients or instructions, possibly for a group meal. The familiar environment and object suggest this is a routine or social activity, not rushed."
+        },
+        {
+          "context_id": 3,
+          "location": "indoor",
+          "time_pressure": "in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user may be in a new place (e.g., visiting someone or in a temporary living situation) and trying to quickly figure out how to prepare a packaged meal. The multiple images suggest difficulty capturing all needed information at once, possibly due to unfamiliarity with both the environment and the product."
+        },
+        {
+          "context_id": 4,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "unfamiliar people",
+          "activity_type": "professional",
+          "rationale": "The user could be in a group setting such as a cooking class or a support group for BLV individuals, trying to document or understand the packaging for a demonstration or shared activity. The presence of others (possibly unfamiliar) and the need to capture readable information from the package could explain the multiple, partial images."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Reading",
+        "description": "Extract the cooking instructions for preparing the meal (microwave and/or oven directions).",
+        "confidence": "high",
+        "rationale": "Multiple images focus on the back and side of the food package where cooking instructions are typically located. This is a common need for BLV users preparing packaged food."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Identification",
+        "description": "Identify the product and its main ingredients or flavor (e.g., 'What meal is this? What are the main ingredients?').",
+        "confidence": "high",
+        "rationale": "The front of the package is shown, and the text and images highlight the product name and ingredients. BLV users often need to confirm what item they are holding."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Verification",
+        "description": "Verify if the product contains any artificial ingredients or specific dietary claims (e.g., 'Does this meal have artificial ingredients?').",
+        "confidence": "medium",
+        "rationale": "The packaging includes claims like 'Nothing Artificial Whatsoever!' and 'Chicken Raised Without Antibiotics or Hormones,' which may be important for dietary or health reasons."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Reading",
+        "description": "Read the nutritional or serving size information (e.g., 'How much protein or vegetables per serving?').",
+        "confidence": "medium",
+        "rationale": "Text on the package mentions serving size and nutritional highlights, which are often sought by users monitoring their diet."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Description",
+        "description": "Describe the overall appearance of the package to confirm it matches what the user expects (e.g., 'What does the box look like?').",
+        "confidence": "medium",
+        "rationale": "BLV users may want confirmation that the packaging matches their intended purchase or use, especially if shopping or organizing food."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Failure-aware",
+        "description": "Clarify or correct incomplete or unclear information from the AI (e.g., 'I can't read the full instructions\u2014can you try again or read the rest?').",
+        "confidence": "high",
+        "rationale": "Parts of the instructions or text may be cut off or obscured due to image angle, glare, or cropping, so the user may need to request clarification or a repeat."
+      },
+      {
+        "task_id": 7,
+        "task_type": "Verification",
+        "description": "Verify that the product is safe to eat for someone with specific dietary restrictions (e.g., 'Is this gluten-free?' or 'Does this contain dairy?').",
+        "confidence": "low",
+        "rationale": "While not directly visible, users often need to check for allergens or dietary restrictions, and may attempt to do so even if the relevant text is not fully captured."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Reading",
+          "description": "Extract the cooking instructions for preparing the meal (microwave and/or oven directions).",
+          "confidence": "high",
+          "rationale": "Multiple images focus on the back and side of the food package where cooking instructions are typically located. This is a common need for BLV users preparing packaged food."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Identification",
+          "description": "Identify the product and its main ingredients or flavor (e.g., 'What meal is this? What are the main ingredients?').",
+          "confidence": "high",
+          "rationale": "The front of the package is shown, and the text and images highlight the product name and ingredients. BLV users often need to confirm what item they are holding."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Verification",
+          "description": "Verify if the product contains any artificial ingredients or specific dietary claims (e.g., 'Does this meal have artificial ingredients?').",
+          "confidence": "medium",
+          "rationale": "The packaging includes claims like 'Nothing Artificial Whatsoever!' and 'Chicken Raised Without Antibiotics or Hormones,' which may be important for dietary or health reasons."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Reading",
+          "description": "Read the nutritional or serving size information (e.g., 'How much protein or vegetables per serving?').",
+          "confidence": "medium",
+          "rationale": "Text on the package mentions serving size and nutritional highlights, which are often sought by users monitoring their diet."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Description",
+          "description": "Describe the overall appearance of the package to confirm it matches what the user expects (e.g., 'What does the box look like?').",
+          "confidence": "medium",
+          "rationale": "BLV users may want confirmation that the packaging matches their intended purchase or use, especially if shopping or organizing food."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Failure-aware",
+          "description": "Clarify or correct incomplete or unclear information from the AI (e.g., 'I can't read the full instructions\u2014can you try again or read the rest?').",
+          "confidence": "high",
+          "rationale": "Parts of the instructions or text may be cut off or obscured due to image angle, glare, or cropping, so the user may need to request clarification or a repeat."
+        },
+        {
+          "task_id": 7,
+          "task_type": "Verification",
+          "description": "Verify that the product is safe to eat for someone with specific dietary restrictions (e.g., 'Is this gluten-free?' or 'Does this contain dairy?').",
+          "confidence": "low",
+          "rationale": "While not directly visible, users often need to check for allergens or dietary restrictions, and may attempt to do so even if the relevant text is not fully captured."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "Can you read the microwave instructions out loud?",
+      "What are the oven directions for this meal?",
+      "Can you repeat the cooking steps more slowly?",
+      "Does it say how long to cook it in the microwave?",
+      "Is there a serving size or nutrition info listed?",
+      "Does it say if this is gluten-free or dairy-free?",
+      "Can you list the main ingredients again?",
+      "Does it mention anything about artificial ingredients?",
+      "What does the box look like? Is there a picture of the meal?",
+      "I can't hear the full instructions\u2014can you try reading them again?"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Can you read the microwave instructions out loud?",
+        "response_target": "Microwave cooking instructions",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.98,
+        "rationale": "The user is likely trying to prepare the meal quickly and may not have been able to capture or hear the microwave instructions clearly. Asking for the microwave instructions is a direct, high-priority follow-up for someone in a hurry or unfamiliar with the product."
+      },
+      {
+        "rank": 2,
+        "response": "What are the oven directions for this meal?",
+        "response_target": "Oven cooking instructions",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.95,
+        "rationale": "If the user prefers or needs to use the oven, they may want the oven-specific instructions. This is a common follow-up, especially if the initial description didn't specify both methods."
+      },
+      {
+        "rank": 3,
+        "response": "Can you repeat the cooking steps more slowly?",
+        "response_target": "Cooking instructions (clarification)",
+        "task_type": "Failure-aware",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 0.93,
+        "rationale": "BLV users often need information repeated or clarified due to fast or unclear AI reading, especially if the instructions are long or complex."
+      },
+      {
+        "rank": 4,
+        "response": "Does it say how long to cook it in the microwave?",
+        "response_target": "Microwave cooking time",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 3,
+        "plausibility_score": 0.92,
+        "rationale": "Time is a critical detail that may be missed or unclear in the AI's initial response, especially if the user is in a hurry or the image is partially cut off."
+      },
+      {
+        "rank": 5,
+        "response": "Is there a serving size or nutrition info listed?",
+        "response_target": "Nutrition/serving size panel",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.88,
+        "rationale": "Users monitoring their diet or portion size may want to know serving size or nutritional information, which is often hard to capture in a single image."
+      },
+      {
+        "rank": 6,
+        "response": "Does it say if this is gluten-free or dairy-free?",
+        "response_target": "Allergen/dietary claims",
+        "task_type": "Verification",
+        "associated_task_id": 7,
+        "associated_context_id": 1,
+        "plausibility_score": 0.85,
+        "rationale": "Dietary restrictions are a common concern, and users may ask about allergens even if the packaging text is partially visible or unclear."
+      },
+      {
+        "rank": 7,
+        "response": "Can you list the main ingredients again?",
+        "response_target": "Ingredients list",
+        "task_type": "Identification",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.83,
+        "rationale": "If the user missed or didn't catch the ingredients, they may ask for a repeat or summary, especially if the product is unfamiliar."
+      },
+      {
+        "rank": 8,
+        "response": "Does it mention anything about artificial ingredients?",
+        "response_target": "Artificial ingredients claim",
+        "task_type": "Verification",
+        "associated_task_id": 3,
+        "associated_context_id": 1,
+        "plausibility_score": 0.8,
+        "rationale": "Some users are specifically interested in claims about artificial ingredients, which may be missed if the AI summary was too general."
+      },
+      {
+        "rank": 9,
+        "response": "What does the box look like? Is there a picture of the meal?",
+        "response_target": "Package appearance and meal image",
+        "task_type": "Description",
+        "associated_task_id": 5,
+        "associated_context_id": 1,
+        "plausibility_score": 0.78,
+        "rationale": "Users may want confirmation of the product's appearance, especially if organizing food or checking for the correct item."
+      },
+      {
+        "rank": 10,
+        "response": "I can't hear the full instructions\u2014can you try reading them again?",
+        "response_target": "Cooking instructions (clarification)",
+        "task_type": "Failure-aware",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 0.75,
+        "rationale": "If the instructions were cut off or unclear, users often ask for a repeat, especially if they sense the AI missed something due to image quality."
+      }
+    ],
+    "raw_output": [
+      {
+        "rank": 1,
+        "response": "Can you read the microwave instructions out loud?",
+        "response_target": "Microwave cooking instructions",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.98,
+        "rationale": "The user is likely trying to prepare the meal quickly and may not have been able to capture or hear the microwave instructions clearly. Asking for the microwave instructions is a direct, high-priority follow-up for someone in a hurry or unfamiliar with the product."
+      },
+      {
+        "rank": 2,
+        "response": "What are the oven directions for this meal?",
+        "response_target": "Oven cooking instructions",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.95,
+        "rationale": "If the user prefers or needs to use the oven, they may want the oven-specific instructions. This is a common follow-up, especially if the initial description didn't specify both methods."
+      },
+      {
+        "rank": 3,
+        "response": "Can you repeat the cooking steps more slowly?",
+        "response_target": "Cooking instructions (clarification)",
+        "task_type": "Failure-aware",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 0.93,
+        "rationale": "BLV users often need information repeated or clarified due to fast or unclear AI reading, especially if the instructions are long or complex."
+      },
+      {
+        "rank": 4,
+        "response": "Does it say how long to cook it in the microwave?",
+        "response_target": "Microwave cooking time",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 3,
+        "plausibility_score": 0.92,
+        "rationale": "Time is a critical detail that may be missed or unclear in the AI's initial response, especially if the user is in a hurry or the image is partially cut off."
+      },
+      {
+        "rank": 5,
+        "response": "Is there a serving size or nutrition info listed?",
+        "response_target": "Nutrition/serving size panel",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.88,
+        "rationale": "Users monitoring their diet or portion size may want to know serving size or nutritional information, which is often hard to capture in a single image."
+      },
+      {
+        "rank": 6,
+        "response": "Does it say if this is gluten-free or dairy-free?",
+        "response_target": "Allergen/dietary claims",
+        "task_type": "Verification",
+        "associated_task_id": 7,
+        "associated_context_id": 1,
+        "plausibility_score": 0.85,
+        "rationale": "Dietary restrictions are a common concern, and users may ask about allergens even if the packaging text is partially visible or unclear."
+      },
+      {
+        "rank": 7,
+        "response": "Can you list the main ingredients again?",
+        "response_target": "Ingredients list",
+        "task_type": "Identification",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.83,
+        "rationale": "If the user missed or didn't catch the ingredients, they may ask for a repeat or summary, especially if the product is unfamiliar."
+      },
+      {
+        "rank": 8,
+        "response": "Does it mention anything about artificial ingredients?",
+        "response_target": "Artificial ingredients claim",
+        "task_type": "Verification",
+        "associated_task_id": 3,
+        "associated_context_id": 1,
+        "plausibility_score": 0.8,
+        "rationale": "Some users are specifically interested in claims about artificial ingredients, which may be missed if the AI summary was too general."
+      },
+      {
+        "rank": 9,
+        "response": "What does the box look like? Is there a picture of the meal?",
+        "response_target": "Package appearance and meal image",
+        "task_type": "Description",
+        "associated_task_id": 5,
+        "associated_context_id": 1,
+        "plausibility_score": 0.78,
+        "rationale": "Users may want confirmation of the product's appearance, especially if organizing food or checking for the correct item."
+      },
+      {
+        "rank": 10,
+        "response": "I can't hear the full instructions\u2014can you try reading them again?",
+        "response_target": "Cooking instructions (clarification)",
+        "task_type": "Failure-aware",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 0.75,
+        "rationale": "If the instructions were cut off or unclear, users often ask for a repeat, especially if they sense the AI missed something due to image quality."
+      }
+    ]
+  },
+  "response_target_agent": {
+    "response_target": "cooking instructions visibility",
+    "task_type": "Reading, Failure-aware",
+    "confidence": "high",
+    "rationale": "The participant explicitly asks whether the cooking instructions are visible, which is a question about the presence and readability of specific text on the packaging. The images provided do show the cooking instructions, but the participant's question is about their visibility, not their content. This is a Reading task, and because the participant is checking for the presence/legibility of information (potentially due to uncertainty or prior failures), Failure-aware is also relevant.",
+    "raw_output": {
+      "response_target": "cooking instructions visibility",
+      "task_type": "Reading, Failure-aware",
+      "confidence": "high",
+      "rationale": "The participant explicitly asks whether the cooking instructions are visible, which is a question about the presence and readability of specific text on the packaging. The images provided do show the cooking instructions, but the participant's question is about their visibility, not their content. This is a Reading task, and because the participant is checking for the presence/legibility of information (potentially due to uncertainty or prior failures), Failure-aware is also relevant."
+    }
+  },
+  "final_ranked_questions": [
+    "Can you read the microwave instructions out loud?",
+    "What are the oven directions for this meal?",
+    "Can you repeat the cooking steps more slowly?",
+    "Does it say how long to cook it in the microwave?",
+    "Is there a serving size or nutrition info listed?",
+    "Does it say if this is gluten-free or dairy-free?",
+    "Can you list the main ingredients again?",
+    "Does it mention anything about artificial ingredients?",
+    "What does the box look like? Is there a picture of the meal?",
+    "I can't hear the full instructions\u2014can you try reading them again?"
+  ],
+  "ground_truth_question": "Are the cooking instructions visible?",
+  "comparison": {
+    "ground_truth": "Are the cooking instructions visible?",
+    "ground_truth_response_target": "cooking instructions visibility",
+    "ground_truth_task_type": "Reading, Failure-aware",
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Can you read the microwave instructions out loud?",
+        "generated_response_target": "Microwave cooking instructions",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking instructions visibility",
+        "ground_truth_task_type": "Reading, Failure-aware",
+        "target_match_score": 0.5,
+        "task_type_match_score": 0.5
+      },
+      {
+        "rank": 2,
+        "generated_question": "What are the oven directions for this meal?",
+        "generated_response_target": "Oven cooking instructions",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking instructions visibility",
+        "ground_truth_task_type": "Reading, Failure-aware",
+        "target_match_score": 0.5,
+        "task_type_match_score": 0.5
+      },
+      {
+        "rank": 3,
+        "generated_question": "Can you repeat the cooking steps more slowly?",
+        "generated_response_target": "Cooking instructions (clarification)",
+        "generated_task_type": "Failure-aware",
+        "ground_truth_response_target": "cooking instructions visibility",
+        "ground_truth_task_type": "Reading, Failure-aware",
+        "target_match_score": 0.5,
+        "task_type_match_score": 0.5
+      },
+      {
+        "rank": 4,
+        "generated_question": "Does it say how long to cook it in the microwave?",
+        "generated_response_target": "Microwave cooking time",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking instructions visibility",
+        "ground_truth_task_type": "Reading, Failure-aware",
+        "target_match_score": 0,
+        "task_type_match_score": 0.5
+      },
+      {
+        "rank": 5,
+        "generated_question": "Is there a serving size or nutrition info listed?",
+        "generated_response_target": "Nutrition/serving size panel",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking instructions visibility",
+        "ground_truth_task_type": "Reading, Failure-aware",
+        "target_match_score": 0,
+        "task_type_match_score": 0.5
+      },
+      {
+        "rank": 6,
+        "generated_question": "Does it say if this is gluten-free or dairy-free?",
+        "generated_response_target": "Allergen/dietary claims",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "cooking instructions visibility",
+        "ground_truth_task_type": "Reading, Failure-aware",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 7,
+        "generated_question": "Can you list the main ingredients again?",
+        "generated_response_target": "Ingredients list",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "cooking instructions visibility",
+        "ground_truth_task_type": "Reading, Failure-aware",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 8,
+        "generated_question": "Does it mention anything about artificial ingredients?",
+        "generated_response_target": "Artificial ingredients claim",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "cooking instructions visibility",
+        "ground_truth_task_type": "Reading, Failure-aware",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 9,
+        "generated_question": "What does the box look like? Is there a picture of the meal?",
+        "generated_response_target": "Package appearance and meal image",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "cooking instructions visibility",
+        "ground_truth_task_type": "Reading, Failure-aware",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 10,
+        "generated_question": "I can't hear the full instructions\u2014can you try reading them again?",
+        "generated_response_target": "Cooking instructions (clarification)",
+        "generated_task_type": "Failure-aware",
+        "ground_truth_response_target": "cooking instructions visibility",
+        "ground_truth_task_type": "Reading, Failure-aware",
+        "target_match_score": 0.5,
+        "task_type_match_score": 0.5
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "Are the cooking instructions visible?",
+        "generated_response_target": "cooking instructions visibility",
+        "generated_task_type": "Reading, Failure-aware",
+        "ground_truth_response_target": "cooking instructions visibility",
+        "ground_truth_task_type": "Reading, Failure-aware",
+        "target_match_score": 1,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "decomposition"
+      ],
+      "question_category": "Reading, Unanswerable",
+      "in_a_hurry": "no",
+      "indoor_outdoor": "indoor",
+      "familiarity_of_environment": "yes",
+      "familiarity_of_item": "no",
+      "surrounding_environment": "alone",
+      "environment_setting": "leisure",
+      "interaction_length": "5",
+      "task_completed": "Yes"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P3_images/image_3_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows a box of a food product on a patterned rug. The box is labeled \"Whole & Simple\" and \"Mediterranean Style Chicken Quinoa Bowl.\" It mentions that it contains brown rice, spinach, red bell peppers, and sun-dried tomatoes. The product is made in Canada. There is an image of the dish on the box, showing a bowl filled with quinoa, chicken pieces, and vegetables. The rug in the background has a blue and white zigzag pattern with fringes on the edge.",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "User:Are the cooking instructions visible?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 4,
+        "text_usr": null,
+        "text_ai": "Be My AI:No, the cooking instructions are not visible in this image. Only the front of the box with the product name and image is shown.",
+        "local_image_path": null
+      },
+      {
+        "turn": 5,
+        "text_usr": "User:What are the cooking instructions?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 6,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P3_images/image_3_6.jpg"
+      },
+      {
+        "turn": 7,
+        "text_usr": null,
+        "text_ai": "Be My AI:The cooking instructions for the Mediterranean Style Chicken Quinoa Bowl are as follows:\n\nConventional Oven (Cook from Frozen):\n1. Preheat oven to 375\u00b0F.\n2. Remove bowl from carton. Do not pierce or remove film.\n3. Place bowl on baking sheet on middle oven rack for 25 - 30 minutes.\n4. Halfway through cooking, peel back film, stir, and replace film for the remaining cooking time.\n5. Remove baking sheet from oven. Bowl will be hot; use caution and support bowl when removing from baking sheet.\n6. Remove film and stir thoroughly.\n7. Let stand 1 - 2 minutes before serving.",
+        "local_image_path": null
+      },
+      {
+        "turn": 8,
+        "text_usr": "User:What are the instructions for cooking it in the microwave?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 9,
+        "text_usr": null,
+        "text_ai": "Be My AI:The microwave cooking instructions are not visible in the image provided. You might need to check another part of the packaging for those details.",
+        "local_image_path": null
+      },
+      {
+        "turn": 10,
+        "text_usr": "User:What are the instructions for cooking in the microwave?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 11,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P3_images/image_3_11.jpg"
+      },
+      {
+        "turn": 12,
+        "text_usr": null,
+        "text_ai": "Be My AI:The microwave cooking instructions for the Mediterranean Style Chicken Quinoa Bowl are as follows:\n\nMicrowave (1000 watts) Recommended (Cook from Frozen):\n1. Remove bowl from carton. Do not pierce or remove film.\n2. Heat on high for 3 minutes. Peel back film and stir thoroughly.\n3. Replace film and cook on high for an additional 1 1/2 to 2 minutes.\n4. Remove from microwave, stir and let stand 1 - 2 minutes before serving. Bowl will be hot; use caution when removing from microwave.",
+        "local_image_path": null
+      }
+    ]
+  }
+}

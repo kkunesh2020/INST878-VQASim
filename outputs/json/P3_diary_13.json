@@ -1,0 +1,624 @@
+{
+  "input": {
+    "participant": "P3",
+    "source": "diary",
+    "interaction": 13,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P3/diary_data/P3.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P3/diary_data/P3_images/image_13_1.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "The image shows two blister packs of capsules on a white surface. The larger blister pack contains eight oval-shaped capsules that are brown in color, arranged in two rows of four. The smaller blister pack contains two green oval-shaped capsules, with one capsule missing from the pack. There is also a hand visible on the right side of the image with painted nails.",
+    "question_category": "Description",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user may be at home or in a familiar indoor setting, quickly checking which medication to take. The presence of multiple blister packs and a hand suggests a routine task, possibly verifying pills before consumption. The image is not carefully framed, indicating possible haste or low vision."
+      },
+      {
+        "context_id": 2,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user could be in a new environment (e.g., hotel, hospital, or someone else's home) and is unsure about the medication. They may be using the VQA system to identify unfamiliar pills before taking them. The image includes multiple types of pills, suggesting uncertainty."
+      },
+      {
+        "context_id": 3,
+        "location": "indoor",
+        "time_pressure": "in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "daily living task",
+        "rationale": "The user might be with family or friends, quickly trying to confirm which medication is theirs or safe to take, possibly due to a time-sensitive situation (e.g., before leaving the house). The presence of different pills could indicate shared medication storage."
+      },
+      {
+        "context_id": 4,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "unfamiliar people",
+        "activity_type": "professional",
+        "rationale": "The user could be in a healthcare or assisted living setting, working with staff to identify or verify medication. The unfamiliarity with the pills and possible presence of others (e.g., caregivers) fits a professional or semi-professional context."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user may be at home or in a familiar indoor setting, quickly checking which medication to take. The presence of multiple blister packs and a hand suggests a routine task, possibly verifying pills before consumption. The image is not carefully framed, indicating possible haste or low vision."
+        },
+        {
+          "context_id": 2,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user could be in a new environment (e.g., hotel, hospital, or someone else's home) and is unsure about the medication. They may be using the VQA system to identify unfamiliar pills before taking them. The image includes multiple types of pills, suggesting uncertainty."
+        },
+        {
+          "context_id": 3,
+          "location": "indoor",
+          "time_pressure": "in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "daily living task",
+          "rationale": "The user might be with family or friends, quickly trying to confirm which medication is theirs or safe to take, possibly due to a time-sensitive situation (e.g., before leaving the house). The presence of different pills could indicate shared medication storage."
+        },
+        {
+          "context_id": 4,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "unfamiliar people",
+          "activity_type": "professional",
+          "rationale": "The user could be in a healthcare or assisted living setting, working with staff to identify or verify medication. The unfamiliarity with the pills and possible presence of others (e.g., caregivers) fits a professional or semi-professional context."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Identification",
+        "description": "User wants to know what type of medication or supplement is in the blister packs.",
+        "confidence": "medium",
+        "rationale": "The image shows blister packs with capsules of different colors. BLV users often need to identify medications for safety and health management, but the image may not show readable text or clear branding."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Description",
+        "description": "User is seeking a general description of what is present in the image (e.g., 'What is on this table?').",
+        "confidence": "high",
+        "rationale": "The question category is 'Description,' and the image contains objects that may be unfamiliar or difficult to distinguish by touch alone."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Verification",
+        "description": "User wants to confirm if both blister packs contain the same type of medication or if they are different.",
+        "confidence": "medium",
+        "rationale": "There are two distinct blister packs with different colored capsules, which could indicate different medications. Verification is important for medication safety."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Reading",
+        "description": "User is attempting to extract any visible text (e.g., dosage, brand, or instructions) from the blister packs.",
+        "confidence": "low",
+        "rationale": "Text may be present but is likely not visible or readable in the image due to glare, angle, or packaging design. However, this is a common user intent."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Description",
+        "description": "User wants to know if any of the blister packs appear to be open or missing pills.",
+        "confidence": "medium",
+        "rationale": "Medication management often involves checking if doses have been taken. The image shows some empty slots, which may prompt this question."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Failure-aware",
+        "description": "User is clarifying or correcting the system if the AI-generated description misidentifies the objects (e.g., system says 'candy' instead of 'medication').",
+        "confidence": "high",
+        "rationale": "Given the ambiguity of capsule appearance, the system may misclassify the items, prompting the user to seek clarification or correction."
+      },
+      {
+        "task_id": 7,
+        "task_type": "Localization",
+        "description": "User wants to know where a specific medication (e.g., the green capsules) is located relative to the other items.",
+        "confidence": "medium",
+        "rationale": "There are multiple items, and distinguishing their positions can help the user select the correct one."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Identification",
+          "description": "User wants to know what type of medication or supplement is in the blister packs.",
+          "confidence": "medium",
+          "rationale": "The image shows blister packs with capsules of different colors. BLV users often need to identify medications for safety and health management, but the image may not show readable text or clear branding."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Description",
+          "description": "User is seeking a general description of what is present in the image (e.g., 'What is on this table?').",
+          "confidence": "high",
+          "rationale": "The question category is 'Description,' and the image contains objects that may be unfamiliar or difficult to distinguish by touch alone."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Verification",
+          "description": "User wants to confirm if both blister packs contain the same type of medication or if they are different.",
+          "confidence": "medium",
+          "rationale": "There are two distinct blister packs with different colored capsules, which could indicate different medications. Verification is important for medication safety."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Reading",
+          "description": "User is attempting to extract any visible text (e.g., dosage, brand, or instructions) from the blister packs.",
+          "confidence": "low",
+          "rationale": "Text may be present but is likely not visible or readable in the image due to glare, angle, or packaging design. However, this is a common user intent."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Description",
+          "description": "User wants to know if any of the blister packs appear to be open or missing pills.",
+          "confidence": "medium",
+          "rationale": "Medication management often involves checking if doses have been taken. The image shows some empty slots, which may prompt this question."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Failure-aware",
+          "description": "User is clarifying or correcting the system if the AI-generated description misidentifies the objects (e.g., system says 'candy' instead of 'medication').",
+          "confidence": "high",
+          "rationale": "Given the ambiguity of capsule appearance, the system may misclassify the items, prompting the user to seek clarification or correction."
+        },
+        {
+          "task_id": 7,
+          "task_type": "Localization",
+          "description": "User wants to know where a specific medication (e.g., the green capsules) is located relative to the other items.",
+          "confidence": "medium",
+          "rationale": "There are multiple items, and distinguishing their positions can help the user select the correct one."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "{'rank': 1, 'response': 'Can you tell if these are the same medication or different?', 'response_target': 'both blister packs', 'task_type': 'Verification', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': \"Given the presence of two different colored capsules and the user's likely need to avoid mixing up medications, this is a highly plausible and safety-driven follow-up, especially in a daily living context.\"}",
+      "{'rank': 2, 'response': 'Is there any readable text on either of the packs?', 'response_target': 'blister packs', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 2, 'plausibility_score': 0.9, 'rationale': 'BLV users often ask for text to confirm medication identity, even if the image quality may not support it. This is a common, need-driven follow-up.'}",
+      "{'rank': 3, 'response': 'Which one is the green capsule pack?', 'response_target': 'green capsule blister pack', 'task_type': 'Localization', 'associated_task_id': 7, 'associated_context_id': 1, 'plausibility_score': 0.88, 'rationale': 'If the user is trying to select a specific medication, knowing the location of the green capsules relative to their hand or the other pack is a realistic follow-up.'}",
+      "{'rank': 4, 'response': 'Are any of the capsules missing?', 'response_target': 'blister packs', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': 'Medication management often involves checking if doses have been taken. The user may want to confirm if any pills are missing.'}",
+      "{'rank': 5, 'response': 'What kind of pills are these?', 'response_target': 'both blister packs', 'task_type': 'Identification', 'associated_task_id': 1, 'associated_context_id': 2, 'plausibility_score': 0.8, 'rationale': 'If the user is unfamiliar with the pills, asking for identification is a direct and plausible follow-up.'}",
+      "{'rank': 6, 'response': 'Is there a way to tell which one I should take now?', 'response_target': 'both blister packs', 'task_type': 'Verification', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.75, 'rationale': 'This reflects a real-world scenario where the user is unsure which medication is due and seeks confirmation, especially if in a hurry.'}",
+      "{'rank': 7, 'response': 'Are the brown capsules vitamins or medicine?', 'response_target': 'brown capsule blister pack', 'task_type': 'Identification', 'associated_task_id': 1, 'associated_context_id': 2, 'plausibility_score': 0.7, 'rationale': 'The user may want to distinguish between supplements and prescription medication, especially if unfamiliar with the pack.'}",
+      "{'rank': 8, 'response': 'Is my hand in the way of anything important?', 'response_target': 'hand and blister packs', 'task_type': 'Description', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.65, 'rationale': 'Users often ask if their hand is blocking key details, especially if they know their hand is in the shot.'}",
+      "{'rank': 9, 'response': 'Can you double-check if these are pills and not candy?', 'response_target': 'both blister packs', 'task_type': 'Failure-aware', 'associated_task_id': 6, 'associated_context_id': 2, 'plausibility_score': 0.6, 'rationale': 'Given the ambiguity of capsules, users may want to confirm that the AI did not misclassify the items.'}",
+      "{'rank': 10, 'response': 'How many pills are left in each pack?', 'response_target': 'both blister packs', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 1, 'plausibility_score': 0.55, 'rationale': 'Counting remaining pills is a common medication management task, though less urgent than identification or verification.'}"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Can you tell if these are the same medication or different?",
+        "response_target": "both blister packs",
+        "task_type": "Verification",
+        "associated_task_id": 3,
+        "associated_context_id": 1,
+        "plausibility_score": 0.95,
+        "rationale": "Given the presence of two different colored capsules and the user's likely need to avoid mixing up medications, this is a highly plausible and safety-driven follow-up, especially in a daily living context."
+      },
+      {
+        "rank": 2,
+        "response": "Is there any readable text on either of the packs?",
+        "response_target": "blister packs",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 2,
+        "plausibility_score": 0.9,
+        "rationale": "BLV users often ask for text to confirm medication identity, even if the image quality may not support it. This is a common, need-driven follow-up."
+      },
+      {
+        "rank": 3,
+        "response": "Which one is the green capsule pack?",
+        "response_target": "green capsule blister pack",
+        "task_type": "Localization",
+        "associated_task_id": 7,
+        "associated_context_id": 1,
+        "plausibility_score": 0.88,
+        "rationale": "If the user is trying to select a specific medication, knowing the location of the green capsules relative to their hand or the other pack is a realistic follow-up."
+      },
+      {
+        "rank": 4,
+        "response": "Are any of the capsules missing?",
+        "response_target": "blister packs",
+        "task_type": "Description",
+        "associated_task_id": 5,
+        "associated_context_id": 1,
+        "plausibility_score": 0.85,
+        "rationale": "Medication management often involves checking if doses have been taken. The user may want to confirm if any pills are missing."
+      },
+      {
+        "rank": 5,
+        "response": "What kind of pills are these?",
+        "response_target": "both blister packs",
+        "task_type": "Identification",
+        "associated_task_id": 1,
+        "associated_context_id": 2,
+        "plausibility_score": 0.8,
+        "rationale": "If the user is unfamiliar with the pills, asking for identification is a direct and plausible follow-up."
+      },
+      {
+        "rank": 6,
+        "response": "Is there a way to tell which one I should take now?",
+        "response_target": "both blister packs",
+        "task_type": "Verification",
+        "associated_task_id": 3,
+        "associated_context_id": 1,
+        "plausibility_score": 0.75,
+        "rationale": "This reflects a real-world scenario where the user is unsure which medication is due and seeks confirmation, especially if in a hurry."
+      },
+      {
+        "rank": 7,
+        "response": "Are the brown capsules vitamins or medicine?",
+        "response_target": "brown capsule blister pack",
+        "task_type": "Identification",
+        "associated_task_id": 1,
+        "associated_context_id": 2,
+        "plausibility_score": 0.7,
+        "rationale": "The user may want to distinguish between supplements and prescription medication, especially if unfamiliar with the pack."
+      },
+      {
+        "rank": 8,
+        "response": "Is my hand in the way of anything important?",
+        "response_target": "hand and blister packs",
+        "task_type": "Description",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.65,
+        "rationale": "Users often ask if their hand is blocking key details, especially if they know their hand is in the shot."
+      },
+      {
+        "rank": 9,
+        "response": "Can you double-check if these are pills and not candy?",
+        "response_target": "both blister packs",
+        "task_type": "Failure-aware",
+        "associated_task_id": 6,
+        "associated_context_id": 2,
+        "plausibility_score": 0.6,
+        "rationale": "Given the ambiguity of capsules, users may want to confirm that the AI did not misclassify the items."
+      },
+      {
+        "rank": 10,
+        "response": "How many pills are left in each pack?",
+        "response_target": "both blister packs",
+        "task_type": "Description",
+        "associated_task_id": 5,
+        "associated_context_id": 1,
+        "plausibility_score": 0.55,
+        "rationale": "Counting remaining pills is a common medication management task, though less urgent than identification or verification."
+      }
+    ],
+    "raw_output": {
+      "ranked_questions": [
+        {
+          "rank": 1,
+          "response": "Can you tell if these are the same medication or different?",
+          "response_target": "both blister packs",
+          "task_type": "Verification",
+          "associated_task_id": 3,
+          "associated_context_id": 1,
+          "plausibility_score": 0.95,
+          "rationale": "Given the presence of two different colored capsules and the user's likely need to avoid mixing up medications, this is a highly plausible and safety-driven follow-up, especially in a daily living context."
+        },
+        {
+          "rank": 2,
+          "response": "Is there any readable text on either of the packs?",
+          "response_target": "blister packs",
+          "task_type": "Reading",
+          "associated_task_id": 4,
+          "associated_context_id": 2,
+          "plausibility_score": 0.9,
+          "rationale": "BLV users often ask for text to confirm medication identity, even if the image quality may not support it. This is a common, need-driven follow-up."
+        },
+        {
+          "rank": 3,
+          "response": "Which one is the green capsule pack?",
+          "response_target": "green capsule blister pack",
+          "task_type": "Localization",
+          "associated_task_id": 7,
+          "associated_context_id": 1,
+          "plausibility_score": 0.88,
+          "rationale": "If the user is trying to select a specific medication, knowing the location of the green capsules relative to their hand or the other pack is a realistic follow-up."
+        },
+        {
+          "rank": 4,
+          "response": "Are any of the capsules missing?",
+          "response_target": "blister packs",
+          "task_type": "Description",
+          "associated_task_id": 5,
+          "associated_context_id": 1,
+          "plausibility_score": 0.85,
+          "rationale": "Medication management often involves checking if doses have been taken. The user may want to confirm if any pills are missing."
+        },
+        {
+          "rank": 5,
+          "response": "What kind of pills are these?",
+          "response_target": "both blister packs",
+          "task_type": "Identification",
+          "associated_task_id": 1,
+          "associated_context_id": 2,
+          "plausibility_score": 0.8,
+          "rationale": "If the user is unfamiliar with the pills, asking for identification is a direct and plausible follow-up."
+        },
+        {
+          "rank": 6,
+          "response": "Is there a way to tell which one I should take now?",
+          "response_target": "both blister packs",
+          "task_type": "Verification",
+          "associated_task_id": 3,
+          "associated_context_id": 1,
+          "plausibility_score": 0.75,
+          "rationale": "This reflects a real-world scenario where the user is unsure which medication is due and seeks confirmation, especially if in a hurry."
+        },
+        {
+          "rank": 7,
+          "response": "Are the brown capsules vitamins or medicine?",
+          "response_target": "brown capsule blister pack",
+          "task_type": "Identification",
+          "associated_task_id": 1,
+          "associated_context_id": 2,
+          "plausibility_score": 0.7,
+          "rationale": "The user may want to distinguish between supplements and prescription medication, especially if unfamiliar with the pack."
+        },
+        {
+          "rank": 8,
+          "response": "Is my hand in the way of anything important?",
+          "response_target": "hand and blister packs",
+          "task_type": "Description",
+          "associated_task_id": 2,
+          "associated_context_id": 1,
+          "plausibility_score": 0.65,
+          "rationale": "Users often ask if their hand is blocking key details, especially if they know their hand is in the shot."
+        },
+        {
+          "rank": 9,
+          "response": "Can you double-check if these are pills and not candy?",
+          "response_target": "both blister packs",
+          "task_type": "Failure-aware",
+          "associated_task_id": 6,
+          "associated_context_id": 2,
+          "plausibility_score": 0.6,
+          "rationale": "Given the ambiguity of capsules, users may want to confirm that the AI did not misclassify the items."
+        },
+        {
+          "rank": 10,
+          "response": "How many pills are left in each pack?",
+          "response_target": "both blister packs",
+          "task_type": "Description",
+          "associated_task_id": 5,
+          "associated_context_id": 1,
+          "plausibility_score": 0.55,
+          "rationale": "Counting remaining pills is a common medication management task, though less urgent than identification or verification."
+        }
+      ]
+    }
+  },
+  "response_target_agent": {
+    "response_target": "number of green capsules in the blister pack at the top",
+    "task_type": "Description",
+    "confidence": "high",
+    "rationale": "The participant's question directly asks about the quantity and color of capsules ('Are there two green capsules at the top?'), indicating their intent is to confirm the visual presence and count of green capsules in the specified location. This is a descriptive task focused on the visual contents, not reading text or identifying brands.",
+    "raw_output": {
+      "response_target": "number of green capsules in the blister pack at the top",
+      "task_type": "Description",
+      "confidence": "high",
+      "rationale": "The participant's question directly asks about the quantity and color of capsules ('Are there two green capsules at the top?'), indicating their intent is to confirm the visual presence and count of green capsules in the specified location. This is a descriptive task focused on the visual contents, not reading text or identifying brands."
+    }
+  },
+  "final_ranked_questions": [
+    "{'rank': 1, 'response': 'Can you tell if these are the same medication or different?', 'response_target': 'both blister packs', 'task_type': 'Verification', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': \"Given the presence of two different colored capsules and the user's likely need to avoid mixing up medications, this is a highly plausible and safety-driven follow-up, especially in a daily living context.\"}",
+    "{'rank': 2, 'response': 'Is there any readable text on either of the packs?', 'response_target': 'blister packs', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 2, 'plausibility_score': 0.9, 'rationale': 'BLV users often ask for text to confirm medication identity, even if the image quality may not support it. This is a common, need-driven follow-up.'}",
+    "{'rank': 3, 'response': 'Which one is the green capsule pack?', 'response_target': 'green capsule blister pack', 'task_type': 'Localization', 'associated_task_id': 7, 'associated_context_id': 1, 'plausibility_score': 0.88, 'rationale': 'If the user is trying to select a specific medication, knowing the location of the green capsules relative to their hand or the other pack is a realistic follow-up.'}",
+    "{'rank': 4, 'response': 'Are any of the capsules missing?', 'response_target': 'blister packs', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': 'Medication management often involves checking if doses have been taken. The user may want to confirm if any pills are missing.'}",
+    "{'rank': 5, 'response': 'What kind of pills are these?', 'response_target': 'both blister packs', 'task_type': 'Identification', 'associated_task_id': 1, 'associated_context_id': 2, 'plausibility_score': 0.8, 'rationale': 'If the user is unfamiliar with the pills, asking for identification is a direct and plausible follow-up.'}",
+    "{'rank': 6, 'response': 'Is there a way to tell which one I should take now?', 'response_target': 'both blister packs', 'task_type': 'Verification', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.75, 'rationale': 'This reflects a real-world scenario where the user is unsure which medication is due and seeks confirmation, especially if in a hurry.'}",
+    "{'rank': 7, 'response': 'Are the brown capsules vitamins or medicine?', 'response_target': 'brown capsule blister pack', 'task_type': 'Identification', 'associated_task_id': 1, 'associated_context_id': 2, 'plausibility_score': 0.7, 'rationale': 'The user may want to distinguish between supplements and prescription medication, especially if unfamiliar with the pack.'}",
+    "{'rank': 8, 'response': 'Is my hand in the way of anything important?', 'response_target': 'hand and blister packs', 'task_type': 'Description', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.65, 'rationale': 'Users often ask if their hand is blocking key details, especially if they know their hand is in the shot.'}",
+    "{'rank': 9, 'response': 'Can you double-check if these are pills and not candy?', 'response_target': 'both blister packs', 'task_type': 'Failure-aware', 'associated_task_id': 6, 'associated_context_id': 2, 'plausibility_score': 0.6, 'rationale': 'Given the ambiguity of capsules, users may want to confirm that the AI did not misclassify the items.'}",
+    "{'rank': 10, 'response': 'How many pills are left in each pack?', 'response_target': 'both blister packs', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 1, 'plausibility_score': 0.55, 'rationale': 'Counting remaining pills is a common medication management task, though less urgent than identification or verification.'}"
+  ],
+  "ground_truth_question": "Are there two green capsules at the top?",
+  "comparison": {
+    "ground_truth": "Are there two green capsules at the top?",
+    "ground_truth_response_target": "number of green capsules in the blister pack at the top",
+    "ground_truth_task_type": "Description",
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Can you tell if these are the same medication or different?",
+        "generated_response_target": "both blister packs",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "number of green capsules in the blister pack at the top",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 2,
+        "generated_question": "Is there any readable text on either of the packs?",
+        "generated_response_target": "blister packs",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "number of green capsules in the blister pack at the top",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 3,
+        "generated_question": "Which one is the green capsule pack?",
+        "generated_response_target": "green capsule blister pack",
+        "generated_task_type": "Localization",
+        "ground_truth_response_target": "number of green capsules in the blister pack at the top",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 4,
+        "generated_question": "Are any of the capsules missing?",
+        "generated_response_target": "blister packs",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "number of green capsules in the blister pack at the top",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 5,
+        "generated_question": "What kind of pills are these?",
+        "generated_response_target": "both blister packs",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "number of green capsules in the blister pack at the top",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 6,
+        "generated_question": "Is there a way to tell which one I should take now?",
+        "generated_response_target": "both blister packs",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "number of green capsules in the blister pack at the top",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 7,
+        "generated_question": "Are the brown capsules vitamins or medicine?",
+        "generated_response_target": "brown capsule blister pack",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "number of green capsules in the blister pack at the top",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 8,
+        "generated_question": "Is my hand in the way of anything important?",
+        "generated_response_target": "hand and blister packs",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "number of green capsules in the blister pack at the top",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 9,
+        "generated_question": "Can you double-check if these are pills and not candy?",
+        "generated_response_target": "both blister packs",
+        "generated_task_type": "Failure-aware",
+        "ground_truth_response_target": "number of green capsules in the blister pack at the top",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 10,
+        "generated_question": "How many pills are left in each pack?",
+        "generated_response_target": "both blister packs",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "number of green capsules in the blister pack at the top",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "Are there two green capsules at the top?",
+        "generated_response_target": "number of green capsules in the blister pack at the top",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "number of green capsules in the blister pack at the top",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 1,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "NA-w-text"
+      ],
+      "question_category": "Description",
+      "in_a_hurry": "yes",
+      "indoor_outdoor": "indoor",
+      "familiarity_of_environment": "yes",
+      "familiarity_of_item": "yes",
+      "surrounding_environment": "alone",
+      "environment_setting": "leisure",
+      "interaction_length": "2",
+      "task_completed": "Yes"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P3_images/image_13_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows two blister packs of capsules on a white surface. The larger blister pack contains eight oval-shaped capsules that are brown in color, arranged in two rows of four. The smaller blister pack contains two green oval-shaped capsules, with one capsule missing from the pack. There is also a hand visible on the right side of the image with painted nails.",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "User:Are there two green capsules at the top?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 4,
+        "text_usr": null,
+        "text_ai": "Be My AI:Yes, there are two green capsules in the smaller blister pack at the top.",
+        "local_image_path": null
+      }
+    ]
+  }
+}

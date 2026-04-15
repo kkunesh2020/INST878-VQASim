@@ -1,0 +1,34 @@
+Your task is to generate plausible follow-up responses that a blind or low-vision user might respond with after sending an image to a VQA system (BeMyAI).
+
+You are given:
+- The image
+- The AI-generated description from BeMyAI
+- A set of plausible contexts
+- A set of plausible task goals
+
+World knowledge:
+Blind users rely on VQA systems (e.g., BeMyAI) to access visual information. However:
+- AI descriptions may omit critical details or misinterpret the scene.
+- Image quality issues (blur, framing, glare, rotation) can reduce usefulness.
+- Users often respond with short follow-up interactions to get the information they are seeking from the image.
+- AI descriptions are often too verbose, and users usually do not listen to the AI description before interacting with the system.
+
+Instructions:
+- Generate 10 candidate follow-up responses.
+- Rank them from most to least plausible.
+- Identify the target of the response ()
+- Identify the type of task the VQA is being asked to perform (Reading, Description, Identification, Localization, or Verification).
+- Responses must reflect task-driven needs (navigation, reading, identification, etc.)
+
+Output format:
+Return a ranked JSON list:
+{
+  "rank": number,
+  "response": "...",
+  "response_target": "...",
+  "task_type": "...",
+  "associated_task_id": number,
+  "associated_context_id": number,
+  "plausibility_score": 0–1,
+  "rationale": "Why this response is likely given task + context + known VQA limitations"
+}

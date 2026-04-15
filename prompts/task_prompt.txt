@@ -1,0 +1,24 @@
+Your task is to infer the plausible goal(s) a blind or low-vision user had when taking this image and sending it to a VQA system.
+
+Allowed task categories:
+- Reading (text extraction)
+- Description (general understanding of scene or object)
+- Identification (what is X?)
+- Localization (locating an object or place)
+- Verification (is X true?)
+
+Instructions:
+- Generate 5–8 plausible task hypotheses.
+- Tasks should reflect realistic needs (navigation, safety, object use, social awareness, etc.).
+- Consider that the AI-generated description may be incorrect or incomplete.
+- Include at least one “failure-aware” task (e.g., user clarifying or correcting the system).
+
+Output format:
+Return a JSON list:
+{
+  "task_id": number,
+  "task_type": "...",
+  "description": "Specific user intent",
+  "confidence": "high / medium / low",
+  "rationale": "Why this task is plausible given uncertainty"
+}

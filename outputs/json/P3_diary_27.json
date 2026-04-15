@@ -1,0 +1,637 @@
+{
+  "input": {
+    "participant": "P3",
+    "source": "diary",
+    "interaction": 27,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P3/diary_data/P3.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P3/diary_data/P3_images/image_27_1.jpg",
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P3/diary_data/P3_images/image_27_5.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "The image shows a blue bottle of shower gel on a white surface. The label on the bottle reads:\n\n\"SHOWER GEL\nFRAGRANCE NOTES:\nTOASTED MARSHMALLOW, SEA SALT BREEZE, SMORES ACCORD, BEACH DRIFTWOOD, CREAMY VANILLA\n\nGENTLE, NON-DRYING FORMULA\nNOURISHING, RICH, BUBBLY LATHER\nMADE WITH\nALOE\nVITAMIN E\n\nBOTTLE MADE WITH 50% RECYCLED PLASTIC\nDermatologist Tested\nNot Tested on Animals\"\n\nThere is also a list of ingredients below this text, and the price is marked as $13.50. Next to the shower gel is a bottle of body spray with a design that includes a sparkler and the words \"Beach Nights.\" In the background, there is a vase with dried flowers and some other items on the counter.",
+    "question_category": "Reading",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user is likely at home (kitchen or living area visible in background), possibly trying to identify or distinguish between two similar bottles (shower gel and fragrance mist) by reading the labels. The careful placement and focus on the back labels suggest a deliberate attempt to read product details, possibly for the first time or after mixing up items."
+      },
+      {
+        "context_id": 2,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "daily living task",
+        "rationale": "The user might be preparing for a shared activity (e.g., getting ready with a roommate or family member) and quickly checking which product is which. The presence of multiple items and some clutter suggests a lived-in, shared space, and the user may be confirming product identity before use or sharing."
+      },
+      {
+        "context_id": 3,
+        "location": "indoor",
+        "time_pressure": "in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user could be in a new environment (e.g., visiting someone or staying in a hotel/Airbnb) and needs to quickly identify which bottle is which before using them. The unfamiliarity with both the space and the products could prompt rapid, possibly imprecise photos for quick AI reading assistance."
+      },
+      {
+        "context_id": 4,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "leisure",
+        "rationale": "The user may be cataloging or organizing personal care products, possibly for inventory or to share information with someone else later. The clear focus on product labels and the relaxed setting (no visible urgency) support a leisure or organizational activity."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user is likely at home (kitchen or living area visible in background), possibly trying to identify or distinguish between two similar bottles (shower gel and fragrance mist) by reading the labels. The careful placement and focus on the back labels suggest a deliberate attempt to read product details, possibly for the first time or after mixing up items."
+        },
+        {
+          "context_id": 2,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "daily living task",
+          "rationale": "The user might be preparing for a shared activity (e.g., getting ready with a roommate or family member) and quickly checking which product is which. The presence of multiple items and some clutter suggests a lived-in, shared space, and the user may be confirming product identity before use or sharing."
+        },
+        {
+          "context_id": 3,
+          "location": "indoor",
+          "time_pressure": "in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user could be in a new environment (e.g., visiting someone or staying in a hotel/Airbnb) and needs to quickly identify which bottle is which before using them. The unfamiliarity with both the space and the products could prompt rapid, possibly imprecise photos for quick AI reading assistance."
+        },
+        {
+          "context_id": 4,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "leisure",
+          "rationale": "The user may be cataloging or organizing personal care products, possibly for inventory or to share information with someone else later. The clear focus on product labels and the relaxed setting (no visible urgency) support a leisure or organizational activity."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Reading",
+        "description": "Extract the full list of ingredients from both bottles to check for allergens or sensitivities.",
+        "confidence": "medium",
+        "rationale": "BLV users often need to verify product safety, especially for skin products. The text is small and may be partially obscured or blurry, so the user may want to confirm ingredients."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Reading",
+        "description": "Read the product names and main usage instructions to distinguish between the two bottles (shower gel vs. fragrance mist).",
+        "confidence": "high",
+        "rationale": "The bottles are similar in size and color, making tactile identification difficult. The user may want to avoid using the wrong product."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Reading",
+        "description": "Check the price of each product as printed on the label.",
+        "confidence": "medium",
+        "rationale": "The price is visible on at least one bottle. The user may want to compare value or track spending, but the price could be obscured or missing on one item."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Reading",
+        "description": "Verify if the products are cruelty-free or dermatologist tested, as indicated on the packaging.",
+        "confidence": "medium",
+        "rationale": "Ethical or medical considerations are common for personal care products. The relevant text may be small or hard to locate."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Reading",
+        "description": "Read the fragrance notes to determine if the scents are similar or different.",
+        "confidence": "high",
+        "rationale": "Both products mention fragrance notes, and the user may want to coordinate scents or avoid duplication."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Reading",
+        "description": "Clarify or correct the AI if the system misidentifies the product type or cannot read the text due to glare, blur, or partial occlusion.",
+        "confidence": "high",
+        "rationale": "BLV users often encounter incomplete or incorrect AI readings, especially with reflective or curved packaging."
+      },
+      {
+        "task_id": 7,
+        "task_type": "Reading",
+        "description": "Extract the expiration date or batch code if present, to check product freshness.",
+        "confidence": "low",
+        "rationale": "Some users may want to check for expiration, but such information is often hard to locate or missing from the visible area."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Reading",
+          "description": "Extract the full list of ingredients from both bottles to check for allergens or sensitivities.",
+          "confidence": "medium",
+          "rationale": "BLV users often need to verify product safety, especially for skin products. The text is small and may be partially obscured or blurry, so the user may want to confirm ingredients."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Reading",
+          "description": "Read the product names and main usage instructions to distinguish between the two bottles (shower gel vs. fragrance mist).",
+          "confidence": "high",
+          "rationale": "The bottles are similar in size and color, making tactile identification difficult. The user may want to avoid using the wrong product."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Reading",
+          "description": "Check the price of each product as printed on the label.",
+          "confidence": "medium",
+          "rationale": "The price is visible on at least one bottle. The user may want to compare value or track spending, but the price could be obscured or missing on one item."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Reading",
+          "description": "Verify if the products are cruelty-free or dermatologist tested, as indicated on the packaging.",
+          "confidence": "medium",
+          "rationale": "Ethical or medical considerations are common for personal care products. The relevant text may be small or hard to locate."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Reading",
+          "description": "Read the fragrance notes to determine if the scents are similar or different.",
+          "confidence": "high",
+          "rationale": "Both products mention fragrance notes, and the user may want to coordinate scents or avoid duplication."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Reading",
+          "description": "Clarify or correct the AI if the system misidentifies the product type or cannot read the text due to glare, blur, or partial occlusion.",
+          "confidence": "high",
+          "rationale": "BLV users often encounter incomplete or incorrect AI readings, especially with reflective or curved packaging."
+        },
+        {
+          "task_id": 7,
+          "task_type": "Reading",
+          "description": "Extract the expiration date or batch code if present, to check product freshness.",
+          "confidence": "low",
+          "rationale": "Some users may want to check for expiration, but such information is often hard to locate or missing from the visible area."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "{'rank': 1, 'response': 'Can you read the full list of ingredients on both bottles? I need to check for allergens.', 'response_target': 'ingredients on both bottles', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.98, 'rationale': 'Ingredient lists are often small, hard to read, and critical for safety. The user is likely to want this information, especially if the AI summary skipped or misread parts due to blur or glare.'}",
+      "{'rank': 2, 'response': 'Which bottle is the shower gel and which one is the body spray?', 'response_target': 'product identification', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 3, 'plausibility_score': 0.96, 'rationale': 'Distinguishing between similar bottles is a common, urgent need, especially if the user is unfamiliar with the products or in a hurry.'}",
+      "{'rank': 3, 'response': 'Can you repeat the fragrance notes for both products? Are they the same or different?', 'response_target': 'fragrance notes comparison', 'task_type': 'Reading', 'associated_task_id': 5, 'associated_context_id': 2, 'plausibility_score': 0.93, 'rationale': 'Users often want to know if scents match or differ, especially if using both products together or sharing with others.'}",
+      "{'rank': 4, 'response': 'Is the price visible on both bottles? If so, what are they?', 'response_target': 'price on both bottles', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 4, 'plausibility_score': 0.9, 'rationale': 'Price checking is a practical, common task, especially if the user is tracking spending or comparing value.'}",
+      "{'rank': 5, 'response': 'Can you confirm if both products are cruelty-free and dermatologist tested?', 'response_target': 'cruelty-free and dermatologist tested claims', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.88, 'rationale': 'Ethical and medical claims are important for many users, and such text is often small or easy to miss.'}",
+      "{'rank': 6, 'response': 'The text on the bottles is small\u2014can you zoom in or clarify the ingredients if any words are unclear?', 'response_target': 'clarification of small/unclear text', 'task_type': 'Reading', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': 'BLV users frequently request clarification or a second attempt if the initial reading seems incomplete or garbled.'}",
+      "{'rank': 7, 'response': 'Can you tell me the main usage instructions for each bottle?', 'response_target': 'usage instructions', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 3, 'plausibility_score': 0.82, 'rationale': 'Instructions may be needed to avoid misuse, especially if the user is unfamiliar with the products.'}",
+      "{'rank': 8, 'response': 'Is there an expiration date or batch code visible on either bottle?', 'response_target': 'expiration date or batch code', 'task_type': 'Reading', 'associated_task_id': 7, 'associated_context_id': 4, 'plausibility_score': 0.75, 'rationale': 'Checking for expiration is less common but plausible, especially if the user is organizing or cataloging products.'}",
+      "{'rank': 9, 'response': 'Are there any warnings or caution statements on either bottle?', 'response_target': 'warnings or caution statements', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.7, 'rationale': 'Warnings are important for safety, and users may ask if they are not sure the AI covered them.'}",
+      "{'rank': 10, 'response': 'Can you double-check the product names? I want to make sure I didn\u2019t mix them up.', 'response_target': 'product names', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 2, 'plausibility_score': 0.68, 'rationale': 'Users often seek confirmation of product identity, especially if tactile differences are minimal and the AI might have made a mistake.'}"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Can you read the full list of ingredients on both bottles? I need to check for allergens.",
+        "response_target": "ingredients on both bottles",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.98,
+        "rationale": "Ingredient lists are often small, hard to read, and critical for safety. The user is likely to want this information, especially if the AI summary skipped or misread parts due to blur or glare."
+      },
+      {
+        "rank": 2,
+        "response": "Which bottle is the shower gel and which one is the body spray?",
+        "response_target": "product identification",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 3,
+        "plausibility_score": 0.96,
+        "rationale": "Distinguishing between similar bottles is a common, urgent need, especially if the user is unfamiliar with the products or in a hurry."
+      },
+      {
+        "rank": 3,
+        "response": "Can you repeat the fragrance notes for both products? Are they the same or different?",
+        "response_target": "fragrance notes comparison",
+        "task_type": "Reading",
+        "associated_task_id": 5,
+        "associated_context_id": 2,
+        "plausibility_score": 0.93,
+        "rationale": "Users often want to know if scents match or differ, especially if using both products together or sharing with others."
+      },
+      {
+        "rank": 4,
+        "response": "Is the price visible on both bottles? If so, what are they?",
+        "response_target": "price on both bottles",
+        "task_type": "Reading",
+        "associated_task_id": 3,
+        "associated_context_id": 4,
+        "plausibility_score": 0.9,
+        "rationale": "Price checking is a practical, common task, especially if the user is tracking spending or comparing value."
+      },
+      {
+        "rank": 5,
+        "response": "Can you confirm if both products are cruelty-free and dermatologist tested?",
+        "response_target": "cruelty-free and dermatologist tested claims",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.88,
+        "rationale": "Ethical and medical claims are important for many users, and such text is often small or easy to miss."
+      },
+      {
+        "rank": 6,
+        "response": "The text on the bottles is small\u2014can you zoom in or clarify the ingredients if any words are unclear?",
+        "response_target": "clarification of small/unclear text",
+        "task_type": "Reading",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 0.85,
+        "rationale": "BLV users frequently request clarification or a second attempt if the initial reading seems incomplete or garbled."
+      },
+      {
+        "rank": 7,
+        "response": "Can you tell me the main usage instructions for each bottle?",
+        "response_target": "usage instructions",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 3,
+        "plausibility_score": 0.82,
+        "rationale": "Instructions may be needed to avoid misuse, especially if the user is unfamiliar with the products."
+      },
+      {
+        "rank": 8,
+        "response": "Is there an expiration date or batch code visible on either bottle?",
+        "response_target": "expiration date or batch code",
+        "task_type": "Reading",
+        "associated_task_id": 7,
+        "associated_context_id": 4,
+        "plausibility_score": 0.75,
+        "rationale": "Checking for expiration is less common but plausible, especially if the user is organizing or cataloging products."
+      },
+      {
+        "rank": 9,
+        "response": "Are there any warnings or caution statements on either bottle?",
+        "response_target": "warnings or caution statements",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.7,
+        "rationale": "Warnings are important for safety, and users may ask if they are not sure the AI covered them."
+      },
+      {
+        "rank": 10,
+        "response": "Can you double-check the product names? I want to make sure I didn\u2019t mix them up.",
+        "response_target": "product names",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 2,
+        "plausibility_score": 0.68,
+        "rationale": "Users often seek confirmation of product identity, especially if tactile differences are minimal and the AI might have made a mistake."
+      }
+    ],
+    "raw_output": {
+      "ranked_questions": [
+        {
+          "rank": 1,
+          "response": "Can you read the full list of ingredients on both bottles? I need to check for allergens.",
+          "response_target": "ingredients on both bottles",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 0.98,
+          "rationale": "Ingredient lists are often small, hard to read, and critical for safety. The user is likely to want this information, especially if the AI summary skipped or misread parts due to blur or glare."
+        },
+        {
+          "rank": 2,
+          "response": "Which bottle is the shower gel and which one is the body spray?",
+          "response_target": "product identification",
+          "task_type": "Reading",
+          "associated_task_id": 2,
+          "associated_context_id": 3,
+          "plausibility_score": 0.96,
+          "rationale": "Distinguishing between similar bottles is a common, urgent need, especially if the user is unfamiliar with the products or in a hurry."
+        },
+        {
+          "rank": 3,
+          "response": "Can you repeat the fragrance notes for both products? Are they the same or different?",
+          "response_target": "fragrance notes comparison",
+          "task_type": "Reading",
+          "associated_task_id": 5,
+          "associated_context_id": 2,
+          "plausibility_score": 0.93,
+          "rationale": "Users often want to know if scents match or differ, especially if using both products together or sharing with others."
+        },
+        {
+          "rank": 4,
+          "response": "Is the price visible on both bottles? If so, what are they?",
+          "response_target": "price on both bottles",
+          "task_type": "Reading",
+          "associated_task_id": 3,
+          "associated_context_id": 4,
+          "plausibility_score": 0.9,
+          "rationale": "Price checking is a practical, common task, especially if the user is tracking spending or comparing value."
+        },
+        {
+          "rank": 5,
+          "response": "Can you confirm if both products are cruelty-free and dermatologist tested?",
+          "response_target": "cruelty-free and dermatologist tested claims",
+          "task_type": "Reading",
+          "associated_task_id": 4,
+          "associated_context_id": 1,
+          "plausibility_score": 0.88,
+          "rationale": "Ethical and medical claims are important for many users, and such text is often small or easy to miss."
+        },
+        {
+          "rank": 6,
+          "response": "The text on the bottles is small\u2014can you zoom in or clarify the ingredients if any words are unclear?",
+          "response_target": "clarification of small/unclear text",
+          "task_type": "Reading",
+          "associated_task_id": 6,
+          "associated_context_id": 1,
+          "plausibility_score": 0.85,
+          "rationale": "BLV users frequently request clarification or a second attempt if the initial reading seems incomplete or garbled."
+        },
+        {
+          "rank": 7,
+          "response": "Can you tell me the main usage instructions for each bottle?",
+          "response_target": "usage instructions",
+          "task_type": "Reading",
+          "associated_task_id": 2,
+          "associated_context_id": 3,
+          "plausibility_score": 0.82,
+          "rationale": "Instructions may be needed to avoid misuse, especially if the user is unfamiliar with the products."
+        },
+        {
+          "rank": 8,
+          "response": "Is there an expiration date or batch code visible on either bottle?",
+          "response_target": "expiration date or batch code",
+          "task_type": "Reading",
+          "associated_task_id": 7,
+          "associated_context_id": 4,
+          "plausibility_score": 0.75,
+          "rationale": "Checking for expiration is less common but plausible, especially if the user is organizing or cataloging products."
+        },
+        {
+          "rank": 9,
+          "response": "Are there any warnings or caution statements on either bottle?",
+          "response_target": "warnings or caution statements",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 0.7,
+          "rationale": "Warnings are important for safety, and users may ask if they are not sure the AI covered them."
+        },
+        {
+          "rank": 10,
+          "response": "Can you double-check the product names? I want to make sure I didn\u2019t mix them up.",
+          "response_target": "product names",
+          "task_type": "Reading",
+          "associated_task_id": 2,
+          "associated_context_id": 2,
+          "plausibility_score": 0.68,
+          "rationale": "Users often seek confirmation of product identity, especially if tactile differences are minimal and the AI might have made a mistake."
+        }
+      ]
+    }
+  },
+  "response_target_agent": {
+    "response_target": "directions for using the body spray",
+    "task_type": "Reading",
+    "confidence": "high",
+    "rationale": "The participant explicitly asks if there are directions for using the body spray, which is a request to read any usage instructions present on the body spray bottle. The images and description focus on the text and labels of the products, making it clear that the participant's intent is to access written instructions, if available.",
+    "raw_output": {
+      "response_target": "directions for using the body spray",
+      "task_type": "Reading",
+      "confidence": "high",
+      "rationale": "The participant explicitly asks if there are directions for using the body spray, which is a request to read any usage instructions present on the body spray bottle. The images and description focus on the text and labels of the products, making it clear that the participant's intent is to access written instructions, if available."
+    }
+  },
+  "final_ranked_questions": [
+    "{'rank': 1, 'response': 'Can you read the full list of ingredients on both bottles? I need to check for allergens.', 'response_target': 'ingredients on both bottles', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.98, 'rationale': 'Ingredient lists are often small, hard to read, and critical for safety. The user is likely to want this information, especially if the AI summary skipped or misread parts due to blur or glare.'}",
+    "{'rank': 2, 'response': 'Which bottle is the shower gel and which one is the body spray?', 'response_target': 'product identification', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 3, 'plausibility_score': 0.96, 'rationale': 'Distinguishing between similar bottles is a common, urgent need, especially if the user is unfamiliar with the products or in a hurry.'}",
+    "{'rank': 3, 'response': 'Can you repeat the fragrance notes for both products? Are they the same or different?', 'response_target': 'fragrance notes comparison', 'task_type': 'Reading', 'associated_task_id': 5, 'associated_context_id': 2, 'plausibility_score': 0.93, 'rationale': 'Users often want to know if scents match or differ, especially if using both products together or sharing with others.'}",
+    "{'rank': 4, 'response': 'Is the price visible on both bottles? If so, what are they?', 'response_target': 'price on both bottles', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 4, 'plausibility_score': 0.9, 'rationale': 'Price checking is a practical, common task, especially if the user is tracking spending or comparing value.'}",
+    "{'rank': 5, 'response': 'Can you confirm if both products are cruelty-free and dermatologist tested?', 'response_target': 'cruelty-free and dermatologist tested claims', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.88, 'rationale': 'Ethical and medical claims are important for many users, and such text is often small or easy to miss.'}",
+    "{'rank': 6, 'response': 'The text on the bottles is small\u2014can you zoom in or clarify the ingredients if any words are unclear?', 'response_target': 'clarification of small/unclear text', 'task_type': 'Reading', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': 'BLV users frequently request clarification or a second attempt if the initial reading seems incomplete or garbled.'}",
+    "{'rank': 7, 'response': 'Can you tell me the main usage instructions for each bottle?', 'response_target': 'usage instructions', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 3, 'plausibility_score': 0.82, 'rationale': 'Instructions may be needed to avoid misuse, especially if the user is unfamiliar with the products.'}",
+    "{'rank': 8, 'response': 'Is there an expiration date or batch code visible on either bottle?', 'response_target': 'expiration date or batch code', 'task_type': 'Reading', 'associated_task_id': 7, 'associated_context_id': 4, 'plausibility_score': 0.75, 'rationale': 'Checking for expiration is less common but plausible, especially if the user is organizing or cataloging products.'}",
+    "{'rank': 9, 'response': 'Are there any warnings or caution statements on either bottle?', 'response_target': 'warnings or caution statements', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.7, 'rationale': 'Warnings are important for safety, and users may ask if they are not sure the AI covered them.'}",
+    "{'rank': 10, 'response': 'Can you double-check the product names? I want to make sure I didn\u2019t mix them up.', 'response_target': 'product names', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 2, 'plausibility_score': 0.68, 'rationale': 'Users often seek confirmation of product identity, especially if tactile differences are minimal and the AI might have made a mistake.'}"
+  ],
+  "ground_truth_question": "Are there directions for using the body spray?",
+  "comparison": {
+    "ground_truth": "Are there directions for using the body spray?",
+    "ground_truth_response_target": "directions for using the body spray",
+    "ground_truth_task_type": "Reading",
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Can you read the full list of ingredients on both bottles? I need to check for allergens.",
+        "generated_response_target": "ingredients on both bottles",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions for using the body spray",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 2,
+        "generated_question": "Which bottle is the shower gel and which one is the body spray?",
+        "generated_response_target": "product identification",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions for using the body spray",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 3,
+        "generated_question": "Can you repeat the fragrance notes for both products? Are they the same or different?",
+        "generated_response_target": "fragrance notes comparison",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions for using the body spray",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 4,
+        "generated_question": "Is the price visible on both bottles? If so, what are they?",
+        "generated_response_target": "price on both bottles",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions for using the body spray",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 5,
+        "generated_question": "Can you confirm if both products are cruelty-free and dermatologist tested?",
+        "generated_response_target": "cruelty-free and dermatologist tested claims",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions for using the body spray",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 6,
+        "generated_question": "The text on the bottles is small\u2014can you zoom in or clarify the ingredients if any words are unclear?",
+        "generated_response_target": "clarification of small/unclear text",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions for using the body spray",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 7,
+        "generated_question": "Can you tell me the main usage instructions for each bottle?",
+        "generated_response_target": "usage instructions",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions for using the body spray",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 8,
+        "generated_question": "Is there an expiration date or batch code visible on either bottle?",
+        "generated_response_target": "expiration date or batch code",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions for using the body spray",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 9,
+        "generated_question": "Are there any warnings or caution statements on either bottle?",
+        "generated_response_target": "warnings or caution statements",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions for using the body spray",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 10,
+        "generated_question": "Can you double-check the product names? I want to make sure I didn\u2019t mix them up.",
+        "generated_response_target": "product names",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions for using the body spray",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "Are there directions for using the body spray?",
+        "generated_response_target": "directions for using the body spray",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions for using the body spray",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 1,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "NA-w-text"
+      ],
+      "question_category": "Reading",
+      "in_a_hurry": "no",
+      "indoor_outdoor": "indoor",
+      "familiarity_of_environment": "yes",
+      "familiarity_of_item": "yes",
+      "surrounding_environment": "alone",
+      "environment_setting": "leisure",
+      "interaction_length": "3",
+      "task_completed": "Not sure (participant thinks the task is completed)"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P3_images/image_27_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows a blue bottle of shower gel on a white surface. The label on the bottle reads:\n\n\"SHOWER GEL\nFRAGRANCE NOTES:\nTOASTED MARSHMALLOW, SEA SALT BREEZE, SMORES ACCORD, BEACH DRIFTWOOD, CREAMY VANILLA\n\nGENTLE, NON-DRYING FORMULA\nNOURISHING, RICH, BUBBLY LATHER\nMADE WITH\nALOE\nVITAMIN E\n\nBOTTLE MADE WITH 50% RECYCLED PLASTIC\nDermatologist Tested\nNot Tested on Animals\"\n\nThere is also a list of ingredients below this text, and the price is marked as $13.50. Next to the shower gel is a bottle of body spray with a design that includes a sparkler and the words \"Beach Nights.\" In the background, there is a vase with dried flowers and some other items on the counter.",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "User:Are there directions for using the body spray?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 4,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image does not show any directions for using the body spray. The visible part of the body spray bottle only shows the design and the words \"Beach Nights.\" If you need more information, you might want to check the other side of the bottle or its packaging.",
+        "local_image_path": null
+      },
+      {
+        "turn": 5,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P3_images/image_27_5.jpg"
+      },
+      {
+        "turn": 6,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows the back of the body spray bottle. The label reads:\n\n\"FINE FRAGRANCE MIST\nFRAGRANCE NOTES:\nTOASTED MARSHMALLOW, SEA SALT BREEZE, SMORES ACCORD, BEACH DRIFTWOOD, CREAMY VANILLA\n\nBOTTLE MADE WITH 50% RECYCLED PLASTIC\nNot Tested on Animals\nVegan\n\nIngredients: Alcohol Denat., Water (Aqua, Eau), Fragrance (Parfum), Propylene Glycol, Ethylhexyl Methoxycinnamate, Butyl Methoxydibenzoylmethane, Ethylhexyl Salicylate, Benzyl Benzoate, Benzyl Salicylate, Limonene, Linalool, Yellow 5 (CI 19140), Red 33 (CI 17200), Red 40 (CI 16035).\"\n\nThere are no specific directions for use on the label.",
+        "local_image_path": null
+      }
+    ]
+  }
+}

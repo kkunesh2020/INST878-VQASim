@@ -1,0 +1,30 @@
+Your task is to infer plausible situational contexts in which a blind or low-vision user might have taken this image.
+
+Use the following context dimensions:
+- Location: indoor / outdoor
+- In a hurry: in a hurry / not in a hurry / maybe in a hurry
+- Environment familiarity: familiar / unfamiliar
+- Item familiarity: familiar / unfamiliar
+- Social context: alone / with others
+    - If with others: familiar people / unfamiliar people
+- Activity type: leisure / professional / daily living task
+
+Instructions:
+- Generate 3–5 distinct plausible context scenarios.
+- Each scenario must be internally consistent.
+- Base your reasoning on BOTH the image and the provided AI description.
+- If the image is ambiguous, reflect that by diversifying scenarios.
+
+Output format:
+Return a JSON list. Each item must include:
+{
+  "context_id": number,
+  "location": "...",
+  "time_pressure": "...",
+  "environment_familiarity": "...",
+  "object_familiarity": "...",
+  "social_context": "...",
+  "social_detail": "...",
+  "activity_type": "...",
+  "rationale": "Brief explanation grounded in image/description uncertainty"
+}
