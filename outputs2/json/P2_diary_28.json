@@ -1,0 +1,667 @@
+{
+  "input": {
+    "participant": "P2",
+    "source": "diary",
+    "interaction": 28,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P2/diary_data/P2.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P2/diary_data/P2_images/image_28_1.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "The image shows a corner of a shower or bathroom area with several bottles of personal care products lined up on the floor. There are various bottles, including a green pump bottle, several white bottles with different colored caps, and a couple of bottles with pump dispensers. Some of the visible brands include Dove and Pantene. The lighting is dim, making it a bit difficult to see all the details clearly.",
+    "question_category": "Locational/retrieval",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The image shows a collection of bottles, likely in a shower or bathroom corner. A BLV user may be checking which products are present or where a specific item is located. The setting suggests routine self-care in a familiar environment, with no indication of urgency or others present."
+      },
+      {
+        "context_id": 2,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user may have recently acquired new products or had items rearranged by someone else, leading to uncertainty about which bottle is which. They might be in a hurry to identify the correct product before showering, explaining a quick, possibly blurry photo."
+      },
+      {
+        "context_id": 3,
+        "location": "indoor",
+        "time_pressure": "in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "unfamiliar people",
+        "activity_type": "daily living task",
+        "rationale": "The user could be in a hotel, gym, or someone else's home, needing to quickly identify which products are theirs or suitable for use. The unfamiliar setting and products, combined with possible time pressure (e.g., sharing a bathroom), motivate a fast, possibly imprecise photo."
+      },
+      {
+        "context_id": 4,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "daily living task",
+        "rationale": "The user may share the bathroom with family or roommates and is trying to determine which products belong to whom, perhaps after items were moved or new ones introduced. The lack of urgency suggests they are taking time to clarify ownership or usage with others."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The image shows a collection of bottles, likely in a shower or bathroom corner. A BLV user may be checking which products are present or where a specific item is located. The setting suggests routine self-care in a familiar environment, with no indication of urgency or others present."
+        },
+        {
+          "context_id": 2,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user may have recently acquired new products or had items rearranged by someone else, leading to uncertainty about which bottle is which. They might be in a hurry to identify the correct product before showering, explaining a quick, possibly blurry photo."
+        },
+        {
+          "context_id": 3,
+          "location": "indoor",
+          "time_pressure": "in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "unfamiliar people",
+          "activity_type": "daily living task",
+          "rationale": "The user could be in a hotel, gym, or someone else's home, needing to quickly identify which products are theirs or suitable for use. The unfamiliar setting and products, combined with possible time pressure (e.g., sharing a bathroom), motivate a fast, possibly imprecise photo."
+        },
+        {
+          "context_id": 4,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "daily living task",
+          "rationale": "The user may share the bathroom with family or roommates and is trying to determine which products belong to whom, perhaps after items were moved or new ones introduced. The lack of urgency suggests they are taking time to clarify ownership or usage with others."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Localization",
+        "description": "Find the location of a specific bottle (e.g., shampoo, conditioner, body wash) among the group of bottles in the shower.",
+        "confidence": "high",
+        "rationale": "BLV users often need to distinguish between similar bottles in the shower for practical use. The image shows multiple bottles, making it plausible the user wants to know where a specific product is."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Identification",
+        "description": "Identify which bottle is which (e.g., which one is shampoo, which one is conditioner, which one is body wash).",
+        "confidence": "high",
+        "rationale": "The bottles are similar in shape and color, which can be confusing for BLV users. The user may want to know the identity of each bottle to avoid mistakes."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Verification",
+        "description": "Verify if a specific product (e.g., a new shampoo or a particular scent) is present among the bottles.",
+        "confidence": "medium",
+        "rationale": "The user may have recently purchased a new product and wants to confirm it is in the shower area."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Description",
+        "description": "Describe the arrangement or organization of the bottles (e.g., are they grouped by type, color, or size?).",
+        "confidence": "medium",
+        "rationale": "The user may want to know if the bottles are organized in a way that makes them easier to find or use."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Reading",
+        "description": "Read the labels or text on the bottles to determine product names or instructions.",
+        "confidence": "medium",
+        "rationale": "BLV users may need to read product labels to ensure they are using the correct item, but the image may be too blurry or labels not fully visible, introducing uncertainty."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Verification",
+        "description": "Verify if any bottles are nearly empty or missing from their usual spot.",
+        "confidence": "low",
+        "rationale": "The user may want to check if they need to replace or refill a product, but the image may not clearly show the contents or all usual bottles."
+      },
+      {
+        "task_id": 7,
+        "task_type": "Localization",
+        "description": "Locate a bottle with a specific feature (e.g., pump dispenser vs. flip cap).",
+        "confidence": "medium",
+        "rationale": "Some users prefer or require a specific dispenser type for accessibility reasons, and the image shows at least one pump bottle."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Localization",
+          "description": "Find the location of a specific bottle (e.g., shampoo, conditioner, body wash) among the group of bottles in the shower.",
+          "confidence": "high",
+          "rationale": "BLV users often need to distinguish between similar bottles in the shower for practical use. The image shows multiple bottles, making it plausible the user wants to know where a specific product is."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Identification",
+          "description": "Identify which bottle is which (e.g., which one is shampoo, which one is conditioner, which one is body wash).",
+          "confidence": "high",
+          "rationale": "The bottles are similar in shape and color, which can be confusing for BLV users. The user may want to know the identity of each bottle to avoid mistakes."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Verification",
+          "description": "Verify if a specific product (e.g., a new shampoo or a particular scent) is present among the bottles.",
+          "confidence": "medium",
+          "rationale": "The user may have recently purchased a new product and wants to confirm it is in the shower area."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Description",
+          "description": "Describe the arrangement or organization of the bottles (e.g., are they grouped by type, color, or size?).",
+          "confidence": "medium",
+          "rationale": "The user may want to know if the bottles are organized in a way that makes them easier to find or use."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Reading",
+          "description": "Read the labels or text on the bottles to determine product names or instructions.",
+          "confidence": "medium",
+          "rationale": "BLV users may need to read product labels to ensure they are using the correct item, but the image may be too blurry or labels not fully visible, introducing uncertainty."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Verification",
+          "description": "Verify if any bottles are nearly empty or missing from their usual spot.",
+          "confidence": "low",
+          "rationale": "The user may want to check if they need to replace or refill a product, but the image may not clearly show the contents or all usual bottles."
+        },
+        {
+          "task_id": 7,
+          "task_type": "Localization",
+          "description": "Locate a bottle with a specific feature (e.g., pump dispenser vs. flip cap).",
+          "confidence": "medium",
+          "rationale": "Some users prefer or require a specific dispenser type for accessibility reasons, and the image shows at least one pump bottle."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "Where is the shampoo bottle?",
+      "Can you tell me which bottle is the conditioner?",
+      "Is there a Dove body wash in the group?",
+      "Which bottle has a pump dispenser?",
+      "Can you read the label on the bottle with the green pump?",
+      "Are any of the bottles almost empty?",
+      "Which bottle is the Pantene one?",
+      "Are the bottles organized by type or just randomly placed?",
+      "Is there a new bottle I haven't used before?",
+      "Can you read any instructions on the bottle in front?"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Where is the shampoo bottle?",
+        "response_target": "shampoo bottle",
+        "task_type": "Localization",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.95,
+        "rationale": "Locating shampoo is a common, high-priority need in a shower context. The user is likely familiar with the environment and wants to quickly find the correct bottle among similar ones."
+      },
+      {
+        "rank": 2,
+        "response": "Can you tell me which bottle is the conditioner?",
+        "response_target": "conditioner bottle",
+        "task_type": "Identification",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.93,
+        "rationale": "Distinguishing between shampoo and conditioner is a frequent challenge for BLV users, especially with similar bottles. This is a direct, task-driven follow-up."
+      },
+      {
+        "rank": 3,
+        "response": "Is there a Dove body wash in the group?",
+        "response_target": "Dove body wash",
+        "task_type": "Verification",
+        "associated_task_id": 3,
+        "associated_context_id": 2,
+        "plausibility_score": 0.9,
+        "rationale": "The user may want to confirm the presence of a specific product, especially if new items were added or bottles were rearranged."
+      },
+      {
+        "rank": 4,
+        "response": "Which bottle has a pump dispenser?",
+        "response_target": "pump dispenser bottle",
+        "task_type": "Localization",
+        "associated_task_id": 7,
+        "associated_context_id": 1,
+        "plausibility_score": 0.88,
+        "rationale": "Some users prefer pump dispensers for accessibility. The question is specific and plausible given the description and visible bottle types."
+      },
+      {
+        "rank": 5,
+        "response": "Can you read the label on the bottle with the green pump?",
+        "response_target": "green pump bottle label",
+        "task_type": "Reading",
+        "associated_task_id": 5,
+        "associated_context_id": 2,
+        "plausibility_score": 0.85,
+        "rationale": "The user may want to confirm the identity of a specific bottle by having the label read, especially if unfamiliar with the product."
+      },
+      {
+        "rank": 6,
+        "response": "Are any of the bottles almost empty?",
+        "response_target": "bottle fill levels",
+        "task_type": "Verification",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 0.8,
+        "rationale": "Checking if a product needs replacement is a realistic concern, though the image quality may limit the AI's ability to answer."
+      },
+      {
+        "rank": 7,
+        "response": "Which bottle is the Pantene one?",
+        "response_target": "Pantene bottle",
+        "task_type": "Identification",
+        "associated_task_id": 2,
+        "associated_context_id": 2,
+        "plausibility_score": 0.78,
+        "rationale": "Identifying a specific brand is a plausible follow-up, especially if the user is unfamiliar with the arrangement or has new products."
+      },
+      {
+        "rank": 8,
+        "response": "Are the bottles organized by type or just randomly placed?",
+        "response_target": "bottle arrangement",
+        "task_type": "Description",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.75,
+        "rationale": "Understanding the organization can help the user locate products more easily, especially if they share the space with others."
+      },
+      {
+        "rank": 9,
+        "response": "Is there a new bottle I haven't used before?",
+        "response_target": "new/unfamiliar bottle",
+        "task_type": "Verification",
+        "associated_task_id": 3,
+        "associated_context_id": 4,
+        "plausibility_score": 0.7,
+        "rationale": "The user may want to confirm if a new product has been added, especially in a shared or recently changed environment."
+      },
+      {
+        "rank": 10,
+        "response": "Can you read any instructions on the bottle in front?",
+        "response_target": "front bottle instructions",
+        "task_type": "Reading",
+        "associated_task_id": 5,
+        "associated_context_id": 2,
+        "plausibility_score": 0.65,
+        "rationale": "Reading instructions is a plausible need, though the dim lighting and possible blur may make this difficult for the AI."
+      }
+    ],
+    "raw_output": [
+      {
+        "rank": 1,
+        "response": "Where is the shampoo bottle?",
+        "response_target": "shampoo bottle",
+        "task_type": "Localization",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.95,
+        "rationale": "Locating shampoo is a common, high-priority need in a shower context. The user is likely familiar with the environment and wants to quickly find the correct bottle among similar ones."
+      },
+      {
+        "rank": 2,
+        "response": "Can you tell me which bottle is the conditioner?",
+        "response_target": "conditioner bottle",
+        "task_type": "Identification",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.93,
+        "rationale": "Distinguishing between shampoo and conditioner is a frequent challenge for BLV users, especially with similar bottles. This is a direct, task-driven follow-up."
+      },
+      {
+        "rank": 3,
+        "response": "Is there a Dove body wash in the group?",
+        "response_target": "Dove body wash",
+        "task_type": "Verification",
+        "associated_task_id": 3,
+        "associated_context_id": 2,
+        "plausibility_score": 0.9,
+        "rationale": "The user may want to confirm the presence of a specific product, especially if new items were added or bottles were rearranged."
+      },
+      {
+        "rank": 4,
+        "response": "Which bottle has a pump dispenser?",
+        "response_target": "pump dispenser bottle",
+        "task_type": "Localization",
+        "associated_task_id": 7,
+        "associated_context_id": 1,
+        "plausibility_score": 0.88,
+        "rationale": "Some users prefer pump dispensers for accessibility. The question is specific and plausible given the description and visible bottle types."
+      },
+      {
+        "rank": 5,
+        "response": "Can you read the label on the bottle with the green pump?",
+        "response_target": "green pump bottle label",
+        "task_type": "Reading",
+        "associated_task_id": 5,
+        "associated_context_id": 2,
+        "plausibility_score": 0.85,
+        "rationale": "The user may want to confirm the identity of a specific bottle by having the label read, especially if unfamiliar with the product."
+      },
+      {
+        "rank": 6,
+        "response": "Are any of the bottles almost empty?",
+        "response_target": "bottle fill levels",
+        "task_type": "Verification",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 0.8,
+        "rationale": "Checking if a product needs replacement is a realistic concern, though the image quality may limit the AI's ability to answer."
+      },
+      {
+        "rank": 7,
+        "response": "Which bottle is the Pantene one?",
+        "response_target": "Pantene bottle",
+        "task_type": "Identification",
+        "associated_task_id": 2,
+        "associated_context_id": 2,
+        "plausibility_score": 0.78,
+        "rationale": "Identifying a specific brand is a plausible follow-up, especially if the user is unfamiliar with the arrangement or has new products."
+      },
+      {
+        "rank": 8,
+        "response": "Are the bottles organized by type or just randomly placed?",
+        "response_target": "bottle arrangement",
+        "task_type": "Description",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.75,
+        "rationale": "Understanding the organization can help the user locate products more easily, especially if they share the space with others."
+      },
+      {
+        "rank": 9,
+        "response": "Is there a new bottle I haven't used before?",
+        "response_target": "new/unfamiliar bottle",
+        "task_type": "Verification",
+        "associated_task_id": 3,
+        "associated_context_id": 4,
+        "plausibility_score": 0.7,
+        "rationale": "The user may want to confirm if a new product has been added, especially in a shared or recently changed environment."
+      },
+      {
+        "rank": 10,
+        "response": "Can you read any instructions on the bottle in front?",
+        "response_target": "front bottle instructions",
+        "task_type": "Reading",
+        "associated_task_id": 5,
+        "associated_context_id": 2,
+        "plausibility_score": 0.65,
+        "rationale": "Reading instructions is a plausible need, though the dim lighting and possible blur may make this difficult for the AI."
+      }
+    ]
+  },
+  "response_target_agent": {
+    "response_target": "hair removal bottle",
+    "task_type": "Locational/retrieval",
+    "confidence": "high",
+    "rationale": "The participant explicitly states they are looking for the 'hair removal bottle' in their question. This is a concrete and direct noun phrase, and aligns with the locational/retrieval task type. No assumptions are made about which specific bottle it is, just that the participant seeks the one used for hair removal.",
+    "raw_output": {
+      "response_target": "hair removal bottle",
+      "task_type": "Locational/retrieval",
+      "confidence": "high",
+      "rationale": "The participant explicitly states they are looking for the 'hair removal bottle' in their question. This is a concrete and direct noun phrase, and aligns with the locational/retrieval task type. No assumptions are made about which specific bottle it is, just that the participant seeks the one used for hair removal."
+    }
+  },
+  "final_ranked_questions": [
+    "Where is the shampoo bottle?",
+    "Can you tell me which bottle is the conditioner?",
+    "Is there a Dove body wash in the group?",
+    "Which bottle has a pump dispenser?",
+    "Can you read the label on the bottle with the green pump?",
+    "Are any of the bottles almost empty?",
+    "Which bottle is the Pantene one?",
+    "Are the bottles organized by type or just randomly placed?",
+    "Is there a new bottle I haven't used before?",
+    "Can you read any instructions on the bottle in front?"
+  ],
+  "ground_truth_question": "I am looking for the hair removal bottle",
+  "comparison": {
+    "ground_truth": "I am looking for the hair removal bottle",
+    "ground_truth_response_target": "hair removal bottle",
+    "ground_truth_task_type": "Locational/retrieval",
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Where is the shampoo bottle?",
+        "generated_response_target": "shampoo bottle",
+        "generated_task_type": "Localization",
+        "ground_truth_response_target": "hair removal bottle",
+        "ground_truth_task_type": "Locational/retrieval",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 2,
+        "generated_question": "Can you tell me which bottle is the conditioner?",
+        "generated_response_target": "conditioner bottle",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "hair removal bottle",
+        "ground_truth_task_type": "Locational/retrieval",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 3,
+        "generated_question": "Is there a Dove body wash in the group?",
+        "generated_response_target": "Dove body wash",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "hair removal bottle",
+        "ground_truth_task_type": "Locational/retrieval",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 4,
+        "generated_question": "Which bottle has a pump dispenser?",
+        "generated_response_target": "pump dispenser bottle",
+        "generated_task_type": "Localization",
+        "ground_truth_response_target": "hair removal bottle",
+        "ground_truth_task_type": "Locational/retrieval",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 5,
+        "generated_question": "Can you read the label on the bottle with the green pump?",
+        "generated_response_target": "green pump bottle label",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "hair removal bottle",
+        "ground_truth_task_type": "Locational/retrieval",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 6,
+        "generated_question": "Are any of the bottles almost empty?",
+        "generated_response_target": "bottle fill levels",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "hair removal bottle",
+        "ground_truth_task_type": "Locational/retrieval",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 7,
+        "generated_question": "Which bottle is the Pantene one?",
+        "generated_response_target": "Pantene bottle",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "hair removal bottle",
+        "ground_truth_task_type": "Locational/retrieval",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 8,
+        "generated_question": "Are the bottles organized by type or just randomly placed?",
+        "generated_response_target": "bottle arrangement",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "hair removal bottle",
+        "ground_truth_task_type": "Locational/retrieval",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 9,
+        "generated_question": "Is there a new bottle I haven't used before?",
+        "generated_response_target": "new/unfamiliar bottle",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "hair removal bottle",
+        "ground_truth_task_type": "Locational/retrieval",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 10,
+        "generated_question": "Can you read any instructions on the bottle in front?",
+        "generated_response_target": "front bottle instructions",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "hair removal bottle",
+        "ground_truth_task_type": "Locational/retrieval",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "I am looking for the hair removal bottle",
+        "generated_response_target": "hair removal bottle",
+        "generated_task_type": "Locational/retrieval",
+        "ground_truth_response_target": "hair removal bottle",
+        "ground_truth_task_type": "Locational/retrieval",
+        "target_match_score": 1,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "intention",
+        "SimToM",
+        "decomposition",
+        "style"
+      ],
+      "question_category": "Locational/retrieval",
+      "in_a_hurry": "no",
+      "indoor_outdoor": "indoor",
+      "familiarity_of_environment": "yes",
+      "familiarity_of_item": "yes",
+      "surrounding_environment": "alone",
+      "environment_setting": "leisure",
+      "interaction_length": "5",
+      "task_completed": "Yes"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P2_images/image_28_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows a corner of a shower or bathroom area with several bottles of personal care products lined up on the floor. There are various bottles, including a green pump bottle, several white bottles with different colored caps, and a couple of bottles with pump dispensers. Some of the visible brands include Dove and Pantene. The lighting is dim, making it a bit difficult to see all the details clearly.",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "User:I am looking for the hair removal bottle",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 4,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image is a bit dim, making it hard to clearly identify all the bottles. However, hair removal products often come in bottles with specific branding or design. If you have any additional details about the bottle, such as its color or shape, that might help in identifying it. Alternatively, you might want to press the \"Call a volunteer\" button for more precise assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 5,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P2_images/image_28_5.jpg"
+      },
+      {
+        "turn": 6,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image is still a bit dim, but I can see the arrangement of the bottles more clearly. Unfortunately, none of the visible bottles have distinct markings or labels that specifically indicate they are hair removal products. If you know the brand or any specific features of the bottle, such as its shape or color, that could help in identifying it. Otherwise, you might want to press the \"Call a volunteer\" button for more detailed assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 7,
+        "text_usr": "User:Veet and it does have a pump",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 8,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P2_images/image_28_8.jpg"
+      },
+      {
+        "turn": 9,
+        "text_usr": null,
+        "text_ai": "Be My AI:In this image, the Veet bottle is visible on the right side. It is a purple bottle with a pump dispenser. The label on the bottle reads \"Veet\" and mentions \"Gel Cream\" for hair removal. This should be the product you are looking for.",
+        "local_image_path": null
+      },
+      {
+        "turn": 10,
+        "text_usr": "User:From right to left which bottle is the veep bottleR",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 11,
+        "text_usr": null,
+        "text_ai": "Be My AI:From right to left, the Veet bottle is the second one. It is the purple bottle with a pump dispenser.",
+        "local_image_path": null
+      }
+    ]
+  }
+}

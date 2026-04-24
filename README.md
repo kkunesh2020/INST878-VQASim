@@ -118,7 +118,7 @@ project_root/
 |   |-- formatter.py
 |   `-- openai_client.py
 |
-|-- outputs/
+|-- outputs2/
 |   |-- json/
 |   `-- readable/
 |
@@ -148,9 +148,9 @@ If image paths are relative, the loader tries to resolve them relative to expect
 
 Each run writes:
 
-- `outputs/json/{participant}_{source}_{interaction}.json`
-- `outputs/readable/{participant}_{source}_{interaction}.txt`
-- Batch runs also write `outputs/json/{participant}_{source}_batch_comparison.json`
+- `outputs2/json/{participant}_{source}_{interaction}.json`
+- `outputs2/readable/{participant}_{source}_{interaction}.txt`
+- Batch runs also write `outputs2/json/{participant}_{source}_batch_comparison.json`
 
 If optional prompts are enabled, suffixes are appended before the extension:
 

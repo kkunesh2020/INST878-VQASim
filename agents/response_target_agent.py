@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import json
 from pathlib import Path
 
 from config import PROMPTS_DIR
@@ -39,14 +38,15 @@ class ResponseTargetAgent:
         prompt = (
             f"{prompt_prefix}\n\n"
             "INPUT:\n"
-            f"description: {description}\n"
-            f"question_category: {question_category}\n"
             f"ground_truth_question: {ground_truth_question}\n"
-            f"image_paths: {image_paths}\n\n"
+            f"question_category: {question_category}\n\n"
+            "Focus on the participant's question text and extract only the information target.\n"
+            "Keep response_target short, concrete, and not overly specific.\n"
+            "Use question_category exactly as provided for task_type.\n\n"
             "Return valid JSON only. Required format:\n"
             "{"
             '"response_target": "...", '
-            '"task_type": "Reading", '
+            '"task_type": "...", '
             '"confidence": "high|medium|low", '
             '"rationale": "..."'
             "}"
@@ -54,4 +54,7 @@ class ResponseTargetAgent:
 
         response_text = call_model(prompt=prompt, image_paths=image_paths)
         parsed = extract_json_value(response_text)
-        return normalize_response_target_output(parsed if parsed is not None else response_text)
+        normalized = normalize_response_target_output(parsed if parsed is not None else response_text)
+        if question_category.strip():
+            normalized["task_type"] = question_category.strip()
+        return normalized

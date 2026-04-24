@@ -125,6 +125,7 @@ def _extract_from_turns(interaction: dict[str, Any]) -> dict[str, Any]:
         "description": description,
         "ground_truth_question": first_user_response,
         "question_category": question_category,
+        "annotation_task_type": question_category,
     }
 
 
@@ -226,7 +227,7 @@ def load_interaction(participant_id: str, source: str, interaction_id: int) -> d
                 json_file,
                 participant_id,
                 source.lower(),
-            )
+            )[:1]
 
             return {
                 "participant_id": participant_id,
@@ -238,6 +239,7 @@ def load_interaction(participant_id: str, source: str, interaction_id: int) -> d
                 "description": str(extracted.get("description", "") or ""),
                 "ground_truth_question": str(extracted.get("ground_truth_question", "") or ""),
                 "question_category": str(extracted.get("question_category", "") or ""),
+                "annotation_task_type": str(extracted.get("annotation_task_type", "") or ""),
                 "raw_interaction": interaction,
             }
         except DataLoaderError as exc:
@@ -287,7 +289,7 @@ def load_interaction(participant_id: str, source: str, interaction_id: int) -> d
         ],
     )
 
-    image_paths = _coerce_image_paths(image_raw, json_file, participant_id, source.lower())
+    image_paths = _coerce_image_paths(image_raw, json_file, participant_id, source.lower())[:1]
 
     return {
         "participant_id": participant_id,
@@ -298,6 +300,7 @@ def load_interaction(participant_id: str, source: str, interaction_id: int) -> d
         "description": str(description or ""),
         "ground_truth_question": str(ground_truth_question or ""),
         "question_category": "",
+        "annotation_task_type": "",
         "raw_interaction": interaction,
     }
 
@@ -331,7 +334,7 @@ def load_all_interactions(participant_id: str, source: str) -> list[dict[str, An
                     json_file,
                     participant_id,
                     source,
-                )
+                )[:1]
                 payloads.append(
                     {
                         "participant_id": participant_id,
@@ -343,6 +346,7 @@ def load_all_interactions(participant_id: str, source: str) -> list[dict[str, An
                         "description": str(extracted.get("description", "") or ""),
                         "ground_truth_question": str(extracted.get("ground_truth_question", "") or ""),
                         "question_category": str(extracted.get("question_category", "") or ""),
+                        "annotation_task_type": str(extracted.get("annotation_task_type", "") or ""),
                         "raw_interaction": interaction,
                     }
                 )
@@ -381,7 +385,7 @@ def load_all_interactions(participant_id: str, source: str) -> list[dict[str, An
                 "gt_question",
             ],
         )
-        image_paths = _coerce_image_paths(image_raw, json_file, participant_id, source)
+        image_paths = _coerce_image_paths(image_raw, json_file, participant_id, source)[:1]
 
         payloads.append(
             {
@@ -393,6 +397,7 @@ def load_all_interactions(participant_id: str, source: str) -> list[dict[str, An
                 "description": str(description or ""),
                 "ground_truth_question": str(ground_truth_question or ""),
                 "question_category": "",
+                "annotation_task_type": "",
                 "raw_interaction": interaction,
             }
         )

@@ -57,7 +57,7 @@ def run(
         logger.error("Failed to load interaction: %s", exc)
         raise SystemExit(1)
 
-    image_paths = interaction_payload.get("image_paths", [])
+    image_paths = interaction_payload.get("image_paths", [])[:1]
     valid_images, missing_images = validate_image_paths(image_paths)
     if missing_images:
         logger.warning("Missing image files: %s", missing_images)
@@ -126,6 +126,7 @@ def run(
         question_category=question_category,
         optional_prompt=optional_prompt,
     )
+    response_target_output["task_type"] = str(question_category or response_target_output.get("task_type", ""))
 
     ranked_questions = _extract_ranked_questions(question_output)
     comparison = build_comparison(question_output, ground_truth_question, response_target_output)

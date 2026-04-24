@@ -1,0 +1,663 @@
+{
+  "input": {
+    "participant": "P2",
+    "source": "diary",
+    "interaction": 8,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P2/diary_data/P2.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P2/diary_data/P2_images/image_8_1.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "The image shows an outdoor scene with a sidewalk in the foreground leading to a parking lot. There is a silver SUV parked on the edge of the parking lot, facing towards the right. In the background, there are buildings with brick exteriors, and a few street lamps are visible. The sky is partly cloudy, and there are trees with autumn-colored leaves in the distance. A wooden fence is on the right side of the image.",
+    "question_category": "Locational/retrieval",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "outdoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "locational/retrieval",
+        "rationale": "The user may be trying to locate a rideshare or taxi pickup spot in an unfamiliar area. The image includes a car and a sidewalk, possibly taken to confirm their location or ask for help identifying the correct vehicle or meeting point. The framing suggests uncertainty about the exact location or object of interest."
+      },
+      {
+        "context_id": 2,
+        "location": "outdoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user might be checking if their own car is parked in the expected spot or if the area is clear for walking. The image could be used to confirm the presence or absence of obstacles or to document the location for later reference. Familiarity with the environment and object is plausible if this is a routine parking or walking area."
+      },
+      {
+        "context_id": 3,
+        "location": "outdoor",
+        "time_pressure": "in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "unfamiliar people",
+        "activity_type": "professional",
+        "rationale": "The user could be navigating to a meeting or appointment in an unfamiliar area, possibly with assistance from a rideshare driver or guide. The image may have been taken quickly to confirm the destination or to ask for directions, reflecting urgency and unfamiliarity with both the environment and the people present."
+      },
+      {
+        "context_id": 4,
+        "location": "outdoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "leisure",
+        "rationale": "The user might be out with friends or family, trying to locate a specific car or meeting spot. The image could be used to confirm with others whether this is the correct location or vehicle, especially if the user is unsure about the appearance of the car or the exact spot."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "outdoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "locational/retrieval",
+          "rationale": "The user may be trying to locate a rideshare or taxi pickup spot in an unfamiliar area. The image includes a car and a sidewalk, possibly taken to confirm their location or ask for help identifying the correct vehicle or meeting point. The framing suggests uncertainty about the exact location or object of interest."
+        },
+        {
+          "context_id": 2,
+          "location": "outdoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user might be checking if their own car is parked in the expected spot or if the area is clear for walking. The image could be used to confirm the presence or absence of obstacles or to document the location for later reference. Familiarity with the environment and object is plausible if this is a routine parking or walking area."
+        },
+        {
+          "context_id": 3,
+          "location": "outdoor",
+          "time_pressure": "in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "unfamiliar people",
+          "activity_type": "professional",
+          "rationale": "The user could be navigating to a meeting or appointment in an unfamiliar area, possibly with assistance from a rideshare driver or guide. The image may have been taken quickly to confirm the destination or to ask for directions, reflecting urgency and unfamiliarity with both the environment and the people present."
+        },
+        {
+          "context_id": 4,
+          "location": "outdoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "leisure",
+          "rationale": "The user might be out with friends or family, trying to locate a specific car or meeting spot. The image could be used to confirm with others whether this is the correct location or vehicle, especially if the user is unsure about the appearance of the car or the exact spot."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Localization",
+        "description": "Determine if there is a car parked in a specific location (e.g., pick-up spot, accessible parking, or near a landmark).",
+        "confidence": "high",
+        "rationale": "The image shows a car in a parking lot, which is a common context for users needing to locate a vehicle for pick-up, drop-off, or navigation."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Retrieval",
+        "description": "Find the location of the sidewalk or path relative to the street or parking lot.",
+        "confidence": "medium",
+        "rationale": "The image includes a sidewalk and a transition to a paved area, which may indicate the user is trying to orient themselves or find a safe walking route."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Verification",
+        "description": "Verify if the path ahead is clear of obstacles or vehicles.",
+        "confidence": "medium",
+        "rationale": "The image is taken from a pedestrian perspective and may be intended to check for obstructions or hazards before proceeding."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Localization",
+        "description": "Identify the location of a specific building or entrance relative to the user\u2019s current position.",
+        "confidence": "medium",
+        "rationale": "The image includes buildings and a sidewalk, suggesting the user may want to confirm proximity to a destination or entrance."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Description",
+        "description": "Describe the general environment to understand where they are (e.g., parking lot, street, campus).",
+        "confidence": "medium",
+        "rationale": "The image contains contextual clues (cars, buildings, sidewalk) that could help a user understand their surroundings."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Identification",
+        "description": "Identify if a specific car (e.g., rideshare, friend\u2019s car) has arrived or is present.",
+        "confidence": "medium",
+        "rationale": "A car is prominently visible, and users often need to confirm the presence of a particular vehicle for transportation."
+      },
+      {
+        "task_id": 7,
+        "task_type": "Verification",
+        "description": "Verify if the user is at the correct pick-up or drop-off location.",
+        "confidence": "medium",
+        "rationale": "The combination of a car, sidewalk, and buildings suggests a context where location verification is important, such as waiting for a ride."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Localization",
+          "description": "Determine if there is a car parked in a specific location (e.g., pick-up spot, accessible parking, or near a landmark).",
+          "confidence": "high",
+          "rationale": "The image shows a car in a parking lot, which is a common context for users needing to locate a vehicle for pick-up, drop-off, or navigation."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Retrieval",
+          "description": "Find the location of the sidewalk or path relative to the street or parking lot.",
+          "confidence": "medium",
+          "rationale": "The image includes a sidewalk and a transition to a paved area, which may indicate the user is trying to orient themselves or find a safe walking route."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Verification",
+          "description": "Verify if the path ahead is clear of obstacles or vehicles.",
+          "confidence": "medium",
+          "rationale": "The image is taken from a pedestrian perspective and may be intended to check for obstructions or hazards before proceeding."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Localization",
+          "description": "Identify the location of a specific building or entrance relative to the user\u2019s current position.",
+          "confidence": "medium",
+          "rationale": "The image includes buildings and a sidewalk, suggesting the user may want to confirm proximity to a destination or entrance."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Description",
+          "description": "Describe the general environment to understand where they are (e.g., parking lot, street, campus).",
+          "confidence": "medium",
+          "rationale": "The image contains contextual clues (cars, buildings, sidewalk) that could help a user understand their surroundings."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Identification",
+          "description": "Identify if a specific car (e.g., rideshare, friend\u2019s car) has arrived or is present.",
+          "confidence": "medium",
+          "rationale": "A car is prominently visible, and users often need to confirm the presence of a particular vehicle for transportation."
+        },
+        {
+          "task_id": 7,
+          "task_type": "Verification",
+          "description": "Verify if the user is at the correct pick-up or drop-off location.",
+          "confidence": "medium",
+          "rationale": "The combination of a car, sidewalk, and buildings suggests a context where location verification is important, such as waiting for a ride."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "{'rank': 1, 'response': 'Is the silver SUV the only car nearby, or are there other cars close to where I am standing?', 'response_target': 'Nearby vehicles', 'task_type': 'Localization', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': 'A user trying to locate a rideshare or pick-up spot in an unfamiliar area would want to know if the visible car is the only option or if there are others nearby, especially if they are unsure which car is theirs.'}",
+      "{'rank': 2, 'response': 'Can you tell if the sidewalk continues past the parked SUV or if I need to go around it?', 'response_target': 'Sidewalk/path', 'task_type': 'Retrieval', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.92, 'rationale': 'If the user is navigating, knowing whether the sidewalk is blocked or clear is critical for safe travel, especially in an unfamiliar environment.'}",
+      "{'rank': 3, 'response': 'Is there anything blocking the sidewalk ahead of me?', 'response_target': 'Obstacles on path', 'task_type': 'Verification', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.9, 'rationale': 'Users often want to verify that their route is clear, particularly if they are moving quickly or are unfamiliar with the area.'}",
+      "{'rank': 4, 'response': 'Does the silver SUV have any visible identifying features, like a sign or sticker?', 'response_target': 'Vehicle identification', 'task_type': 'Identification', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.88, 'rationale': 'If waiting for a rideshare or friend, users may want to confirm the vehicle by looking for specific identifiers.'}",
+      "{'rank': 5, 'response': 'Am I close to the entrance of any of the buildings in the background?', 'response_target': 'Building/entrance location', 'task_type': 'Localization', 'associated_task_id': 4, 'associated_context_id': 3, 'plausibility_score': 0.85, 'rationale': 'A user navigating to a meeting or appointment may want to know if they are near their destination.'}",
+      "{'rank': 6, 'response': 'Is this a good spot for a rideshare pick-up, or should I move somewhere else?', 'response_target': 'Pick-up location suitability', 'task_type': 'Verification', 'associated_task_id': 7, 'associated_context_id': 1, 'plausibility_score': 0.83, 'rationale': 'Users often want to confirm if they are in the right place for a pick-up, especially if the area is unfamiliar.'}",
+      "{'rank': 7, 'response': 'Can you describe what\u2019s to the right of the sidewalk, past the wooden fence?', 'response_target': 'Area beyond fence', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 1, 'plausibility_score': 0.8, 'rationale': 'The user may be trying to orient themselves or find a landmark, especially if the fence is blocking part of their view.'}",
+      "{'rank': 8, 'response': 'Is there a crosswalk or safe place to cross the parking lot visible?', 'response_target': 'Crosswalk/safe crossing', 'task_type': 'Retrieval', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.78, 'rationale': 'A user may want to know if there is a designated crossing area, especially in an unfamiliar or busy parking lot.'}",
+      "{'rank': 9, 'response': 'Are there any people near the silver SUV or in the parking lot?', 'response_target': 'Presence of people', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 3, 'plausibility_score': 0.75, 'rationale': 'If the user is meeting someone or concerned about safety, knowing if people are nearby is relevant.'}",
+      "{'rank': 10, 'response': 'Can you confirm if this is the main entrance to the building ahead?', 'response_target': 'Building entrance verification', 'task_type': 'Verification', 'associated_task_id': 4, 'associated_context_id': 3, 'plausibility_score': 0.7, 'rationale': 'A user heading to an appointment or meeting may want to verify if they are at the correct entrance, especially if in a hurry or unfamiliar with the area.'}"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Is the silver SUV the only car nearby, or are there other cars close to where I am standing?",
+        "response_target": "Nearby vehicles",
+        "task_type": "Localization",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.95,
+        "rationale": "A user trying to locate a rideshare or pick-up spot in an unfamiliar area would want to know if the visible car is the only option or if there are others nearby, especially if they are unsure which car is theirs."
+      },
+      {
+        "rank": 2,
+        "response": "Can you tell if the sidewalk continues past the parked SUV or if I need to go around it?",
+        "response_target": "Sidewalk/path",
+        "task_type": "Retrieval",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.92,
+        "rationale": "If the user is navigating, knowing whether the sidewalk is blocked or clear is critical for safe travel, especially in an unfamiliar environment."
+      },
+      {
+        "rank": 3,
+        "response": "Is there anything blocking the sidewalk ahead of me?",
+        "response_target": "Obstacles on path",
+        "task_type": "Verification",
+        "associated_task_id": 3,
+        "associated_context_id": 1,
+        "plausibility_score": 0.9,
+        "rationale": "Users often want to verify that their route is clear, particularly if they are moving quickly or are unfamiliar with the area."
+      },
+      {
+        "rank": 4,
+        "response": "Does the silver SUV have any visible identifying features, like a sign or sticker?",
+        "response_target": "Vehicle identification",
+        "task_type": "Identification",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 0.88,
+        "rationale": "If waiting for a rideshare or friend, users may want to confirm the vehicle by looking for specific identifiers."
+      },
+      {
+        "rank": 5,
+        "response": "Am I close to the entrance of any of the buildings in the background?",
+        "response_target": "Building/entrance location",
+        "task_type": "Localization",
+        "associated_task_id": 4,
+        "associated_context_id": 3,
+        "plausibility_score": 0.85,
+        "rationale": "A user navigating to a meeting or appointment may want to know if they are near their destination."
+      },
+      {
+        "rank": 6,
+        "response": "Is this a good spot for a rideshare pick-up, or should I move somewhere else?",
+        "response_target": "Pick-up location suitability",
+        "task_type": "Verification",
+        "associated_task_id": 7,
+        "associated_context_id": 1,
+        "plausibility_score": 0.83,
+        "rationale": "Users often want to confirm if they are in the right place for a pick-up, especially if the area is unfamiliar."
+      },
+      {
+        "rank": 7,
+        "response": "Can you describe what\u2019s to the right of the sidewalk, past the wooden fence?",
+        "response_target": "Area beyond fence",
+        "task_type": "Description",
+        "associated_task_id": 5,
+        "associated_context_id": 1,
+        "plausibility_score": 0.8,
+        "rationale": "The user may be trying to orient themselves or find a landmark, especially if the fence is blocking part of their view."
+      },
+      {
+        "rank": 8,
+        "response": "Is there a crosswalk or safe place to cross the parking lot visible?",
+        "response_target": "Crosswalk/safe crossing",
+        "task_type": "Retrieval",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.78,
+        "rationale": "A user may want to know if there is a designated crossing area, especially in an unfamiliar or busy parking lot."
+      },
+      {
+        "rank": 9,
+        "response": "Are there any people near the silver SUV or in the parking lot?",
+        "response_target": "Presence of people",
+        "task_type": "Description",
+        "associated_task_id": 5,
+        "associated_context_id": 3,
+        "plausibility_score": 0.75,
+        "rationale": "If the user is meeting someone or concerned about safety, knowing if people are nearby is relevant."
+      },
+      {
+        "rank": 10,
+        "response": "Can you confirm if this is the main entrance to the building ahead?",
+        "response_target": "Building entrance verification",
+        "task_type": "Verification",
+        "associated_task_id": 4,
+        "associated_context_id": 3,
+        "plausibility_score": 0.7,
+        "rationale": "A user heading to an appointment or meeting may want to verify if they are at the correct entrance, especially if in a hurry or unfamiliar with the area."
+      }
+    ],
+    "raw_output": {
+      "ranked_questions": [
+        {
+          "rank": 1,
+          "response": "Is the silver SUV the only car nearby, or are there other cars close to where I am standing?",
+          "response_target": "Nearby vehicles",
+          "task_type": "Localization",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 0.95,
+          "rationale": "A user trying to locate a rideshare or pick-up spot in an unfamiliar area would want to know if the visible car is the only option or if there are others nearby, especially if they are unsure which car is theirs."
+        },
+        {
+          "rank": 2,
+          "response": "Can you tell if the sidewalk continues past the parked SUV or if I need to go around it?",
+          "response_target": "Sidewalk/path",
+          "task_type": "Retrieval",
+          "associated_task_id": 2,
+          "associated_context_id": 1,
+          "plausibility_score": 0.92,
+          "rationale": "If the user is navigating, knowing whether the sidewalk is blocked or clear is critical for safe travel, especially in an unfamiliar environment."
+        },
+        {
+          "rank": 3,
+          "response": "Is there anything blocking the sidewalk ahead of me?",
+          "response_target": "Obstacles on path",
+          "task_type": "Verification",
+          "associated_task_id": 3,
+          "associated_context_id": 1,
+          "plausibility_score": 0.9,
+          "rationale": "Users often want to verify that their route is clear, particularly if they are moving quickly or are unfamiliar with the area."
+        },
+        {
+          "rank": 4,
+          "response": "Does the silver SUV have any visible identifying features, like a sign or sticker?",
+          "response_target": "Vehicle identification",
+          "task_type": "Identification",
+          "associated_task_id": 6,
+          "associated_context_id": 1,
+          "plausibility_score": 0.88,
+          "rationale": "If waiting for a rideshare or friend, users may want to confirm the vehicle by looking for specific identifiers."
+        },
+        {
+          "rank": 5,
+          "response": "Am I close to the entrance of any of the buildings in the background?",
+          "response_target": "Building/entrance location",
+          "task_type": "Localization",
+          "associated_task_id": 4,
+          "associated_context_id": 3,
+          "plausibility_score": 0.85,
+          "rationale": "A user navigating to a meeting or appointment may want to know if they are near their destination."
+        },
+        {
+          "rank": 6,
+          "response": "Is this a good spot for a rideshare pick-up, or should I move somewhere else?",
+          "response_target": "Pick-up location suitability",
+          "task_type": "Verification",
+          "associated_task_id": 7,
+          "associated_context_id": 1,
+          "plausibility_score": 0.83,
+          "rationale": "Users often want to confirm if they are in the right place for a pick-up, especially if the area is unfamiliar."
+        },
+        {
+          "rank": 7,
+          "response": "Can you describe what\u2019s to the right of the sidewalk, past the wooden fence?",
+          "response_target": "Area beyond fence",
+          "task_type": "Description",
+          "associated_task_id": 5,
+          "associated_context_id": 1,
+          "plausibility_score": 0.8,
+          "rationale": "The user may be trying to orient themselves or find a landmark, especially if the fence is blocking part of their view."
+        },
+        {
+          "rank": 8,
+          "response": "Is there a crosswalk or safe place to cross the parking lot visible?",
+          "response_target": "Crosswalk/safe crossing",
+          "task_type": "Retrieval",
+          "associated_task_id": 2,
+          "associated_context_id": 1,
+          "plausibility_score": 0.78,
+          "rationale": "A user may want to know if there is a designated crossing area, especially in an unfamiliar or busy parking lot."
+        },
+        {
+          "rank": 9,
+          "response": "Are there any people near the silver SUV or in the parking lot?",
+          "response_target": "Presence of people",
+          "task_type": "Description",
+          "associated_task_id": 5,
+          "associated_context_id": 3,
+          "plausibility_score": 0.75,
+          "rationale": "If the user is meeting someone or concerned about safety, knowing if people are nearby is relevant."
+        },
+        {
+          "rank": 10,
+          "response": "Can you confirm if this is the main entrance to the building ahead?",
+          "response_target": "Building entrance verification",
+          "task_type": "Verification",
+          "associated_task_id": 4,
+          "associated_context_id": 3,
+          "plausibility_score": 0.7,
+          "rationale": "A user heading to an appointment or meeting may want to verify if they are at the correct entrance, especially if in a hurry or unfamiliar with the area."
+        }
+      ]
+    }
+  },
+  "response_target_agent": {
+    "response_target": "green dumpster",
+    "task_type": "Locational/retrieval",
+    "confidence": "high",
+    "rationale": "The participant's question directly specifies they are looking for the green dumpster, making this the clear information target. The question_category supports that this is a locational/retrieval task. No need to infer beyond the explicit noun phrase provided.",
+    "raw_output": {
+      "response_target": "green dumpster",
+      "task_type": "Locational/retrieval",
+      "confidence": "high",
+      "rationale": "The participant's question directly specifies they are looking for the green dumpster, making this the clear information target. The question_category supports that this is a locational/retrieval task. No need to infer beyond the explicit noun phrase provided."
+    }
+  },
+  "final_ranked_questions": [
+    "{'rank': 1, 'response': 'Is the silver SUV the only car nearby, or are there other cars close to where I am standing?', 'response_target': 'Nearby vehicles', 'task_type': 'Localization', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': 'A user trying to locate a rideshare or pick-up spot in an unfamiliar area would want to know if the visible car is the only option or if there are others nearby, especially if they are unsure which car is theirs.'}",
+    "{'rank': 2, 'response': 'Can you tell if the sidewalk continues past the parked SUV or if I need to go around it?', 'response_target': 'Sidewalk/path', 'task_type': 'Retrieval', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.92, 'rationale': 'If the user is navigating, knowing whether the sidewalk is blocked or clear is critical for safe travel, especially in an unfamiliar environment.'}",
+    "{'rank': 3, 'response': 'Is there anything blocking the sidewalk ahead of me?', 'response_target': 'Obstacles on path', 'task_type': 'Verification', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.9, 'rationale': 'Users often want to verify that their route is clear, particularly if they are moving quickly or are unfamiliar with the area.'}",
+    "{'rank': 4, 'response': 'Does the silver SUV have any visible identifying features, like a sign or sticker?', 'response_target': 'Vehicle identification', 'task_type': 'Identification', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.88, 'rationale': 'If waiting for a rideshare or friend, users may want to confirm the vehicle by looking for specific identifiers.'}",
+    "{'rank': 5, 'response': 'Am I close to the entrance of any of the buildings in the background?', 'response_target': 'Building/entrance location', 'task_type': 'Localization', 'associated_task_id': 4, 'associated_context_id': 3, 'plausibility_score': 0.85, 'rationale': 'A user navigating to a meeting or appointment may want to know if they are near their destination.'}",
+    "{'rank': 6, 'response': 'Is this a good spot for a rideshare pick-up, or should I move somewhere else?', 'response_target': 'Pick-up location suitability', 'task_type': 'Verification', 'associated_task_id': 7, 'associated_context_id': 1, 'plausibility_score': 0.83, 'rationale': 'Users often want to confirm if they are in the right place for a pick-up, especially if the area is unfamiliar.'}",
+    "{'rank': 7, 'response': 'Can you describe what\u2019s to the right of the sidewalk, past the wooden fence?', 'response_target': 'Area beyond fence', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 1, 'plausibility_score': 0.8, 'rationale': 'The user may be trying to orient themselves or find a landmark, especially if the fence is blocking part of their view.'}",
+    "{'rank': 8, 'response': 'Is there a crosswalk or safe place to cross the parking lot visible?', 'response_target': 'Crosswalk/safe crossing', 'task_type': 'Retrieval', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.78, 'rationale': 'A user may want to know if there is a designated crossing area, especially in an unfamiliar or busy parking lot.'}",
+    "{'rank': 9, 'response': 'Are there any people near the silver SUV or in the parking lot?', 'response_target': 'Presence of people', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 3, 'plausibility_score': 0.75, 'rationale': 'If the user is meeting someone or concerned about safety, knowing if people are nearby is relevant.'}",
+    "{'rank': 10, 'response': 'Can you confirm if this is the main entrance to the building ahead?', 'response_target': 'Building entrance verification', 'task_type': 'Verification', 'associated_task_id': 4, 'associated_context_id': 3, 'plausibility_score': 0.7, 'rationale': 'A user heading to an appointment or meeting may want to verify if they are at the correct entrance, especially if in a hurry or unfamiliar with the area.'}"
+  ],
+  "ground_truth_question": "I am looking for the green dumpster",
+  "comparison": {
+    "ground_truth": "I am looking for the green dumpster",
+    "ground_truth_response_target": "green dumpster",
+    "ground_truth_task_type": "Locational/retrieval",
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Is the silver SUV the only car nearby, or are there other cars close to where I am standing?",
+        "generated_response_target": "Nearby vehicles",
+        "generated_task_type": "Localization",
+        "ground_truth_response_target": "green dumpster",
+        "ground_truth_task_type": "Locational/retrieval",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 2,
+        "generated_question": "Can you tell if the sidewalk continues past the parked SUV or if I need to go around it?",
+        "generated_response_target": "Sidewalk/path",
+        "generated_task_type": "Retrieval",
+        "ground_truth_response_target": "green dumpster",
+        "ground_truth_task_type": "Locational/retrieval",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 3,
+        "generated_question": "Is there anything blocking the sidewalk ahead of me?",
+        "generated_response_target": "Obstacles on path",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "green dumpster",
+        "ground_truth_task_type": "Locational/retrieval",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 4,
+        "generated_question": "Does the silver SUV have any visible identifying features, like a sign or sticker?",
+        "generated_response_target": "Vehicle identification",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "green dumpster",
+        "ground_truth_task_type": "Locational/retrieval",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 5,
+        "generated_question": "Am I close to the entrance of any of the buildings in the background?",
+        "generated_response_target": "Building/entrance location",
+        "generated_task_type": "Localization",
+        "ground_truth_response_target": "green dumpster",
+        "ground_truth_task_type": "Locational/retrieval",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 6,
+        "generated_question": "Is this a good spot for a rideshare pick-up, or should I move somewhere else?",
+        "generated_response_target": "Pick-up location suitability",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "green dumpster",
+        "ground_truth_task_type": "Locational/retrieval",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 7,
+        "generated_question": "Can you describe what\u2019s to the right of the sidewalk, past the wooden fence?",
+        "generated_response_target": "Area beyond fence",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "green dumpster",
+        "ground_truth_task_type": "Locational/retrieval",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 8,
+        "generated_question": "Is there a crosswalk or safe place to cross the parking lot visible?",
+        "generated_response_target": "Crosswalk/safe crossing",
+        "generated_task_type": "Retrieval",
+        "ground_truth_response_target": "green dumpster",
+        "ground_truth_task_type": "Locational/retrieval",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 9,
+        "generated_question": "Are there any people near the silver SUV or in the parking lot?",
+        "generated_response_target": "Presence of people",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "green dumpster",
+        "ground_truth_task_type": "Locational/retrieval",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 10,
+        "generated_question": "Can you confirm if this is the main entrance to the building ahead?",
+        "generated_response_target": "Building entrance verification",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "green dumpster",
+        "ground_truth_task_type": "Locational/retrieval",
+        "target_match_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "I am looking for the green dumpster",
+        "generated_response_target": "green dumpster",
+        "generated_task_type": "Locational/retrieval",
+        "ground_truth_response_target": "green dumpster",
+        "ground_truth_task_type": "Locational/retrieval",
+        "target_match_score": 1,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "intention",
+        "decomposition",
+        "style",
+        "SimToM"
+      ],
+      "question_category": "Locational/retrieval",
+      "in_a_hurry": "no",
+      "indoor_outdoor": "outdoor",
+      "familiarity_of_environment": "no",
+      "familiarity_of_item": "yes",
+      "surrounding_environment": "alone",
+      "environment_setting": "leisure",
+      "interaction_length": "4",
+      "task_completed": "Yes"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P2_images/image_8_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows an outdoor scene with a sidewalk in the foreground leading to a parking lot. There is a silver SUV parked on the edge of the parking lot, facing towards the right. In the background, there are buildings with brick exteriors, and a few street lamps are visible. The sky is partly cloudy, and there are trees with autumn-colored leaves in the distance. A wooden fence is on the right side of the image.",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "User:I am looking for the green dumpster",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 4,
+        "text_usr": null,
+        "text_ai": "Be My AI:The green dumpster is not visible in this image. There is a wooden fence on the right side, which might be blocking the view. You may need to move closer or to a different angle to see if the dumpster is behind the fence.",
+        "local_image_path": null
+      },
+      {
+        "turn": 5,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P2_images/image_8_5.jpg"
+      },
+      {
+        "turn": 6,
+        "text_usr": null,
+        "text_ai": "Be My AI:In this image, the green dumpster is now visible on the right side, just behind the wooden fence. It is partially obscured by the fence, but you can see the top and part of the side of the dumpster.",
+        "local_image_path": null
+      },
+      {
+        "turn": 7,
+        "text_usr": "User:From where I am how far is the dumpster and is it to my left or right?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 8,
+        "text_usr": null,
+        "text_ai": "Be My AI:From your current position, the green dumpster is to your right. It appears to be a short distance away, just past the wooden fence, which is directly adjacent to the sidewalk you are on.",
+        "local_image_path": null
+      },
+      {
+        "turn": 9,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P2_images/image_8_9.jpg"
+      },
+      {
+        "turn": 10,
+        "text_usr": null,
+        "text_ai": "Be My AI:In this image, the green dumpster is still to your right, just beyond the wooden fence. You are a bit closer now, and it is directly adjacent to the sidewalk you are on. The dumpster is only a few steps away from your current position.",
+        "local_image_path": null
+      }
+    ]
+  }
+}

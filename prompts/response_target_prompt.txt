@@ -1,22 +1,21 @@
 Your task is to infer what information target the participant is asking about in their response/question.
 
 You are given:
-- The image
-- The AI-generated description
 - The participant's ground-truth question/response
-- The question category annotation
+- The question_category from the interaction JSON
+- The image and AI-generated description only as weak supporting context
 
 Instructions:
-- Identify the primary response target as a short phrase (for example: "microwave cooking instructions", "expiration date", "product name and brand").
-- Identify the task type using one of these labels: Reading, Description, Identification, Localization, Verification, Combination, Failure-aware.
-- If the participant question clearly includes multiple task types, use a comma-separated list in priority order.
-- Keep the response target concrete and specific to what the participant wants to know.
+- Identify only the participant's information target as a short phrase.
+- Prefer the most direct noun phrase from the ground-truth question.
+- Do not make the target overly pointed or overly specific.
+- Use the question_category exactly as provided.
 
 Output format:
 Return valid JSON only:
 {
   "response_target": "...",
-  "task_type": "Reading",
+  "task_type": "...",
   "confidence": "high|medium|low",
   "rationale": "..."
 }
