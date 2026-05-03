@@ -21,17 +21,17 @@ METRICS = {
     "category": {
         "label": "Category",
         "score_field": "task_type_match_score",
-        "color": "#d8b365",
+        "color": "#dfc27d",
     },
     "target": {
         "label": "Target",
         "score_field": "target_match_score",
-        "color": "#5ab4ac",
+        "color": "#80cdc1",
     },
     "matched_user_turn": {
         "label": "Any-Turn Target",
         "score_field": "matched_user_turn_score",
-        "color": "#4c78a8",
+        "color": "#018571",
     },
 }
 
