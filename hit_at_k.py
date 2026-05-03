@@ -48,7 +48,7 @@ def _compute_hit_flags(rows: list[dict[str, Any]], threshold: float) -> tuple[bo
 
     for row in rows:
         category_ok = _safe_float(row.get("task_type_match_score", 0)) >= threshold
-        target_ok = _safe_float(row.get("target_match_score", 0)) >= threshold
+        target_ok = row.get("matched_user_turn") == 1
         matched_turn_ok = _safe_float(row.get("matched_user_turn_score", 0)) >= threshold
 
         category_hit = category_hit or category_ok
