@@ -4,12 +4,13 @@ Python project for analyzing blind and low-vision (BLV) VQA interactions using a
 
 ## Pipeline
 
-For each interaction, the system runs four agents in order:
+For each interaction, the system runs five agents in order:
 
 1. Context Generator (`ContextAgent`)
 2. Task Generator (`TaskAgent`)
 3. Follow-up Question Generator (`QuestionAgent`)
 4. Ground-Truth Response Target Analyzer (`ResponseTargetAgent`)
+5. Per-Turn Interaction Target Analyzer (`InteractionTargetAgent`)
 
 The pipeline processes one interaction at a time and saves:
 
@@ -58,6 +59,24 @@ Run all valid interactions for one participant in batch mode:
 python batch_run.py --participant P3 --source diary
 ```
 
+Compute Hit@k metrics from a batch comparison file:
+
+```bash
+python hit_at_k.py --input outputs2/json/P3_diary_batch_comparison.json
+```
+
+By default, this prints per-interaction Hit@k values and averaged results to the console, and saves a metrics file next to the input as:
+
+```text
+outputs2/json/P3_diary_batch_comparison_hit_at_k.json
+```
+
+You can override the save path with `--output`:
+
+```bash
+python hit_at_k.py --input outputs2/json/P3_diary_batch_comparison.json --output outputs2/json/P3_diary_hit_at_k.json
+```
+
 Preview which interaction IDs will run without calling the API:
 
 ```bash
@@ -91,6 +110,7 @@ Batch filtering rule:
 ```text
 project_root/
 |-- main.py
+|-- hit_at_k.py
 |-- config.py
 |-- requirements.txt
 |-- README.md
@@ -101,6 +121,7 @@ project_root/
 |   |-- task_agent.py
 |   |-- question_agent.py
 |   `-- response_target_agent.py
+|   `-- interaction_target_agent.py
 |
 |-- prompts/
 |   |-- context_prompt.txt
@@ -165,10 +186,12 @@ JSON output includes:
 - Task agent output
 - Question agent output
 - Response-target agent output (for participant ground-truth question)
+- Interaction-target agent output (per user response/turn for the interaction)
 - Final ranked questions
 - Ground-truth question
 - Per-question comparison scores for generated question vs. ground truth:
     - `target_match_score` in `{0, 0.5, 1}`
+    - `matched_user_turn` (1-based index) and `matched_user_turn_score` in `{0, 0.5, 1}`
     - `task_type_match_score` in `{0, 0.5, 1}`
 
 Batch comparison output includes one entry per interaction run in the batch, with the interaction ID, ground-truth question/target/type, and all generated responses with their targets, types, and match scores.

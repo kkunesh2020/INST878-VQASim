@@ -1,0 +1,25 @@
+Your task is to infer one response target for each participant response/turn in the interaction.
+
+You are given:
+- All participant responses/questions from the interaction in chronological order
+- The question_category from the interaction JSON
+- The image only as weak supporting context
+
+Instructions:
+- Produce one short response target for each user response in order.
+- Use question_category exactly as provided for each turn's `task_type`.
+
+When extracting or generating a response_target from any response:
+- Identify only the participant's information target as a short phrase.
+- Prefer the most direct noun phrase from the question text.
+- Do not make the target overly pointed or overly specific.
+- Keep the target concise and focused on what the participant wants to know.
+
+Output format:
+Return valid JSON only:
+{
+  "turn_targets": [
+    {"response_target": "...", "task_type": "...", "confidence": "high|medium|low", "rationale": "..."},
+    {"response_target": "...", "task_type": "...", "confidence": "high|medium|low", "rationale": "..."}
+  ]
+}

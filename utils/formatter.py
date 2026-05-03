@@ -134,8 +134,13 @@ def build_comparison(
     question_payload: dict[str, Any],
     ground_truth_question: str,
     response_target_payload: dict[str, Any],
+    interaction_target_payload: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
-    """Create per-question target/type match scores against a ground-truth question."""
+    """Create per-question target/type match scores against a ground-truth question.
+
+    Supports matching generated targets to any user's turn targets. If a generated
+    target matches multiple user-turn targets, the earliest matching turn is used.
+    """
 
     ranked_questions = question_payload.get("ranked_questions", [])
     candidates = question_payload.get("candidates", [])
@@ -148,15 +153,41 @@ def build_comparison(
     gt_target = str(response_target_payload.get("response_target", "") or "")
     gt_task_type = str(response_target_payload.get("task_type", "") or "")
 
+    # Extract per-turn targets from interaction_target_payload if present
+    interaction_target_payload = interaction_target_payload or {}
+    interaction_turns: list[dict[str, Any]] = []
+    if isinstance(interaction_target_payload, dict):
+        maybe = interaction_target_payload.get("turn_targets")
+        if isinstance(maybe, list):
+            interaction_turns = [item for item in maybe if isinstance(item, dict)]
+
     per_question_scores: list[dict[str, Any]] = []
     for index, question in enumerate(ranked_questions, start=1):
         candidate = sorted_candidates[index - 1] if index - 1 < len(sorted_candidates) else {}
         question_text, fallback_target, fallback_task_type = _extract_question_fields(question)
 
+        # If the question candidate already includes a response_target, use it.
+        # Otherwise, ask the generated-response-target agent to extract a target
+        # from the generated question text (no images used).
+        generated_task_type = str(candidate.get("task_type", "") or fallback_task_type or "")
         generated_target = str(candidate.get("response_target", "") or fallback_target or "")
         generated_task_type = str(candidate.get("task_type", "") or fallback_task_type or "")
 
         target_match_score = _quantize_score(_score_target_match(generated_target, gt_target))
+
+        # Match against each user turn target; pick earliest non-zero match
+        matched_turn_index = None
+        matched_turn_target = ""
+        matched_turn_score: int | float = 0
+        for t_idx, turn in enumerate(interaction_turns, start=1):
+            turn_target = str(turn.get("response_target", "") or "")
+            score = _quantize_score(_score_target_match(generated_target, turn_target))
+            if score:
+                matched_turn_index = t_idx
+                matched_turn_target = turn_target
+                matched_turn_score = score
+                break
+
         task_type_match_score = _quantize_score(_score_task_type_match(generated_task_type, gt_task_type))
 
         per_question_scores.append(
@@ -168,9 +199,25 @@ def build_comparison(
                 "ground_truth_response_target": gt_target,
                 "ground_truth_task_type": gt_task_type,
                 "target_match_score": target_match_score,
+                "matched_user_turn": matched_turn_index,
+                "matched_user_turn_target": matched_turn_target,
+                "matched_user_turn_score": matched_turn_score,
                 "task_type_match_score": task_type_match_score,
             }
         )
+
+    # Append ground-truth row (first-response). Match it against per-turn targets
+    gt_matched_turn = None
+    gt_matched_turn_target = ""
+    gt_matched_turn_score: int | float = 0
+    for t_idx, turn in enumerate(interaction_turns, start=1):
+        turn_target = str(turn.get("response_target", "") or "")
+        score = _quantize_score(_score_target_match(gt_target, turn_target))
+        if score:
+            gt_matched_turn = t_idx
+            gt_matched_turn_target = turn_target
+            gt_matched_turn_score = score
+            break
 
     per_question_scores.append(
         {
@@ -181,6 +228,9 @@ def build_comparison(
             "ground_truth_response_target": gt_target,
             "ground_truth_task_type": gt_task_type,
             "target_match_score": 1,
+            "matched_user_turn": gt_matched_turn,
+            "matched_user_turn_target": gt_matched_turn_target,
+            "matched_user_turn_score": gt_matched_turn_score,
             "task_type_match_score": 1,
         }
     )
@@ -189,6 +239,7 @@ def build_comparison(
         "ground_truth": ground_truth_question,
         "ground_truth_response_target": gt_target,
         "ground_truth_task_type": gt_task_type,
+        "turn_targets": interaction_turns,
         "per_question_scores": per_question_scores,
     }
 
@@ -303,6 +354,12 @@ def _render_match_scores(comparison_payload: dict[str, Any]) -> list[str]:
         lines.append(f"generated_response_target: {row.get('generated_response_target', '')}")
         lines.append(f"task_type_match_score: {row.get('task_type_match_score', 0)}")
         lines.append(f"target_match_score: {row.get('target_match_score', 0)}")
+        # If the generated target matched a specific user turn, show it concisely
+        matched_turn = row.get("matched_user_turn")
+        if matched_turn is not None:
+            lines.append(f"matched_user_turn: {matched_turn}")
+            lines.append(f"matched_user_turn_target: {row.get('matched_user_turn_target', '')}")
+            lines.append(f"matched_user_turn_score: {row.get('matched_user_turn_score', 0)}")
         lines.append("")
     return lines
 
@@ -315,6 +372,7 @@ def build_readable_output(payload: dict[str, Any]) -> str:
     tasks = payload.get("task_agent", {})
     question_agent = payload.get("question_agent", {})
     response_target_agent = payload.get("response_target_agent", {})
+    interaction_target_agent = payload.get("interaction_target_agent", {})
     ranked = payload.get("final_ranked_questions", [])
     comparison = payload.get("comparison", {})
 
@@ -324,6 +382,12 @@ def build_readable_output(payload: dict[str, Any]) -> str:
     lines.append(f"Description: {input_data.get('description', '')}")
     lines.append(f"Question Category: {input_data.get('question_category', '')}")
     lines.append(f"Ground Truth Response Target: {response_target_agent.get('response_target', '')}")
+    # Per-turn interaction targets (if available)
+    turn_targets = interaction_target_agent.get("turn_targets", []) if isinstance(interaction_target_agent, dict) else []
+    if turn_targets:
+        lines.append("Per-turn interaction targets:")
+        for idx, tt in enumerate(turn_targets, start=1):
+            lines.append(f"{idx}. target: {tt.get('response_target', '')} | task_type: {tt.get('task_type', '')} | confidence: {tt.get('confidence', '')}")
     lines.append(f"Ground Truth Task Type: {response_target_agent.get('task_type', '')}")
     lines.append("")
 

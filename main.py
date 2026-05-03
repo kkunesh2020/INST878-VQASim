@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any
 
 from agents.context_agent import ContextAgent
+from agents.interaction_target_agent import InteractionTargetAgent
 from agents.question_agent import QuestionAgent
 from agents.response_target_agent import ResponseTargetAgent
 from agents.task_agent import TaskAgent
@@ -64,6 +65,13 @@ def run(
 
     description = interaction_payload.get("description", "")
     ground_truth_question = interaction_payload.get("ground_truth_question", "")
+    all_user_responses = [
+        str(item)
+        for item in interaction_payload.get("all_user_responses", [])
+        if str(item).strip()
+    ]
+    if not all_user_responses and str(ground_truth_question).strip():
+        all_user_responses = [str(ground_truth_question)]
     question_category = interaction_payload.get("question_category", "")
 
     optional_prompt_sections: list[str] = []
@@ -128,8 +136,21 @@ def run(
     )
     response_target_output["task_type"] = str(question_category or response_target_output.get("task_type", ""))
 
+    logger.info("Running InteractionTargetAgent (per-turn)")
+    interaction_target_output = InteractionTargetAgent().run(
+        valid_images,
+        all_user_responses,
+        question_category=question_category,
+        optional_prompt=optional_prompt,
+    )
+
     ranked_questions = _extract_ranked_questions(question_output)
-    comparison = build_comparison(question_output, ground_truth_question, response_target_output)
+    comparison = build_comparison(
+        question_output,
+        ground_truth_question,
+        response_target_output,
+        interaction_target_output,
+    )
 
     output_payload: dict[str, Any] = {
         "input": {
@@ -140,6 +161,7 @@ def run(
             "image_paths": valid_images,
             "missing_image_paths": missing_images,
             "description": description,
+            "all_user_responses": all_user_responses,
             "question_category": question_category,
             "optional_prompt": optional_prompt_metadata,
         },
@@ -147,6 +169,7 @@ def run(
         "task_agent": task_output,
         "question_agent": question_output,
         "response_target_agent": response_target_output,
+        "interaction_target_agent": interaction_target_output,
         "final_ranked_questions": ranked_questions,
         "ground_truth_question": ground_truth_question,
         "comparison": comparison,

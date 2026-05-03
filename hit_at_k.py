@@ -40,20 +40,23 @@ def _top_k_rows(generated_responses: list[dict[str, Any]], k: int) -> list[dict[
     return [row for _, row in sortable[:k]]
 
 
-def _compute_hit_flags(rows: list[dict[str, Any]], threshold: float) -> tuple[bool, bool, bool]:
+def _compute_hit_flags(rows: list[dict[str, Any]], threshold: float) -> tuple[bool, bool, bool, bool]:
     category_hit = False
     target_hit = False
     combined_hit = False
+    matched_turn_hit = False
 
     for row in rows:
         category_ok = _safe_float(row.get("task_type_match_score", 0)) >= threshold
         target_ok = _safe_float(row.get("target_match_score", 0)) >= threshold
+        matched_turn_ok = _safe_float(row.get("matched_user_turn_score", 0)) >= threshold
 
         category_hit = category_hit or category_ok
         target_hit = target_hit or target_ok
         combined_hit = combined_hit or (category_ok and target_ok)
+        matched_turn_hit = matched_turn_hit or matched_turn_ok
 
-    return category_hit, target_hit, combined_hit
+    return category_hit, target_hit, combined_hit, matched_turn_hit
 
 
 def compute_hit_at_k(
@@ -94,7 +97,7 @@ def compute_hit_at_k(
         interaction_scores: list[dict[str, Any]] = []
         for interaction in interactions:
             rows = _top_k_rows(interaction["generated_responses"], k)
-            category_hit, target_hit, combined_hit = _compute_hit_flags(rows, threshold)
+            category_hit, target_hit, combined_hit, matched_turn_hit = _compute_hit_flags(rows, threshold)
 
             interaction_scores.append(
                 {
@@ -102,6 +105,7 @@ def compute_hit_at_k(
                     "category_hit": 1 if category_hit else 0,
                     "target_hit": 1 if target_hit else 0,
                     "combined_hit": 1 if combined_hit else 0,
+                    "matched_user_turn_hit": 1 if matched_turn_hit else 0,
                 }
             )
 
@@ -110,12 +114,14 @@ def compute_hit_at_k(
         category_hits = sum(item["category_hit"] for item in interaction_scores)
         target_hits = sum(item["target_hit"] for item in interaction_scores)
         combined_hits = sum(item["combined_hit"] for item in interaction_scores)
+        matched_turn_hits = sum(item["matched_user_turn_hit"] for item in interaction_scores)
 
         for item in interaction_scores:
             item[f"hit_at_{k}"] = {
                 "category": item.pop("category_hit"),
                 "target": item.pop("target_hit"),
                 "combined": item.pop("combined_hit"),
+                "matched_user_turn": item.pop("matched_user_turn_hit"),
             }
 
         metrics["per_interaction"].append(
@@ -140,6 +146,11 @@ def compute_hit_at_k(
                 "hits": combined_hits,
                 "total": total,
                 "hit_at_k": combined_hits / denom,
+            },
+            "matched_user_turn": {
+                "hits": matched_turn_hits,
+                "total": total,
+                "hit_at_k": matched_turn_hits / denom,
             },
         }
 
@@ -185,7 +196,8 @@ def _print_summary(metrics: dict[str, Any]) -> None:
                     f"  interaction {item.get('interaction')}: "
                     f"category={hit_vals.get('category', 0)} "
                     f"target={hit_vals.get('target', 0)} "
-                    f"combined={hit_vals.get('combined', 0)}"
+                    f"combined={hit_vals.get('combined', 0)} "
+                    f"matched_user_turn={hit_vals.get('matched_user_turn', 0)}"
                 )
             print()
 
@@ -195,6 +207,7 @@ def _print_summary(metrics: dict[str, Any]) -> None:
         category = block.get("category", {})
         target = block.get("target", {})
         combined = block.get("combined", {})
+        matched_turn = block.get("matched_user_turn", {})
 
         print(f"Averaged Hit@{k} across interactions")
         print(
@@ -208,6 +221,10 @@ def _print_summary(metrics: dict[str, Any]) -> None:
         print(
             f"  Combined Hit@{k}: {combined.get('hit_at_k', 0):.4f} "
             f"({combined.get('hits', 0)}/{combined.get('total', 0)})"
+        )
+        print(
+            f"  Matched User Turn Hit@{k}: {matched_turn.get('hit_at_k', 0):.4f} "
+            f"({matched_turn.get('hits', 0)}/{matched_turn.get('total', 0)})"
         )
         print()
 

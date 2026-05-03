@@ -97,6 +97,7 @@ def _extract_from_turns(interaction: dict[str, Any]) -> dict[str, Any]:
     image_paths: list[str] = []
     description = ""
     first_user_response = ""
+    all_user_responses: list[str] = []
 
     for turn in turns:
         local_image_path = turn.get("local_image_path")
@@ -113,6 +114,10 @@ def _extract_from_turns(interaction: dict[str, Any]) -> dict[str, Any]:
             if isinstance(usr_text, str) and usr_text.strip():
                 first_user_response = _strip_known_prefix(usr_text)
 
+        usr_text = turn.get("text_usr")
+        if isinstance(usr_text, str) and usr_text.strip():
+            all_user_responses.append(_strip_known_prefix(usr_text))
+
     annotations = interaction.get("annotations", {})
     question_category = ""
     if isinstance(annotations, dict):
@@ -124,6 +129,7 @@ def _extract_from_turns(interaction: dict[str, Any]) -> dict[str, Any]:
         "image_paths": image_paths,
         "description": description,
         "ground_truth_question": first_user_response,
+        "all_user_responses": all_user_responses,
         "question_category": question_category,
         "annotation_task_type": question_category,
     }
@@ -238,6 +244,11 @@ def load_interaction(participant_id: str, source: str, interaction_id: int) -> d
                 "image_paths": image_paths,
                 "description": str(extracted.get("description", "") or ""),
                 "ground_truth_question": str(extracted.get("ground_truth_question", "") or ""),
+                "all_user_responses": [
+                    str(item)
+                    for item in extracted.get("all_user_responses", [])
+                    if str(item).strip()
+                ],
                 "question_category": str(extracted.get("question_category", "") or ""),
                 "annotation_task_type": str(extracted.get("annotation_task_type", "") or ""),
                 "raw_interaction": interaction,
@@ -299,6 +310,7 @@ def load_interaction(participant_id: str, source: str, interaction_id: int) -> d
         "image_paths": image_paths,
         "description": str(description or ""),
         "ground_truth_question": str(ground_truth_question or ""),
+        "all_user_responses": [str(ground_truth_question or "")] if str(ground_truth_question or "").strip() else [],
         "question_category": "",
         "annotation_task_type": "",
         "raw_interaction": interaction,
@@ -345,6 +357,11 @@ def load_all_interactions(participant_id: str, source: str) -> list[dict[str, An
                         "image_paths": image_paths,
                         "description": str(extracted.get("description", "") or ""),
                         "ground_truth_question": str(extracted.get("ground_truth_question", "") or ""),
+                        "all_user_responses": [
+                            str(item)
+                            for item in extracted.get("all_user_responses", [])
+                            if str(item).strip()
+                        ],
                         "question_category": str(extracted.get("question_category", "") or ""),
                         "annotation_task_type": str(extracted.get("annotation_task_type", "") or ""),
                         "raw_interaction": interaction,
@@ -396,6 +413,7 @@ def load_all_interactions(participant_id: str, source: str) -> list[dict[str, An
                 "image_paths": image_paths,
                 "description": str(description or ""),
                 "ground_truth_question": str(ground_truth_question or ""),
+                "all_user_responses": [str(ground_truth_question or "")] if str(ground_truth_question or "").strip() else [],
                 "question_category": "",
                 "annotation_task_type": "",
                 "raw_interaction": interaction,

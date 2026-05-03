@@ -58,6 +58,9 @@ def _build_batch_interaction_summary(interaction_id: int, output_payload: dict[s
                     "response_target": row.get("generated_response_target", ""),
                     "task_type": row.get("generated_task_type", ""),
                     "target_match_score": row.get("target_match_score", 0),
+                    "matched_user_turn": row.get("matched_user_turn", None),
+                    "matched_user_turn_target": row.get("matched_user_turn_target", ""),
+                    "matched_user_turn_score": row.get("matched_user_turn_score", 0),
                     "task_type_match_score": row.get("task_type_match_score", 0),
                 }
             )
@@ -68,6 +71,7 @@ def _build_batch_interaction_summary(interaction_id: int, output_payload: dict[s
         "ground_truth": {
             "question": output_payload.get("ground_truth_question", ""),
             "response_target": comparison.get("ground_truth_response_target", "") if isinstance(comparison, dict) else "",
+            "turn_targets": comparison.get("turn_targets", []) if isinstance(comparison, dict) else [],
             "task_type": comparison.get("ground_truth_task_type", "") if isinstance(comparison, dict) else "",
         },
         "generated_responses": generated_responses,

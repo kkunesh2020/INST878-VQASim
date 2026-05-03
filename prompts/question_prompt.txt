@@ -16,9 +16,16 @@ Blind users rely on VQA systems (e.g., BeMyAI) to access visual information. How
 Instructions:
 - Generate 10 candidate follow-up responses.
 - Rank them from most to least plausible.
-- Identify the target of the response ()
+- Identify the target of the response
 - Identify the type of task the VQA is being asked to perform (Reading, Description, Identification, Localization, or Verification).
 - Responses must reflect task-driven needs (navigation, reading, identification, etc.)
+
+When extracting or generating a response_target from any response:
+- Identify only the participant's information target as a short phrase.
+- Prefer the most direct noun phrase from the question text.
+- Do not make the target overly pointed or overly specific.
+- Keep the target concise and focused on what the participant wants to know.
+
 
 Output format:
 Return a ranked JSON list:

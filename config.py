@@ -11,8 +11,8 @@ load_dotenv()
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 PROMPTS_DIR = PROJECT_ROOT / "prompts"
-OUTPUT_JSON_DIR = PROJECT_ROOT / "outputs2" / "json"
-OUTPUT_READABLE_DIR = PROJECT_ROOT / "outputs2" / "readable"
+OUTPUT_JSON_DIR = PROJECT_ROOT / "outputs3" / "json"
+OUTPUT_READABLE_DIR = PROJECT_ROOT / "outputs3" / "readable"
 PARTICIPANT_DATA_DIR = PROJECT_ROOT / "participant_data"
 
 DEFAULT_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o")
