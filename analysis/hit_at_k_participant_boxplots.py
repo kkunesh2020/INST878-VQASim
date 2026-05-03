@@ -104,45 +104,79 @@ def main() -> None:
     os.environ.setdefault("MPLCONFIGDIR", str(MPLCONFIGDIR))
 
     import matplotlib.pyplot as plt
+    from matplotlib.patches import Patch
 
-    fig, axes = plt.subplots(1, 4, figsize=(15, 4.5), sharey=True)
-    colors = ["#5B8DEF", "#39A96B", "#E07A5F"]
+    fig, ax = plt.subplots(figsize=(12, 5))
+    colors = {1: "#d8b365", 3: "#f5f5f5", 10: "#5ab4ac"}
+    group_gap = 1.25
+    offsets = {1: 0.26, 3: 0.0, 10: -0.26}
 
-    for ax, (metric, metric_label) in zip(axes, METRICS.items()):
-        data = [
-            participant_df[
-                (participant_df["metric"] == metric) & (participant_df["k"] == k)
-            ]["hit_at_k"].tolist()
-            for k in K_VALUES
-        ]
-        box = ax.boxplot(
-            data,
-            tick_labels=[f"Hit@{k}" for k in K_VALUES],
-            patch_artist=True,
-            widths=0.55,
-            showmeans=True,
-            meanprops={
-                "marker": "o",
-                "markerfacecolor": "#222222",
-                "markeredgecolor": "#222222",
-                "markersize": 4,
-            },
-            medianprops={"color": "#222222", "linewidth": 1.5},
-            whiskerprops={"color": "#555555"},
-            capprops={"color": "#555555"},
-        )
-        for patch, color in zip(box["boxes"], colors):
-            patch.set_facecolor(color)
-            patch.set_alpha(0.72)
-            patch.set_edgecolor("#444444")
+    data: list[list[float]] = []
+    positions: list[float] = []
+    box_colors: list[str] = []
+    group_centers: list[float] = []
+    group_labels: list[str] = []
 
-        ax.set_title(metric_label)
-        ax.set_ylim(0, 1.05)
-        ax.grid(axis="y", alpha=0.25)
-        ax.set_xlabel("k")
+    metric_items = list(METRICS.items())
+    for metric_index, (metric, metric_label) in enumerate(metric_items):
+        center = (len(metric_items) - metric_index - 1) * group_gap
+        group_centers.append(center)
+        group_labels.append(metric_label)
+        for k in K_VALUES:
+            data.append(
+                participant_df[
+                    (participant_df["metric"] == metric) & (participant_df["k"] == k)
+                ]["hit_at_k"].tolist()
+            )
+            positions.append(center + offsets[k])
+            box_colors.append(colors[k])
 
-    axes[0].set_ylabel("Participant average Hit@k")
-    fig.suptitle("Participant Average Hit@k by Metric", fontsize=14)
+    box = ax.boxplot(
+        data,
+        positions=positions,
+        orientation="horizontal",
+        patch_artist=True,
+        widths=0.18,
+        showmeans=True,
+        meanprops={
+            "marker": "o",
+            "markerfacecolor": "#222222",
+            "markeredgecolor": "#222222",
+            "markersize": 3,
+        },
+        medianprops={"color": "#222222", "linewidth": 1.5},
+        whiskerprops={"color": "#555555", "linewidth": 1.0},
+        capprops={"color": "#555555", "linewidth": 1.0},
+        flierprops={
+            "marker": "x",
+            "markerfacecolor": "#666666",
+            "markeredgecolor": "#666666",
+            "markersize": 3,
+            "alpha": 0.7,
+        },
+    )
+    for patch, color in zip(box["boxes"], box_colors):
+        patch.set_facecolor(color)
+        patch.set_alpha(0.86)
+        patch.set_edgecolor("#444444")
+        patch.set_linewidth(1.1)
+
+    for center in group_centers[:-1]:
+        ax.axhline(center - group_gap / 2, color="#dddddd", linewidth=0.8, zorder=0)
+
+    legend_handles = [
+        Patch(facecolor=colors[k], edgecolor="#444444", label=f"Hit@{k}", alpha=0.86)
+        for k in K_VALUES
+    ]
+    ax.legend(handles=legend_handles, loc="lower right", frameon=True)
+    ax.set_yticks(group_centers)
+    ax.set_yticklabels(group_labels)
+    ax.set_ylim(min(positions) - 0.45, max(positions) + 0.45)
+    ax.set_xlim(0, 1.0)
+    ax.set_xlabel("Participant average Hit@k")
+    ax.grid(axis="x", alpha=0.25)
+    ax.set_axisbelow(True)
+    # ax.set_title("Participant Average Hit@k by Metric", fontsize=14)
     fig.tight_layout()
     fig.savefig(OUTPUT_PNG_PATH, dpi=300, bbox_inches="tight")
     plt.close(fig)
