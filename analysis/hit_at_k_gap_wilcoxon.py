@@ -1,7 +1,7 @@
 """Participant-level Hit@k gap analysis with Wilcoxon signed-rank tests.
 
-Analysis 4: compare participant average Hit@k values for k=3 and k=10
-against k=1. Gaps are computed per participant and metric.
+Analysis 4: compare participant average Hit@k values across k values.
+Gaps are computed per participant and metric.
 """
 
 from __future__ import annotations
@@ -26,6 +26,7 @@ METRICS = {
 COMPARISONS = {
     "1_to_3": (1, 3),
     "1_to_10": (1, 10),
+    "3_to_10": (3, 10),
 }
 ALTERNATIVE = "greater"
 
