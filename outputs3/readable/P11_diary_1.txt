@@ -1,0 +1,431 @@
+=== INPUT ===
+Image(s): ['/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P11/diary_data/P11_images/image_1_1.jpg']
+Description: A cardboard box with a shipping label attached to it. The label includes the following information:
+
+- Weight: 2 lbs
+- Tracking number: [PII removed]
+- Service: UPS Next Day Air Saver
+- Billing: P/P
+- Shipper:[PII removed]
+- Ship to:[PII removed]
+
+There is also a barcode and a QR code on the label. Another smaller label is partially visible with the address: [PII removed]
+Question Category: Reading
+Ground Truth Response Target: name or address on the label
+Per-turn interaction targets:
+1. target: name on the label | task_type: Reading | confidence: high
+Ground Truth Task Type: Reading
+
+=== CONTEXTS ===
+1.
+context_id: 1
+location: indoor
+time_pressure: maybe in a hurry
+environment_familiarity: familiar
+object_familiarity: unfamiliar
+social_context: alone
+social_detail: 
+activity_type: daily living task
+rationale: The image shows a shipping label on a package, possibly taken in a home or office. The user may be trying to read the label to identify the sender or recipient, perhaps to determine if the package is for them. The presence of storage bins suggests a familiar environment, but the package itself may be unfamiliar, prompting the need to read the label. The user could be in a hurry if they are sorting multiple packages.
+
+2.
+context_id: 2
+location: indoor
+time_pressure: not in a hurry
+environment_familiarity: unfamiliar
+object_familiarity: unfamiliar
+social_context: with others
+social_detail: unfamiliar people
+activity_type: professional
+rationale: The user might be in a mailroom or office setting, possibly as part of a job or volunteer task, needing to read package labels to sort or deliver items. The environment could be unfamiliar if they are new to the location or assisting temporarily, and they may be working with others they do not know well.
+
+3.
+context_id: 3
+location: indoor
+time_pressure: in a hurry
+environment_familiarity: familiar
+object_familiarity: familiar
+social_context: with others
+social_detail: familiar people
+activity_type: daily living task
+rationale: The user could be at home with family or roommates, quickly checking a package label to confirm its contents or recipient before opening or distributing it. The familiar setting and people suggest routine package handling, but time pressure could arise if multiple packages arrived or if someone is waiting for a specific delivery.
+
+4.
+context_id: 4
+location: indoor
+time_pressure: not in a hurry
+environment_familiarity: familiar
+object_familiarity: unfamiliar
+social_context: alone
+social_detail: 
+activity_type: leisure
+rationale: The user might be at home, leisurely checking a package received as a gift or online order. They may be curious about the sender or contents, especially if they were not expecting a delivery. The relaxed pace and familiar environment suggest no urgency.
+
+
+=== TASKS ===
+1.
+task_id: 1
+task_type: Reading
+description: Extract the shipping address from the label on the package.
+confidence: high
+rationale: The image shows a cardboard box with a large shipping label, which is a common scenario where a BLV user would want to know the recipient or sender address for package identification or delivery confirmation.
+
+2.
+task_id: 2
+task_type: Reading
+description: Read the sender information from the package label.
+confidence: medium
+rationale: BLV users may need to know who sent the package, especially if they are expecting multiple deliveries or need to verify the sender for safety or organizational reasons.
+
+3.
+task_id: 3
+task_type: Reading
+description: Extract tracking or reference numbers from the shipping label.
+confidence: medium
+rationale: Tracking numbers are often needed for checking delivery status or reporting issues; the user may want to read these numbers from the label.
+
+4.
+task_id: 4
+task_type: Reading
+description: Read special handling instructions or warnings on the package.
+confidence: medium
+rationale: Packages sometimes include handling instructions (e.g., 'Fragile', 'This Side Up'), which a BLV user may want to know for safe handling or storage.
+
+5.
+task_id: 5
+task_type: Reading
+description: Identify the intended recipient to ensure the package is for them.
+confidence: high
+rationale: A BLV user may want to confirm that the package is addressed to them before opening it, especially in shared living or work environments.
+
+6.
+task_id: 6
+task_type: Reading
+description: Read the return address in case the package needs to be returned.
+confidence: medium
+rationale: Knowing the return address is important for returns or contacting the sender, and a BLV user may need this information from the label.
+
+7.
+task_id: 7
+task_type: Reading
+description: Extract the delivery date or shipment date from the label.
+confidence: low
+rationale: Some users may want to know when the package was shipped or delivered, though this information is not always present or prominent on labels.
+
+
+=== GENERATED QUESTIONS (RANKED) ===
+1. Can you read the full shipping address on the label?
+2. Who is this package addressed to?
+3. Can you tell me who sent this package?
+4. Is my name on the label?
+5. Can you read the tracking number out loud?
+6. Is there a return address listed?
+7. Are there any special instructions or warnings on the box?
+8. Can you read the smaller label on the side?
+9. Is there a delivery date or shipment date on the label?
+10. Can you read any barcodes or QR codes on the label?
+
+=== GENERATED QUESTION DETAILS ===
+1.
+question: Can you read the full shipping address on the label?
+task_type: Reading
+response_target: shipping address
+
+2.
+question: Who is this package addressed to?
+task_type: Reading
+response_target: intended recipient
+
+3.
+question: Can you tell me who sent this package?
+task_type: Reading
+response_target: sender information
+
+4.
+question: Is my name on the label?
+task_type: Reading
+response_target: recipient name
+
+5.
+question: Can you read the tracking number out loud?
+task_type: Reading
+response_target: tracking number
+
+6.
+question: Is there a return address listed?
+task_type: Reading
+response_target: return address
+
+7.
+question: Are there any special instructions or warnings on the box?
+task_type: Reading
+response_target: special handling instructions
+
+8.
+question: Can you read the smaller label on the side?
+task_type: Reading
+response_target: smaller label
+
+9.
+question: Is there a delivery date or shipment date on the label?
+task_type: Reading
+response_target: delivery date
+
+10.
+question: Can you read any barcodes or QR codes on the label?
+task_type: Reading
+response_target: barcodes or QR codes
+
+
+=== QUESTION SUMMARY ===
+Top candidate details:
+rank: 1
+response: Can you read the full shipping address on the label?
+associated_task_id: 1
+associated_context_id: 1
+plausibility_score: 1.0
+rationale: The most common and urgent need is to know who the package is for, especially in a home or office setting where multiple people may receive packages. The user may not trust that the AI read the full address or may want it repeated clearly.
+
+=== GROUND TRUTH ===
+Look again, is it actually [PII removed] and not [PII removed]?
+
+=== COMPARISON ===
+1.
+question: Can you read the full shipping address on the label?
+generated_task_type: Reading
+generated_response_target: shipping address
+task_type_match_score: 1
+target_match_score: 0
+
+2.
+question: Who is this package addressed to?
+generated_task_type: Reading
+generated_response_target: intended recipient
+task_type_match_score: 1
+target_match_score: 0
+
+3.
+question: Can you tell me who sent this package?
+generated_task_type: Reading
+generated_response_target: sender information
+task_type_match_score: 1
+target_match_score: 0
+
+4.
+question: Is my name on the label?
+generated_task_type: Reading
+generated_response_target: recipient name
+task_type_match_score: 1
+target_match_score: 0
+
+5.
+question: Can you read the tracking number out loud?
+generated_task_type: Reading
+generated_response_target: tracking number
+task_type_match_score: 1
+target_match_score: 0
+
+6.
+question: Is there a return address listed?
+generated_task_type: Reading
+generated_response_target: return address
+task_type_match_score: 1
+target_match_score: 0
+
+7.
+question: Are there any special instructions or warnings on the box?
+generated_task_type: Reading
+generated_response_target: special handling instructions
+task_type_match_score: 1
+target_match_score: 0
+
+8.
+question: Can you read the smaller label on the side?
+generated_task_type: Reading
+generated_response_target: smaller label
+task_type_match_score: 1
+target_match_score: 0
+
+9.
+question: Is there a delivery date or shipment date on the label?
+generated_task_type: Reading
+generated_response_target: delivery date
+task_type_match_score: 1
+target_match_score: 0
+
+10.
+question: Can you read any barcodes or QR codes on the label?
+generated_task_type: Reading
+generated_response_target: barcodes or QR codes
+task_type_match_score: 1
+target_match_score: 0
+
+ground_truth.
+question: Look again, is it actually [PII removed] and not [PII removed]?
+generated_task_type: Reading
+generated_response_target: name or address on the label
+task_type_match_score: 1
+target_match_score: 1
+matched_user_turn: 1
+matched_user_turn_target: name on the label
+matched_user_turn_score: 0.5
+
+Raw comparison JSON:
+{
+  "ground_truth": "Look again, is it actually [PII removed] and not [PII removed]?",
+  "ground_truth_response_target": "name or address on the label",
+  "ground_truth_task_type": "Reading",
+  "turn_targets": [
+    {
+      "response_target": "name on the label",
+      "task_type": "Reading",
+      "confidence": "high",
+      "rationale": "The participant is asking for confirmation of a specific name on the package label, indicating their intent is to verify the name that appears there."
+    }
+  ],
+  "per_question_scores": [
+    {
+      "rank": 1,
+      "generated_question": "Can you read the full shipping address on the label?",
+      "generated_response_target": "shipping address",
+      "generated_task_type": "Reading",
+      "ground_truth_response_target": "name or address on the label",
+      "ground_truth_task_type": "Reading",
+      "target_match_score": 0,
+      "matched_user_turn": null,
+      "matched_user_turn_target": "",
+      "matched_user_turn_score": 0,
+      "task_type_match_score": 1
+    },
+    {
+      "rank": 2,
+      "generated_question": "Who is this package addressed to?",
+      "generated_response_target": "intended recipient",
+      "generated_task_type": "Reading",
+      "ground_truth_response_target": "name or address on the label",
+      "ground_truth_task_type": "Reading",
+      "target_match_score": 0,
+      "matched_user_turn": null,
+      "matched_user_turn_target": "",
+      "matched_user_turn_score": 0,
+      "task_type_match_score": 1
+    },
+    {
+      "rank": 3,
+      "generated_question": "Can you tell me who sent this package?",
+      "generated_response_target": "sender information",
+      "generated_task_type": "Reading",
+      "ground_truth_response_target": "name or address on the label",
+      "ground_truth_task_type": "Reading",
+      "target_match_score": 0,
+      "matched_user_turn": null,
+      "matched_user_turn_target": "",
+      "matched_user_turn_score": 0,
+      "task_type_match_score": 1
+    },
+    {
+      "rank": 4,
+      "generated_question": "Is my name on the label?",
+      "generated_response_target": "recipient name",
+      "generated_task_type": "Reading",
+      "ground_truth_response_target": "name or address on the label",
+      "ground_truth_task_type": "Reading",
+      "target_match_score": 0,
+      "matched_user_turn": null,
+      "matched_user_turn_target": "",
+      "matched_user_turn_score": 0,
+      "task_type_match_score": 1
+    },
+    {
+      "rank": 5,
+      "generated_question": "Can you read the tracking number out loud?",
+      "generated_response_target": "tracking number",
+      "generated_task_type": "Reading",
+      "ground_truth_response_target": "name or address on the label",
+      "ground_truth_task_type": "Reading",
+      "target_match_score": 0,
+      "matched_user_turn": null,
+      "matched_user_turn_target": "",
+      "matched_user_turn_score": 0,
+      "task_type_match_score": 1
+    },
+    {
+      "rank": 6,
+      "generated_question": "Is there a return address listed?",
+      "generated_response_target": "return address",
+      "generated_task_type": "Reading",
+      "ground_truth_response_target": "name or address on the label",
+      "ground_truth_task_type": "Reading",
+      "target_match_score": 0,
+      "matched_user_turn": null,
+      "matched_user_turn_target": "",
+      "matched_user_turn_score": 0,
+      "task_type_match_score": 1
+    },
+    {
+      "rank": 7,
+      "generated_question": "Are there any special instructions or warnings on the box?",
+      "generated_response_target": "special handling instructions",
+      "generated_task_type": "Reading",
+      "ground_truth_response_target": "name or address on the label",
+      "ground_truth_task_type": "Reading",
+      "target_match_score": 0,
+      "matched_user_turn": null,
+      "matched_user_turn_target": "",
+      "matched_user_turn_score": 0,
+      "task_type_match_score": 1
+    },
+    {
+      "rank": 8,
+      "generated_question": "Can you read the smaller label on the side?",
+      "generated_response_target": "smaller label",
+      "generated_task_type": "Reading",
+      "ground_truth_response_target": "name or address on the label",
+      "ground_truth_task_type": "Reading",
+      "target_match_score": 0,
+      "matched_user_turn": null,
+      "matched_user_turn_target": "",
+      "matched_user_turn_score": 0,
+      "task_type_match_score": 1
+    },
+    {
+      "rank": 9,
+      "generated_question": "Is there a delivery date or shipment date on the label?",
+      "generated_response_target": "delivery date",
+      "generated_task_type": "Reading",
+      "ground_truth_response_target": "name or address on the label",
+      "ground_truth_task_type": "Reading",
+      "target_match_score": 0,
+      "matched_user_turn": null,
+      "matched_user_turn_target": "",
+      "matched_user_turn_score": 0,
+      "task_type_match_score": 1
+    },
+    {
+      "rank": 10,
+      "generated_question": "Can you read any barcodes or QR codes on the label?",
+      "generated_response_target": "barcodes or QR codes",
+      "generated_task_type": "Reading",
+      "ground_truth_response_target": "name or address on the label",
+      "ground_truth_task_type": "Reading",
+      "target_match_score": 0,
+      "matched_user_turn": null,
+      "matched_user_turn_target": "",
+      "matched_user_turn_score": 0,
+      "task_type_match_score": 1
+    },
+    {
+      "rank": "ground_truth",
+      "generated_question": "Look again, is it actually [PII removed] and not [PII removed]?",
+      "generated_response_target": "name or address on the label",
+      "generated_task_type": "Reading",
+      "ground_truth_response_target": "name or address on the label",
+      "ground_truth_task_type": "Reading",
+      "target_match_score": 1,
+      "matched_user_turn": 1,
+      "matched_user_turn_target": "name on the label",
+      "matched_user_turn_score": 0.5,
+      "task_type_match_score": 1
+    }
+  ]
+}

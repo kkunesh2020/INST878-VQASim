@@ -1,0 +1,756 @@
+{
+  "input": {
+    "participant": "P3",
+    "source": "diary",
+    "interaction": 16,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P3/diary_data/P3.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P3/diary_data/P3_images/image_16_1.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "The image shows a box of medication on a white surface. The box is for \"Coricidin HBP,\" which is a cold and flu medication specifically for people with high blood pressure. The box is divided into two sections: one for \"Cold & Flu Day\" and the other for \"Cold & Flu Night.\" The day section is orange, and the night section is blue. The box mentions \"Maximum Strength\" and \"Cold Relief for People with High Blood Pressure.\" There are also mentions of symptoms it addresses, such as body aches, fever, cough, and runny nose. A hand with pink nail polish is holding the box. In the background, there is another box with a green and orange design, but the details are not clear.",
+    "all_user_responses": [
+      "What are the directions for taking the",
+      "What are the instructions for taking the medication?",
+      "What is the name of the medication?"
+    ],
+    "question_category": "Reading, Unanswerable",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user is likely at home, possibly feeling unwell and trying to quickly identify or confirm the medication (cold/flu medicine) before taking it. The hand placement and partial view suggest the user may be in a hurry or not feeling well, leading to a less careful photo. The user is probably familiar with both the environment and the medication but may want to double-check the label or dosage."
+      },
+      {
+        "context_id": 2,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "unfamiliar people",
+        "activity_type": "professional",
+        "rationale": "The user could be in a clinic, pharmacy, or another public indoor setting, consulting with staff about which medication to purchase or use. The unfamiliarity with both the environment and the medication, as well as the presence of others, suggests a professional or transactional context. The user may be documenting the medication to ask questions or get assistance."
+      },
+      {
+        "context_id": 3,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "daily living task",
+        "rationale": "The user might be at home with family or friends, trying to identify an unfamiliar medication found in the household. The presence of another box and the hand in the image suggest the user may be discussing or showing the item to someone else, possibly to confirm its use or safety."
+      },
+      {
+        "context_id": 4,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "leisure",
+        "rationale": "The user could be organizing or cleaning up their space, coming across a medication box they don't recognize. They may be taking their time to document or identify the item for later reference, leading to a more casual, less urgent context."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user is likely at home, possibly feeling unwell and trying to quickly identify or confirm the medication (cold/flu medicine) before taking it. The hand placement and partial view suggest the user may be in a hurry or not feeling well, leading to a less careful photo. The user is probably familiar with both the environment and the medication but may want to double-check the label or dosage."
+        },
+        {
+          "context_id": 2,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "unfamiliar people",
+          "activity_type": "professional",
+          "rationale": "The user could be in a clinic, pharmacy, or another public indoor setting, consulting with staff about which medication to purchase or use. The unfamiliarity with both the environment and the medication, as well as the presence of others, suggests a professional or transactional context. The user may be documenting the medication to ask questions or get assistance."
+        },
+        {
+          "context_id": 3,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "daily living task",
+          "rationale": "The user might be at home with family or friends, trying to identify an unfamiliar medication found in the household. The presence of another box and the hand in the image suggest the user may be discussing or showing the item to someone else, possibly to confirm its use or safety."
+        },
+        {
+          "context_id": 4,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "leisure",
+          "rationale": "The user could be organizing or cleaning up their space, coming across a medication box they don't recognize. They may be taking their time to document or identify the item for later reference, leading to a more casual, less urgent context."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Reading",
+        "description": "Extracting the name and dosage instructions of the medication box in the image.",
+        "confidence": "high",
+        "rationale": "The box is prominently shown and partially readable, suggesting the user may want to confirm the medication name, its purpose, or how to take it, which is a common need for BLV users handling medication."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Reading",
+        "description": "Checking for warnings or special instructions (e.g., for people with high blood pressure) on the medication packaging.",
+        "confidence": "medium",
+        "rationale": "The visible text mentions 'HIGH BLOOD PRESSURE,' indicating the user may want to confirm if the medication is safe for them or someone else with this condition."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Identification",
+        "description": "Identifying which medication box is which among multiple boxes on the table.",
+        "confidence": "medium",
+        "rationale": "There are at least two different boxes visible, so the user may want to distinguish between them, especially if they are similar in size or shape."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Reading",
+        "description": "Determining the expiration date of the medication.",
+        "confidence": "medium",
+        "rationale": "BLV users often need to check expiration dates for safety, and the side of the upper box is visible, which is a common location for expiration dates."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Description",
+        "description": "Getting a general description of the items on the table to confirm what is present.",
+        "confidence": "medium",
+        "rationale": "The user may want to know what items are on the table, especially if they are unsure which box is which or if there are other objects present."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Reading",
+        "description": "Verifying the number of pills or capsules remaining in the box.",
+        "confidence": "low",
+        "rationale": "The box is closed, so this may not be possible, but the user might be hoping for information about the contents if the box were open or partially open."
+      },
+      {
+        "task_id": 7,
+        "task_type": "Identification",
+        "description": "Confirming that the medication is for cold and flu symptoms.",
+        "confidence": "high",
+        "rationale": "The visible text references 'COLD & FLU,' so the user may want to confirm that this is the correct medication for their symptoms."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Reading",
+          "description": "Extracting the name and dosage instructions of the medication box in the image.",
+          "confidence": "high",
+          "rationale": "The box is prominently shown and partially readable, suggesting the user may want to confirm the medication name, its purpose, or how to take it, which is a common need for BLV users handling medication."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Reading",
+          "description": "Checking for warnings or special instructions (e.g., for people with high blood pressure) on the medication packaging.",
+          "confidence": "medium",
+          "rationale": "The visible text mentions 'HIGH BLOOD PRESSURE,' indicating the user may want to confirm if the medication is safe for them or someone else with this condition."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Identification",
+          "description": "Identifying which medication box is which among multiple boxes on the table.",
+          "confidence": "medium",
+          "rationale": "There are at least two different boxes visible, so the user may want to distinguish between them, especially if they are similar in size or shape."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Reading",
+          "description": "Determining the expiration date of the medication.",
+          "confidence": "medium",
+          "rationale": "BLV users often need to check expiration dates for safety, and the side of the upper box is visible, which is a common location for expiration dates."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Description",
+          "description": "Getting a general description of the items on the table to confirm what is present.",
+          "confidence": "medium",
+          "rationale": "The user may want to know what items are on the table, especially if they are unsure which box is which or if there are other objects present."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Reading",
+          "description": "Verifying the number of pills or capsules remaining in the box.",
+          "confidence": "low",
+          "rationale": "The box is closed, so this may not be possible, but the user might be hoping for information about the contents if the box were open or partially open."
+        },
+        {
+          "task_id": 7,
+          "task_type": "Identification",
+          "description": "Confirming that the medication is for cold and flu symptoms.",
+          "confidence": "high",
+          "rationale": "The visible text references 'COLD & FLU,' so the user may want to confirm that this is the correct medication for their symptoms."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "{'rank': 1, 'response': 'Can you read the dosage instructions for both the day and night pills?', 'response_target': 'dosage instructions', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.98, 'rationale': 'The user is likely about to take the medication and needs to confirm how much to take and when, especially since the box is divided into day and night sections. This is a high-frequency, safety-critical follow-up.'}",
+      "{'rank': 2, 'response': 'Is there an expiration date visible on the box?', 'response_target': 'expiration date', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': 'Checking expiration is a common safety check before taking medication, especially if the user is familiar with the medication but not sure how old it is.'}",
+      "{'rank': 3, 'response': 'Does the box say anything about side effects or warnings for people with high blood pressure?', 'response_target': 'warnings for high blood pressure', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.93, 'rationale': 'Given the mention of high blood pressure, the user may want to double-check for any specific warnings or instructions, especially if they are managing this condition.'}",
+      "{'rank': 4, 'response': 'What is the name of the other box on the table?', 'response_target': 'other box name', 'task_type': 'Identification', 'associated_task_id': 3, 'associated_context_id': 3, 'plausibility_score': 0.9, 'rationale': 'If the user is choosing between medications or wants to avoid confusion, identifying the second box is a logical follow-up, especially since its details are unclear.'}",
+      "{'rank': 5, 'response': 'Can you confirm that this is cold and flu medicine?', 'response_target': 'medication purpose', 'task_type': 'Identification', 'associated_task_id': 7, 'associated_context_id': 1, 'plausibility_score': 0.88, 'rationale': 'The user may want to verify that the medication matches their symptoms, especially if they are not feeling well or are unsure due to partial labeling.'}",
+      "{'rank': 6, 'response': 'How many pills are left in the box?', 'response_target': 'number of pills remaining', 'task_type': 'Reading', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.7, 'rationale': 'While the box appears closed, users sometimes ask this in hopes the AI can see through a partially open flap or transparent window, or just to confirm if the box is full or empty.'}",
+      "{'rank': 7, 'response': 'Can you list the symptoms this medication treats?', 'response_target': 'treated symptoms', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': 'The user may want to confirm that the medication addresses their specific symptoms, especially if they are not feeling well or are comparing options.'}",
+      "{'rank': 8, 'response': 'Is there any information about drug interactions or things I should avoid while taking this?', 'response_target': 'drug interaction information', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.78, 'rationale': 'Users often want to check for interactions, especially with medications for chronic conditions like high blood pressure.'}",
+      "{'rank': 9, 'response': 'Can you describe what else is on the table besides the medication boxes?', 'response_target': 'other items on table', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 4, 'plausibility_score': 0.65, 'rationale': 'If the user is organizing or cleaning, they may want to know what else is present, though this is less urgent than medication-specific questions.'}",
+      "{'rank': 10, 'response': 'Is the box open or sealed?', 'response_target': 'box status', 'task_type': 'Verification', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.6, 'rationale': 'The user may want to know if the box has been opened before, which could affect their decision to use it, but this is less likely than verifying instructions or warnings.'}"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Can you read the dosage instructions for both the day and night pills?",
+        "response_target": "dosage instructions",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.98,
+        "rationale": "The user is likely about to take the medication and needs to confirm how much to take and when, especially since the box is divided into day and night sections. This is a high-frequency, safety-critical follow-up."
+      },
+      {
+        "rank": 2,
+        "response": "Is there an expiration date visible on the box?",
+        "response_target": "expiration date",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.95,
+        "rationale": "Checking expiration is a common safety check before taking medication, especially if the user is familiar with the medication but not sure how old it is."
+      },
+      {
+        "rank": 3,
+        "response": "Does the box say anything about side effects or warnings for people with high blood pressure?",
+        "response_target": "warnings for high blood pressure",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.93,
+        "rationale": "Given the mention of high blood pressure, the user may want to double-check for any specific warnings or instructions, especially if they are managing this condition."
+      },
+      {
+        "rank": 4,
+        "response": "What is the name of the other box on the table?",
+        "response_target": "other box name",
+        "task_type": "Identification",
+        "associated_task_id": 3,
+        "associated_context_id": 3,
+        "plausibility_score": 0.9,
+        "rationale": "If the user is choosing between medications or wants to avoid confusion, identifying the second box is a logical follow-up, especially since its details are unclear."
+      },
+      {
+        "rank": 5,
+        "response": "Can you confirm that this is cold and flu medicine?",
+        "response_target": "medication purpose",
+        "task_type": "Identification",
+        "associated_task_id": 7,
+        "associated_context_id": 1,
+        "plausibility_score": 0.88,
+        "rationale": "The user may want to verify that the medication matches their symptoms, especially if they are not feeling well or are unsure due to partial labeling."
+      },
+      {
+        "rank": 6,
+        "response": "How many pills are left in the box?",
+        "response_target": "number of pills remaining",
+        "task_type": "Reading",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 0.7,
+        "rationale": "While the box appears closed, users sometimes ask this in hopes the AI can see through a partially open flap or transparent window, or just to confirm if the box is full or empty."
+      },
+      {
+        "rank": 7,
+        "response": "Can you list the symptoms this medication treats?",
+        "response_target": "treated symptoms",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.85,
+        "rationale": "The user may want to confirm that the medication addresses their specific symptoms, especially if they are not feeling well or are comparing options."
+      },
+      {
+        "rank": 8,
+        "response": "Is there any information about drug interactions or things I should avoid while taking this?",
+        "response_target": "drug interaction information",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.78,
+        "rationale": "Users often want to check for interactions, especially with medications for chronic conditions like high blood pressure."
+      },
+      {
+        "rank": 9,
+        "response": "Can you describe what else is on the table besides the medication boxes?",
+        "response_target": "other items on table",
+        "task_type": "Description",
+        "associated_task_id": 5,
+        "associated_context_id": 4,
+        "plausibility_score": 0.65,
+        "rationale": "If the user is organizing or cleaning, they may want to know what else is present, though this is less urgent than medication-specific questions."
+      },
+      {
+        "rank": 10,
+        "response": "Is the box open or sealed?",
+        "response_target": "box status",
+        "task_type": "Verification",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 0.6,
+        "rationale": "The user may want to know if the box has been opened before, which could affect their decision to use it, but this is less likely than verifying instructions or warnings."
+      }
+    ],
+    "raw_output": {
+      "ranked_questions": [
+        {
+          "rank": 1,
+          "response": "Can you read the dosage instructions for both the day and night pills?",
+          "response_target": "dosage instructions",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 0.98,
+          "rationale": "The user is likely about to take the medication and needs to confirm how much to take and when, especially since the box is divided into day and night sections. This is a high-frequency, safety-critical follow-up."
+        },
+        {
+          "rank": 2,
+          "response": "Is there an expiration date visible on the box?",
+          "response_target": "expiration date",
+          "task_type": "Reading",
+          "associated_task_id": 4,
+          "associated_context_id": 1,
+          "plausibility_score": 0.95,
+          "rationale": "Checking expiration is a common safety check before taking medication, especially if the user is familiar with the medication but not sure how old it is."
+        },
+        {
+          "rank": 3,
+          "response": "Does the box say anything about side effects or warnings for people with high blood pressure?",
+          "response_target": "warnings for high blood pressure",
+          "task_type": "Reading",
+          "associated_task_id": 2,
+          "associated_context_id": 1,
+          "plausibility_score": 0.93,
+          "rationale": "Given the mention of high blood pressure, the user may want to double-check for any specific warnings or instructions, especially if they are managing this condition."
+        },
+        {
+          "rank": 4,
+          "response": "What is the name of the other box on the table?",
+          "response_target": "other box name",
+          "task_type": "Identification",
+          "associated_task_id": 3,
+          "associated_context_id": 3,
+          "plausibility_score": 0.9,
+          "rationale": "If the user is choosing between medications or wants to avoid confusion, identifying the second box is a logical follow-up, especially since its details are unclear."
+        },
+        {
+          "rank": 5,
+          "response": "Can you confirm that this is cold and flu medicine?",
+          "response_target": "medication purpose",
+          "task_type": "Identification",
+          "associated_task_id": 7,
+          "associated_context_id": 1,
+          "plausibility_score": 0.88,
+          "rationale": "The user may want to verify that the medication matches their symptoms, especially if they are not feeling well or are unsure due to partial labeling."
+        },
+        {
+          "rank": 6,
+          "response": "How many pills are left in the box?",
+          "response_target": "number of pills remaining",
+          "task_type": "Reading",
+          "associated_task_id": 6,
+          "associated_context_id": 1,
+          "plausibility_score": 0.7,
+          "rationale": "While the box appears closed, users sometimes ask this in hopes the AI can see through a partially open flap or transparent window, or just to confirm if the box is full or empty."
+        },
+        {
+          "rank": 7,
+          "response": "Can you list the symptoms this medication treats?",
+          "response_target": "treated symptoms",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 0.85,
+          "rationale": "The user may want to confirm that the medication addresses their specific symptoms, especially if they are not feeling well or are comparing options."
+        },
+        {
+          "rank": 8,
+          "response": "Is there any information about drug interactions or things I should avoid while taking this?",
+          "response_target": "drug interaction information",
+          "task_type": "Reading",
+          "associated_task_id": 2,
+          "associated_context_id": 1,
+          "plausibility_score": 0.78,
+          "rationale": "Users often want to check for interactions, especially with medications for chronic conditions like high blood pressure."
+        },
+        {
+          "rank": 9,
+          "response": "Can you describe what else is on the table besides the medication boxes?",
+          "response_target": "other items on table",
+          "task_type": "Description",
+          "associated_task_id": 5,
+          "associated_context_id": 4,
+          "plausibility_score": 0.65,
+          "rationale": "If the user is organizing or cleaning, they may want to know what else is present, though this is less urgent than medication-specific questions."
+        },
+        {
+          "rank": 10,
+          "response": "Is the box open or sealed?",
+          "response_target": "box status",
+          "task_type": "Verification",
+          "associated_task_id": 6,
+          "associated_context_id": 1,
+          "plausibility_score": 0.6,
+          "rationale": "The user may want to know if the box has been opened before, which could affect their decision to use it, but this is less likely than verifying instructions or warnings."
+        }
+      ]
+    }
+  },
+  "response_target_agent": {
+    "response_target": "directions for taking the medication",
+    "task_type": "Reading, Unanswerable",
+    "confidence": "high",
+    "rationale": "The participant's question directly asks for the directions for taking the medication. The question_category is 'Reading, Unanswerable,' indicating they want to read specific instructions, but the answer may not be available due to image quality or framing. The information target is clearly the medication directions.",
+    "raw_output": {
+      "response_target": "directions for taking the medication",
+      "task_type": "Reading, Unanswerable",
+      "confidence": "high",
+      "rationale": "The participant's question directly asks for the directions for taking the medication. The question_category is 'Reading, Unanswerable,' indicating they want to read specific instructions, but the answer may not be available due to image quality or framing. The information target is clearly the medication directions."
+    }
+  },
+  "interaction_target_agent": {
+    "turn_targets": [
+      {
+        "response_target": "directions for taking the medication",
+        "task_type": "Reading, Unanswerable",
+        "confidence": "high",
+        "rationale": "The participant's incomplete question directly seeks the directions for taking the medication, which is a clear and common information target for medication packaging."
+      },
+      {
+        "response_target": "instructions for taking the medication",
+        "task_type": "Reading, Unanswerable",
+        "confidence": "high",
+        "rationale": "The participant repeats and clarifies their request, specifically asking for the instructions for taking the medication, which is a direct noun phrase from the question."
+      },
+      {
+        "response_target": "name of the medication",
+        "task_type": "Reading, Unanswerable",
+        "confidence": "high",
+        "rationale": "The participant explicitly asks for the name of the medication, which is a straightforward and unambiguous information target."
+      }
+    ],
+    "raw_output": {
+      "turn_targets": [
+        {
+          "response_target": "directions for taking the medication",
+          "task_type": "Reading",
+          "confidence": "high",
+          "rationale": "The participant's incomplete question directly seeks the directions for taking the medication, which is a clear and common information target for medication packaging."
+        },
+        {
+          "response_target": "instructions for taking the medication",
+          "task_type": "Reading",
+          "confidence": "high",
+          "rationale": "The participant repeats and clarifies their request, specifically asking for the instructions for taking the medication, which is a direct noun phrase from the question."
+        },
+        {
+          "response_target": "name of the medication",
+          "task_type": "Reading",
+          "confidence": "high",
+          "rationale": "The participant explicitly asks for the name of the medication, which is a straightforward and unambiguous information target."
+        }
+      ]
+    }
+  },
+  "final_ranked_questions": [
+    "{'rank': 1, 'response': 'Can you read the dosage instructions for both the day and night pills?', 'response_target': 'dosage instructions', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.98, 'rationale': 'The user is likely about to take the medication and needs to confirm how much to take and when, especially since the box is divided into day and night sections. This is a high-frequency, safety-critical follow-up.'}",
+    "{'rank': 2, 'response': 'Is there an expiration date visible on the box?', 'response_target': 'expiration date', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': 'Checking expiration is a common safety check before taking medication, especially if the user is familiar with the medication but not sure how old it is.'}",
+    "{'rank': 3, 'response': 'Does the box say anything about side effects or warnings for people with high blood pressure?', 'response_target': 'warnings for high blood pressure', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.93, 'rationale': 'Given the mention of high blood pressure, the user may want to double-check for any specific warnings or instructions, especially if they are managing this condition.'}",
+    "{'rank': 4, 'response': 'What is the name of the other box on the table?', 'response_target': 'other box name', 'task_type': 'Identification', 'associated_task_id': 3, 'associated_context_id': 3, 'plausibility_score': 0.9, 'rationale': 'If the user is choosing between medications or wants to avoid confusion, identifying the second box is a logical follow-up, especially since its details are unclear.'}",
+    "{'rank': 5, 'response': 'Can you confirm that this is cold and flu medicine?', 'response_target': 'medication purpose', 'task_type': 'Identification', 'associated_task_id': 7, 'associated_context_id': 1, 'plausibility_score': 0.88, 'rationale': 'The user may want to verify that the medication matches their symptoms, especially if they are not feeling well or are unsure due to partial labeling.'}",
+    "{'rank': 6, 'response': 'How many pills are left in the box?', 'response_target': 'number of pills remaining', 'task_type': 'Reading', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.7, 'rationale': 'While the box appears closed, users sometimes ask this in hopes the AI can see through a partially open flap or transparent window, or just to confirm if the box is full or empty.'}",
+    "{'rank': 7, 'response': 'Can you list the symptoms this medication treats?', 'response_target': 'treated symptoms', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': 'The user may want to confirm that the medication addresses their specific symptoms, especially if they are not feeling well or are comparing options.'}",
+    "{'rank': 8, 'response': 'Is there any information about drug interactions or things I should avoid while taking this?', 'response_target': 'drug interaction information', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.78, 'rationale': 'Users often want to check for interactions, especially with medications for chronic conditions like high blood pressure.'}",
+    "{'rank': 9, 'response': 'Can you describe what else is on the table besides the medication boxes?', 'response_target': 'other items on table', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 4, 'plausibility_score': 0.65, 'rationale': 'If the user is organizing or cleaning, they may want to know what else is present, though this is less urgent than medication-specific questions.'}",
+    "{'rank': 10, 'response': 'Is the box open or sealed?', 'response_target': 'box status', 'task_type': 'Verification', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.6, 'rationale': 'The user may want to know if the box has been opened before, which could affect their decision to use it, but this is less likely than verifying instructions or warnings.'}"
+  ],
+  "ground_truth_question": "What are the directions for taking the",
+  "comparison": {
+    "ground_truth": "What are the directions for taking the",
+    "ground_truth_response_target": "directions for taking the medication",
+    "ground_truth_task_type": "Reading, Unanswerable",
+    "turn_targets": [
+      {
+        "response_target": "directions for taking the medication",
+        "task_type": "Reading, Unanswerable",
+        "confidence": "high",
+        "rationale": "The participant's incomplete question directly seeks the directions for taking the medication, which is a clear and common information target for medication packaging."
+      },
+      {
+        "response_target": "instructions for taking the medication",
+        "task_type": "Reading, Unanswerable",
+        "confidence": "high",
+        "rationale": "The participant repeats and clarifies their request, specifically asking for the instructions for taking the medication, which is a direct noun phrase from the question."
+      },
+      {
+        "response_target": "name of the medication",
+        "task_type": "Reading, Unanswerable",
+        "confidence": "high",
+        "rationale": "The participant explicitly asks for the name of the medication, which is a straightforward and unambiguous information target."
+      }
+    ],
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Can you read the dosage instructions for both the day and night pills?",
+        "generated_response_target": "dosage instructions",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions for taking the medication",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 2,
+        "generated_question": "Is there an expiration date visible on the box?",
+        "generated_response_target": "expiration date",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions for taking the medication",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 3,
+        "generated_question": "Does the box say anything about side effects or warnings for people with high blood pressure?",
+        "generated_response_target": "warnings for high blood pressure",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions for taking the medication",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 4,
+        "generated_question": "What is the name of the other box on the table?",
+        "generated_response_target": "other box name",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "directions for taking the medication",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 5,
+        "generated_question": "Can you confirm that this is cold and flu medicine?",
+        "generated_response_target": "medication purpose",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "directions for taking the medication",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 6,
+        "generated_question": "How many pills are left in the box?",
+        "generated_response_target": "number of pills remaining",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions for taking the medication",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 7,
+        "generated_question": "Can you list the symptoms this medication treats?",
+        "generated_response_target": "treated symptoms",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions for taking the medication",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 8,
+        "generated_question": "Is there any information about drug interactions or things I should avoid while taking this?",
+        "generated_response_target": "drug interaction information",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions for taking the medication",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 9,
+        "generated_question": "Can you describe what else is on the table besides the medication boxes?",
+        "generated_response_target": "other items on table",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "directions for taking the medication",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 10,
+        "generated_question": "Is the box open or sealed?",
+        "generated_response_target": "box status",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "directions for taking the medication",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "What are the directions for taking the",
+        "generated_response_target": "directions for taking the medication",
+        "generated_task_type": "Reading, Unanswerable",
+        "ground_truth_response_target": "directions for taking the medication",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 1,
+        "matched_user_turn": 1,
+        "matched_user_turn_target": "directions for taking the medication",
+        "matched_user_turn_score": 1,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "NA-w-text"
+      ],
+      "question_category": "Reading, Unanswerable",
+      "in_a_hurry": "no",
+      "indoor_outdoor": "indoor",
+      "familiarity_of_environment": "yes",
+      "familiarity_of_item": "yes",
+      "surrounding_environment": "alone",
+      "environment_setting": "leisure",
+      "interaction_length": "4",
+      "task_completed": "No"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P3_images/image_16_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows a box of medication on a white surface. The box is for \"Coricidin HBP,\" which is a cold and flu medication specifically for people with high blood pressure. The box is divided into two sections: one for \"Cold & Flu Day\" and the other for \"Cold & Flu Night.\" The day section is orange, and the night section is blue. The box mentions \"Maximum Strength\" and \"Cold Relief for People with High Blood Pressure.\" There are also mentions of symptoms it addresses, such as body aches, fever, cough, and runny nose. A hand with pink nail polish is holding the box. In the background, there is another box with a green and orange design, but the details are not clear.",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "User:What are the directions for taking the",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 4,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image does not clearly show the directions for taking the medication. You might need to look for the specific section on the box that lists the dosage instructions or check the leaflet inside the box. If you need detailed guidance, I recommend pressing the \"Call a volunteer\" button for assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 5,
+        "text_usr": "User:What are the instructions for taking the medication?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 6,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P3_images/image_16_6.jpg"
+      },
+      {
+        "turn": 7,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image does not clearly show the instructions for taking the medication. You might need to look for the specific section on the box that lists the dosage instructions or check the leaflet inside the box. If you need detailed guidance, I recommend pressing the \"Call a volunteer\" button for assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 8,
+        "text_usr": "User:What is the name of the medication?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 9,
+        "text_usr": null,
+        "text_ai": "Be My AI:The name of the medication is \"Coricidin HBP.\"",
+        "local_image_path": null
+      }
+    ]
+  }
+}

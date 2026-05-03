@@ -1,0 +1,686 @@
+{
+  "input": {
+    "participant": "P1",
+    "source": "diary",
+    "interaction": 1,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P1/diary_data/P1.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P1/diary_data/P1_images/image_1_1.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "The image shows the back of a food package with a Nutrition Facts label and cooking directions. The Nutrition Facts label provides information for a serving size of 1/2 cup dry mix (64g) with about 2.5 servings per container. It lists the calories as 230 per serving and 320 per prepared portion. The label includes details on total fat, cholesterol, sodium, total carbohydrates, dietary fiber, total sugars, added sugars, and protein. It also provides information on vitamins and minerals such as Vitamin D, calcium, iron, potassium, thiamin, riboflavin, niacin, and folate.\n\nTo the right of the Nutrition Facts, there are stovetop and microwave directions for preparing the food. Below this, there is a section titled \"Our Promise\" and a QR code for scanning with a phone camera for more recipes and inspiration. The bottom of the package shows an image of a prepared dish with vegetables like tomatoes and zucchini.",
+    "all_user_responses": [
+      "What are the directions on how to make this item?"
+    ],
+    "question_category": "Reading",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user is likely at home in their kitchen, checking nutrition facts before preparing a meal. The image focuses on the nutrition label, suggesting intent to read it, possibly for dietary tracking or meal planning. The countertop and packaging imply a routine setting, and the user is probably familiar with both the environment and the product."
+      },
+      {
+        "context_id": 2,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user could be in a new kitchen (e.g., at a friend's house or an Airbnb), trying to quickly check the nutrition facts of an unfamiliar packaged food. The partial and slightly rotated image suggests possible haste or unfamiliarity with the product or environment, leading to a less carefully framed photo."
+      },
+      {
+        "context_id": 3,
+        "location": "indoor",
+        "time_pressure": "in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "leisure",
+        "rationale": "The user might be preparing a meal with family or friends and needs to quickly check nutrition facts for dietary restrictions or preferences. The presence of others and a social cooking activity could lead to a hurried, less precise photo as the user multitasks or responds to questions."
+      },
+      {
+        "context_id": 4,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "unfamiliar people",
+        "activity_type": "professional",
+        "rationale": "The user could be in a work or volunteer setting (e.g., a cooking class or nutrition workshop), documenting nutrition facts for later reference or reporting. The unfamiliar environment and product, combined with the presence of others, could explain the partial, slightly awkward framing as the user balances documentation with participation."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user is likely at home in their kitchen, checking nutrition facts before preparing a meal. The image focuses on the nutrition label, suggesting intent to read it, possibly for dietary tracking or meal planning. The countertop and packaging imply a routine setting, and the user is probably familiar with both the environment and the product."
+        },
+        {
+          "context_id": 2,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user could be in a new kitchen (e.g., at a friend's house or an Airbnb), trying to quickly check the nutrition facts of an unfamiliar packaged food. The partial and slightly rotated image suggests possible haste or unfamiliarity with the product or environment, leading to a less carefully framed photo."
+        },
+        {
+          "context_id": 3,
+          "location": "indoor",
+          "time_pressure": "in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "leisure",
+          "rationale": "The user might be preparing a meal with family or friends and needs to quickly check nutrition facts for dietary restrictions or preferences. The presence of others and a social cooking activity could lead to a hurried, less precise photo as the user multitasks or responds to questions."
+        },
+        {
+          "context_id": 4,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "unfamiliar people",
+          "activity_type": "professional",
+          "rationale": "The user could be in a work or volunteer setting (e.g., a cooking class or nutrition workshop), documenting nutrition facts for later reference or reporting. The unfamiliar environment and product, combined with the presence of others, could explain the partial, slightly awkward framing as the user balances documentation with participation."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Reading",
+        "description": "Extracting nutrition facts (e.g., calories, fat, sodium) from the package to make dietary decisions.",
+        "confidence": "high",
+        "rationale": "The image is focused on the Nutrition Facts panel, which is a common need for BLV users managing health, diet, or allergies."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Reading",
+        "description": "Determining the serving size and number of servings per container for portion control.",
+        "confidence": "high",
+        "rationale": "The serving size and servings per container are clearly visible and are critical for meal planning or tracking food intake."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Reading",
+        "description": "Reading the ingredients list to check for allergens or dietary restrictions.",
+        "confidence": "medium",
+        "rationale": "The ingredients list is partially visible at the bottom, which may be important for users with allergies or specific dietary needs, though some of it may be cut off or hard to read."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Reading",
+        "description": "Extracting preparation or cooking instructions (stovetop or microwave directions).",
+        "confidence": "medium",
+        "rationale": "Some cooking instructions are visible on the right, though not fully in frame, suggesting the user may want to know how to prepare the food."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Reading",
+        "description": "Scanning the QR code for additional product information or recipes.",
+        "confidence": "low",
+        "rationale": "A QR code is visible, and the packaging suggests scanning it for more information, which could be a user goal, though this is less likely than reading the main text."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Reading",
+        "description": "Checking for specific vitamin or mineral content (e.g., calcium, iron) for nutritional tracking.",
+        "confidence": "medium",
+        "rationale": "The nutrition panel includes detailed vitamin and mineral information, which may be important for users with specific health concerns."
+      },
+      {
+        "task_id": 7,
+        "task_type": "Reading",
+        "description": "Verifying the product flavor or variety (e.g., Cheddar Broccoli) to ensure correct selection.",
+        "confidence": "low",
+        "rationale": "The product name is partially visible, and a user may want to confirm they have the correct item, though the main focus is on the nutrition panel."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Reading",
+          "description": "Extracting nutrition facts (e.g., calories, fat, sodium) from the package to make dietary decisions.",
+          "confidence": "high",
+          "rationale": "The image is focused on the Nutrition Facts panel, which is a common need for BLV users managing health, diet, or allergies."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Reading",
+          "description": "Determining the serving size and number of servings per container for portion control.",
+          "confidence": "high",
+          "rationale": "The serving size and servings per container are clearly visible and are critical for meal planning or tracking food intake."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Reading",
+          "description": "Reading the ingredients list to check for allergens or dietary restrictions.",
+          "confidence": "medium",
+          "rationale": "The ingredients list is partially visible at the bottom, which may be important for users with allergies or specific dietary needs, though some of it may be cut off or hard to read."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Reading",
+          "description": "Extracting preparation or cooking instructions (stovetop or microwave directions).",
+          "confidence": "medium",
+          "rationale": "Some cooking instructions are visible on the right, though not fully in frame, suggesting the user may want to know how to prepare the food."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Reading",
+          "description": "Scanning the QR code for additional product information or recipes.",
+          "confidence": "low",
+          "rationale": "A QR code is visible, and the packaging suggests scanning it for more information, which could be a user goal, though this is less likely than reading the main text."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Reading",
+          "description": "Checking for specific vitamin or mineral content (e.g., calcium, iron) for nutritional tracking.",
+          "confidence": "medium",
+          "rationale": "The nutrition panel includes detailed vitamin and mineral information, which may be important for users with specific health concerns."
+        },
+        {
+          "task_id": 7,
+          "task_type": "Reading",
+          "description": "Verifying the product flavor or variety (e.g., Cheddar Broccoli) to ensure correct selection.",
+          "confidence": "low",
+          "rationale": "The product name is partially visible, and a user may want to confirm they have the correct item, though the main focus is on the nutrition panel."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "Can you read the ingredients list at the bottom? I need to check for allergens.",
+      "What are the stovetop cooking directions? I want to make sure I do it right.",
+      "How much sodium is in one serving?",
+      "Can you tell me the serving size again?",
+      "How many servings are in the package?",
+      "Can you read the microwave directions? I might have missed part of it.",
+      "Does it contain any milk or cheese?",
+      "What vitamins are listed and how much of each?",
+      "Can you tell me what flavor or variety this is?",
+      "Is the QR code clear enough to scan?"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Can you read the ingredients list at the bottom? I need to check for allergens.",
+        "response_target": "ingredients list",
+        "task_type": "Reading",
+        "associated_task_id": 3,
+        "associated_context_id": 1,
+        "plausibility_score": 0.95,
+        "rationale": "The ingredients list is partially visible and may be hard to read due to its location and possible glare. Checking for allergens is a high-priority, realistic need for BLV users, especially in a familiar kitchen setting."
+      },
+      {
+        "rank": 2,
+        "response": "What are the stovetop cooking directions? I want to make sure I do it right.",
+        "response_target": "stovetop cooking directions",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.9,
+        "rationale": "Cooking instructions are a common need, and the user may want to confirm the steps. The directions are mentioned but may not be fully legible, prompting a follow-up."
+      },
+      {
+        "rank": 3,
+        "response": "How much sodium is in one serving?",
+        "response_target": "sodium content",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.88,
+        "rationale": "Sodium is a key dietary concern for many users. The nutrition panel is visible, but the user may want a specific value read aloud for tracking."
+      },
+      {
+        "rank": 4,
+        "response": "Can you tell me the serving size again?",
+        "response_target": "serving size",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 2,
+        "plausibility_score": 0.85,
+        "rationale": "Serving size is critical for portion control. The user may have missed it or wants it repeated clearly, especially if the image is rotated or unclear."
+      },
+      {
+        "rank": 5,
+        "response": "How many servings are in the package?",
+        "response_target": "number of servings",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 2,
+        "plausibility_score": 0.83,
+        "rationale": "Knowing the total servings helps with meal planning. The user may want this clarified if the label is partially cut off or hard to interpret."
+      },
+      {
+        "rank": 6,
+        "response": "Can you read the microwave directions? I might have missed part of it.",
+        "response_target": "microwave directions",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 3,
+        "plausibility_score": 0.8,
+        "rationale": "If the user is multitasking or in a hurry, they may want the microwave instructions read out, especially if the image is not perfectly framed."
+      },
+      {
+        "rank": 7,
+        "response": "Does it contain any milk or cheese?",
+        "response_target": "milk or cheese ingredients",
+        "task_type": "Reading",
+        "associated_task_id": 3,
+        "associated_context_id": 3,
+        "plausibility_score": 0.78,
+        "rationale": "Users with dietary restrictions often ask about specific allergens. The ingredients list may be hard to read, so a direct question is likely."
+      },
+      {
+        "rank": 8,
+        "response": "What vitamins are listed and how much of each?",
+        "response_target": "vitamin content",
+        "task_type": "Reading",
+        "associated_task_id": 6,
+        "associated_context_id": 4,
+        "plausibility_score": 0.75,
+        "rationale": "Some users track vitamin intake. The nutrition panel lists several vitamins, but the user may want a clear, itemized reading."
+      },
+      {
+        "rank": 9,
+        "response": "Can you tell me what flavor or variety this is?",
+        "response_target": "product flavor or variety",
+        "task_type": "Reading",
+        "associated_task_id": 7,
+        "associated_context_id": 2,
+        "plausibility_score": 0.7,
+        "rationale": "If the user is unfamiliar with the product, confirming the flavor is a reasonable follow-up, especially if the name is partially visible."
+      },
+      {
+        "rank": 10,
+        "response": "Is the QR code clear enough to scan?",
+        "response_target": "QR code",
+        "task_type": "Reading",
+        "associated_task_id": 5,
+        "associated_context_id": 4,
+        "plausibility_score": 0.65,
+        "rationale": "While less common, some users may want to access additional information via the QR code, especially in a professional or documentation context."
+      }
+    ],
+    "raw_output": [
+      {
+        "rank": 1,
+        "response": "Can you read the ingredients list at the bottom? I need to check for allergens.",
+        "response_target": "ingredients list",
+        "task_type": "Reading",
+        "associated_task_id": 3,
+        "associated_context_id": 1,
+        "plausibility_score": 0.95,
+        "rationale": "The ingredients list is partially visible and may be hard to read due to its location and possible glare. Checking for allergens is a high-priority, realistic need for BLV users, especially in a familiar kitchen setting."
+      },
+      {
+        "rank": 2,
+        "response": "What are the stovetop cooking directions? I want to make sure I do it right.",
+        "response_target": "stovetop cooking directions",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.9,
+        "rationale": "Cooking instructions are a common need, and the user may want to confirm the steps. The directions are mentioned but may not be fully legible, prompting a follow-up."
+      },
+      {
+        "rank": 3,
+        "response": "How much sodium is in one serving?",
+        "response_target": "sodium content",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.88,
+        "rationale": "Sodium is a key dietary concern for many users. The nutrition panel is visible, but the user may want a specific value read aloud for tracking."
+      },
+      {
+        "rank": 4,
+        "response": "Can you tell me the serving size again?",
+        "response_target": "serving size",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 2,
+        "plausibility_score": 0.85,
+        "rationale": "Serving size is critical for portion control. The user may have missed it or wants it repeated clearly, especially if the image is rotated or unclear."
+      },
+      {
+        "rank": 5,
+        "response": "How many servings are in the package?",
+        "response_target": "number of servings",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 2,
+        "plausibility_score": 0.83,
+        "rationale": "Knowing the total servings helps with meal planning. The user may want this clarified if the label is partially cut off or hard to interpret."
+      },
+      {
+        "rank": 6,
+        "response": "Can you read the microwave directions? I might have missed part of it.",
+        "response_target": "microwave directions",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 3,
+        "plausibility_score": 0.8,
+        "rationale": "If the user is multitasking or in a hurry, they may want the microwave instructions read out, especially if the image is not perfectly framed."
+      },
+      {
+        "rank": 7,
+        "response": "Does it contain any milk or cheese?",
+        "response_target": "milk or cheese ingredients",
+        "task_type": "Reading",
+        "associated_task_id": 3,
+        "associated_context_id": 3,
+        "plausibility_score": 0.78,
+        "rationale": "Users with dietary restrictions often ask about specific allergens. The ingredients list may be hard to read, so a direct question is likely."
+      },
+      {
+        "rank": 8,
+        "response": "What vitamins are listed and how much of each?",
+        "response_target": "vitamin content",
+        "task_type": "Reading",
+        "associated_task_id": 6,
+        "associated_context_id": 4,
+        "plausibility_score": 0.75,
+        "rationale": "Some users track vitamin intake. The nutrition panel lists several vitamins, but the user may want a clear, itemized reading."
+      },
+      {
+        "rank": 9,
+        "response": "Can you tell me what flavor or variety this is?",
+        "response_target": "product flavor or variety",
+        "task_type": "Reading",
+        "associated_task_id": 7,
+        "associated_context_id": 2,
+        "plausibility_score": 0.7,
+        "rationale": "If the user is unfamiliar with the product, confirming the flavor is a reasonable follow-up, especially if the name is partially visible."
+      },
+      {
+        "rank": 10,
+        "response": "Is the QR code clear enough to scan?",
+        "response_target": "QR code",
+        "task_type": "Reading",
+        "associated_task_id": 5,
+        "associated_context_id": 4,
+        "plausibility_score": 0.65,
+        "rationale": "While less common, some users may want to access additional information via the QR code, especially in a professional or documentation context."
+      }
+    ]
+  },
+  "response_target_agent": {
+    "response_target": "directions on how to make this item",
+    "task_type": "Reading",
+    "confidence": "high",
+    "rationale": "The participant explicitly asks for the directions on how to make the item, which is a direct request for the preparation or cooking instructions. The question_category is 'Reading', supporting that the target is text-based information, specifically the directions.",
+    "raw_output": {
+      "response_target": "directions on how to make this item",
+      "task_type": "Reading",
+      "confidence": "high",
+      "rationale": "The participant explicitly asks for the directions on how to make the item, which is a direct request for the preparation or cooking instructions. The question_category is 'Reading', supporting that the target is text-based information, specifically the directions."
+    }
+  },
+  "interaction_target_agent": {
+    "turn_targets": [
+      {
+        "response_target": "directions on how to make this item",
+        "task_type": "Reading",
+        "confidence": "high",
+        "rationale": "The participant directly asks for the directions on how to make the item, which is a clear and concise noun phrase representing their information need."
+      }
+    ],
+    "raw_output": {
+      "turn_targets": [
+        {
+          "response_target": "directions on how to make this item",
+          "task_type": "Reading",
+          "confidence": "high",
+          "rationale": "The participant directly asks for the directions on how to make the item, which is a clear and concise noun phrase representing their information need."
+        }
+      ]
+    }
+  },
+  "final_ranked_questions": [
+    "Can you read the ingredients list at the bottom? I need to check for allergens.",
+    "What are the stovetop cooking directions? I want to make sure I do it right.",
+    "How much sodium is in one serving?",
+    "Can you tell me the serving size again?",
+    "How many servings are in the package?",
+    "Can you read the microwave directions? I might have missed part of it.",
+    "Does it contain any milk or cheese?",
+    "What vitamins are listed and how much of each?",
+    "Can you tell me what flavor or variety this is?",
+    "Is the QR code clear enough to scan?"
+  ],
+  "ground_truth_question": "What are the directions on how to make this item?",
+  "comparison": {
+    "ground_truth": "What are the directions on how to make this item?",
+    "ground_truth_response_target": "directions on how to make this item",
+    "ground_truth_task_type": "Reading",
+    "turn_targets": [
+      {
+        "response_target": "directions on how to make this item",
+        "task_type": "Reading",
+        "confidence": "high",
+        "rationale": "The participant directly asks for the directions on how to make the item, which is a clear and concise noun phrase representing their information need."
+      }
+    ],
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Can you read the ingredients list at the bottom? I need to check for allergens.",
+        "generated_response_target": "ingredients list",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions on how to make this item",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 2,
+        "generated_question": "What are the stovetop cooking directions? I want to make sure I do it right.",
+        "generated_response_target": "stovetop cooking directions",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions on how to make this item",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 3,
+        "generated_question": "How much sodium is in one serving?",
+        "generated_response_target": "sodium content",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions on how to make this item",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 4,
+        "generated_question": "Can you tell me the serving size again?",
+        "generated_response_target": "serving size",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions on how to make this item",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 5,
+        "generated_question": "How many servings are in the package?",
+        "generated_response_target": "number of servings",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions on how to make this item",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 6,
+        "generated_question": "Can you read the microwave directions? I might have missed part of it.",
+        "generated_response_target": "microwave directions",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions on how to make this item",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 7,
+        "generated_question": "Does it contain any milk or cheese?",
+        "generated_response_target": "milk or cheese ingredients",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions on how to make this item",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 8,
+        "generated_question": "What vitamins are listed and how much of each?",
+        "generated_response_target": "vitamin content",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions on how to make this item",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 9,
+        "generated_question": "Can you tell me what flavor or variety this is?",
+        "generated_response_target": "product flavor or variety",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions on how to make this item",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 10,
+        "generated_question": "Is the QR code clear enough to scan?",
+        "generated_response_target": "QR code",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions on how to make this item",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "What are the directions on how to make this item?",
+        "generated_response_target": "directions on how to make this item",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "directions on how to make this item",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 1,
+        "matched_user_turn": 1,
+        "matched_user_turn_target": "directions on how to make this item",
+        "matched_user_turn_score": 1,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "NA-w-text"
+      ],
+      "question_category": "Reading",
+      "in_a_hurry": "no",
+      "indoor_outdoor": "indoor",
+      "familiarity_of_environment": "yes",
+      "familiarity_of_item": "no",
+      "surrounding_environment": "alone",
+      "environment_setting": "leisure",
+      "interaction_length": "2",
+      "task_completed": "Yes"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P1_images/image_1_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows the back of a food package with a Nutrition Facts label and cooking directions. The Nutrition Facts label provides information for a serving size of 1/2 cup dry mix (64g) with about 2.5 servings per container. It lists the calories as 230 per serving and 320 per prepared portion. The label includes details on total fat, cholesterol, sodium, total carbohydrates, dietary fiber, total sugars, added sugars, and protein. It also provides information on vitamins and minerals such as Vitamin D, calcium, iron, potassium, thiamin, riboflavin, niacin, and folate.\n\nTo the right of the Nutrition Facts, there are stovetop and microwave directions for preparing the food. Below this, there is a section titled \"Our Promise\" and a QR code for scanning with a phone camera for more recipes and inspiration. The bottom of the package shows an image of a prepared dish with vegetables like tomatoes and zucchini.",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "User:What are the directions on how to make this item?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 4,
+        "text_usr": null,
+        "text_ai": "Be My AI:The package provides stovetop and microwave directions for preparation:\n\nStovetop Directions:\n1. In a medium saucepan, bring 1 3/4 cups of water, 2 tablespoons of margarine or butter, and contents of the package to a boil.\n2. Reduce heat and cover.\n3. Simmer for 7 minutes or until rice is tender.\n4. Stir and serve.\n\nMicrowave Directions:\n1. In a 2-quart microwave-safe bowl, combine 1 3/4 cups of water, 2 tablespoons of margarine or butter, and contents of the package.\n2. Microwave on high for 12 to 14 minutes or until rice is tender, stirring once halfway through cooking.\n3. Stir and serve.\n\nIt also notes that microwave ovens vary, so you may need to adjust the times as needed.",
+        "local_image_path": null
+      }
+    ]
+  }
+}

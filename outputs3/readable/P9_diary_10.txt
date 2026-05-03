@@ -1,0 +1,463 @@
+=== INPUT ===
+Image(s): ['/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P9/diary_data/P9_images/image_10_1.jpg']
+Description: LandD+2023
+
+The image is a menu from Gertrude's Chesapeake Kitchen, featuring a variety of dishes categorized into sections such as Soups, Oysters, Salads, Small Plates, Classic Entrees, Sandwiches, and Burgers 'N Such. The menu also includes options for sides and add-ons. Each section lists several dishes with descriptions and prices. Symbols indicate dietary options like vegan, vegetarian, and gluten-free. The menu is designed in a clear, organized layout with a crab illustration and the restaurant's logo at the top left corner. There is a note at the bottom mentioning a 20% gratuity for parties of 6 or more.
+Question Category: Reading
+Ground Truth Response Target: contents of each menu section
+Per-turn interaction targets:
+1. target: contents of each section | task_type: Reading | confidence: high
+2. target: missing sections | task_type: Reading | confidence: medium
+3. target: completeness of menu | task_type: Reading | confidence: medium
+4. target: low-carb options | task_type: Reading | confidence: high
+5. target: substituting mashed potatoes with green beans or similar | task_type: Reading | confidence: high
+Ground Truth Task Type: Reading
+
+=== CONTEXTS ===
+1.
+context_id: 1
+location: indoor
+time_pressure: maybe in a hurry
+environment_familiarity: unfamiliar
+object_familiarity: unfamiliar
+social_context: with others
+social_detail: unfamiliar people
+activity_type: leisure
+rationale: The image is of a restaurant menu, which is a common scenario for BLV users seeking to read options in a new dining environment. The user may be at a restaurant with friends or colleagues, possibly unfamiliar with both the menu and the people, and may feel some time pressure to order.
+
+2.
+context_id: 2
+location: indoor
+time_pressure: not in a hurry
+environment_familiarity: familiar
+object_familiarity: familiar
+social_context: alone
+social_detail: 
+activity_type: leisure
+rationale: The user could be a regular at this restaurant, reviewing the menu alone to decide on a meal, perhaps checking for new items or specials. Familiarity with both the environment and menu reduces urgency.
+
+3.
+context_id: 3
+location: indoor
+time_pressure: in a hurry
+environment_familiarity: unfamiliar
+object_familiarity: unfamiliar
+social_context: with others
+social_detail: familiar people
+activity_type: daily living task
+rationale: The user might be dining with family or friends in a new restaurant, feeling rushed to make a selection before the server arrives. The menu may be hard to read due to possible blur or glare, increasing the need for quick assistance.
+
+4.
+context_id: 4
+location: indoor
+time_pressure: not in a hurry
+environment_familiarity: unfamiliar
+object_familiarity: unfamiliar
+social_context: alone
+social_detail: 
+activity_type: daily living task
+rationale: The user could be independently exploring a new restaurant, taking their time to read the menu using assistive technology. The unfamiliarity with both the place and menu motivates the use of a VQA system for detailed reading.
+
+5.
+context_id: 5
+location: indoor
+time_pressure: maybe in a hurry
+environment_familiarity: familiar
+object_familiarity: unfamiliar
+social_context: with others
+social_detail: familiar people
+activity_type: leisure
+rationale: The user may be at a familiar restaurant but encountering a new or seasonal menu, possibly with friends or family. They might want to quickly check for dietary options or new dishes, leading to moderate time pressure.
+
+
+=== TASKS ===
+1.
+task_id: 1
+task_type: Reading
+description: Extract the full menu text to know what food options are available.
+confidence: high
+rationale: The image is of a restaurant menu, and a BLV user may want to independently access all menu items, prices, and descriptions for informed ordering.
+
+2.
+task_id: 2
+task_type: Reading
+description: Identify which menu items are vegetarian, vegan, or gluten-free.
+confidence: high
+rationale: The menu uses icons for dietary restrictions, and a BLV user may need to confirm which dishes meet their dietary needs.
+
+3.
+task_id: 3
+task_type: Reading
+description: Read the ingredients or descriptions of specific dishes to check for allergens or disliked ingredients.
+confidence: medium
+rationale: A user may be concerned about allergies or preferences and want to verify what is in a dish, but the image quality or partial capture could obscure some details.
+
+4.
+task_id: 4
+task_type: Reading
+description: Find the price of a specific dish or compare prices across menu items.
+confidence: high
+rationale: Price is a common concern when ordering, and a BLV user may want to ensure affordability or compare options.
+
+5.
+task_id: 5
+task_type: Reading
+description: Locate the section for soups, salads, or another category to narrow down choices.
+confidence: medium
+rationale: The menu is divided into sections, and the user may want to focus on a particular type of dish, but section headers may be unclear if the image is blurry or cut off.
+
+6.
+task_id: 6
+task_type: Reading
+description: Check for any notes about service charges, gratuity, or special offers.
+confidence: medium
+rationale: Menus often include fine print about additional charges or policies, which may be hard to spot or read in a photo.
+
+7.
+task_id: 7
+task_type: Reading
+description: Read the restaurant name and logo to confirm the menu is from the intended location.
+confidence: medium
+rationale: A BLV user may want to verify they have the correct menu, especially if ordering delivery or pickup, but the logo or name could be partially obscured.
+
+
+=== GENERATED QUESTIONS (RANKED) ===
+1. {'rank': 1, 'response': 'Can you list all the vegetarian and vegan options on this menu?', 'response_target': 'vegetarian and vegan options', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.98, 'rationale': 'Dietary restrictions are a common concern, especially in unfamiliar settings or with time pressure. The menu uses icons for these options, which may be hard to interpret if the image is unclear. This is a direct, high-priority follow-up.'}
+2. {'rank': 2, 'response': 'What soups are available and what are their prices?', 'response_target': 'soups and their prices', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 3, 'plausibility_score': 0.95, 'rationale': 'Soups are often a quick, popular choice. The user may want to narrow down options quickly, especially if in a hurry or if the section headers are unclear.'}
+3. {'rank': 3, 'response': 'Are there any gluten-free dishes listed?', 'response_target': 'gluten-free dishes', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 5, 'plausibility_score': 0.93, 'rationale': 'Gluten-free needs are common, and the menu uses icons that may not be described clearly by the AI. This is a focused, plausible follow-up.'}
+4. {'rank': 4, 'response': 'What are the ingredients in the Middle Eastern Plate?', 'response_target': 'Middle Eastern Plate ingredients', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 4, 'plausibility_score': 0.91, 'rationale': 'Checking for allergens or disliked ingredients is a realistic need, especially for unfamiliar dishes. The user may want to verify details that could be missed due to image quality.'}
+5. {'rank': 5, 'response': 'How much is the crab cake sandwich?', 'response_target': 'crab cake sandwich price', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.89, 'rationale': 'Price comparison is common, and the crab cake is a signature dish. The user may want to confirm affordability or compare with other options.'}
+6. {'rank': 6, 'response': 'Can you read the full list of salads and their descriptions?', 'response_target': 'salads and descriptions', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 2, 'plausibility_score': 0.87, 'rationale': 'A user may want to focus on a specific section, especially if they prefer lighter options or have dietary needs. Full descriptions help with informed choices.'}
+7. {'rank': 7, 'response': 'Is there a note about gratuity or service charges?', 'response_target': 'gratuity or service charge note', 'task_type': 'Reading', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': 'Fine print about gratuity is often overlooked or hard to read, but important for group dining. The user may want to confirm this detail.'}
+8. {'rank': 8, 'response': 'What is the price range for the classic entrees?', 'response_target': 'classic entrees price range', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 3, 'plausibility_score': 0.83, 'rationale': 'Comparing prices within a section helps with budgeting and decision-making, especially if the user is unfamiliar with the menu.'}
+9. {'rank': 9, 'response': 'Can you tell me the restaurant name at the top of the menu?', 'response_target': 'restaurant name', 'task_type': 'Reading', 'associated_task_id': 7, 'associated_context_id': 4, 'plausibility_score': 0.8, 'rationale': 'Verifying the restaurant name is useful if the user is unsure they have the correct menu, especially if ordering takeout or delivery.'}
+10. {'rank': 10, 'response': 'Are there any dishes with nuts or shellfish?', 'response_target': 'dishes with nuts or shellfish', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.78, 'rationale': 'Allergen information is critical, and the user may want to confirm this if the AI description did not specify or if the image is unclear.'}
+
+=== GENERATED QUESTION DETAILS ===
+1.
+question: {'rank': 1, 'response': 'Can you list all the vegetarian and vegan options on this menu?', 'response_target': 'vegetarian and vegan options', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.98, 'rationale': 'Dietary restrictions are a common concern, especially in unfamiliar settings or with time pressure. The menu uses icons for these options, which may be hard to interpret if the image is unclear. This is a direct, high-priority follow-up.'}
+task_type: Reading
+response_target: vegetarian and vegan options
+
+2.
+question: {'rank': 2, 'response': 'What soups are available and what are their prices?', 'response_target': 'soups and their prices', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 3, 'plausibility_score': 0.95, 'rationale': 'Soups are often a quick, popular choice. The user may want to narrow down options quickly, especially if in a hurry or if the section headers are unclear.'}
+task_type: Reading
+response_target: soups and their prices
+
+3.
+question: {'rank': 3, 'response': 'Are there any gluten-free dishes listed?', 'response_target': 'gluten-free dishes', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 5, 'plausibility_score': 0.93, 'rationale': 'Gluten-free needs are common, and the menu uses icons that may not be described clearly by the AI. This is a focused, plausible follow-up.'}
+task_type: Reading
+response_target: gluten-free dishes
+
+4.
+question: {'rank': 4, 'response': 'What are the ingredients in the Middle Eastern Plate?', 'response_target': 'Middle Eastern Plate ingredients', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 4, 'plausibility_score': 0.91, 'rationale': 'Checking for allergens or disliked ingredients is a realistic need, especially for unfamiliar dishes. The user may want to verify details that could be missed due to image quality.'}
+task_type: Reading
+response_target: Middle Eastern Plate ingredients
+
+5.
+question: {'rank': 5, 'response': 'How much is the crab cake sandwich?', 'response_target': 'crab cake sandwich price', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.89, 'rationale': 'Price comparison is common, and the crab cake is a signature dish. The user may want to confirm affordability or compare with other options.'}
+task_type: Reading
+response_target: crab cake sandwich price
+
+6.
+question: {'rank': 6, 'response': 'Can you read the full list of salads and their descriptions?', 'response_target': 'salads and descriptions', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 2, 'plausibility_score': 0.87, 'rationale': 'A user may want to focus on a specific section, especially if they prefer lighter options or have dietary needs. Full descriptions help with informed choices.'}
+task_type: Reading
+response_target: salads and descriptions
+
+7.
+question: {'rank': 7, 'response': 'Is there a note about gratuity or service charges?', 'response_target': 'gratuity or service charge note', 'task_type': 'Reading', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': 'Fine print about gratuity is often overlooked or hard to read, but important for group dining. The user may want to confirm this detail.'}
+task_type: Reading
+response_target: gratuity or service charge note
+
+8.
+question: {'rank': 8, 'response': 'What is the price range for the classic entrees?', 'response_target': 'classic entrees price range', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 3, 'plausibility_score': 0.83, 'rationale': 'Comparing prices within a section helps with budgeting and decision-making, especially if the user is unfamiliar with the menu.'}
+task_type: Reading
+response_target: classic entrees price range
+
+9.
+question: {'rank': 9, 'response': 'Can you tell me the restaurant name at the top of the menu?', 'response_target': 'restaurant name', 'task_type': 'Reading', 'associated_task_id': 7, 'associated_context_id': 4, 'plausibility_score': 0.8, 'rationale': 'Verifying the restaurant name is useful if the user is unsure they have the correct menu, especially if ordering takeout or delivery.'}
+task_type: Reading
+response_target: restaurant name
+
+10.
+question: {'rank': 10, 'response': 'Are there any dishes with nuts or shellfish?', 'response_target': 'dishes with nuts or shellfish', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.78, 'rationale': 'Allergen information is critical, and the user may want to confirm this if the AI description did not specify or if the image is unclear.'}
+task_type: Reading
+response_target: dishes with nuts or shellfish
+
+
+=== QUESTION SUMMARY ===
+Top candidate details:
+rank: 1
+response: Can you list all the vegetarian and vegan options on this menu?
+associated_task_id: 2
+associated_context_id: 1
+plausibility_score: 0.98
+rationale: Dietary restrictions are a common concern, especially in unfamiliar settings or with time pressure. The menu uses icons for these options, which may be hard to interpret if the image is unclear. This is a direct, high-priority follow-up.
+
+=== GROUND TRUTH ===
+What's in each section?
+
+=== COMPARISON ===
+1.
+question: Can you list all the vegetarian and vegan options on this menu?
+generated_task_type: Reading
+generated_response_target: vegetarian and vegan options
+task_type_match_score: 1
+target_match_score: 0
+
+2.
+question: What soups are available and what are their prices?
+generated_task_type: Reading
+generated_response_target: soups and their prices
+task_type_match_score: 1
+target_match_score: 0
+
+3.
+question: Are there any gluten-free dishes listed?
+generated_task_type: Reading
+generated_response_target: gluten-free dishes
+task_type_match_score: 1
+target_match_score: 0
+
+4.
+question: What are the ingredients in the Middle Eastern Plate?
+generated_task_type: Reading
+generated_response_target: Middle Eastern Plate ingredients
+task_type_match_score: 1
+target_match_score: 0
+
+5.
+question: How much is the crab cake sandwich?
+generated_task_type: Reading
+generated_response_target: crab cake sandwich price
+task_type_match_score: 1
+target_match_score: 0
+
+6.
+question: Can you read the full list of salads and their descriptions?
+generated_task_type: Reading
+generated_response_target: salads and descriptions
+task_type_match_score: 1
+target_match_score: 0
+
+7.
+question: Is there a note about gratuity or service charges?
+generated_task_type: Reading
+generated_response_target: gratuity or service charge note
+task_type_match_score: 1
+target_match_score: 0
+
+8.
+question: What is the price range for the classic entrees?
+generated_task_type: Reading
+generated_response_target: classic entrees price range
+task_type_match_score: 1
+target_match_score: 0
+
+9.
+question: Can you tell me the restaurant name at the top of the menu?
+generated_task_type: Reading
+generated_response_target: restaurant name
+task_type_match_score: 1
+target_match_score: 0
+
+10.
+question: Are there any dishes with nuts or shellfish?
+generated_task_type: Reading
+generated_response_target: dishes with nuts or shellfish
+task_type_match_score: 1
+target_match_score: 0
+
+ground_truth.
+question: What's in each section?
+generated_task_type: Reading
+generated_response_target: contents of each menu section
+task_type_match_score: 1
+target_match_score: 1
+matched_user_turn: 1
+matched_user_turn_target: contents of each section
+matched_user_turn_score: 0.5
+
+Raw comparison JSON:
+{
+  "ground_truth": "What's in each section?",
+  "ground_truth_response_target": "contents of each menu section",
+  "ground_truth_task_type": "Reading",
+  "turn_targets": [
+    {
+      "response_target": "contents of each section",
+      "task_type": "Reading",
+      "confidence": "high",
+      "rationale": "The participant directly asks what is in each section, seeking a breakdown of the menu's sections and their items."
+    },
+    {
+      "response_target": "missing sections",
+      "task_type": "Reading",
+      "confidence": "medium",
+      "rationale": "The participant expresses concern that some sections may be missing, likely due to incomplete or unclear image capture."
+    },
+    {
+      "response_target": "completeness of menu",
+      "task_type": "Reading",
+      "confidence": "medium",
+      "rationale": "The participant repeats their concern about whether the menu shown is complete, indicating uncertainty about missing information."
+    },
+    {
+      "response_target": "low-carb options",
+      "task_type": "Reading",
+      "confidence": "high",
+      "rationale": "The participant specifically asks for low-carb options, directly targeting menu items that fit this dietary preference."
+    },
+    {
+      "response_target": "substituting mashed potatoes with green beans or similar",
+      "task_type": "Reading",
+      "confidence": "high",
+      "rationale": "The participant asks about the possibility of replacing mashed potatoes with green beans or a similar alternative, focusing on side substitution."
+    }
+  ],
+  "per_question_scores": [
+    {
+      "rank": 1,
+      "generated_question": "Can you list all the vegetarian and vegan options on this menu?",
+      "generated_response_target": "vegetarian and vegan options",
+      "generated_task_type": "Reading",
+      "ground_truth_response_target": "contents of each menu section",
+      "ground_truth_task_type": "Reading",
+      "target_match_score": 0,
+      "matched_user_turn": null,
+      "matched_user_turn_target": "",
+      "matched_user_turn_score": 0,
+      "task_type_match_score": 1
+    },
+    {
+      "rank": 2,
+      "generated_question": "What soups are available and what are their prices?",
+      "generated_response_target": "soups and their prices",
+      "generated_task_type": "Reading",
+      "ground_truth_response_target": "contents of each menu section",
+      "ground_truth_task_type": "Reading",
+      "target_match_score": 0,
+      "matched_user_turn": null,
+      "matched_user_turn_target": "",
+      "matched_user_turn_score": 0,
+      "task_type_match_score": 1
+    },
+    {
+      "rank": 3,
+      "generated_question": "Are there any gluten-free dishes listed?",
+      "generated_response_target": "gluten-free dishes",
+      "generated_task_type": "Reading",
+      "ground_truth_response_target": "contents of each menu section",
+      "ground_truth_task_type": "Reading",
+      "target_match_score": 0,
+      "matched_user_turn": null,
+      "matched_user_turn_target": "",
+      "matched_user_turn_score": 0,
+      "task_type_match_score": 1
+    },
+    {
+      "rank": 4,
+      "generated_question": "What are the ingredients in the Middle Eastern Plate?",
+      "generated_response_target": "Middle Eastern Plate ingredients",
+      "generated_task_type": "Reading",
+      "ground_truth_response_target": "contents of each menu section",
+      "ground_truth_task_type": "Reading",
+      "target_match_score": 0,
+      "matched_user_turn": null,
+      "matched_user_turn_target": "",
+      "matched_user_turn_score": 0,
+      "task_type_match_score": 1
+    },
+    {
+      "rank": 5,
+      "generated_question": "How much is the crab cake sandwich?",
+      "generated_response_target": "crab cake sandwich price",
+      "generated_task_type": "Reading",
+      "ground_truth_response_target": "contents of each menu section",
+      "ground_truth_task_type": "Reading",
+      "target_match_score": 0,
+      "matched_user_turn": null,
+      "matched_user_turn_target": "",
+      "matched_user_turn_score": 0,
+      "task_type_match_score": 1
+    },
+    {
+      "rank": 6,
+      "generated_question": "Can you read the full list of salads and their descriptions?",
+      "generated_response_target": "salads and descriptions",
+      "generated_task_type": "Reading",
+      "ground_truth_response_target": "contents of each menu section",
+      "ground_truth_task_type": "Reading",
+      "target_match_score": 0,
+      "matched_user_turn": null,
+      "matched_user_turn_target": "",
+      "matched_user_turn_score": 0,
+      "task_type_match_score": 1
+    },
+    {
+      "rank": 7,
+      "generated_question": "Is there a note about gratuity or service charges?",
+      "generated_response_target": "gratuity or service charge note",
+      "generated_task_type": "Reading",
+      "ground_truth_response_target": "contents of each menu section",
+      "ground_truth_task_type": "Reading",
+      "target_match_score": 0,
+      "matched_user_turn": null,
+      "matched_user_turn_target": "",
+      "matched_user_turn_score": 0,
+      "task_type_match_score": 1
+    },
+    {
+      "rank": 8,
+      "generated_question": "What is the price range for the classic entrees?",
+      "generated_response_target": "classic entrees price range",
+      "generated_task_type": "Reading",
+      "ground_truth_response_target": "contents of each menu section",
+      "ground_truth_task_type": "Reading",
+      "target_match_score": 0,
+      "matched_user_turn": null,
+      "matched_user_turn_target": "",
+      "matched_user_turn_score": 0,
+      "task_type_match_score": 1
+    },
+    {
+      "rank": 9,
+      "generated_question": "Can you tell me the restaurant name at the top of the menu?",
+      "generated_response_target": "restaurant name",
+      "generated_task_type": "Reading",
+      "ground_truth_response_target": "contents of each menu section",
+      "ground_truth_task_type": "Reading",
+      "target_match_score": 0,
+      "matched_user_turn": null,
+      "matched_user_turn_target": "",
+      "matched_user_turn_score": 0,
+      "task_type_match_score": 1
+    },
+    {
+      "rank": 10,
+      "generated_question": "Are there any dishes with nuts or shellfish?",
+      "generated_response_target": "dishes with nuts or shellfish",
+      "generated_task_type": "Reading",
+      "ground_truth_response_target": "contents of each menu section",
+      "ground_truth_task_type": "Reading",
+      "target_match_score": 0,
+      "matched_user_turn": null,
+      "matched_user_turn_target": "",
+      "matched_user_turn_score": 0,
+      "task_type_match_score": 1
+    },
+    {
+      "rank": "ground_truth",
+      "generated_question": "What's in each section?",
+      "generated_response_target": "contents of each menu section",
+      "generated_task_type": "Reading",
+      "ground_truth_response_target": "contents of each menu section",
+      "ground_truth_task_type": "Reading",
+      "target_match_score": 1,
+      "matched_user_turn": 1,
+      "matched_user_turn_target": "contents of each section",
+      "matched_user_turn_score": 0.5,
+      "task_type_match_score": 1
+    }
+  ]
+}

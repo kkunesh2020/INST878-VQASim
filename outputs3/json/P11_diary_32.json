@@ -1,0 +1,720 @@
+{
+  "input": {
+    "participant": "P11",
+    "source": "diary",
+    "interaction": 32,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P11/diary_data/P11.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P11/diary_data/P11_images/image_32_1.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "A brown paper package with a USPS shipping label attached. The label reads \"USPS PARCEL SELECT\" and includes a tracking number: [PII removed]. The recipient's address is [PII removed][PII removed]. There are QR codes and barcodes on the label. The package has printed instructions on the side that say \"PULL TO OPEN\" with an illustration showing how to open it. Handwritten numbers [PII removed] are visible on the package.",
+    "all_user_responses": [
+      "This package is left in my front door when I opened it this morning\u2026 Can you check again to see if it is for [PII removed]?",
+      "The last name is correct so I\u2019m going to open this assuming it\u2019s [PII removed] I do not believe the AI information is precisely correct on the first name"
+    ],
+    "question_category": "Reading",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user is likely at home (indoor, familiar environment) and has received a package. The package may be unfamiliar (e.g., not sure who it is from or what it contains), prompting the user to take a photo to read the label. The image is not perfectly aligned, suggesting possible haste or difficulty in positioning, but not necessarily urgent. The user is likely alone, handling a personal task."
+      },
+      {
+        "context_id": 2,
+        "location": "indoor",
+        "time_pressure": "in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "unfamiliar people",
+        "activity_type": "professional",
+        "rationale": "The user could be in a workplace or shared mailroom (indoor, unfamiliar environment), needing to quickly identify a package among others. The presence of others (possibly staff or other recipients) and the need to read the label quickly for sorting or delivery purposes could explain the hurried, imperfect photo."
+      },
+      {
+        "context_id": 3,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "leisure",
+        "rationale": "The user might be at home with family or friends, opening a package they were expecting (familiar object and environment). They may be taking the photo to share the label details with someone else or to confirm the recipient, with no particular time pressure."
+      },
+      {
+        "context_id": 4,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user could be checking a package that arrived unexpectedly or is unsure if it is for them. The imperfect framing and partial view suggest uncertainty about how to best capture the needed information, reflecting typical BLV user experience."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user is likely at home (indoor, familiar environment) and has received a package. The package may be unfamiliar (e.g., not sure who it is from or what it contains), prompting the user to take a photo to read the label. The image is not perfectly aligned, suggesting possible haste or difficulty in positioning, but not necessarily urgent. The user is likely alone, handling a personal task."
+        },
+        {
+          "context_id": 2,
+          "location": "indoor",
+          "time_pressure": "in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "unfamiliar people",
+          "activity_type": "professional",
+          "rationale": "The user could be in a workplace or shared mailroom (indoor, unfamiliar environment), needing to quickly identify a package among others. The presence of others (possibly staff or other recipients) and the need to read the label quickly for sorting or delivery purposes could explain the hurried, imperfect photo."
+        },
+        {
+          "context_id": 3,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "leisure",
+          "rationale": "The user might be at home with family or friends, opening a package they were expecting (familiar object and environment). They may be taking the photo to share the label details with someone else or to confirm the recipient, with no particular time pressure."
+        },
+        {
+          "context_id": 4,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user could be checking a package that arrived unexpectedly or is unsure if it is for them. The imperfect framing and partial view suggest uncertainty about how to best capture the needed information, reflecting typical BLV user experience."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Reading",
+        "description": "Extract the recipient's name and address from the package label.",
+        "confidence": "high",
+        "rationale": "BLV users often need to confirm if a package is intended for them or someone else in their household. The visible label area suggests this is a primary goal."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Reading",
+        "description": "Read the sender's information or return address on the package.",
+        "confidence": "medium",
+        "rationale": "Knowing the sender can help the user decide whether to open the package or return it. The sender's info is often on the same label as the recipient's."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Reading",
+        "description": "Read any special handling instructions or warnings printed on the package.",
+        "confidence": "medium",
+        "rationale": "BLV users may want to know if there are any handling instructions (e.g., 'fragile', 'perishable') to avoid damaging the contents."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Reading",
+        "description": "Read the tracking number or barcode information.",
+        "confidence": "medium",
+        "rationale": "A user may need to confirm the tracking number for delivery confirmation or to report a missing package. Barcodes and tracking numbers are visible."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Reading",
+        "description": "Read handwritten notes or markings on the package.",
+        "confidence": "medium",
+        "rationale": "There are visible handwritten numbers/letters, which may be relevant for sorting, delivery, or personal organization."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Reading",
+        "description": "Read the instructions for opening the package.",
+        "confidence": "high",
+        "rationale": "The 'PULL TO OPEN' text and associated diagrams are visible, suggesting the user may want to know how to open the package safely."
+      },
+      {
+        "task_id": 7,
+        "task_type": "Reading",
+        "description": "Read recycling or disposal instructions printed on the package.",
+        "confidence": "low",
+        "rationale": "There is a recycling symbol and text, which may be of interest to users who want to dispose of packaging responsibly, though this is less likely than address or opening instructions."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Reading",
+          "description": "Extract the recipient's name and address from the package label.",
+          "confidence": "high",
+          "rationale": "BLV users often need to confirm if a package is intended for them or someone else in their household. The visible label area suggests this is a primary goal."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Reading",
+          "description": "Read the sender's information or return address on the package.",
+          "confidence": "medium",
+          "rationale": "Knowing the sender can help the user decide whether to open the package or return it. The sender's info is often on the same label as the recipient's."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Reading",
+          "description": "Read any special handling instructions or warnings printed on the package.",
+          "confidence": "medium",
+          "rationale": "BLV users may want to know if there are any handling instructions (e.g., 'fragile', 'perishable') to avoid damaging the contents."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Reading",
+          "description": "Read the tracking number or barcode information.",
+          "confidence": "medium",
+          "rationale": "A user may need to confirm the tracking number for delivery confirmation or to report a missing package. Barcodes and tracking numbers are visible."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Reading",
+          "description": "Read handwritten notes or markings on the package.",
+          "confidence": "medium",
+          "rationale": "There are visible handwritten numbers/letters, which may be relevant for sorting, delivery, or personal organization."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Reading",
+          "description": "Read the instructions for opening the package.",
+          "confidence": "high",
+          "rationale": "The 'PULL TO OPEN' text and associated diagrams are visible, suggesting the user may want to know how to open the package safely."
+        },
+        {
+          "task_id": 7,
+          "task_type": "Reading",
+          "description": "Read recycling or disposal instructions printed on the package.",
+          "confidence": "low",
+          "rationale": "There is a recycling symbol and text, which may be of interest to users who want to dispose of packaging responsibly, though this is less likely than address or opening instructions."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "{'rank': 1, 'response': \"Can you read the recipient's name and address out loud?\", 'response_target': \"recipient's name and address\", 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 1.0, 'rationale': 'This is the most common and urgent need for BLV users receiving a package, especially if the package is unfamiliar and the user is alone at home. The user needs to confirm if the package is for them, and the AI description mentions the label but may not have read it fully.'}",
+      "{'rank': 2, 'response': \"Who is the package from? Can you read the sender's information?\", 'response_target': \"sender's information\", 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.9, 'rationale': \"After confirming the recipient, the sender's info is the next most likely need, especially if the package is unexpected or the user is deciding whether to open it.\"}",
+      "{'rank': 3, 'response': 'Are there any special handling instructions or warnings on the package?', 'response_target': 'handling instructions or warnings', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': \"Users may want to avoid damaging the contents, so checking for instructions like 'fragile' or 'perishable' is a plausible follow-up, especially if the package is unfamiliar.\"}",
+      "{'rank': 4, 'response': 'Can you read the tracking number for me?', 'response_target': 'tracking number', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.8, 'rationale': 'Tracking numbers are often needed for delivery confirmation or reporting issues. The AI description mentions a tracking number, but the user may want it read aloud for copying or sharing.'}",
+      "{'rank': 5, 'response': 'What do the handwritten numbers on the package say?', 'response_target': 'handwritten numbers', 'task_type': 'Reading', 'associated_task_id': 5, 'associated_context_id': 1, 'plausibility_score': 0.75, 'rationale': \"Handwritten notes can be important for sorting or personal organization, and the AI description mentions them but doesn't specify the content.\"}",
+      "{'rank': 6, 'response': \"Can you explain the opening instructions again? I'm not sure how to open this.\", 'response_target': 'opening instructions', 'task_type': 'Reading', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.7, 'rationale': 'If the user is unfamiliar with the packaging, they may want a clearer or repeated explanation of how to open it, especially if the diagram is hard to interpret.'}",
+      "{'rank': 7, 'response': 'Is there a recycling symbol or disposal instructions on the package?', 'response_target': 'recycling or disposal instructions', 'task_type': 'Reading', 'associated_task_id': 7, 'associated_context_id': 1, 'plausibility_score': 0.6, 'rationale': 'Some users are environmentally conscious and may want to know about recycling, though this is less urgent than recipient or sender info.'}",
+      "{'rank': 8, 'response': 'Is the label clear enough to read, or should I retake the photo?', 'response_target': 'label clarity', 'task_type': 'Verification', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.55, 'rationale': 'Given possible blur or glare, users may want confirmation that the image is readable before proceeding.'}",
+      "{'rank': 9, 'response': 'Can you describe what the illustration for opening the package shows?', 'response_target': 'opening illustration', 'task_type': 'Description', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.5, 'rationale': \"If the user can't interpret diagrams, they may ask for a description of the illustration to supplement the text instructions.\"}",
+      "{'rank': 10, 'response': 'Are there any barcodes or QR codes I need to scan?', 'response_target': 'barcodes or QR codes', 'task_type': 'Identification', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.45, 'rationale': 'Some users may want to know if there are codes they should scan with another app, but this is less likely than reading the label or instructions.'}"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Can you read the recipient's name and address out loud?",
+        "response_target": "recipient's name and address",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 1.0,
+        "rationale": "This is the most common and urgent need for BLV users receiving a package, especially if the package is unfamiliar and the user is alone at home. The user needs to confirm if the package is for them, and the AI description mentions the label but may not have read it fully."
+      },
+      {
+        "rank": 2,
+        "response": "Who is the package from? Can you read the sender's information?",
+        "response_target": "sender's information",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.9,
+        "rationale": "After confirming the recipient, the sender's info is the next most likely need, especially if the package is unexpected or the user is deciding whether to open it."
+      },
+      {
+        "rank": 3,
+        "response": "Are there any special handling instructions or warnings on the package?",
+        "response_target": "handling instructions or warnings",
+        "task_type": "Reading",
+        "associated_task_id": 3,
+        "associated_context_id": 1,
+        "plausibility_score": 0.85,
+        "rationale": "Users may want to avoid damaging the contents, so checking for instructions like 'fragile' or 'perishable' is a plausible follow-up, especially if the package is unfamiliar."
+      },
+      {
+        "rank": 4,
+        "response": "Can you read the tracking number for me?",
+        "response_target": "tracking number",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.8,
+        "rationale": "Tracking numbers are often needed for delivery confirmation or reporting issues. The AI description mentions a tracking number, but the user may want it read aloud for copying or sharing."
+      },
+      {
+        "rank": 5,
+        "response": "What do the handwritten numbers on the package say?",
+        "response_target": "handwritten numbers",
+        "task_type": "Reading",
+        "associated_task_id": 5,
+        "associated_context_id": 1,
+        "plausibility_score": 0.75,
+        "rationale": "Handwritten notes can be important for sorting or personal organization, and the AI description mentions them but doesn't specify the content."
+      },
+      {
+        "rank": 6,
+        "response": "Can you explain the opening instructions again? I'm not sure how to open this.",
+        "response_target": "opening instructions",
+        "task_type": "Reading",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 0.7,
+        "rationale": "If the user is unfamiliar with the packaging, they may want a clearer or repeated explanation of how to open it, especially if the diagram is hard to interpret."
+      },
+      {
+        "rank": 7,
+        "response": "Is there a recycling symbol or disposal instructions on the package?",
+        "response_target": "recycling or disposal instructions",
+        "task_type": "Reading",
+        "associated_task_id": 7,
+        "associated_context_id": 1,
+        "plausibility_score": 0.6,
+        "rationale": "Some users are environmentally conscious and may want to know about recycling, though this is less urgent than recipient or sender info."
+      },
+      {
+        "rank": 8,
+        "response": "Is the label clear enough to read, or should I retake the photo?",
+        "response_target": "label clarity",
+        "task_type": "Verification",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.55,
+        "rationale": "Given possible blur or glare, users may want confirmation that the image is readable before proceeding."
+      },
+      {
+        "rank": 9,
+        "response": "Can you describe what the illustration for opening the package shows?",
+        "response_target": "opening illustration",
+        "task_type": "Description",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 0.5,
+        "rationale": "If the user can't interpret diagrams, they may ask for a description of the illustration to supplement the text instructions."
+      },
+      {
+        "rank": 10,
+        "response": "Are there any barcodes or QR codes I need to scan?",
+        "response_target": "barcodes or QR codes",
+        "task_type": "Identification",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.45,
+        "rationale": "Some users may want to know if there are codes they should scan with another app, but this is less likely than reading the label or instructions."
+      }
+    ],
+    "raw_output": {
+      "ranked_questions": [
+        {
+          "rank": 1,
+          "response": "Can you read the recipient's name and address out loud?",
+          "response_target": "recipient's name and address",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 1.0,
+          "rationale": "This is the most common and urgent need for BLV users receiving a package, especially if the package is unfamiliar and the user is alone at home. The user needs to confirm if the package is for them, and the AI description mentions the label but may not have read it fully."
+        },
+        {
+          "rank": 2,
+          "response": "Who is the package from? Can you read the sender's information?",
+          "response_target": "sender's information",
+          "task_type": "Reading",
+          "associated_task_id": 2,
+          "associated_context_id": 1,
+          "plausibility_score": 0.9,
+          "rationale": "After confirming the recipient, the sender's info is the next most likely need, especially if the package is unexpected or the user is deciding whether to open it."
+        },
+        {
+          "rank": 3,
+          "response": "Are there any special handling instructions or warnings on the package?",
+          "response_target": "handling instructions or warnings",
+          "task_type": "Reading",
+          "associated_task_id": 3,
+          "associated_context_id": 1,
+          "plausibility_score": 0.85,
+          "rationale": "Users may want to avoid damaging the contents, so checking for instructions like 'fragile' or 'perishable' is a plausible follow-up, especially if the package is unfamiliar."
+        },
+        {
+          "rank": 4,
+          "response": "Can you read the tracking number for me?",
+          "response_target": "tracking number",
+          "task_type": "Reading",
+          "associated_task_id": 4,
+          "associated_context_id": 1,
+          "plausibility_score": 0.8,
+          "rationale": "Tracking numbers are often needed for delivery confirmation or reporting issues. The AI description mentions a tracking number, but the user may want it read aloud for copying or sharing."
+        },
+        {
+          "rank": 5,
+          "response": "What do the handwritten numbers on the package say?",
+          "response_target": "handwritten numbers",
+          "task_type": "Reading",
+          "associated_task_id": 5,
+          "associated_context_id": 1,
+          "plausibility_score": 0.75,
+          "rationale": "Handwritten notes can be important for sorting or personal organization, and the AI description mentions them but doesn't specify the content."
+        },
+        {
+          "rank": 6,
+          "response": "Can you explain the opening instructions again? I'm not sure how to open this.",
+          "response_target": "opening instructions",
+          "task_type": "Reading",
+          "associated_task_id": 6,
+          "associated_context_id": 1,
+          "plausibility_score": 0.7,
+          "rationale": "If the user is unfamiliar with the packaging, they may want a clearer or repeated explanation of how to open it, especially if the diagram is hard to interpret."
+        },
+        {
+          "rank": 7,
+          "response": "Is there a recycling symbol or disposal instructions on the package?",
+          "response_target": "recycling or disposal instructions",
+          "task_type": "Reading",
+          "associated_task_id": 7,
+          "associated_context_id": 1,
+          "plausibility_score": 0.6,
+          "rationale": "Some users are environmentally conscious and may want to know about recycling, though this is less urgent than recipient or sender info."
+        },
+        {
+          "rank": 8,
+          "response": "Is the label clear enough to read, or should I retake the photo?",
+          "response_target": "label clarity",
+          "task_type": "Verification",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 0.55,
+          "rationale": "Given possible blur or glare, users may want confirmation that the image is readable before proceeding."
+        },
+        {
+          "rank": 9,
+          "response": "Can you describe what the illustration for opening the package shows?",
+          "response_target": "opening illustration",
+          "task_type": "Description",
+          "associated_task_id": 6,
+          "associated_context_id": 1,
+          "plausibility_score": 0.5,
+          "rationale": "If the user can't interpret diagrams, they may ask for a description of the illustration to supplement the text instructions."
+        },
+        {
+          "rank": 10,
+          "response": "Are there any barcodes or QR codes I need to scan?",
+          "response_target": "barcodes or QR codes",
+          "task_type": "Identification",
+          "associated_task_id": 4,
+          "associated_context_id": 1,
+          "plausibility_score": 0.45,
+          "rationale": "Some users may want to know if there are codes they should scan with another app, but this is less likely than reading the label or instructions."
+        }
+      ]
+    }
+  },
+  "response_target_agent": {
+    "response_target": "recipient name on the package",
+    "task_type": "Reading",
+    "confidence": "high",
+    "rationale": "The participant is asking if the package is for a specific person, which requires reading the recipient name or address on the package. This is a direct reading task focused on identifying the intended recipient.",
+    "raw_output": {
+      "response_target": "recipient name on the package",
+      "task_type": "Reading",
+      "confidence": "high",
+      "rationale": "The participant is asking if the package is for a specific person, which requires reading the recipient name or address on the package. This is a direct reading task focused on identifying the intended recipient."
+    }
+  },
+  "interaction_target_agent": {
+    "turn_targets": [
+      {
+        "response_target": "recipient name on package",
+        "task_type": "Reading",
+        "confidence": "high",
+        "rationale": "The participant asks if the package is for a specific person, indicating they want to confirm the recipient name on the package."
+      },
+      {
+        "response_target": "last name on package",
+        "task_type": "Reading",
+        "confidence": "high",
+        "rationale": "The participant states the last name is correct and references the first name, showing their focus is on verifying the last name on the package."
+      }
+    ],
+    "raw_output": {
+      "turn_targets": [
+        {
+          "response_target": "recipient name on package",
+          "task_type": "Reading",
+          "confidence": "high",
+          "rationale": "The participant asks if the package is for a specific person, indicating they want to confirm the recipient name on the package."
+        },
+        {
+          "response_target": "last name on package",
+          "task_type": "Reading",
+          "confidence": "high",
+          "rationale": "The participant states the last name is correct and references the first name, showing their focus is on verifying the last name on the package."
+        }
+      ]
+    }
+  },
+  "final_ranked_questions": [
+    "{'rank': 1, 'response': \"Can you read the recipient's name and address out loud?\", 'response_target': \"recipient's name and address\", 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 1.0, 'rationale': 'This is the most common and urgent need for BLV users receiving a package, especially if the package is unfamiliar and the user is alone at home. The user needs to confirm if the package is for them, and the AI description mentions the label but may not have read it fully.'}",
+    "{'rank': 2, 'response': \"Who is the package from? Can you read the sender's information?\", 'response_target': \"sender's information\", 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.9, 'rationale': \"After confirming the recipient, the sender's info is the next most likely need, especially if the package is unexpected or the user is deciding whether to open it.\"}",
+    "{'rank': 3, 'response': 'Are there any special handling instructions or warnings on the package?', 'response_target': 'handling instructions or warnings', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': \"Users may want to avoid damaging the contents, so checking for instructions like 'fragile' or 'perishable' is a plausible follow-up, especially if the package is unfamiliar.\"}",
+    "{'rank': 4, 'response': 'Can you read the tracking number for me?', 'response_target': 'tracking number', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.8, 'rationale': 'Tracking numbers are often needed for delivery confirmation or reporting issues. The AI description mentions a tracking number, but the user may want it read aloud for copying or sharing.'}",
+    "{'rank': 5, 'response': 'What do the handwritten numbers on the package say?', 'response_target': 'handwritten numbers', 'task_type': 'Reading', 'associated_task_id': 5, 'associated_context_id': 1, 'plausibility_score': 0.75, 'rationale': \"Handwritten notes can be important for sorting or personal organization, and the AI description mentions them but doesn't specify the content.\"}",
+    "{'rank': 6, 'response': \"Can you explain the opening instructions again? I'm not sure how to open this.\", 'response_target': 'opening instructions', 'task_type': 'Reading', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.7, 'rationale': 'If the user is unfamiliar with the packaging, they may want a clearer or repeated explanation of how to open it, especially if the diagram is hard to interpret.'}",
+    "{'rank': 7, 'response': 'Is there a recycling symbol or disposal instructions on the package?', 'response_target': 'recycling or disposal instructions', 'task_type': 'Reading', 'associated_task_id': 7, 'associated_context_id': 1, 'plausibility_score': 0.6, 'rationale': 'Some users are environmentally conscious and may want to know about recycling, though this is less urgent than recipient or sender info.'}",
+    "{'rank': 8, 'response': 'Is the label clear enough to read, or should I retake the photo?', 'response_target': 'label clarity', 'task_type': 'Verification', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.55, 'rationale': 'Given possible blur or glare, users may want confirmation that the image is readable before proceeding.'}",
+    "{'rank': 9, 'response': 'Can you describe what the illustration for opening the package shows?', 'response_target': 'opening illustration', 'task_type': 'Description', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.5, 'rationale': \"If the user can't interpret diagrams, they may ask for a description of the illustration to supplement the text instructions.\"}",
+    "{'rank': 10, 'response': 'Are there any barcodes or QR codes I need to scan?', 'response_target': 'barcodes or QR codes', 'task_type': 'Identification', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.45, 'rationale': 'Some users may want to know if there are codes they should scan with another app, but this is less likely than reading the label or instructions.'}"
+  ],
+  "ground_truth_question": "This package is left in my front door when I opened it this morning\u2026 Can you check again to see if it is for [PII removed]?",
+  "comparison": {
+    "ground_truth": "This package is left in my front door when I opened it this morning\u2026 Can you check again to see if it is for [PII removed]?",
+    "ground_truth_response_target": "recipient name on the package",
+    "ground_truth_task_type": "Reading",
+    "turn_targets": [
+      {
+        "response_target": "recipient name on package",
+        "task_type": "Reading",
+        "confidence": "high",
+        "rationale": "The participant asks if the package is for a specific person, indicating they want to confirm the recipient name on the package."
+      },
+      {
+        "response_target": "last name on package",
+        "task_type": "Reading",
+        "confidence": "high",
+        "rationale": "The participant states the last name is correct and references the first name, showing their focus is on verifying the last name on the package."
+      }
+    ],
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Can you read the recipient's name and address out loud?",
+        "generated_response_target": "recipient's name and address",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "recipient name on the package",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 2,
+        "generated_question": "Who is the package from? Can you read the sender's information?",
+        "generated_response_target": "sender's information",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "recipient name on the package",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 3,
+        "generated_question": "Are there any special handling instructions or warnings on the package?",
+        "generated_response_target": "handling instructions or warnings",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "recipient name on the package",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 4,
+        "generated_question": "Can you read the tracking number for me?",
+        "generated_response_target": "tracking number",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "recipient name on the package",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 5,
+        "generated_question": "What do the handwritten numbers on the package say?",
+        "generated_response_target": "handwritten numbers",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "recipient name on the package",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 6,
+        "generated_question": "Can you explain the opening instructions again? I'm not sure how to open this.",
+        "generated_response_target": "opening instructions",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "recipient name on the package",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 7,
+        "generated_question": "Is there a recycling symbol or disposal instructions on the package?",
+        "generated_response_target": "recycling or disposal instructions",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "recipient name on the package",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 8,
+        "generated_question": "Is the label clear enough to read, or should I retake the photo?",
+        "generated_response_target": "label clarity",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "recipient name on the package",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 9,
+        "generated_question": "Can you describe what the illustration for opening the package shows?",
+        "generated_response_target": "opening illustration",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "recipient name on the package",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 10,
+        "generated_question": "Are there any barcodes or QR codes I need to scan?",
+        "generated_response_target": "barcodes or QR codes",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "recipient name on the package",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "This package is left in my front door when I opened it this morning\u2026 Can you check again to see if it is for [PII removed]?",
+        "generated_response_target": "recipient name on the package",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "recipient name on the package",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 1,
+        "matched_user_turn": 1,
+        "matched_user_turn_target": "recipient name on package",
+        "matched_user_turn_score": 0.5,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "grounding",
+        "feedback"
+      ],
+      "question_category": "Reading",
+      "in_a_hurry": "yes",
+      "indoor_outdoor": "indoor",
+      "familiarity_of_environment": "yes",
+      "familiarity_of_item": "no",
+      "surrounding_environment": "alone",
+      "environment_setting": "leisure",
+      "interaction_length": "3",
+      "task_completed": "Yes"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P11_images/image_32_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:A brown paper package with a USPS shipping label attached. The label reads \"USPS PARCEL SELECT\" and includes a tracking number: [PII removed]. The recipient's address is [PII removed][PII removed]. There are QR codes and barcodes on the label. The package has printed instructions on the side that say \"PULL TO OPEN\" with an illustration showing how to open it. Handwritten numbers [PII removed] are visible on the package.",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "User:This package is left in my front door when I opened it this morning\u2026 Can you check again to see if it is for [PII removed]?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 4,
+        "text_usr": null,
+        "text_ai": "Be My AI:The package is addressed to [PII removed], not [PII removed].",
+        "local_image_path": null
+      },
+      {
+        "turn": 5,
+        "text_usr": "User:The last name is correct so I\u2019m going to open this assuming it\u2019s [PII removed] I do not believe the AI information is precisely correct on the first name",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 6,
+        "text_usr": null,
+        "text_ai": "Be My AI:If the last name matches and you are expecting a package, it might be intended for you. If you have any doubts or concerns, you could also contact the sender or the delivery service for confirmation.",
+        "local_image_path": null
+      }
+    ]
+  }
+}

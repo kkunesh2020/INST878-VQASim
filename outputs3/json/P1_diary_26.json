@@ -1,0 +1,674 @@
+{
+  "input": {
+    "participant": "P1",
+    "source": "diary",
+    "interaction": 26,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P1/diary_data/P1.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P1/diary_data/P1_images/image_26_1.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "The image shows a sidewalk next to a low red brick wall, which separates the sidewalk from a grassy area. On the left side, there is a brick building with large windows. A person is walking away from the camera along the sidewalk, and there are parked cars on the right side of the street. In the background, there is a sign that reads \"Amidon-Bowen Elementary School\" with additional text below it. The scene is lit by sunlight, and there are trees with some autumn leaves.",
+    "all_user_responses": [
+      "What does the additional text say?"
+    ],
+    "question_category": "Reading",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "outdoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The image shows a sidewalk, a building, and a sign that appears to contain text, possibly a school or community center. A BLV user might be trying to read the sign to confirm their location or destination, perhaps while navigating an unfamiliar area. The angle and partial view suggest the user may have quickly taken the photo while moving, possibly to get information from the sign using a VQA system."
+      },
+      {
+        "context_id": 2,
+        "location": "outdoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "daily living task",
+        "rationale": "The user could be walking with a friend or family member in a familiar neighborhood, perhaps passing by a school or community center. They might be using the VQA system to confirm the content of the sign for a routine check or to share information with their companion. The relaxed pace is suggested by the presence of another person walking ahead and the lack of obvious urgency in the scene."
+      },
+      {
+        "context_id": 3,
+        "location": "outdoor",
+        "time_pressure": "in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "professional",
+        "rationale": "The user may be on their way to a meeting, appointment, or job interview and needs to quickly verify the building or sign to ensure they are at the correct location. The hurried context is plausible due to the off-center, angled shot and the presence of a person walking ahead, possibly indicating the user is trying to keep up or follow someone."
+      },
+      {
+        "context_id": 4,
+        "location": "outdoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "leisure",
+        "rationale": "The user could be taking a walk in a familiar area but encounters a new or updated sign (e.g., event announcement, schedule change) and wants to read it out of curiosity or interest. The relaxed environment and daylight suggest a leisurely activity, and the user may be exploring or enjoying their surroundings."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "outdoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The image shows a sidewalk, a building, and a sign that appears to contain text, possibly a school or community center. A BLV user might be trying to read the sign to confirm their location or destination, perhaps while navigating an unfamiliar area. The angle and partial view suggest the user may have quickly taken the photo while moving, possibly to get information from the sign using a VQA system."
+        },
+        {
+          "context_id": 2,
+          "location": "outdoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "daily living task",
+          "rationale": "The user could be walking with a friend or family member in a familiar neighborhood, perhaps passing by a school or community center. They might be using the VQA system to confirm the content of the sign for a routine check or to share information with their companion. The relaxed pace is suggested by the presence of another person walking ahead and the lack of obvious urgency in the scene."
+        },
+        {
+          "context_id": 3,
+          "location": "outdoor",
+          "time_pressure": "in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "professional",
+          "rationale": "The user may be on their way to a meeting, appointment, or job interview and needs to quickly verify the building or sign to ensure they are at the correct location. The hurried context is plausible due to the off-center, angled shot and the presence of a person walking ahead, possibly indicating the user is trying to keep up or follow someone."
+        },
+        {
+          "context_id": 4,
+          "location": "outdoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "leisure",
+          "rationale": "The user could be taking a walk in a familiar area but encounters a new or updated sign (e.g., event announcement, schedule change) and wants to read it out of curiosity or interest. The relaxed environment and daylight suggest a leisurely activity, and the user may be exploring or enjoying their surroundings."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Reading",
+        "description": "Extract the text from the sign visible in the image (e.g., school or public notice board).",
+        "confidence": "high",
+        "rationale": "The sign is a prominent feature in the image and likely contains important information (such as a school name, event, or announcement) that a BLV user may need to access."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Reading",
+        "description": "Determine if there are any street or directional signs visible and extract their text.",
+        "confidence": "medium",
+        "rationale": "Street signs may be present but could be partially obscured or out of focus; a BLV user may want to confirm their location or directions."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Reading",
+        "description": "Check for any posted notices, flyers, or temporary signage along the sidewalk or building.",
+        "confidence": "medium",
+        "rationale": "BLV users often need to know about temporary changes, events, or warnings posted in public spaces, even if such signs are small or partially visible."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Reading",
+        "description": "Identify if there are any parking or traffic regulation signs visible and extract their content.",
+        "confidence": "medium",
+        "rationale": "The presence of parked cars and a street suggests possible interest in parking or traffic signs, which may be relevant for navigation or compliance."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Reading",
+        "description": "Verify if the building has any accessible entrance or facility signage (e.g., hours, accessibility info).",
+        "confidence": "low",
+        "rationale": "While not clearly visible, a BLV user may be attempting to confirm accessibility or entry information, though such signs may not be captured in the image."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Reading",
+        "description": "Extract any visible text on vehicles (e.g., license plates, company logos) for identification purposes.",
+        "confidence": "low",
+        "rationale": "There are vehicles present, and a user might want to identify a specific car, but the text may not be legible or in frame."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Reading",
+          "description": "Extract the text from the sign visible in the image (e.g., school or public notice board).",
+          "confidence": "high",
+          "rationale": "The sign is a prominent feature in the image and likely contains important information (such as a school name, event, or announcement) that a BLV user may need to access."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Reading",
+          "description": "Determine if there are any street or directional signs visible and extract their text.",
+          "confidence": "medium",
+          "rationale": "Street signs may be present but could be partially obscured or out of focus; a BLV user may want to confirm their location or directions."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Reading",
+          "description": "Check for any posted notices, flyers, or temporary signage along the sidewalk or building.",
+          "confidence": "medium",
+          "rationale": "BLV users often need to know about temporary changes, events, or warnings posted in public spaces, even if such signs are small or partially visible."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Reading",
+          "description": "Identify if there are any parking or traffic regulation signs visible and extract their content.",
+          "confidence": "medium",
+          "rationale": "The presence of parked cars and a street suggests possible interest in parking or traffic signs, which may be relevant for navigation or compliance."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Reading",
+          "description": "Verify if the building has any accessible entrance or facility signage (e.g., hours, accessibility info).",
+          "confidence": "low",
+          "rationale": "While not clearly visible, a BLV user may be attempting to confirm accessibility or entry information, though such signs may not be captured in the image."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Reading",
+          "description": "Extract any visible text on vehicles (e.g., license plates, company logos) for identification purposes.",
+          "confidence": "low",
+          "rationale": "There are vehicles present, and a user might want to identify a specific car, but the text may not be legible or in frame."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "{'rank': 1, 'response': \"Can you read all the text on the school sign, including what's below the name?\", 'response_target': 'school sign text', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.98, 'rationale': 'The user is likely trying to confirm their location or get information from the sign, especially since the sign is mentioned as having additional text. This is a direct, high-priority question in an unfamiliar, possibly hurried context.'}",
+      "{'rank': 2, 'response': 'What does the orange scrolling part of the sign say?', 'response_target': 'scrolling sign text', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 3, 'plausibility_score': 0.95, 'rationale': 'Scrolling or digital signs often contain important, time-sensitive information. The user may want to know about events, announcements, or hours, especially if in a hurry.'}",
+      "{'rank': 3, 'response': 'Is there any information about events or hours on the sign?', 'response_target': 'event or hours information', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 4, 'plausibility_score': 0.92, 'rationale': 'A user might be curious about community events or school hours, especially if they are exploring or have leisure time.'}",
+      "{'rank': 4, 'response': 'Can you tell me if there are any street signs nearby and what they say?', 'response_target': 'street sign text', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.88, 'rationale': 'In an unfamiliar area, confirming street names or directions is a common need, especially if the user is navigating alone.'}",
+      "{'rank': 5, 'response': 'Are there any temporary notices or flyers posted on the building or along the sidewalk?', 'response_target': 'temporary notices or flyers', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': 'Users often want to know about temporary changes or events, especially in public spaces like schools.'}",
+      "{'rank': 6, 'response': 'Is there any parking sign visible near the cars?', 'response_target': 'parking sign text', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.8, 'rationale': 'If the user is considering parking or needs to comply with regulations, they may want to check for parking signs.'}",
+      "{'rank': 7, 'response': 'Can you check if there\u2019s any information about accessibility or entrance hours on the building?', 'response_target': 'accessibility or entrance information', 'task_type': 'Reading', 'associated_task_id': 5, 'associated_context_id': 1, 'plausibility_score': 0.75, 'rationale': 'Accessibility and entrance info are important for navigation, though such signs may not be visible in the image.'}",
+      "{'rank': 8, 'response': 'Is there any text visible on the parked cars, like license plates or company names?', 'response_target': 'text on vehicles', 'task_type': 'Reading', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.7, 'rationale': 'While less likely, a user might want to identify a specific car, especially if waiting for a ride or delivery.'}",
+      "{'rank': 9, 'response': 'Can you confirm if this is the Amidon-Bowen Elementary School?', 'response_target': 'school name', 'task_type': 'Verification', 'associated_task_id': 1, 'associated_context_id': 3, 'plausibility_score': 0.68, 'rationale': 'A user in a hurry or unfamiliar area may want quick confirmation of their location.'}",
+      "{'rank': 10, 'response': 'Is there any other important text in the image that I might have missed?', 'response_target': 'other visible text', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 4, 'plausibility_score': 0.6, 'rationale': 'A general catch-all question, less likely if the user has a specific goal, but plausible if they are exploring or unsure.'}"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Can you read all the text on the school sign, including what's below the name?",
+        "response_target": "school sign text",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.98,
+        "rationale": "The user is likely trying to confirm their location or get information from the sign, especially since the sign is mentioned as having additional text. This is a direct, high-priority question in an unfamiliar, possibly hurried context."
+      },
+      {
+        "rank": 2,
+        "response": "What does the orange scrolling part of the sign say?",
+        "response_target": "scrolling sign text",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 3,
+        "plausibility_score": 0.95,
+        "rationale": "Scrolling or digital signs often contain important, time-sensitive information. The user may want to know about events, announcements, or hours, especially if in a hurry."
+      },
+      {
+        "rank": 3,
+        "response": "Is there any information about events or hours on the sign?",
+        "response_target": "event or hours information",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 4,
+        "plausibility_score": 0.92,
+        "rationale": "A user might be curious about community events or school hours, especially if they are exploring or have leisure time."
+      },
+      {
+        "rank": 4,
+        "response": "Can you tell me if there are any street signs nearby and what they say?",
+        "response_target": "street sign text",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.88,
+        "rationale": "In an unfamiliar area, confirming street names or directions is a common need, especially if the user is navigating alone."
+      },
+      {
+        "rank": 5,
+        "response": "Are there any temporary notices or flyers posted on the building or along the sidewalk?",
+        "response_target": "temporary notices or flyers",
+        "task_type": "Reading",
+        "associated_task_id": 3,
+        "associated_context_id": 1,
+        "plausibility_score": 0.85,
+        "rationale": "Users often want to know about temporary changes or events, especially in public spaces like schools."
+      },
+      {
+        "rank": 6,
+        "response": "Is there any parking sign visible near the cars?",
+        "response_target": "parking sign text",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.8,
+        "rationale": "If the user is considering parking or needs to comply with regulations, they may want to check for parking signs."
+      },
+      {
+        "rank": 7,
+        "response": "Can you check if there\u2019s any information about accessibility or entrance hours on the building?",
+        "response_target": "accessibility or entrance information",
+        "task_type": "Reading",
+        "associated_task_id": 5,
+        "associated_context_id": 1,
+        "plausibility_score": 0.75,
+        "rationale": "Accessibility and entrance info are important for navigation, though such signs may not be visible in the image."
+      },
+      {
+        "rank": 8,
+        "response": "Is there any text visible on the parked cars, like license plates or company names?",
+        "response_target": "text on vehicles",
+        "task_type": "Reading",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 0.7,
+        "rationale": "While less likely, a user might want to identify a specific car, especially if waiting for a ride or delivery."
+      },
+      {
+        "rank": 9,
+        "response": "Can you confirm if this is the Amidon-Bowen Elementary School?",
+        "response_target": "school name",
+        "task_type": "Verification",
+        "associated_task_id": 1,
+        "associated_context_id": 3,
+        "plausibility_score": 0.68,
+        "rationale": "A user in a hurry or unfamiliar area may want quick confirmation of their location."
+      },
+      {
+        "rank": 10,
+        "response": "Is there any other important text in the image that I might have missed?",
+        "response_target": "other visible text",
+        "task_type": "Reading",
+        "associated_task_id": 3,
+        "associated_context_id": 4,
+        "plausibility_score": 0.6,
+        "rationale": "A general catch-all question, less likely if the user has a specific goal, but plausible if they are exploring or unsure."
+      }
+    ],
+    "raw_output": {
+      "ranked_questions": [
+        {
+          "rank": 1,
+          "response": "Can you read all the text on the school sign, including what's below the name?",
+          "response_target": "school sign text",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 0.98,
+          "rationale": "The user is likely trying to confirm their location or get information from the sign, especially since the sign is mentioned as having additional text. This is a direct, high-priority question in an unfamiliar, possibly hurried context."
+        },
+        {
+          "rank": 2,
+          "response": "What does the orange scrolling part of the sign say?",
+          "response_target": "scrolling sign text",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 3,
+          "plausibility_score": 0.95,
+          "rationale": "Scrolling or digital signs often contain important, time-sensitive information. The user may want to know about events, announcements, or hours, especially if in a hurry."
+        },
+        {
+          "rank": 3,
+          "response": "Is there any information about events or hours on the sign?",
+          "response_target": "event or hours information",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 4,
+          "plausibility_score": 0.92,
+          "rationale": "A user might be curious about community events or school hours, especially if they are exploring or have leisure time."
+        },
+        {
+          "rank": 4,
+          "response": "Can you tell me if there are any street signs nearby and what they say?",
+          "response_target": "street sign text",
+          "task_type": "Reading",
+          "associated_task_id": 2,
+          "associated_context_id": 1,
+          "plausibility_score": 0.88,
+          "rationale": "In an unfamiliar area, confirming street names or directions is a common need, especially if the user is navigating alone."
+        },
+        {
+          "rank": 5,
+          "response": "Are there any temporary notices or flyers posted on the building or along the sidewalk?",
+          "response_target": "temporary notices or flyers",
+          "task_type": "Reading",
+          "associated_task_id": 3,
+          "associated_context_id": 1,
+          "plausibility_score": 0.85,
+          "rationale": "Users often want to know about temporary changes or events, especially in public spaces like schools."
+        },
+        {
+          "rank": 6,
+          "response": "Is there any parking sign visible near the cars?",
+          "response_target": "parking sign text",
+          "task_type": "Reading",
+          "associated_task_id": 4,
+          "associated_context_id": 1,
+          "plausibility_score": 0.8,
+          "rationale": "If the user is considering parking or needs to comply with regulations, they may want to check for parking signs."
+        },
+        {
+          "rank": 7,
+          "response": "Can you check if there\u2019s any information about accessibility or entrance hours on the building?",
+          "response_target": "accessibility or entrance information",
+          "task_type": "Reading",
+          "associated_task_id": 5,
+          "associated_context_id": 1,
+          "plausibility_score": 0.75,
+          "rationale": "Accessibility and entrance info are important for navigation, though such signs may not be visible in the image."
+        },
+        {
+          "rank": 8,
+          "response": "Is there any text visible on the parked cars, like license plates or company names?",
+          "response_target": "text on vehicles",
+          "task_type": "Reading",
+          "associated_task_id": 6,
+          "associated_context_id": 1,
+          "plausibility_score": 0.7,
+          "rationale": "While less likely, a user might want to identify a specific car, especially if waiting for a ride or delivery."
+        },
+        {
+          "rank": 9,
+          "response": "Can you confirm if this is the Amidon-Bowen Elementary School?",
+          "response_target": "school name",
+          "task_type": "Verification",
+          "associated_task_id": 1,
+          "associated_context_id": 3,
+          "plausibility_score": 0.68,
+          "rationale": "A user in a hurry or unfamiliar area may want quick confirmation of their location."
+        },
+        {
+          "rank": 10,
+          "response": "Is there any other important text in the image that I might have missed?",
+          "response_target": "other visible text",
+          "task_type": "Reading",
+          "associated_task_id": 3,
+          "associated_context_id": 4,
+          "plausibility_score": 0.6,
+          "rationale": "A general catch-all question, less likely if the user has a specific goal, but plausible if they are exploring or unsure."
+        }
+      ]
+    }
+  },
+  "response_target_agent": {
+    "response_target": "additional text",
+    "task_type": "Reading",
+    "confidence": "high",
+    "rationale": "The participant explicitly asks what the 'additional text' says, which directly targets any extra written information present, likely on the sign in the image. The question_category is 'Reading,' confirming the focus is on extracting written content.",
+    "raw_output": {
+      "response_target": "additional text",
+      "task_type": "Reading",
+      "confidence": "high",
+      "rationale": "The participant explicitly asks what the 'additional text' says, which directly targets any extra written information present, likely on the sign in the image. The question_category is 'Reading,' confirming the focus is on extracting written content."
+    }
+  },
+  "interaction_target_agent": {
+    "turn_targets": [
+      {
+        "response_target": "additional text",
+        "task_type": "Reading",
+        "confidence": "high",
+        "rationale": "The participant directly asks what the 'additional text' says, indicating their target is the content of any extra text visible in the image, likely on the sign. The noun phrase 'additional text' is concise and directly reflects their information need."
+      }
+    ],
+    "raw_output": {
+      "turn_targets": [
+        {
+          "response_target": "additional text",
+          "task_type": "Reading",
+          "confidence": "high",
+          "rationale": "The participant directly asks what the 'additional text' says, indicating their target is the content of any extra text visible in the image, likely on the sign. The noun phrase 'additional text' is concise and directly reflects their information need."
+        }
+      ]
+    }
+  },
+  "final_ranked_questions": [
+    "{'rank': 1, 'response': \"Can you read all the text on the school sign, including what's below the name?\", 'response_target': 'school sign text', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.98, 'rationale': 'The user is likely trying to confirm their location or get information from the sign, especially since the sign is mentioned as having additional text. This is a direct, high-priority question in an unfamiliar, possibly hurried context.'}",
+    "{'rank': 2, 'response': 'What does the orange scrolling part of the sign say?', 'response_target': 'scrolling sign text', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 3, 'plausibility_score': 0.95, 'rationale': 'Scrolling or digital signs often contain important, time-sensitive information. The user may want to know about events, announcements, or hours, especially if in a hurry.'}",
+    "{'rank': 3, 'response': 'Is there any information about events or hours on the sign?', 'response_target': 'event or hours information', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 4, 'plausibility_score': 0.92, 'rationale': 'A user might be curious about community events or school hours, especially if they are exploring or have leisure time.'}",
+    "{'rank': 4, 'response': 'Can you tell me if there are any street signs nearby and what they say?', 'response_target': 'street sign text', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.88, 'rationale': 'In an unfamiliar area, confirming street names or directions is a common need, especially if the user is navigating alone.'}",
+    "{'rank': 5, 'response': 'Are there any temporary notices or flyers posted on the building or along the sidewalk?', 'response_target': 'temporary notices or flyers', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': 'Users often want to know about temporary changes or events, especially in public spaces like schools.'}",
+    "{'rank': 6, 'response': 'Is there any parking sign visible near the cars?', 'response_target': 'parking sign text', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.8, 'rationale': 'If the user is considering parking or needs to comply with regulations, they may want to check for parking signs.'}",
+    "{'rank': 7, 'response': 'Can you check if there\u2019s any information about accessibility or entrance hours on the building?', 'response_target': 'accessibility or entrance information', 'task_type': 'Reading', 'associated_task_id': 5, 'associated_context_id': 1, 'plausibility_score': 0.75, 'rationale': 'Accessibility and entrance info are important for navigation, though such signs may not be visible in the image.'}",
+    "{'rank': 8, 'response': 'Is there any text visible on the parked cars, like license plates or company names?', 'response_target': 'text on vehicles', 'task_type': 'Reading', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.7, 'rationale': 'While less likely, a user might want to identify a specific car, especially if waiting for a ride or delivery.'}",
+    "{'rank': 9, 'response': 'Can you confirm if this is the Amidon-Bowen Elementary School?', 'response_target': 'school name', 'task_type': 'Verification', 'associated_task_id': 1, 'associated_context_id': 3, 'plausibility_score': 0.68, 'rationale': 'A user in a hurry or unfamiliar area may want quick confirmation of their location.'}",
+    "{'rank': 10, 'response': 'Is there any other important text in the image that I might have missed?', 'response_target': 'other visible text', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 4, 'plausibility_score': 0.6, 'rationale': 'A general catch-all question, less likely if the user has a specific goal, but plausible if they are exploring or unsure.'}"
+  ],
+  "ground_truth_question": "What does the additional text say?",
+  "comparison": {
+    "ground_truth": "What does the additional text say?",
+    "ground_truth_response_target": "additional text",
+    "ground_truth_task_type": "Reading",
+    "turn_targets": [
+      {
+        "response_target": "additional text",
+        "task_type": "Reading",
+        "confidence": "high",
+        "rationale": "The participant directly asks what the 'additional text' says, indicating their target is the content of any extra text visible in the image, likely on the sign. The noun phrase 'additional text' is concise and directly reflects their information need."
+      }
+    ],
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Can you read all the text on the school sign, including what's below the name?",
+        "generated_response_target": "school sign text",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "additional text",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 2,
+        "generated_question": "What does the orange scrolling part of the sign say?",
+        "generated_response_target": "scrolling sign text",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "additional text",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 3,
+        "generated_question": "Is there any information about events or hours on the sign?",
+        "generated_response_target": "event or hours information",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "additional text",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 4,
+        "generated_question": "Can you tell me if there are any street signs nearby and what they say?",
+        "generated_response_target": "street sign text",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "additional text",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 5,
+        "generated_question": "Are there any temporary notices or flyers posted on the building or along the sidewalk?",
+        "generated_response_target": "temporary notices or flyers",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "additional text",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 6,
+        "generated_question": "Is there any parking sign visible near the cars?",
+        "generated_response_target": "parking sign text",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "additional text",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 7,
+        "generated_question": "Can you check if there\u2019s any information about accessibility or entrance hours on the building?",
+        "generated_response_target": "accessibility or entrance information",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "additional text",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 8,
+        "generated_question": "Is there any text visible on the parked cars, like license plates or company names?",
+        "generated_response_target": "text on vehicles",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "additional text",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 9,
+        "generated_question": "Can you confirm if this is the Amidon-Bowen Elementary School?",
+        "generated_response_target": "school name",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "additional text",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 10,
+        "generated_question": "Is there any other important text in the image that I might have missed?",
+        "generated_response_target": "other visible text",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "additional text",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "What does the additional text say?",
+        "generated_response_target": "additional text",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "additional text",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 1,
+        "matched_user_turn": 1,
+        "matched_user_turn_target": "additional text",
+        "matched_user_turn_score": 1,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "NA-w-text"
+      ],
+      "question_category": "Reading",
+      "in_a_hurry": "yes",
+      "indoor_outdoor": "outdoor",
+      "familiarity_of_environment": "yes",
+      "familiarity_of_item": "no",
+      "surrounding_environment": "stranger",
+      "environment_setting": "leisure",
+      "interaction_length": "2",
+      "task_completed": "No"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P1_images/image_26_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows a sidewalk next to a low red brick wall, which separates the sidewalk from a grassy area. On the left side, there is a brick building with large windows. A person is walking away from the camera along the sidewalk, and there are parked cars on the right side of the street. In the background, there is a sign that reads \"Amidon-Bowen Elementary School\" with additional text below it. The scene is lit by sunlight, and there are trees with some autumn leaves.",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "User:What does the additional text say?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 4,
+        "text_usr": null,
+        "text_ai": "Be My AI:The additional text on the sign reads: \"Welcome Back! School Starts August 29th.\"",
+        "local_image_path": null
+      }
+    ]
+  }
+}

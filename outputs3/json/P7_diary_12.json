@@ -1,0 +1,959 @@
+{
+  "input": {
+    "participant": "P7",
+    "source": "diary",
+    "interaction": 12,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P7/diary_data/P7.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P7/diary_data/P7_images/image_12_1.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "The image shows a hand holding a white prescription medication bottle with a label partially visible. The label includes the following text:\n\n- \"Swallow Whole. Do Not Chew Or Crush.\"\n- \"Qty 90\"\n- \"Discard After: 04/07/25\"\n- \"Rev: 1/2021\"\n\nThe label also has some colored sections with additional text, but they are not fully visible in the image. The hand holding the bottle is wearing a black wristband with circular holes. The bottle appears to be a prescription for a medication in capsule form, as indicated by the text \"extended-release capsule\" and \"fenofibrate\" visible on the label.",
+    "all_user_responses": [
+      "Does it have an expiration date?",
+      "Does it show the expiration date?",
+      "Good"
+    ],
+    "question_category": "Reading, Unanswerable",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user is holding a prescription bottle and possibly a medication information sheet, suggesting a routine task like checking medication details at home. The image is close-up but not perfectly framed, which is common for BLV users. The user may be verifying dosage or instructions, possibly before taking the medication, and could be in a hurry if it's time-sensitive."
+      },
+      {
+        "context_id": 2,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "unfamiliar people",
+        "activity_type": "professional",
+        "rationale": "The user might be at a clinic or pharmacy, trying to confirm the identity or instructions of a newly prescribed medication. The setting is unfamiliar, and the user may be with staff or other patients, seeking assistance or double-checking information before leaving."
+      },
+      {
+        "context_id": 3,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user could have received a new medication and is trying to read the label or instructions independently at home. The unfamiliarity with the item may prompt them to use a VQA system for clarification, especially if they are unsure about the medication's purpose or dosage."
+      },
+      {
+        "context_id": 4,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "daily living task",
+        "rationale": "The user may be at home with family or friends, discussing or double-checking medication details together. They might be using the VQA system to confirm information for themselves or another household member, taking their time to ensure accuracy."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user is holding a prescription bottle and possibly a medication information sheet, suggesting a routine task like checking medication details at home. The image is close-up but not perfectly framed, which is common for BLV users. The user may be verifying dosage or instructions, possibly before taking the medication, and could be in a hurry if it's time-sensitive."
+        },
+        {
+          "context_id": 2,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "unfamiliar people",
+          "activity_type": "professional",
+          "rationale": "The user might be at a clinic or pharmacy, trying to confirm the identity or instructions of a newly prescribed medication. The setting is unfamiliar, and the user may be with staff or other patients, seeking assistance or double-checking information before leaving."
+        },
+        {
+          "context_id": 3,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user could have received a new medication and is trying to read the label or instructions independently at home. The unfamiliarity with the item may prompt them to use a VQA system for clarification, especially if they are unsure about the medication's purpose or dosage."
+        },
+        {
+          "context_id": 4,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "daily living task",
+          "rationale": "The user may be at home with family or friends, discussing or double-checking medication details together. They might be using the VQA system to confirm information for themselves or another household member, taking their time to ensure accuracy."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Reading",
+        "description": "Extracting medication name and dosage from a prescription bottle.",
+        "confidence": "high",
+        "rationale": "The user is holding a prescription bottle with visible text, suggesting a need to identify the medication or dosage, which is a common task for BLV users managing medications."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Reading",
+        "description": "Checking prescription instructions or warnings.",
+        "confidence": "medium",
+        "rationale": "Prescription bottles often have important instructions or warnings; the user may want to confirm how or when to take the medication."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Identification",
+        "description": "Verifying that the correct medication bottle is in hand.",
+        "confidence": "medium",
+        "rationale": "BLV users may need to confirm they have the right bottle, especially if multiple medications are present and tactile labels are absent or unclear."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Reading",
+        "description": "Reading the refill date or expiration date on the prescription label.",
+        "confidence": "medium",
+        "rationale": "Prescription bottles often include refill and expiration dates, which are important for medication management and safety."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Reading",
+        "description": "Extracting pharmacy or prescriber contact information from the label.",
+        "confidence": "low",
+        "rationale": "The user may need to contact the pharmacy or prescriber, and such information is typically printed on the label, though this is a less frequent need."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Description",
+        "description": "Getting a general description of the object to confirm it is a medication bottle.",
+        "confidence": "medium",
+        "rationale": "If the user is unsure whether the object is a medication bottle or another container, they may seek confirmation from the VQA system."
+      },
+      {
+        "task_id": 7,
+        "task_type": "Reading",
+        "description": "Checking for potential drug interactions or allergy warnings on the label.",
+        "confidence": "low",
+        "rationale": "Some users may want to confirm that the medication does not contain allergens or interact with other drugs, though this information is not always present or easy to locate on the label."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Reading",
+          "description": "Extracting medication name and dosage from a prescription bottle.",
+          "confidence": "high",
+          "rationale": "The user is holding a prescription bottle with visible text, suggesting a need to identify the medication or dosage, which is a common task for BLV users managing medications."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Reading",
+          "description": "Checking prescription instructions or warnings.",
+          "confidence": "medium",
+          "rationale": "Prescription bottles often have important instructions or warnings; the user may want to confirm how or when to take the medication."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Identification",
+          "description": "Verifying that the correct medication bottle is in hand.",
+          "confidence": "medium",
+          "rationale": "BLV users may need to confirm they have the right bottle, especially if multiple medications are present and tactile labels are absent or unclear."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Reading",
+          "description": "Reading the refill date or expiration date on the prescription label.",
+          "confidence": "medium",
+          "rationale": "Prescription bottles often include refill and expiration dates, which are important for medication management and safety."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Reading",
+          "description": "Extracting pharmacy or prescriber contact information from the label.",
+          "confidence": "low",
+          "rationale": "The user may need to contact the pharmacy or prescriber, and such information is typically printed on the label, though this is a less frequent need."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Description",
+          "description": "Getting a general description of the object to confirm it is a medication bottle.",
+          "confidence": "medium",
+          "rationale": "If the user is unsure whether the object is a medication bottle or another container, they may seek confirmation from the VQA system."
+        },
+        {
+          "task_id": 7,
+          "task_type": "Reading",
+          "description": "Checking for potential drug interactions or allergy warnings on the label.",
+          "confidence": "low",
+          "rationale": "Some users may want to confirm that the medication does not contain allergens or interact with other drugs, though this information is not always present or easy to locate on the label."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "{'rank': 1, 'response': 'Can you read the full medication name and dosage for me?', 'response_target': 'medication name and dosage', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 1.0, 'rationale': 'This is the most common and urgent need for BLV users handling medication, especially if the label is only partially visible and the user is in a hurry or needs to confirm before taking the medication.'}",
+      "{'rank': 2, 'response': 'What are the instructions for taking this medication?', 'response_target': 'prescription instructions', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': 'Instructions are critical for safe medication use. The user may want to confirm how to take the medication, especially since only part of the label is visible and the AI description mentions some instructions.'}",
+      "{'rank': 3, 'response': 'Is the medication name fully visible, or do I need to retake the photo?', 'response_target': 'medication name visibility', 'task_type': 'Verification', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.9, 'rationale': 'Given the partial visibility and possible framing issues, users often ask if they need to retake the photo to get the information they need.'}",
+      "{'rank': 4, 'response': 'Can you tell me the expiration or discard date?', 'response_target': 'expiration date', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': 'Expiration dates are important for medication safety. The AI description mentions a discard date, so the user may want to confirm or hear it repeated.'}",
+      "{'rank': 5, 'response': 'Is this bottle for fenofibrate?', 'response_target': 'medication identity', 'task_type': 'Identification', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.8, 'rationale': 'If the user manages multiple medications, confirming the identity of the bottle is a frequent and necessary task.'}",
+      "{'rank': 6, 'response': 'Can you read any warnings or allergy information on the label?', 'response_target': 'warnings or allergy information', 'task_type': 'Reading', 'associated_task_id': 7, 'associated_context_id': 3, 'plausibility_score': 0.75, 'rationale': 'Users may want to check for allergy or interaction warnings, especially if the medication is new or unfamiliar.'}",
+      "{'rank': 7, 'response': 'Is the dosage strength visible on the label?', 'response_target': 'dosage strength visibility', 'task_type': 'Verification', 'associated_task_id': 1, 'associated_context_id': 3, 'plausibility_score': 0.7, 'rationale': 'If the user is unsure whether the dosage is readable, they may ask for confirmation before retaking the photo.'}",
+      "{'rank': 8, 'response': 'Can you read the pharmacy or doctor\u2019s contact info?', 'response_target': 'pharmacy or prescriber contact information', 'task_type': 'Reading', 'associated_task_id': 5, 'associated_context_id': 2, 'plausibility_score': 0.6, 'rationale': 'Less common, but sometimes users need to contact the pharmacy or prescriber, especially if the medication is new or there are questions.'}",
+      "{'rank': 9, 'response': 'Is there anything else important on the colored sections of the label?', 'response_target': 'colored label sections', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.55, 'rationale': 'Colored sections often indicate warnings or special instructions. The user may want to know if they are missing critical information due to partial visibility.'}",
+      "{'rank': 10, 'response': 'Can you describe what you see on the label overall?', 'response_target': 'label description', 'task_type': 'Description', 'associated_task_id': 6, 'associated_context_id': 3, 'plausibility_score': 0.5, 'rationale': 'A general description is less targeted but may be used if the user is unsure what information is visible or relevant.'}"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Can you read the full medication name and dosage for me?",
+        "response_target": "medication name and dosage",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 1.0,
+        "rationale": "This is the most common and urgent need for BLV users handling medication, especially if the label is only partially visible and the user is in a hurry or needs to confirm before taking the medication."
+      },
+      {
+        "rank": 2,
+        "response": "What are the instructions for taking this medication?",
+        "response_target": "prescription instructions",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.95,
+        "rationale": "Instructions are critical for safe medication use. The user may want to confirm how to take the medication, especially since only part of the label is visible and the AI description mentions some instructions."
+      },
+      {
+        "rank": 3,
+        "response": "Is the medication name fully visible, or do I need to retake the photo?",
+        "response_target": "medication name visibility",
+        "task_type": "Verification",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.9,
+        "rationale": "Given the partial visibility and possible framing issues, users often ask if they need to retake the photo to get the information they need."
+      },
+      {
+        "rank": 4,
+        "response": "Can you tell me the expiration or discard date?",
+        "response_target": "expiration date",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.85,
+        "rationale": "Expiration dates are important for medication safety. The AI description mentions a discard date, so the user may want to confirm or hear it repeated."
+      },
+      {
+        "rank": 5,
+        "response": "Is this bottle for fenofibrate?",
+        "response_target": "medication identity",
+        "task_type": "Identification",
+        "associated_task_id": 3,
+        "associated_context_id": 1,
+        "plausibility_score": 0.8,
+        "rationale": "If the user manages multiple medications, confirming the identity of the bottle is a frequent and necessary task."
+      },
+      {
+        "rank": 6,
+        "response": "Can you read any warnings or allergy information on the label?",
+        "response_target": "warnings or allergy information",
+        "task_type": "Reading",
+        "associated_task_id": 7,
+        "associated_context_id": 3,
+        "plausibility_score": 0.75,
+        "rationale": "Users may want to check for allergy or interaction warnings, especially if the medication is new or unfamiliar."
+      },
+      {
+        "rank": 7,
+        "response": "Is the dosage strength visible on the label?",
+        "response_target": "dosage strength visibility",
+        "task_type": "Verification",
+        "associated_task_id": 1,
+        "associated_context_id": 3,
+        "plausibility_score": 0.7,
+        "rationale": "If the user is unsure whether the dosage is readable, they may ask for confirmation before retaking the photo."
+      },
+      {
+        "rank": 8,
+        "response": "Can you read the pharmacy or doctor\u2019s contact info?",
+        "response_target": "pharmacy or prescriber contact information",
+        "task_type": "Reading",
+        "associated_task_id": 5,
+        "associated_context_id": 2,
+        "plausibility_score": 0.6,
+        "rationale": "Less common, but sometimes users need to contact the pharmacy or prescriber, especially if the medication is new or there are questions."
+      },
+      {
+        "rank": 9,
+        "response": "Is there anything else important on the colored sections of the label?",
+        "response_target": "colored label sections",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.55,
+        "rationale": "Colored sections often indicate warnings or special instructions. The user may want to know if they are missing critical information due to partial visibility."
+      },
+      {
+        "rank": 10,
+        "response": "Can you describe what you see on the label overall?",
+        "response_target": "label description",
+        "task_type": "Description",
+        "associated_task_id": 6,
+        "associated_context_id": 3,
+        "plausibility_score": 0.5,
+        "rationale": "A general description is less targeted but may be used if the user is unsure what information is visible or relevant."
+      }
+    ],
+    "raw_output": {
+      "ranked_questions": [
+        {
+          "rank": 1,
+          "response": "Can you read the full medication name and dosage for me?",
+          "response_target": "medication name and dosage",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 1.0,
+          "rationale": "This is the most common and urgent need for BLV users handling medication, especially if the label is only partially visible and the user is in a hurry or needs to confirm before taking the medication."
+        },
+        {
+          "rank": 2,
+          "response": "What are the instructions for taking this medication?",
+          "response_target": "prescription instructions",
+          "task_type": "Reading",
+          "associated_task_id": 2,
+          "associated_context_id": 1,
+          "plausibility_score": 0.95,
+          "rationale": "Instructions are critical for safe medication use. The user may want to confirm how to take the medication, especially since only part of the label is visible and the AI description mentions some instructions."
+        },
+        {
+          "rank": 3,
+          "response": "Is the medication name fully visible, or do I need to retake the photo?",
+          "response_target": "medication name visibility",
+          "task_type": "Verification",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 0.9,
+          "rationale": "Given the partial visibility and possible framing issues, users often ask if they need to retake the photo to get the information they need."
+        },
+        {
+          "rank": 4,
+          "response": "Can you tell me the expiration or discard date?",
+          "response_target": "expiration date",
+          "task_type": "Reading",
+          "associated_task_id": 4,
+          "associated_context_id": 1,
+          "plausibility_score": 0.85,
+          "rationale": "Expiration dates are important for medication safety. The AI description mentions a discard date, so the user may want to confirm or hear it repeated."
+        },
+        {
+          "rank": 5,
+          "response": "Is this bottle for fenofibrate?",
+          "response_target": "medication identity",
+          "task_type": "Identification",
+          "associated_task_id": 3,
+          "associated_context_id": 1,
+          "plausibility_score": 0.8,
+          "rationale": "If the user manages multiple medications, confirming the identity of the bottle is a frequent and necessary task."
+        },
+        {
+          "rank": 6,
+          "response": "Can you read any warnings or allergy information on the label?",
+          "response_target": "warnings or allergy information",
+          "task_type": "Reading",
+          "associated_task_id": 7,
+          "associated_context_id": 3,
+          "plausibility_score": 0.75,
+          "rationale": "Users may want to check for allergy or interaction warnings, especially if the medication is new or unfamiliar."
+        },
+        {
+          "rank": 7,
+          "response": "Is the dosage strength visible on the label?",
+          "response_target": "dosage strength visibility",
+          "task_type": "Verification",
+          "associated_task_id": 1,
+          "associated_context_id": 3,
+          "plausibility_score": 0.7,
+          "rationale": "If the user is unsure whether the dosage is readable, they may ask for confirmation before retaking the photo."
+        },
+        {
+          "rank": 8,
+          "response": "Can you read the pharmacy or doctor\u2019s contact info?",
+          "response_target": "pharmacy or prescriber contact information",
+          "task_type": "Reading",
+          "associated_task_id": 5,
+          "associated_context_id": 2,
+          "plausibility_score": 0.6,
+          "rationale": "Less common, but sometimes users need to contact the pharmacy or prescriber, especially if the medication is new or there are questions."
+        },
+        {
+          "rank": 9,
+          "response": "Is there anything else important on the colored sections of the label?",
+          "response_target": "colored label sections",
+          "task_type": "Reading",
+          "associated_task_id": 2,
+          "associated_context_id": 1,
+          "plausibility_score": 0.55,
+          "rationale": "Colored sections often indicate warnings or special instructions. The user may want to know if they are missing critical information due to partial visibility."
+        },
+        {
+          "rank": 10,
+          "response": "Can you describe what you see on the label overall?",
+          "response_target": "label description",
+          "task_type": "Description",
+          "associated_task_id": 6,
+          "associated_context_id": 3,
+          "plausibility_score": 0.5,
+          "rationale": "A general description is less targeted but may be used if the user is unsure what information is visible or relevant."
+        }
+      ]
+    }
+  },
+  "response_target_agent": {
+    "response_target": "expiration date",
+    "task_type": "Reading, Unanswerable",
+    "confidence": "high",
+    "rationale": "The participant's question directly asks about the presence of an expiration date, making 'expiration date' the clear information target. The question_category 'Reading, Unanswerable' suggests the participant is seeking to read this specific information, even if it may not be visible or legible in the image.",
+    "raw_output": {
+      "response_target": "expiration date",
+      "task_type": "Reading, Unanswerable",
+      "confidence": "high",
+      "rationale": "The participant's question directly asks about the presence of an expiration date, making 'expiration date' the clear information target. The question_category 'Reading, Unanswerable' suggests the participant is seeking to read this specific information, even if it may not be visible or legible in the image."
+    }
+  },
+  "interaction_target_agent": {
+    "turn_targets": [
+      {
+        "response_target": "expiration date",
+        "task_type": "Reading, Unanswerable",
+        "confidence": "high",
+        "rationale": "The participant directly asks if the item has an expiration date, making 'expiration date' the clear information target."
+      },
+      {
+        "response_target": "expiration date",
+        "task_type": "Reading, Unanswerable",
+        "confidence": "high",
+        "rationale": "The follow-up question clarifies whether the expiration date is shown, maintaining the same information target."
+      },
+      {
+        "response_target": "expiration date",
+        "task_type": "Reading, Unanswerable",
+        "confidence": "high",
+        "rationale": "The participant's 'Good' response likely acknowledges the previous answer about the expiration date, so the information target remains the same."
+      }
+    ],
+    "raw_output": {
+      "turn_targets": [
+        {
+          "response_target": "expiration date",
+          "task_type": "Reading",
+          "confidence": "high",
+          "rationale": "The participant directly asks if the item has an expiration date, making 'expiration date' the clear information target."
+        },
+        {
+          "response_target": "expiration date",
+          "task_type": "Unanswerable",
+          "confidence": "high",
+          "rationale": "The follow-up question clarifies whether the expiration date is shown, maintaining the same information target."
+        },
+        {
+          "response_target": "expiration date",
+          "task_type": "Unanswerable",
+          "confidence": "high",
+          "rationale": "The participant's 'Good' response likely acknowledges the previous answer about the expiration date, so the information target remains the same."
+        }
+      ]
+    }
+  },
+  "final_ranked_questions": [
+    "{'rank': 1, 'response': 'Can you read the full medication name and dosage for me?', 'response_target': 'medication name and dosage', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 1.0, 'rationale': 'This is the most common and urgent need for BLV users handling medication, especially if the label is only partially visible and the user is in a hurry or needs to confirm before taking the medication.'}",
+    "{'rank': 2, 'response': 'What are the instructions for taking this medication?', 'response_target': 'prescription instructions', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': 'Instructions are critical for safe medication use. The user may want to confirm how to take the medication, especially since only part of the label is visible and the AI description mentions some instructions.'}",
+    "{'rank': 3, 'response': 'Is the medication name fully visible, or do I need to retake the photo?', 'response_target': 'medication name visibility', 'task_type': 'Verification', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.9, 'rationale': 'Given the partial visibility and possible framing issues, users often ask if they need to retake the photo to get the information they need.'}",
+    "{'rank': 4, 'response': 'Can you tell me the expiration or discard date?', 'response_target': 'expiration date', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': 'Expiration dates are important for medication safety. The AI description mentions a discard date, so the user may want to confirm or hear it repeated.'}",
+    "{'rank': 5, 'response': 'Is this bottle for fenofibrate?', 'response_target': 'medication identity', 'task_type': 'Identification', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.8, 'rationale': 'If the user manages multiple medications, confirming the identity of the bottle is a frequent and necessary task.'}",
+    "{'rank': 6, 'response': 'Can you read any warnings or allergy information on the label?', 'response_target': 'warnings or allergy information', 'task_type': 'Reading', 'associated_task_id': 7, 'associated_context_id': 3, 'plausibility_score': 0.75, 'rationale': 'Users may want to check for allergy or interaction warnings, especially if the medication is new or unfamiliar.'}",
+    "{'rank': 7, 'response': 'Is the dosage strength visible on the label?', 'response_target': 'dosage strength visibility', 'task_type': 'Verification', 'associated_task_id': 1, 'associated_context_id': 3, 'plausibility_score': 0.7, 'rationale': 'If the user is unsure whether the dosage is readable, they may ask for confirmation before retaking the photo.'}",
+    "{'rank': 8, 'response': 'Can you read the pharmacy or doctor\u2019s contact info?', 'response_target': 'pharmacy or prescriber contact information', 'task_type': 'Reading', 'associated_task_id': 5, 'associated_context_id': 2, 'plausibility_score': 0.6, 'rationale': 'Less common, but sometimes users need to contact the pharmacy or prescriber, especially if the medication is new or there are questions.'}",
+    "{'rank': 9, 'response': 'Is there anything else important on the colored sections of the label?', 'response_target': 'colored label sections', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.55, 'rationale': 'Colored sections often indicate warnings or special instructions. The user may want to know if they are missing critical information due to partial visibility.'}",
+    "{'rank': 10, 'response': 'Can you describe what you see on the label overall?', 'response_target': 'label description', 'task_type': 'Description', 'associated_task_id': 6, 'associated_context_id': 3, 'plausibility_score': 0.5, 'rationale': 'A general description is less targeted but may be used if the user is unsure what information is visible or relevant.'}"
+  ],
+  "ground_truth_question": "Does it have an expiration date?",
+  "comparison": {
+    "ground_truth": "Does it have an expiration date?",
+    "ground_truth_response_target": "expiration date",
+    "ground_truth_task_type": "Reading, Unanswerable",
+    "turn_targets": [
+      {
+        "response_target": "expiration date",
+        "task_type": "Reading, Unanswerable",
+        "confidence": "high",
+        "rationale": "The participant directly asks if the item has an expiration date, making 'expiration date' the clear information target."
+      },
+      {
+        "response_target": "expiration date",
+        "task_type": "Reading, Unanswerable",
+        "confidence": "high",
+        "rationale": "The follow-up question clarifies whether the expiration date is shown, maintaining the same information target."
+      },
+      {
+        "response_target": "expiration date",
+        "task_type": "Reading, Unanswerable",
+        "confidence": "high",
+        "rationale": "The participant's 'Good' response likely acknowledges the previous answer about the expiration date, so the information target remains the same."
+      }
+    ],
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Can you read the full medication name and dosage for me?",
+        "generated_response_target": "medication name and dosage",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 2,
+        "generated_question": "What are the instructions for taking this medication?",
+        "generated_response_target": "prescription instructions",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 3,
+        "generated_question": "Is the medication name fully visible, or do I need to retake the photo?",
+        "generated_response_target": "medication name visibility",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 4,
+        "generated_question": "Can you tell me the expiration or discard date?",
+        "generated_response_target": "expiration date",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 1,
+        "matched_user_turn": 1,
+        "matched_user_turn_target": "expiration date",
+        "matched_user_turn_score": 1,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 5,
+        "generated_question": "Is this bottle for fenofibrate?",
+        "generated_response_target": "medication identity",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 6,
+        "generated_question": "Can you read any warnings or allergy information on the label?",
+        "generated_response_target": "warnings or allergy information",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 7,
+        "generated_question": "Is the dosage strength visible on the label?",
+        "generated_response_target": "dosage strength visibility",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 8,
+        "generated_question": "Can you read the pharmacy or doctor\u2019s contact info?",
+        "generated_response_target": "pharmacy or prescriber contact information",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 9,
+        "generated_question": "Is there anything else important on the colored sections of the label?",
+        "generated_response_target": "colored label sections",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 10,
+        "generated_question": "Can you describe what you see on the label overall?",
+        "generated_response_target": "label description",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "Does it have an expiration date?",
+        "generated_response_target": "expiration date",
+        "generated_task_type": "Reading, Unanswerable",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 1,
+        "matched_user_turn": 1,
+        "matched_user_turn_target": "expiration date",
+        "matched_user_turn_score": 1,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "binary"
+      ],
+      "question_category": "Reading, Unanswerable",
+      "in_a_hurry": "no",
+      "indoor_outdoor": "indoor",
+      "familiarity_of_environment": "yes",
+      "familiarity_of_item": "yes",
+      "surrounding_environment": "familiar",
+      "environment_setting": "leisure",
+      "interaction_length": "21"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P7_images/image_12_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows a hand holding a white prescription medication bottle with a label partially visible. The label includes the following text:\n\n- \"Swallow Whole. Do Not Chew Or Crush.\"\n- \"Qty 90\"\n- \"Discard After: 04/07/25\"\n- \"Rev: 1/2021\"\n\nThe label also has some colored sections with additional text, but they are not fully visible in the image. The hand holding the bottle is wearing a black wristband with circular holes. The bottle appears to be a prescription for a medication in capsule form, as indicated by the text \"extended-release capsule\" and \"fenofibrate\" visible on the label.",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P7_images/image_12_3.jpg"
+      },
+      {
+        "turn": 4,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows a hand holding a white prescription medication bottle with a label. The label includes the following text:\n\n- \"Swallow Whole. Do Not Chew Or Crush.\"\n- \"Qty 90\"\n- \"Discard After: 04/07/25\"\n\nThe label also has colored sections with additional text, but they are not fully visible or clear in the image. The bottle appears to be a prescription for a medication, and there is some text on the right side of the bottle, but it is not legible in this image. If you need more detailed information, you might consider pressing the \"Call a volunteer\" button for assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 5,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P7_images/image_12_5.jpg"
+      },
+      {
+        "turn": 6,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image is quite blurry, making it difficult to read any text on the prescription bottle. The bottle is white and cylindrical, and it is being held in a hand. The background shows a wooden floor, and part of a foot is visible at the bottom of the image. If you need specific information from the label, it might be helpful to take a clearer picture or press the \"Call a volunteer\" button for further assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 7,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P7_images/image_12_7.jpg"
+      },
+      {
+        "turn": 8,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image is very blurry, making it difficult to discern any details or text on the prescription bottle. The bottle is white and being held in a hand, but no specific information can be read from the label. For better assistance, you might consider taking a clearer picture or pressing the \"Call a volunteer\" button for help.",
+        "local_image_path": null
+      },
+      {
+        "turn": 9,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P7_images/image_12_9.jpg"
+      },
+      {
+        "turn": 10,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows a white prescription bottle with the following text on the label:\n\n- \"[NDC-69315-282-09]\"\n- \"Fenofibric Acid Delayed-Release Capsules\"\n- \"135 mg\"\n- \"Rx only\"\n- \"90 Capsules\"\n- \"LEADING PHARMA\"\n\nThis bottle contains fenofibric acid delayed-release capsules at a dosage of 135 mg, and it is manufactured by Leading Pharma.",
+        "local_image_path": null
+      },
+      {
+        "turn": 11,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P7_images/image_12_11.jpg"
+      },
+      {
+        "turn": 12,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows a hand holding a bottle with a label that reads:\n\n- \"Nature's Valley\" (partially visible)\n- \"Cherry Extract\"\n- \"1000 mg per capsule\"\n- \"Dietary Supplement\"\n- \"ANTIOXIDANT SUPPORT\"\n- \"90 VEGETARIAN CAPSULES\"\n\nThe label suggests that this is a dietary supplement containing cherry extract, providing antioxidant support. The bottle contains 90 vegetarian capsules. The hand holding the bottle is wearing a black wristband with circular holes.",
+        "local_image_path": null
+      },
+      {
+        "turn": 13,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P7_images/image_12_13.jpg"
+      },
+      {
+        "turn": 14,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows a hand holding a white bottle with a partially visible label. The text on the label includes:\n\n- \"Ad\" (likely part of a larger word, possibly \"Advil\" or similar)\n- \"Ibuprofen, 200 mg\"\n- \"Pain Reliever\"\n- \"Nighttime Sleep-\"\n- \"READ AND KEEP WARNINGS\"\n\nThe bottle appears to be a medication that contains ibuprofen as a pain reliever, possibly intended for nighttime use. The hand holding the bottle is wearing a black wristband with circular holes. If you need more specific information, a clearer picture might help.",
+        "local_image_path": null
+      },
+      {
+        "turn": 15,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P7_images/image_12_15.jpg"
+      },
+      {
+        "turn": 16,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows a hand holding a prescription pill bottle with a partially visible label. The text on the label includes:\n\n- \"AND 1/2 TA... ONCE A DAY\"\n- \"[PII removed]\"\n\nThe medication is [PII removed], which is a generic form of [PII removed], at a dosage of 100 mg. The prescription is for 45 tablets with no refills. The hand holding the bottle is wearing a black wristband with circular holes.",
+        "local_image_path": null
+      },
+      {
+        "turn": 17,
+        "text_usr": "User:Does it have an expiration date?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 18,
+        "text_usr": null,
+        "text_ai": "Be My AI:The expiration date is not visible in the image provided. If you need to find the expiration date, you might try looking for it on the label or the bottom of the bottle. If it's still unclear, you could take another picture focusing on the area where the expiration date might be printed. Alternatively, you might consider pressing the \"Call a volunteer\" button for further assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 19,
+        "text_usr": "User:Does it show the expiration date?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 20,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P7_images/image_12_20.jpg"
+      },
+      {
+        "turn": 21,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows the side of the prescription bottle, but the expiration date is not visible in this view. It might be located on another part of the label or the bottom of the bottle. If you need to find the expiration date, you might try checking those areas or taking another picture that includes the full label. Alternatively, you could press the \"Call a volunteer\" button for further assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 22,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P7_images/image_12_22.jpg"
+      },
+      {
+        "turn": 23,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows a prescription bottle with a partially visible label, but the expiration date is not visible in this view. The text that can be seen includes:\n\n- \"TAKE 1 AND 1/2 BY MOUTH ONCE A\"\n- \"[PII removed]\"\n- \"Generic For: [PII removed]\"\n- \"No Refills\"\n\nTo find the expiration date, you might need to check another part of the label or the bottom of the bottle. If it's still unclear, you could try taking another picture that includes the full label or press the \"Call a volunteer\" button for further assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 24,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P7_images/image_12_24.jpg"
+      },
+      {
+        "turn": 25,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image is quite dark and blurry, making it difficult to see any details or text on the prescription bottle. The top of the bottle is visible, but the label and any potential expiration date are not clear. To find the expiration date, you might try taking a clearer picture with better lighting or press the \"Call a volunteer\" button for further assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 26,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P7_images/image_12_26.jpg"
+      },
+      {
+        "turn": 27,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows the top view of an open prescription bottle with yellow tablets inside. However, the label and any potential expiration date are not visible from this angle. To find the expiration date, you might need to check the side of the bottle where the label is located or take another picture focusing on the label. If it's still unclear, you could press the \"Call a volunteer\" button for further assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 28,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P7_images/image_12_28.jpg"
+      },
+      {
+        "turn": 29,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows a hand holding a prescription bottle with a partially visible label. The text that can be seen includes:\n\n- \"TAKE 1 AND 1/2 TABLETS BY MOUTH ONCE A DAY\"\n- \"[PII removed\"\n- \"Generic For: [PII removed]\"\n- \"Qty: 45\"\n\nThe expiration date is not visible in this image. It might be located on another part of the label or the bottom of the bottle. If you need to find the expiration date, you might try checking those areas or taking another picture that includes the full label. Alternatively, you could press the \"Call a volunteer\" button for further assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 30,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P7_images/image_12_30.jpg"
+      },
+      {
+        "turn": 31,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows a hand holding a small bottle with a green cap. The label on the bottle has a block of text, but it is not legible due to the lighting and angle. The expiration date is not visible in this image. To find the expiration date, you might try checking the label more closely or taking another picture with better lighting and focus. If it's still unclear, you could press the \"Call a volunteer\" button for further assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 32,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P7_images/image_12_32.jpg"
+      },
+      {
+        "turn": 33,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows a hand holding a small bottle with a green cap. The label has a block of text, but it is not legible due to the lighting and focus. The expiration date is not visible in this image. To find the expiration date, you might try checking the label more closely or taking another picture with better lighting and focus. If it's still unclear, you could press the \"Call a volunteer\" button for further assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 34,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P7_images/image_12_34.jpg"
+      },
+      {
+        "turn": 35,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows a hand holding a small bottle with a green cap. The label has a block of text and a QR code, but the text is not fully legible due to the angle and focus. The expiration date is not visible in this image. To find the expiration date, you might try checking the label more closely or taking another picture with better focus on the text. If it's still unclear, you could press the \"Call a volunteer\" button for further assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 36,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P7_images/image_12_36.jpg"
+      },
+      {
+        "turn": 37,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image is blurry, making it difficult to read the text on the label of the small bottle with a green cap. The expiration date is not visible in this image. To find the expiration date, you might try taking another picture with better focus and lighting, specifically targeting the area where the expiration date might be printed. If it's still unclear, you could press the \"Call a volunteer\" button for further assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 38,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P7_images/image_12_38.jpg"
+      },
+      {
+        "turn": 39,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image is still blurry, making it difficult to read any text on the label of the small bottle with a green cap. The expiration date is not visible in this image. To find the expiration date, you might try taking another picture with better focus and lighting, specifically targeting the area where the expiration date might be printed. If it's still unclear, you could press the \"Call a volunteer\" button for further assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 40,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P7_images/image_12_40.jpg"
+      },
+      {
+        "turn": 41,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image is blurry, but it appears to show a label with the text \"Zyrtec\" on it, which is a brand of allergy medication. However, the expiration date is not visible in this image. To find the expiration date, you might try taking another picture with better focus and lighting, specifically targeting the area where the expiration date might be printed. If it's still unclear, you could press the \"Call a volunteer\" button for further assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 42,
+        "text_usr": "User:Good",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 43,
+        "text_usr": null,
+        "text_ai": "Be My AI:If you have any more questions or need further assistance, feel free to ask!",
+        "local_image_path": null
+      }
+    ]
+  }
+}

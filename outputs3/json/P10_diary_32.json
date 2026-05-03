@@ -1,0 +1,700 @@
+{
+  "input": {
+    "participant": "P10",
+    "source": "diary",
+    "interaction": 32,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P10/diary_data/P10.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P10/diary_data/P10_images/image_32_1.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "A hand is holding a round container with a clear lid. The label on the lid reads \"HOMEWORX BY HARRY SLATKIN\" and \"OATMEAL COOKIE\" with a description of the fragrance as \"SWEET RAISINS, TOASTED OATS, BROWN SUGAR, FRESH BAKED COOKIE.\" There is a warning about burning the candle within sight and keeping it away from things that catch fire. The net weight is listed as 18 oz (510 g). There is also a price sticker from Marshalls showing the price as $14.99.",
+    "all_user_responses": [
+      "What color is the candle"
+    ],
+    "question_category": "Description",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user is holding a candle with a visible store label, possibly at home after a recent purchase. They may be trying to identify the scent or check product details, suggesting they are in a familiar environment and not rushed. The object may be unfamiliar, prompting the use of a VQA system for clarification."
+      },
+      {
+        "context_id": 2,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "unfamiliar people",
+        "activity_type": "leisure",
+        "rationale": "The user could be in a store (e.g., Marshalls, as seen on the label), trying to quickly identify or confirm the product before purchase, possibly with store staff or other shoppers nearby. The environment and item are both unfamiliar, and there may be mild time pressure."
+      },
+      {
+        "context_id": 3,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "leisure",
+        "rationale": "The user might be at home with friends or family, discussing or sharing a new candle purchase. They may want to confirm details about the scent or brand for conversation, indicating both environment and object familiarity and a relaxed pace."
+      },
+      {
+        "context_id": 4,
+        "location": "indoor",
+        "time_pressure": "in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user could be in a new location (such as a friend's house or a hotel room) and quickly trying to identify an unfamiliar item, possibly to avoid using or opening the wrong product. The hurried grip and flash suggest urgency and uncertainty."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user is holding a candle with a visible store label, possibly at home after a recent purchase. They may be trying to identify the scent or check product details, suggesting they are in a familiar environment and not rushed. The object may be unfamiliar, prompting the use of a VQA system for clarification."
+        },
+        {
+          "context_id": 2,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "unfamiliar people",
+          "activity_type": "leisure",
+          "rationale": "The user could be in a store (e.g., Marshalls, as seen on the label), trying to quickly identify or confirm the product before purchase, possibly with store staff or other shoppers nearby. The environment and item are both unfamiliar, and there may be mild time pressure."
+        },
+        {
+          "context_id": 3,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "leisure",
+          "rationale": "The user might be at home with friends or family, discussing or sharing a new candle purchase. They may want to confirm details about the scent or brand for conversation, indicating both environment and object familiarity and a relaxed pace."
+        },
+        {
+          "context_id": 4,
+          "location": "indoor",
+          "time_pressure": "in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user could be in a new location (such as a friend's house or a hotel room) and quickly trying to identify an unfamiliar item, possibly to avoid using or opening the wrong product. The hurried grip and flash suggest urgency and uncertainty."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Reading",
+        "description": "Extract the product name and scent from the label.",
+        "confidence": "high",
+        "rationale": "The user may want to know what this item is, especially since candles often have subtle or similar packaging and scent names are important for selection."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Reading",
+        "description": "Read the warning or usage instructions on the label.",
+        "confidence": "medium",
+        "rationale": "Candles often have safety warnings and usage instructions that are important for safe use, and a BLV user may need this information read aloud."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Reading",
+        "description": "Identify the price or store information from the sticker.",
+        "confidence": "high",
+        "rationale": "The visible Marshalls price sticker suggests the user may want to know the cost or confirm where the item was purchased."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Identification",
+        "description": "Confirm whether the item is a candle or a food product.",
+        "confidence": "medium",
+        "rationale": "The label says 'Oatmeal Cookie,' which could be confusing as it sounds like food, but the context suggests it is a candle. The user may want to confirm the item type to avoid mistakes."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Description",
+        "description": "Describe the general appearance and packaging of the item.",
+        "confidence": "medium",
+        "rationale": "The user may want to know what the item looks like for organizational or aesthetic reasons, or to confirm they have the right product."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Reading",
+        "description": "Check for allergen or ingredient information.",
+        "confidence": "low",
+        "rationale": "Although less likely for a candle, the food-like scent name could prompt a user to check for allergen information, especially if they are unsure about the product type."
+      },
+      {
+        "task_id": 7,
+        "task_type": "Locational/retrieval",
+        "description": "Verify that the correct label is attached and readable.",
+        "confidence": "medium",
+        "rationale": "BLV users may want to ensure that the label is intact and legible before purchase or use, especially if they rely on others to read it later."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Reading",
+          "description": "Extract the product name and scent from the label.",
+          "confidence": "high",
+          "rationale": "The user may want to know what this item is, especially since candles often have subtle or similar packaging and scent names are important for selection."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Reading",
+          "description": "Read the warning or usage instructions on the label.",
+          "confidence": "medium",
+          "rationale": "Candles often have safety warnings and usage instructions that are important for safe use, and a BLV user may need this information read aloud."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Reading",
+          "description": "Identify the price or store information from the sticker.",
+          "confidence": "high",
+          "rationale": "The visible Marshalls price sticker suggests the user may want to know the cost or confirm where the item was purchased."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Identification",
+          "description": "Confirm whether the item is a candle or a food product.",
+          "confidence": "medium",
+          "rationale": "The label says 'Oatmeal Cookie,' which could be confusing as it sounds like food, but the context suggests it is a candle. The user may want to confirm the item type to avoid mistakes."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Description",
+          "description": "Describe the general appearance and packaging of the item.",
+          "confidence": "medium",
+          "rationale": "The user may want to know what the item looks like for organizational or aesthetic reasons, or to confirm they have the right product."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Reading",
+          "description": "Check for allergen or ingredient information.",
+          "confidence": "low",
+          "rationale": "Although less likely for a candle, the food-like scent name could prompt a user to check for allergen information, especially if they are unsure about the product type."
+        },
+        {
+          "task_id": 7,
+          "task_type": "Locational/retrieval",
+          "description": "Verify that the correct label is attached and readable.",
+          "confidence": "medium",
+          "rationale": "BLV users may want to ensure that the label is intact and legible before purchase or use, especially if they rely on others to read it later."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "{'rank': 1, 'response': 'Is this definitely a candle and not food?', 'response_target': 'item type', 'task_type': 'Identification', 'associated_task_id': 4, 'associated_context_id': 4, 'plausibility_score': 0.98, 'rationale': \"Given the label says 'Oatmeal Cookie,' a BLV user may be concerned about confusing a candle with food, especially in an unfamiliar or hurried context. This is a high-priority, safety-driven clarification.\"}",
+      "{'rank': 2, 'response': 'Can you read the warning label out loud?', 'response_target': 'warning label', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': 'Safety information is critical for candles, and BLV users often need explicit reading of warnings, especially if they missed it in the initial description.'}",
+      "{'rank': 3, 'response': 'What does the price sticker say?', 'response_target': 'price sticker', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 2, 'plausibility_score': 0.92, 'rationale': 'Price is a common concern, especially in a store or unfamiliar environment. The user may want to confirm the price before purchase.'}",
+      "{'rank': 4, 'response': 'What is the scent of this candle?', 'response_target': 'candle scent', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.9, 'rationale': 'Scent is a primary differentiator for candles, and the user may want to confirm it, especially if the name is ambiguous or unfamiliar.'}",
+      "{'rank': 5, 'response': 'Can you describe what the container looks like?', 'response_target': 'container appearance', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 3, 'plausibility_score': 0.85, 'rationale': 'Users may want to know the appearance for organization, aesthetics, or to confirm they have the right product, especially when sharing with others.'}",
+      "{'rank': 6, 'response': 'Does the label look damaged or hard to read?', 'response_target': 'label condition', 'task_type': 'Verification', 'associated_task_id': 7, 'associated_context_id': 2, 'plausibility_score': 0.82, 'rationale': 'Ensuring the label is readable is important for future reference or if the user relies on others to read it later.'}",
+      "{'rank': 7, 'response': 'Is there any ingredient or allergen information?', 'response_target': 'ingredient or allergen information', 'task_type': 'Reading', 'associated_task_id': 6, 'associated_context_id': 4, 'plausibility_score': 0.78, 'rationale': 'Though unlikely for a candle, the food-like scent name may prompt a user to check for allergen info, especially if unsure about the product.'}",
+      "{'rank': 8, 'response': 'Can you confirm the brand name for me?', 'response_target': 'brand name', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 3, 'plausibility_score': 0.76, 'rationale': 'Brand can be important for quality or preference, especially if the user is discussing or comparing products with others.'}",
+      "{'rank': 9, 'response': 'Is the label fully visible or is anything covered?', 'response_target': 'label visibility', 'task_type': 'Verification', 'associated_task_id': 7, 'associated_context_id': 2, 'plausibility_score': 0.74, 'rationale': 'If the label is partially obscured (e.g., by the price sticker or hand), the user may want to know if they need to retake the photo.'}",
+      "{'rank': 10, 'response': 'Does the label mention how long the candle will burn?', 'response_target': 'burn time information', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.7, 'rationale': \"Burn time is a common detail for candles, and the user may want to know this for planning or comparison, though it's less urgent than safety or identification.\"}"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Is this definitely a candle and not food?",
+        "response_target": "item type",
+        "task_type": "Identification",
+        "associated_task_id": 4,
+        "associated_context_id": 4,
+        "plausibility_score": 0.98,
+        "rationale": "Given the label says 'Oatmeal Cookie,' a BLV user may be concerned about confusing a candle with food, especially in an unfamiliar or hurried context. This is a high-priority, safety-driven clarification."
+      },
+      {
+        "rank": 2,
+        "response": "Can you read the warning label out loud?",
+        "response_target": "warning label",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.95,
+        "rationale": "Safety information is critical for candles, and BLV users often need explicit reading of warnings, especially if they missed it in the initial description."
+      },
+      {
+        "rank": 3,
+        "response": "What does the price sticker say?",
+        "response_target": "price sticker",
+        "task_type": "Reading",
+        "associated_task_id": 3,
+        "associated_context_id": 2,
+        "plausibility_score": 0.92,
+        "rationale": "Price is a common concern, especially in a store or unfamiliar environment. The user may want to confirm the price before purchase."
+      },
+      {
+        "rank": 4,
+        "response": "What is the scent of this candle?",
+        "response_target": "candle scent",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.9,
+        "rationale": "Scent is a primary differentiator for candles, and the user may want to confirm it, especially if the name is ambiguous or unfamiliar."
+      },
+      {
+        "rank": 5,
+        "response": "Can you describe what the container looks like?",
+        "response_target": "container appearance",
+        "task_type": "Description",
+        "associated_task_id": 5,
+        "associated_context_id": 3,
+        "plausibility_score": 0.85,
+        "rationale": "Users may want to know the appearance for organization, aesthetics, or to confirm they have the right product, especially when sharing with others."
+      },
+      {
+        "rank": 6,
+        "response": "Does the label look damaged or hard to read?",
+        "response_target": "label condition",
+        "task_type": "Verification",
+        "associated_task_id": 7,
+        "associated_context_id": 2,
+        "plausibility_score": 0.82,
+        "rationale": "Ensuring the label is readable is important for future reference or if the user relies on others to read it later."
+      },
+      {
+        "rank": 7,
+        "response": "Is there any ingredient or allergen information?",
+        "response_target": "ingredient or allergen information",
+        "task_type": "Reading",
+        "associated_task_id": 6,
+        "associated_context_id": 4,
+        "plausibility_score": 0.78,
+        "rationale": "Though unlikely for a candle, the food-like scent name may prompt a user to check for allergen info, especially if unsure about the product."
+      },
+      {
+        "rank": 8,
+        "response": "Can you confirm the brand name for me?",
+        "response_target": "brand name",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 3,
+        "plausibility_score": 0.76,
+        "rationale": "Brand can be important for quality or preference, especially if the user is discussing or comparing products with others."
+      },
+      {
+        "rank": 9,
+        "response": "Is the label fully visible or is anything covered?",
+        "response_target": "label visibility",
+        "task_type": "Verification",
+        "associated_task_id": 7,
+        "associated_context_id": 2,
+        "plausibility_score": 0.74,
+        "rationale": "If the label is partially obscured (e.g., by the price sticker or hand), the user may want to know if they need to retake the photo."
+      },
+      {
+        "rank": 10,
+        "response": "Does the label mention how long the candle will burn?",
+        "response_target": "burn time information",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.7,
+        "rationale": "Burn time is a common detail for candles, and the user may want to know this for planning or comparison, though it's less urgent than safety or identification."
+      }
+    ],
+    "raw_output": {
+      "ranked_questions": [
+        {
+          "rank": 1,
+          "response": "Is this definitely a candle and not food?",
+          "response_target": "item type",
+          "task_type": "Identification",
+          "associated_task_id": 4,
+          "associated_context_id": 4,
+          "plausibility_score": 0.98,
+          "rationale": "Given the label says 'Oatmeal Cookie,' a BLV user may be concerned about confusing a candle with food, especially in an unfamiliar or hurried context. This is a high-priority, safety-driven clarification."
+        },
+        {
+          "rank": 2,
+          "response": "Can you read the warning label out loud?",
+          "response_target": "warning label",
+          "task_type": "Reading",
+          "associated_task_id": 2,
+          "associated_context_id": 1,
+          "plausibility_score": 0.95,
+          "rationale": "Safety information is critical for candles, and BLV users often need explicit reading of warnings, especially if they missed it in the initial description."
+        },
+        {
+          "rank": 3,
+          "response": "What does the price sticker say?",
+          "response_target": "price sticker",
+          "task_type": "Reading",
+          "associated_task_id": 3,
+          "associated_context_id": 2,
+          "plausibility_score": 0.92,
+          "rationale": "Price is a common concern, especially in a store or unfamiliar environment. The user may want to confirm the price before purchase."
+        },
+        {
+          "rank": 4,
+          "response": "What is the scent of this candle?",
+          "response_target": "candle scent",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 0.9,
+          "rationale": "Scent is a primary differentiator for candles, and the user may want to confirm it, especially if the name is ambiguous or unfamiliar."
+        },
+        {
+          "rank": 5,
+          "response": "Can you describe what the container looks like?",
+          "response_target": "container appearance",
+          "task_type": "Description",
+          "associated_task_id": 5,
+          "associated_context_id": 3,
+          "plausibility_score": 0.85,
+          "rationale": "Users may want to know the appearance for organization, aesthetics, or to confirm they have the right product, especially when sharing with others."
+        },
+        {
+          "rank": 6,
+          "response": "Does the label look damaged or hard to read?",
+          "response_target": "label condition",
+          "task_type": "Verification",
+          "associated_task_id": 7,
+          "associated_context_id": 2,
+          "plausibility_score": 0.82,
+          "rationale": "Ensuring the label is readable is important for future reference or if the user relies on others to read it later."
+        },
+        {
+          "rank": 7,
+          "response": "Is there any ingredient or allergen information?",
+          "response_target": "ingredient or allergen information",
+          "task_type": "Reading",
+          "associated_task_id": 6,
+          "associated_context_id": 4,
+          "plausibility_score": 0.78,
+          "rationale": "Though unlikely for a candle, the food-like scent name may prompt a user to check for allergen info, especially if unsure about the product."
+        },
+        {
+          "rank": 8,
+          "response": "Can you confirm the brand name for me?",
+          "response_target": "brand name",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 3,
+          "plausibility_score": 0.76,
+          "rationale": "Brand can be important for quality or preference, especially if the user is discussing or comparing products with others."
+        },
+        {
+          "rank": 9,
+          "response": "Is the label fully visible or is anything covered?",
+          "response_target": "label visibility",
+          "task_type": "Verification",
+          "associated_task_id": 7,
+          "associated_context_id": 2,
+          "plausibility_score": 0.74,
+          "rationale": "If the label is partially obscured (e.g., by the price sticker or hand), the user may want to know if they need to retake the photo."
+        },
+        {
+          "rank": 10,
+          "response": "Does the label mention how long the candle will burn?",
+          "response_target": "burn time information",
+          "task_type": "Reading",
+          "associated_task_id": 2,
+          "associated_context_id": 1,
+          "plausibility_score": 0.7,
+          "rationale": "Burn time is a common detail for candles, and the user may want to know this for planning or comparison, though it's less urgent than safety or identification."
+        }
+      ]
+    }
+  },
+  "response_target_agent": {
+    "response_target": "candle color",
+    "task_type": "Description",
+    "confidence": "high",
+    "rationale": "The participant directly asks about the color of the candle, making 'candle color' the clear information target. The question_category is 'Description,' which aligns with this focus. There is no ambiguity in the phrasing of the question.",
+    "raw_output": {
+      "response_target": "candle color",
+      "task_type": "Description",
+      "confidence": "high",
+      "rationale": "The participant directly asks about the color of the candle, making 'candle color' the clear information target. The question_category is 'Description,' which aligns with this focus. There is no ambiguity in the phrasing of the question."
+    }
+  },
+  "interaction_target_agent": {
+    "turn_targets": [
+      {
+        "response_target": "candle color",
+        "task_type": "Description",
+        "confidence": "high",
+        "rationale": "The participant directly asks about the color of the candle, making 'candle color' the most direct and concise information target."
+      }
+    ],
+    "raw_output": {
+      "turn_targets": [
+        {
+          "response_target": "candle color",
+          "task_type": "Description",
+          "confidence": "high",
+          "rationale": "The participant directly asks about the color of the candle, making 'candle color' the most direct and concise information target."
+        }
+      ]
+    }
+  },
+  "final_ranked_questions": [
+    "{'rank': 1, 'response': 'Is this definitely a candle and not food?', 'response_target': 'item type', 'task_type': 'Identification', 'associated_task_id': 4, 'associated_context_id': 4, 'plausibility_score': 0.98, 'rationale': \"Given the label says 'Oatmeal Cookie,' a BLV user may be concerned about confusing a candle with food, especially in an unfamiliar or hurried context. This is a high-priority, safety-driven clarification.\"}",
+    "{'rank': 2, 'response': 'Can you read the warning label out loud?', 'response_target': 'warning label', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': 'Safety information is critical for candles, and BLV users often need explicit reading of warnings, especially if they missed it in the initial description.'}",
+    "{'rank': 3, 'response': 'What does the price sticker say?', 'response_target': 'price sticker', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 2, 'plausibility_score': 0.92, 'rationale': 'Price is a common concern, especially in a store or unfamiliar environment. The user may want to confirm the price before purchase.'}",
+    "{'rank': 4, 'response': 'What is the scent of this candle?', 'response_target': 'candle scent', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.9, 'rationale': 'Scent is a primary differentiator for candles, and the user may want to confirm it, especially if the name is ambiguous or unfamiliar.'}",
+    "{'rank': 5, 'response': 'Can you describe what the container looks like?', 'response_target': 'container appearance', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 3, 'plausibility_score': 0.85, 'rationale': 'Users may want to know the appearance for organization, aesthetics, or to confirm they have the right product, especially when sharing with others.'}",
+    "{'rank': 6, 'response': 'Does the label look damaged or hard to read?', 'response_target': 'label condition', 'task_type': 'Verification', 'associated_task_id': 7, 'associated_context_id': 2, 'plausibility_score': 0.82, 'rationale': 'Ensuring the label is readable is important for future reference or if the user relies on others to read it later.'}",
+    "{'rank': 7, 'response': 'Is there any ingredient or allergen information?', 'response_target': 'ingredient or allergen information', 'task_type': 'Reading', 'associated_task_id': 6, 'associated_context_id': 4, 'plausibility_score': 0.78, 'rationale': 'Though unlikely for a candle, the food-like scent name may prompt a user to check for allergen info, especially if unsure about the product.'}",
+    "{'rank': 8, 'response': 'Can you confirm the brand name for me?', 'response_target': 'brand name', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 3, 'plausibility_score': 0.76, 'rationale': 'Brand can be important for quality or preference, especially if the user is discussing or comparing products with others.'}",
+    "{'rank': 9, 'response': 'Is the label fully visible or is anything covered?', 'response_target': 'label visibility', 'task_type': 'Verification', 'associated_task_id': 7, 'associated_context_id': 2, 'plausibility_score': 0.74, 'rationale': 'If the label is partially obscured (e.g., by the price sticker or hand), the user may want to know if they need to retake the photo.'}",
+    "{'rank': 10, 'response': 'Does the label mention how long the candle will burn?', 'response_target': 'burn time information', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.7, 'rationale': \"Burn time is a common detail for candles, and the user may want to know this for planning or comparison, though it's less urgent than safety or identification.\"}"
+  ],
+  "ground_truth_question": "What color is the candle",
+  "comparison": {
+    "ground_truth": "What color is the candle",
+    "ground_truth_response_target": "candle color",
+    "ground_truth_task_type": "Description",
+    "turn_targets": [
+      {
+        "response_target": "candle color",
+        "task_type": "Description",
+        "confidence": "high",
+        "rationale": "The participant directly asks about the color of the candle, making 'candle color' the most direct and concise information target."
+      }
+    ],
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Is this definitely a candle and not food?",
+        "generated_response_target": "item type",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "candle color",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 2,
+        "generated_question": "Can you read the warning label out loud?",
+        "generated_response_target": "warning label",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "candle color",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 3,
+        "generated_question": "What does the price sticker say?",
+        "generated_response_target": "price sticker",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "candle color",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 4,
+        "generated_question": "What is the scent of this candle?",
+        "generated_response_target": "candle scent",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "candle color",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 5,
+        "generated_question": "Can you describe what the container looks like?",
+        "generated_response_target": "container appearance",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "candle color",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 6,
+        "generated_question": "Does the label look damaged or hard to read?",
+        "generated_response_target": "label condition",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "candle color",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 7,
+        "generated_question": "Is there any ingredient or allergen information?",
+        "generated_response_target": "ingredient or allergen information",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "candle color",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 8,
+        "generated_question": "Can you confirm the brand name for me?",
+        "generated_response_target": "brand name",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "candle color",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 9,
+        "generated_question": "Is the label fully visible or is anything covered?",
+        "generated_response_target": "label visibility",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "candle color",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 10,
+        "generated_question": "Does the label mention how long the candle will burn?",
+        "generated_response_target": "burn time information",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "candle color",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "What color is the candle",
+        "generated_response_target": "candle color",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "candle color",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 1,
+        "matched_user_turn": 1,
+        "matched_user_turn_target": "candle color",
+        "matched_user_turn_score": 1,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "NA-w-text"
+      ],
+      "question_category": "Description",
+      "in_a_hurry": "no",
+      "indoor_outdoor": "indoor",
+      "familiarity_of_environment": "yes",
+      "familiarity_of_item": "yes",
+      "surrounding_environment": "alone",
+      "environment_setting": "leisure",
+      "interaction_length": "3",
+      "task_completed": "Yes"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P10_images/image_32_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:A hand is holding a round container with a clear lid. The label on the lid reads \"HOMEWORX BY HARRY SLATKIN\" and \"OATMEAL COOKIE\" with a description of the fragrance as \"SWEET RAISINS, TOASTED OATS, BROWN SUGAR, FRESH BAKED COOKIE.\" There is a warning about burning the candle within sight and keeping it away from things that catch fire. The net weight is listed as 18 oz (510 g). There is also a price sticker from Marshalls showing the price as $14.99.",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P10_images/image_32_3.jpg"
+      },
+      {
+        "turn": 4,
+        "text_usr": null,
+        "text_ai": "Be My AI:A hand is holding a round container with a label on the bottom. The label includes a warning to prevent fire and serious injury, advising to burn the candle within sight, keep away from things that catch fire, and keep away from children. It also mentions trimming the wicks to 1/4 inch before relighting and keeping wax free of wick trimmings. The fragrance is \"CHAMPAGNE TOAST,\" described as having notes of bubbly champagne, sparkling berries, and juicy tangerine, made with natural essential oils. The net weight is 14.5 oz (411 g).",
+        "local_image_path": null
+      },
+      {
+        "turn": 5,
+        "text_usr": "User:What color is the candle",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 6,
+        "text_usr": null,
+        "text_ai": "Be My AI:The candle is pink.",
+        "local_image_path": null
+      }
+    ]
+  }
+}

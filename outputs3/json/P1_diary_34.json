@@ -1,0 +1,700 @@
+{
+  "input": {
+    "participant": "P1",
+    "source": "diary",
+    "interaction": 34,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P1/diary_data/P1.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P1/diary_data/P1_images/image_34_1.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "The image shows a bottle of Bayer Low Dose Aspirin. The label is yellow with a green section. The text on the label reads \"BAYER\" at the top, followed by \"LOW DOSE\" and \"SAFETY COATED ASPIRIN REGIMEN.\" There is a red heart with \"81 mg\" written inside it. The bottle contains 200 tablets, and the product number at the bottom is 87594679.",
+    "all_user_responses": [
+      "How many can I take?"
+    ],
+    "question_category": "Unanswerable, Reading",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user is likely at home, quickly checking the label of a medication bottle they use regularly. The image is close-up but blurry, suggesting the user may be trying to confirm dosage or expiration but is having difficulty capturing a clear image, possibly due to urgency or vision limitations."
+      },
+      {
+        "context_id": 2,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "unfamiliar people",
+        "activity_type": "professional",
+        "rationale": "The user might be in a clinic or pharmacy, trying to verify a medication they were given. The unfamiliar setting and object could prompt them to seek confirmation from a VQA system before taking the medication, possibly with staff nearby."
+      },
+      {
+        "context_id": 3,
+        "location": "indoor",
+        "time_pressure": "in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user could be at home but handling a new or different medication bottle, possibly after a recent prescription change. The hurried, blurry photo suggests they may need to take the medication soon and want to confirm it\u2019s the correct one."
+      },
+      {
+        "context_id": 4,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "daily living task",
+        "rationale": "The user could be at home with family, double-checking the medication label for a loved one. The presence of another hand or object in the background could indicate assistance or shared activity, and the user is taking their time to ensure safety."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user is likely at home, quickly checking the label of a medication bottle they use regularly. The image is close-up but blurry, suggesting the user may be trying to confirm dosage or expiration but is having difficulty capturing a clear image, possibly due to urgency or vision limitations."
+        },
+        {
+          "context_id": 2,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "unfamiliar people",
+          "activity_type": "professional",
+          "rationale": "The user might be in a clinic or pharmacy, trying to verify a medication they were given. The unfamiliar setting and object could prompt them to seek confirmation from a VQA system before taking the medication, possibly with staff nearby."
+        },
+        {
+          "context_id": 3,
+          "location": "indoor",
+          "time_pressure": "in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user could be at home but handling a new or different medication bottle, possibly after a recent prescription change. The hurried, blurry photo suggests they may need to take the medication soon and want to confirm it\u2019s the correct one."
+        },
+        {
+          "context_id": 4,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "daily living task",
+          "rationale": "The user could be at home with family, double-checking the medication label for a loved one. The presence of another hand or object in the background could indicate assistance or shared activity, and the user is taking their time to ensure safety."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Reading",
+        "description": "Extract the medication name and dosage from the bottle label.",
+        "confidence": "high",
+        "rationale": "The image is focused on a medication bottle, and the user may need to confirm the drug name and dosage for safety or medication management."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Reading",
+        "description": "Read the instructions or warnings on the medication bottle.",
+        "confidence": "medium",
+        "rationale": "Medication bottles often have important usage instructions or warnings, and a BLV user may need this information to use the medication safely. However, the image is somewhat blurry and may not capture all the text."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Identification",
+        "description": "Identify whether this is the correct medication bottle among several similar bottles.",
+        "confidence": "medium",
+        "rationale": "BLV users may have multiple similar bottles and need to distinguish between them. The image shows a close-up of a label, suggesting the user wants to confirm the identity."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Reading",
+        "description": "Determine the expiration date or lot number on the medication bottle.",
+        "confidence": "low",
+        "rationale": "Users may need to check if the medication is still safe to use, but the relevant information may not be visible or legible in the image."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Description",
+        "description": "Describe the appearance of the medication bottle for future identification.",
+        "confidence": "medium",
+        "rationale": "A user may want a description of the bottle's color, shape, or label for organizational or retrieval purposes, especially if they rely on tactile or visual cues."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Reading",
+        "description": "Count the number of tablets or servings remaining, if visible.",
+        "confidence": "low",
+        "rationale": "Some users may want to know how much medication is left, but this information is unlikely to be visible from the outside of the bottle in this image."
+      },
+      {
+        "task_id": 7,
+        "task_type": "Locational/retrieval",
+        "description": "Confirm that the bottle is in hand or located in the correct place.",
+        "confidence": "low",
+        "rationale": "The user may want to verify that they have picked up the correct item, but the image does not provide clear context about its location."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Reading",
+          "description": "Extract the medication name and dosage from the bottle label.",
+          "confidence": "high",
+          "rationale": "The image is focused on a medication bottle, and the user may need to confirm the drug name and dosage for safety or medication management."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Reading",
+          "description": "Read the instructions or warnings on the medication bottle.",
+          "confidence": "medium",
+          "rationale": "Medication bottles often have important usage instructions or warnings, and a BLV user may need this information to use the medication safely. However, the image is somewhat blurry and may not capture all the text."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Identification",
+          "description": "Identify whether this is the correct medication bottle among several similar bottles.",
+          "confidence": "medium",
+          "rationale": "BLV users may have multiple similar bottles and need to distinguish between them. The image shows a close-up of a label, suggesting the user wants to confirm the identity."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Reading",
+          "description": "Determine the expiration date or lot number on the medication bottle.",
+          "confidence": "low",
+          "rationale": "Users may need to check if the medication is still safe to use, but the relevant information may not be visible or legible in the image."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Description",
+          "description": "Describe the appearance of the medication bottle for future identification.",
+          "confidence": "medium",
+          "rationale": "A user may want a description of the bottle's color, shape, or label for organizational or retrieval purposes, especially if they rely on tactile or visual cues."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Reading",
+          "description": "Count the number of tablets or servings remaining, if visible.",
+          "confidence": "low",
+          "rationale": "Some users may want to know how much medication is left, but this information is unlikely to be visible from the outside of the bottle in this image."
+        },
+        {
+          "task_id": 7,
+          "task_type": "Locational/retrieval",
+          "description": "Confirm that the bottle is in hand or located in the correct place.",
+          "confidence": "low",
+          "rationale": "The user may want to verify that they have picked up the correct item, but the image does not provide clear context about its location."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "{'rank': 1, 'response': 'Can you read the instructions or warnings on the bottle? I need to know if there are any precautions.', 'response_target': 'instructions or warnings', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': 'Given the context of a daily living task and possible urgency, users often want to confirm safety instructions, especially since the main label info is already provided but warnings are often missed in blurry images.'}",
+      "{'rank': 2, 'response': 'Is the expiration date visible anywhere on the bottle?', 'response_target': 'expiration date', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.9, 'rationale': 'Checking expiration is a common follow-up for medication, especially if the main label is readable but expiry is not mentioned in the description.'}",
+      "{'rank': 3, 'response': 'Can you confirm if this is Bayer Low Dose Aspirin, 81 mg?', 'response_target': 'medication name and dosage', 'task_type': 'Verification', 'associated_task_id': 1, 'associated_context_id': 3, 'plausibility_score': 0.88, 'rationale': 'If the user is unfamiliar with the bottle or in a hurry, they may want to double-check the medication identity and dosage for safety.'}",
+      "{'rank': 4, 'response': 'Are there any other bottles in the image, or is this the only one?', 'response_target': 'other bottles', 'task_type': 'Identification', 'associated_task_id': 3, 'associated_context_id': 3, 'plausibility_score': 0.85, 'rationale': \"Users with multiple similar bottles may want to confirm they're holding the right one, especially if the image is unclear or context suggests confusion.\"}",
+      "{'rank': 5, 'response': 'Can you describe what the rest of the label says below the green section?', 'response_target': 'lower label text', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.8, 'rationale': 'The AI description may have missed smaller or less legible text, so users often ask for more detail from the label.'}",
+      "{'rank': 6, 'response': 'Is there a lot number or any small print you can read?', 'response_target': 'lot number or small print', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 2, 'plausibility_score': 0.75, 'rationale': 'In professional or pharmacy contexts, users may need to verify the lot number for safety or recall reasons.'}",
+      "{'rank': 7, 'response': 'Can you tell if the bottle is open or sealed?', 'response_target': 'bottle seal', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 1, 'plausibility_score': 0.7, 'rationale': \"Users sometimes want to confirm if a medication bottle is still sealed, especially if it's new or for safety.\"}",
+      "{'rank': 8, 'response': 'How many tablets are left in the bottle, if you can see?', 'response_target': 'number of tablets remaining', 'task_type': 'Reading', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.6, 'rationale': 'While unlikely to be visible, users sometimes ask about remaining quantity, especially if they are running low.'}",
+      "{'rank': 9, 'response': 'Can you describe the shape and color of the bottle cap?', 'response_target': 'bottle cap appearance', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 4, 'plausibility_score': 0.55, 'rationale': 'For future identification, users may want to know about tactile or visual features like the cap.'}",
+      "{'rank': 10, 'response': 'Is the bottle in my hand or on a surface?', 'response_target': 'bottle location', 'task_type': 'Localization', 'associated_task_id': 7, 'associated_context_id': 1, 'plausibility_score': 0.5, 'rationale': \"Some users may want to confirm if they're holding the correct item, but this is less likely than label-focused questions.\"}"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Can you read the instructions or warnings on the bottle? I need to know if there are any precautions.",
+        "response_target": "instructions or warnings",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.95,
+        "rationale": "Given the context of a daily living task and possible urgency, users often want to confirm safety instructions, especially since the main label info is already provided but warnings are often missed in blurry images."
+      },
+      {
+        "rank": 2,
+        "response": "Is the expiration date visible anywhere on the bottle?",
+        "response_target": "expiration date",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.9,
+        "rationale": "Checking expiration is a common follow-up for medication, especially if the main label is readable but expiry is not mentioned in the description."
+      },
+      {
+        "rank": 3,
+        "response": "Can you confirm if this is Bayer Low Dose Aspirin, 81 mg?",
+        "response_target": "medication name and dosage",
+        "task_type": "Verification",
+        "associated_task_id": 1,
+        "associated_context_id": 3,
+        "plausibility_score": 0.88,
+        "rationale": "If the user is unfamiliar with the bottle or in a hurry, they may want to double-check the medication identity and dosage for safety."
+      },
+      {
+        "rank": 4,
+        "response": "Are there any other bottles in the image, or is this the only one?",
+        "response_target": "other bottles",
+        "task_type": "Identification",
+        "associated_task_id": 3,
+        "associated_context_id": 3,
+        "plausibility_score": 0.85,
+        "rationale": "Users with multiple similar bottles may want to confirm they're holding the right one, especially if the image is unclear or context suggests confusion."
+      },
+      {
+        "rank": 5,
+        "response": "Can you describe what the rest of the label says below the green section?",
+        "response_target": "lower label text",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.8,
+        "rationale": "The AI description may have missed smaller or less legible text, so users often ask for more detail from the label."
+      },
+      {
+        "rank": 6,
+        "response": "Is there a lot number or any small print you can read?",
+        "response_target": "lot number or small print",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 2,
+        "plausibility_score": 0.75,
+        "rationale": "In professional or pharmacy contexts, users may need to verify the lot number for safety or recall reasons."
+      },
+      {
+        "rank": 7,
+        "response": "Can you tell if the bottle is open or sealed?",
+        "response_target": "bottle seal",
+        "task_type": "Description",
+        "associated_task_id": 5,
+        "associated_context_id": 1,
+        "plausibility_score": 0.7,
+        "rationale": "Users sometimes want to confirm if a medication bottle is still sealed, especially if it's new or for safety."
+      },
+      {
+        "rank": 8,
+        "response": "How many tablets are left in the bottle, if you can see?",
+        "response_target": "number of tablets remaining",
+        "task_type": "Reading",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 0.6,
+        "rationale": "While unlikely to be visible, users sometimes ask about remaining quantity, especially if they are running low."
+      },
+      {
+        "rank": 9,
+        "response": "Can you describe the shape and color of the bottle cap?",
+        "response_target": "bottle cap appearance",
+        "task_type": "Description",
+        "associated_task_id": 5,
+        "associated_context_id": 4,
+        "plausibility_score": 0.55,
+        "rationale": "For future identification, users may want to know about tactile or visual features like the cap."
+      },
+      {
+        "rank": 10,
+        "response": "Is the bottle in my hand or on a surface?",
+        "response_target": "bottle location",
+        "task_type": "Localization",
+        "associated_task_id": 7,
+        "associated_context_id": 1,
+        "plausibility_score": 0.5,
+        "rationale": "Some users may want to confirm if they're holding the correct item, but this is less likely than label-focused questions."
+      }
+    ],
+    "raw_output": {
+      "ranked_questions": [
+        {
+          "rank": 1,
+          "response": "Can you read the instructions or warnings on the bottle? I need to know if there are any precautions.",
+          "response_target": "instructions or warnings",
+          "task_type": "Reading",
+          "associated_task_id": 2,
+          "associated_context_id": 1,
+          "plausibility_score": 0.95,
+          "rationale": "Given the context of a daily living task and possible urgency, users often want to confirm safety instructions, especially since the main label info is already provided but warnings are often missed in blurry images."
+        },
+        {
+          "rank": 2,
+          "response": "Is the expiration date visible anywhere on the bottle?",
+          "response_target": "expiration date",
+          "task_type": "Reading",
+          "associated_task_id": 4,
+          "associated_context_id": 1,
+          "plausibility_score": 0.9,
+          "rationale": "Checking expiration is a common follow-up for medication, especially if the main label is readable but expiry is not mentioned in the description."
+        },
+        {
+          "rank": 3,
+          "response": "Can you confirm if this is Bayer Low Dose Aspirin, 81 mg?",
+          "response_target": "medication name and dosage",
+          "task_type": "Verification",
+          "associated_task_id": 1,
+          "associated_context_id": 3,
+          "plausibility_score": 0.88,
+          "rationale": "If the user is unfamiliar with the bottle or in a hurry, they may want to double-check the medication identity and dosage for safety."
+        },
+        {
+          "rank": 4,
+          "response": "Are there any other bottles in the image, or is this the only one?",
+          "response_target": "other bottles",
+          "task_type": "Identification",
+          "associated_task_id": 3,
+          "associated_context_id": 3,
+          "plausibility_score": 0.85,
+          "rationale": "Users with multiple similar bottles may want to confirm they're holding the right one, especially if the image is unclear or context suggests confusion."
+        },
+        {
+          "rank": 5,
+          "response": "Can you describe what the rest of the label says below the green section?",
+          "response_target": "lower label text",
+          "task_type": "Reading",
+          "associated_task_id": 2,
+          "associated_context_id": 1,
+          "plausibility_score": 0.8,
+          "rationale": "The AI description may have missed smaller or less legible text, so users often ask for more detail from the label."
+        },
+        {
+          "rank": 6,
+          "response": "Is there a lot number or any small print you can read?",
+          "response_target": "lot number or small print",
+          "task_type": "Reading",
+          "associated_task_id": 4,
+          "associated_context_id": 2,
+          "plausibility_score": 0.75,
+          "rationale": "In professional or pharmacy contexts, users may need to verify the lot number for safety or recall reasons."
+        },
+        {
+          "rank": 7,
+          "response": "Can you tell if the bottle is open or sealed?",
+          "response_target": "bottle seal",
+          "task_type": "Description",
+          "associated_task_id": 5,
+          "associated_context_id": 1,
+          "plausibility_score": 0.7,
+          "rationale": "Users sometimes want to confirm if a medication bottle is still sealed, especially if it's new or for safety."
+        },
+        {
+          "rank": 8,
+          "response": "How many tablets are left in the bottle, if you can see?",
+          "response_target": "number of tablets remaining",
+          "task_type": "Reading",
+          "associated_task_id": 6,
+          "associated_context_id": 1,
+          "plausibility_score": 0.6,
+          "rationale": "While unlikely to be visible, users sometimes ask about remaining quantity, especially if they are running low."
+        },
+        {
+          "rank": 9,
+          "response": "Can you describe the shape and color of the bottle cap?",
+          "response_target": "bottle cap appearance",
+          "task_type": "Description",
+          "associated_task_id": 5,
+          "associated_context_id": 4,
+          "plausibility_score": 0.55,
+          "rationale": "For future identification, users may want to know about tactile or visual features like the cap."
+        },
+        {
+          "rank": 10,
+          "response": "Is the bottle in my hand or on a surface?",
+          "response_target": "bottle location",
+          "task_type": "Localization",
+          "associated_task_id": 7,
+          "associated_context_id": 1,
+          "plausibility_score": 0.5,
+          "rationale": "Some users may want to confirm if they're holding the correct item, but this is less likely than label-focused questions."
+        }
+      ]
+    }
+  },
+  "response_target_agent": {
+    "response_target": "dosage instructions",
+    "task_type": "Unanswerable, Reading",
+    "confidence": "high",
+    "rationale": "The participant's question 'How many can I take?' directly seeks information about the recommended number of pills to take, which is typically found in the dosage instructions on the medication label. The question_category 'Unanswerable, Reading' indicates the answer should be read from the label, but the image is blurry and the relevant text is not clearly visible, making the answer unanswerable from the provided image.",
+    "raw_output": {
+      "response_target": "dosage instructions",
+      "task_type": "Unanswerable, Reading",
+      "confidence": "high",
+      "rationale": "The participant's question 'How many can I take?' directly seeks information about the recommended number of pills to take, which is typically found in the dosage instructions on the medication label. The question_category 'Unanswerable, Reading' indicates the answer should be read from the label, but the image is blurry and the relevant text is not clearly visible, making the answer unanswerable from the provided image."
+    }
+  },
+  "interaction_target_agent": {
+    "turn_targets": [
+      {
+        "response_target": "dosage instructions",
+        "task_type": "Unanswerable, Reading",
+        "confidence": "high",
+        "rationale": "The participant asks 'How many can I take?', which directly seeks information about the recommended dosage instructions, typically found on the label. The question_category is 'Unanswerable, Reading', indicating the answer is likely not readable or present in the image, but the intent is clear."
+      }
+    ],
+    "raw_output": {
+      "turn_targets": [
+        {
+          "response_target": "dosage instructions",
+          "task_type": "Unanswerable, Reading",
+          "confidence": "high",
+          "rationale": "The participant asks 'How many can I take?', which directly seeks information about the recommended dosage instructions, typically found on the label. The question_category is 'Unanswerable, Reading', indicating the answer is likely not readable or present in the image, but the intent is clear."
+        }
+      ]
+    }
+  },
+  "final_ranked_questions": [
+    "{'rank': 1, 'response': 'Can you read the instructions or warnings on the bottle? I need to know if there are any precautions.', 'response_target': 'instructions or warnings', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': 'Given the context of a daily living task and possible urgency, users often want to confirm safety instructions, especially since the main label info is already provided but warnings are often missed in blurry images.'}",
+    "{'rank': 2, 'response': 'Is the expiration date visible anywhere on the bottle?', 'response_target': 'expiration date', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.9, 'rationale': 'Checking expiration is a common follow-up for medication, especially if the main label is readable but expiry is not mentioned in the description.'}",
+    "{'rank': 3, 'response': 'Can you confirm if this is Bayer Low Dose Aspirin, 81 mg?', 'response_target': 'medication name and dosage', 'task_type': 'Verification', 'associated_task_id': 1, 'associated_context_id': 3, 'plausibility_score': 0.88, 'rationale': 'If the user is unfamiliar with the bottle or in a hurry, they may want to double-check the medication identity and dosage for safety.'}",
+    "{'rank': 4, 'response': 'Are there any other bottles in the image, or is this the only one?', 'response_target': 'other bottles', 'task_type': 'Identification', 'associated_task_id': 3, 'associated_context_id': 3, 'plausibility_score': 0.85, 'rationale': \"Users with multiple similar bottles may want to confirm they're holding the right one, especially if the image is unclear or context suggests confusion.\"}",
+    "{'rank': 5, 'response': 'Can you describe what the rest of the label says below the green section?', 'response_target': 'lower label text', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.8, 'rationale': 'The AI description may have missed smaller or less legible text, so users often ask for more detail from the label.'}",
+    "{'rank': 6, 'response': 'Is there a lot number or any small print you can read?', 'response_target': 'lot number or small print', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 2, 'plausibility_score': 0.75, 'rationale': 'In professional or pharmacy contexts, users may need to verify the lot number for safety or recall reasons.'}",
+    "{'rank': 7, 'response': 'Can you tell if the bottle is open or sealed?', 'response_target': 'bottle seal', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 1, 'plausibility_score': 0.7, 'rationale': \"Users sometimes want to confirm if a medication bottle is still sealed, especially if it's new or for safety.\"}",
+    "{'rank': 8, 'response': 'How many tablets are left in the bottle, if you can see?', 'response_target': 'number of tablets remaining', 'task_type': 'Reading', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.6, 'rationale': 'While unlikely to be visible, users sometimes ask about remaining quantity, especially if they are running low.'}",
+    "{'rank': 9, 'response': 'Can you describe the shape and color of the bottle cap?', 'response_target': 'bottle cap appearance', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 4, 'plausibility_score': 0.55, 'rationale': 'For future identification, users may want to know about tactile or visual features like the cap.'}",
+    "{'rank': 10, 'response': 'Is the bottle in my hand or on a surface?', 'response_target': 'bottle location', 'task_type': 'Localization', 'associated_task_id': 7, 'associated_context_id': 1, 'plausibility_score': 0.5, 'rationale': \"Some users may want to confirm if they're holding the correct item, but this is less likely than label-focused questions.\"}"
+  ],
+  "ground_truth_question": "How many can I take?",
+  "comparison": {
+    "ground_truth": "How many can I take?",
+    "ground_truth_response_target": "dosage instructions",
+    "ground_truth_task_type": "Unanswerable, Reading",
+    "turn_targets": [
+      {
+        "response_target": "dosage instructions",
+        "task_type": "Unanswerable, Reading",
+        "confidence": "high",
+        "rationale": "The participant asks 'How many can I take?', which directly seeks information about the recommended dosage instructions, typically found on the label. The question_category is 'Unanswerable, Reading', indicating the answer is likely not readable or present in the image, but the intent is clear."
+      }
+    ],
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Can you read the instructions or warnings on the bottle? I need to know if there are any precautions.",
+        "generated_response_target": "instructions or warnings",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "dosage instructions",
+        "ground_truth_task_type": "Unanswerable, Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 2,
+        "generated_question": "Is the expiration date visible anywhere on the bottle?",
+        "generated_response_target": "expiration date",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "dosage instructions",
+        "ground_truth_task_type": "Unanswerable, Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 3,
+        "generated_question": "Can you confirm if this is Bayer Low Dose Aspirin, 81 mg?",
+        "generated_response_target": "medication name and dosage",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "dosage instructions",
+        "ground_truth_task_type": "Unanswerable, Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 4,
+        "generated_question": "Are there any other bottles in the image, or is this the only one?",
+        "generated_response_target": "other bottles",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "dosage instructions",
+        "ground_truth_task_type": "Unanswerable, Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 5,
+        "generated_question": "Can you describe what the rest of the label says below the green section?",
+        "generated_response_target": "lower label text",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "dosage instructions",
+        "ground_truth_task_type": "Unanswerable, Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 6,
+        "generated_question": "Is there a lot number or any small print you can read?",
+        "generated_response_target": "lot number or small print",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "dosage instructions",
+        "ground_truth_task_type": "Unanswerable, Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 7,
+        "generated_question": "Can you tell if the bottle is open or sealed?",
+        "generated_response_target": "bottle seal",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "dosage instructions",
+        "ground_truth_task_type": "Unanswerable, Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 8,
+        "generated_question": "How many tablets are left in the bottle, if you can see?",
+        "generated_response_target": "number of tablets remaining",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "dosage instructions",
+        "ground_truth_task_type": "Unanswerable, Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 9,
+        "generated_question": "Can you describe the shape and color of the bottle cap?",
+        "generated_response_target": "bottle cap appearance",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "dosage instructions",
+        "ground_truth_task_type": "Unanswerable, Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 10,
+        "generated_question": "Is the bottle in my hand or on a surface?",
+        "generated_response_target": "bottle location",
+        "generated_task_type": "Localization",
+        "ground_truth_response_target": "dosage instructions",
+        "ground_truth_task_type": "Unanswerable, Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "How many can I take?",
+        "generated_response_target": "dosage instructions",
+        "generated_task_type": "Unanswerable, Reading",
+        "ground_truth_response_target": "dosage instructions",
+        "ground_truth_task_type": "Unanswerable, Reading",
+        "target_match_score": 1,
+        "matched_user_turn": 1,
+        "matched_user_turn_target": "dosage instructions",
+        "matched_user_turn_score": 1,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "NA-w-text"
+      ],
+      "question_category": "Unanswerable, Reading",
+      "in_a_hurry": "yes",
+      "indoor_outdoor": "indoor",
+      "familiarity_of_environment": "yes",
+      "familiarity_of_item": "yes",
+      "surrounding_environment": "alone",
+      "environment_setting": "leisure",
+      "interaction_length": "3",
+      "task_completed": "No"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P1_images/image_34_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows a bottle of Bayer Low Dose Aspirin. The label is yellow with a green section. The text on the label reads \"BAYER\" at the top, followed by \"LOW DOSE\" and \"SAFETY COATED ASPIRIN REGIMEN.\" There is a red heart with \"81 mg\" written inside it. The bottle contains 200 tablets, and the product number at the bottom is 87594679.",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "User:How many can I take?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 4,
+        "text_usr": null,
+        "text_ai": "Be My AI:The label in the image does not provide specific dosage instructions. It's important to follow the guidance of a healthcare professional or the instructions on the packaging for the correct dosage. If you're unsure, I recommend consulting a doctor or pharmacist for advice.",
+        "local_image_path": null
+      },
+      {
+        "turn": 5,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P1_images/image_34_5.jpg"
+      },
+      {
+        "turn": 6,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows the side of the Bayer Low Dose Aspirin bottle with a warning label. The text is small and difficult to read in the image, but it typically includes warnings and instructions. It mentions not to use if the printed safety seal is broken or missing, and advises to see the carton for full information. For specific dosage instructions, it's best to refer to the carton or consult a healthcare professional. If you need detailed information from the label, you might want to press the \"Call a volunteer\" button for assistance.",
+        "local_image_path": null
+      }
+    ]
+  }
+}

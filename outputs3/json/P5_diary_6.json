@@ -1,0 +1,688 @@
+{
+  "input": {
+    "participant": "P5",
+    "source": "diary",
+    "interaction": 6,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P5/diary_data/P5.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P5/diary_data/P5_images/image_6_1.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "The image shows a winter scene with a snow-covered ground and a few patches of exposed grass. In the foreground, there are some green bushes and a concrete walkway. Two large trees with bare branches are visible, one on the left and one on the right. In the background, there is a red car parked on a snow-cleared road, and further back, there are more trees and a grassy area. The sky is blue with some clouds, indicating a clear day.",
+    "all_user_responses": [
+      "Is there snow on the grass?"
+    ],
+    "question_category": "Description",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "outdoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The image shows a snowy outdoor area with a sidewalk and parked cars, suggesting the user might be checking walking conditions or looking for their car. The photo could be taken quickly while navigating, possibly to assess safety or orientation, indicating some time pressure and familiarity with the environment."
+      },
+      {
+        "context_id": 2,
+        "location": "outdoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "leisure",
+        "rationale": "The user may be exploring a new area, such as a park or residential complex, and taking a photo to ask about the surroundings or document the winter scenery. The lack of urgency and unfamiliarity with the environment and objects (e.g., which car or path to take) is plausible."
+      },
+      {
+        "context_id": 3,
+        "location": "outdoor",
+        "time_pressure": "in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "unfamiliar people",
+        "activity_type": "professional",
+        "rationale": "The user could be arriving at a workplace or meeting location, possibly with a rideshare or group, and is unsure which car or entrance is relevant. The hurried context fits if they are trying to confirm details quickly, and the presence of others (e.g., colleagues or drivers) is plausible."
+      },
+      {
+        "context_id": 4,
+        "location": "outdoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "leisure",
+        "rationale": "The user might be outside with friends or family, perhaps discussing the weather or planning an activity. They could be taking a photo to share the snowy scene or to ask about the conditions for a walk or play, with no urgency and familiar company."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "outdoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The image shows a snowy outdoor area with a sidewalk and parked cars, suggesting the user might be checking walking conditions or looking for their car. The photo could be taken quickly while navigating, possibly to assess safety or orientation, indicating some time pressure and familiarity with the environment."
+        },
+        {
+          "context_id": 2,
+          "location": "outdoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "leisure",
+          "rationale": "The user may be exploring a new area, such as a park or residential complex, and taking a photo to ask about the surroundings or document the winter scenery. The lack of urgency and unfamiliarity with the environment and objects (e.g., which car or path to take) is plausible."
+        },
+        {
+          "context_id": 3,
+          "location": "outdoor",
+          "time_pressure": "in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "unfamiliar people",
+          "activity_type": "professional",
+          "rationale": "The user could be arriving at a workplace or meeting location, possibly with a rideshare or group, and is unsure which car or entrance is relevant. The hurried context fits if they are trying to confirm details quickly, and the presence of others (e.g., colleagues or drivers) is plausible."
+        },
+        {
+          "context_id": 4,
+          "location": "outdoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "leisure",
+          "rationale": "The user might be outside with friends or family, perhaps discussing the weather or planning an activity. They could be taking a photo to share the snowy scene or to ask about the conditions for a walk or play, with no urgency and familiar company."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Description",
+        "description": "Determine the current weather or ground conditions outside (e.g., is there snow, ice, or clear ground?)",
+        "confidence": "high",
+        "rationale": "The image shows an outdoor scene with visible snow and ice, which is a common concern for BLV users regarding safety and mobility."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Locational/retrieval",
+        "description": "Assess whether the path or sidewalk is clear and safe to walk on, or if there are obstacles or ice patches.",
+        "confidence": "high",
+        "rationale": "The foreground includes a sidewalk and snow, suggesting the user may want to know if it is safe to walk outside or if there are hazards."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Description",
+        "description": "Get a general sense of the outdoor environment (e.g., is it a residential area, parking lot, or park?)",
+        "confidence": "medium",
+        "rationale": "The image includes cars, trees, and a parking area, which may help the user orient themselves or understand their surroundings."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Identification",
+        "description": "Identify if their car or a specific vehicle is present and where it is located.",
+        "confidence": "medium",
+        "rationale": "There are visible cars, and BLV users often need to confirm the presence or location of their own or a visitor's vehicle."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Description",
+        "description": "Check if there are any people or animals present outside.",
+        "confidence": "medium",
+        "rationale": "Users may want to know if the area is busy, if someone is waiting for them, or if there are pets or wildlife present, though none are clearly visible."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Description",
+        "description": "Determine if the area is well-lit or if there are any visibility issues due to weather or time of day.",
+        "confidence": "low",
+        "rationale": "Lighting and visibility can affect safety, but the image appears to be taken during daylight, so this may be a secondary concern."
+      },
+      {
+        "task_id": 7,
+        "task_type": "Locational/retrieval",
+        "description": "Verify if snow removal has occurred or if the area needs to be cleared.",
+        "confidence": "medium",
+        "rationale": "The presence of snow and a partially cleared sidewalk may prompt the user to check if further snow removal is needed for accessibility."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Description",
+          "description": "Determine the current weather or ground conditions outside (e.g., is there snow, ice, or clear ground?)",
+          "confidence": "high",
+          "rationale": "The image shows an outdoor scene with visible snow and ice, which is a common concern for BLV users regarding safety and mobility."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Locational/retrieval",
+          "description": "Assess whether the path or sidewalk is clear and safe to walk on, or if there are obstacles or ice patches.",
+          "confidence": "high",
+          "rationale": "The foreground includes a sidewalk and snow, suggesting the user may want to know if it is safe to walk outside or if there are hazards."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Description",
+          "description": "Get a general sense of the outdoor environment (e.g., is it a residential area, parking lot, or park?)",
+          "confidence": "medium",
+          "rationale": "The image includes cars, trees, and a parking area, which may help the user orient themselves or understand their surroundings."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Identification",
+          "description": "Identify if their car or a specific vehicle is present and where it is located.",
+          "confidence": "medium",
+          "rationale": "There are visible cars, and BLV users often need to confirm the presence or location of their own or a visitor's vehicle."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Description",
+          "description": "Check if there are any people or animals present outside.",
+          "confidence": "medium",
+          "rationale": "Users may want to know if the area is busy, if someone is waiting for them, or if there are pets or wildlife present, though none are clearly visible."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Description",
+          "description": "Determine if the area is well-lit or if there are any visibility issues due to weather or time of day.",
+          "confidence": "low",
+          "rationale": "Lighting and visibility can affect safety, but the image appears to be taken during daylight, so this may be a secondary concern."
+        },
+        {
+          "task_id": 7,
+          "task_type": "Locational/retrieval",
+          "description": "Verify if snow removal has occurred or if the area needs to be cleared.",
+          "confidence": "medium",
+          "rationale": "The presence of snow and a partially cleared sidewalk may prompt the user to check if further snow removal is needed for accessibility."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "{'rank': 1, 'response': 'Is the sidewalk clear enough to walk on, or are there icy spots I should watch out for?', 'response_target': 'sidewalk condition', 'task_type': 'Locational/retrieval', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.98, 'rationale': \"Given the context of daily living and possible time pressure, safety and walkability are top concerns for BLV users. The AI description mentions snow and a walkway but doesn't specify if it's slippery or blocked, prompting a direct follow-up about hazards.\"}",
+      "{'rank': 2, 'response': 'Can you tell if my car is in this photo? If so, where is it?', 'response_target': 'car location', 'task_type': 'Identification', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': \"Locating one's car is a frequent need, especially in familiar environments. The AI notes a red car, but doesn't confirm if it's the user's. This follow-up is highly plausible for orientation or retrieval.\"}",
+      "{'rank': 3, 'response': 'Does the path look safe to use, or should I avoid it?', 'response_target': 'path safety', 'task_type': 'Locational/retrieval', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.93, 'rationale': 'Safety is a primary concern, especially with visible snow and possible ice. The user may want a simple, actionable answer about whether to proceed or not.'}",
+      "{'rank': 4, 'response': 'Are there any people or animals outside right now?', 'response_target': 'people or animals', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 1, 'plausibility_score': 0.9, 'rationale': \"Checking for others in the area is common for both safety and social reasons. The AI doesn't mention people or animals, so the user may want to confirm.\"}",
+      "{'rank': 5, 'response': 'Does it look like the snow has been shoveled or cleared from the walkway?', 'response_target': 'snow removal', 'task_type': 'Locational/retrieval', 'associated_task_id': 7, 'associated_context_id': 1, 'plausibility_score': 0.88, 'rationale': 'Knowing if snow removal has occurred is important for accessibility. The AI mentions a snow-cleared road but not the walkway, prompting this follow-up.'}",
+      "{'rank': 6, 'response': 'Is there any ice on the ground that I should be careful of?', 'response_target': 'ice on ground', 'task_type': 'Description', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': \"Ice is a specific hazard not always visible or described by AI. The user may want to clarify if it's present, especially for mobility safety.\"}",
+      "{'rank': 7, 'response': 'What kind of area is this\u2014does it look like a parking lot, a park, or something else?', 'response_target': 'area type', 'task_type': 'Description', 'associated_task_id': 3, 'associated_context_id': 2, 'plausibility_score': 0.82, 'rationale': 'If the user is unfamiliar with the environment, they may want to orient themselves by asking about the general setting.'}",
+      "{'rank': 8, 'response': 'Is the red car parked close to the sidewalk or further away?', 'response_target': 'red car location', 'task_type': 'Localization', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.8, 'rationale': \"If the user is trying to find a specific car or orient themselves, knowing the car's proximity to the walkway is useful.\"}",
+      "{'rank': 9, 'response': 'Does the photo show any signs or landmarks that could help me know where I am?', 'response_target': 'signs or landmarks', 'task_type': 'Description', 'associated_task_id': 3, 'associated_context_id': 2, 'plausibility_score': 0.75, 'rationale': \"In an unfamiliar area, users often seek orientation cues. The AI doesn't mention signs, so the user may ask specifically.\"}",
+      "{'rank': 10, 'response': 'Is it bright enough outside, or are there any shadows making it hard to see?', 'response_target': 'lighting conditions', 'task_type': 'Description', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.7, 'rationale': \"Lighting can affect both navigation and safety, though the AI notes it's a clear day. Still, the user might want to confirm if there are visibility issues.\"}"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Is the sidewalk clear enough to walk on, or are there icy spots I should watch out for?",
+        "response_target": "sidewalk condition",
+        "task_type": "Locational/retrieval",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.98,
+        "rationale": "Given the context of daily living and possible time pressure, safety and walkability are top concerns for BLV users. The AI description mentions snow and a walkway but doesn't specify if it's slippery or blocked, prompting a direct follow-up about hazards."
+      },
+      {
+        "rank": 2,
+        "response": "Can you tell if my car is in this photo? If so, where is it?",
+        "response_target": "car location",
+        "task_type": "Identification",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.95,
+        "rationale": "Locating one's car is a frequent need, especially in familiar environments. The AI notes a red car, but doesn't confirm if it's the user's. This follow-up is highly plausible for orientation or retrieval."
+      },
+      {
+        "rank": 3,
+        "response": "Does the path look safe to use, or should I avoid it?",
+        "response_target": "path safety",
+        "task_type": "Locational/retrieval",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.93,
+        "rationale": "Safety is a primary concern, especially with visible snow and possible ice. The user may want a simple, actionable answer about whether to proceed or not."
+      },
+      {
+        "rank": 4,
+        "response": "Are there any people or animals outside right now?",
+        "response_target": "people or animals",
+        "task_type": "Description",
+        "associated_task_id": 5,
+        "associated_context_id": 1,
+        "plausibility_score": 0.9,
+        "rationale": "Checking for others in the area is common for both safety and social reasons. The AI doesn't mention people or animals, so the user may want to confirm."
+      },
+      {
+        "rank": 5,
+        "response": "Does it look like the snow has been shoveled or cleared from the walkway?",
+        "response_target": "snow removal",
+        "task_type": "Locational/retrieval",
+        "associated_task_id": 7,
+        "associated_context_id": 1,
+        "plausibility_score": 0.88,
+        "rationale": "Knowing if snow removal has occurred is important for accessibility. The AI mentions a snow-cleared road but not the walkway, prompting this follow-up."
+      },
+      {
+        "rank": 6,
+        "response": "Is there any ice on the ground that I should be careful of?",
+        "response_target": "ice on ground",
+        "task_type": "Description",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.85,
+        "rationale": "Ice is a specific hazard not always visible or described by AI. The user may want to clarify if it's present, especially for mobility safety."
+      },
+      {
+        "rank": 7,
+        "response": "What kind of area is this\u2014does it look like a parking lot, a park, or something else?",
+        "response_target": "area type",
+        "task_type": "Description",
+        "associated_task_id": 3,
+        "associated_context_id": 2,
+        "plausibility_score": 0.82,
+        "rationale": "If the user is unfamiliar with the environment, they may want to orient themselves by asking about the general setting."
+      },
+      {
+        "rank": 8,
+        "response": "Is the red car parked close to the sidewalk or further away?",
+        "response_target": "red car location",
+        "task_type": "Localization",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.8,
+        "rationale": "If the user is trying to find a specific car or orient themselves, knowing the car's proximity to the walkway is useful."
+      },
+      {
+        "rank": 9,
+        "response": "Does the photo show any signs or landmarks that could help me know where I am?",
+        "response_target": "signs or landmarks",
+        "task_type": "Description",
+        "associated_task_id": 3,
+        "associated_context_id": 2,
+        "plausibility_score": 0.75,
+        "rationale": "In an unfamiliar area, users often seek orientation cues. The AI doesn't mention signs, so the user may ask specifically."
+      },
+      {
+        "rank": 10,
+        "response": "Is it bright enough outside, or are there any shadows making it hard to see?",
+        "response_target": "lighting conditions",
+        "task_type": "Description",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 0.7,
+        "rationale": "Lighting can affect both navigation and safety, though the AI notes it's a clear day. Still, the user might want to confirm if there are visibility issues."
+      }
+    ],
+    "raw_output": {
+      "ranked_questions": [
+        {
+          "rank": 1,
+          "response": "Is the sidewalk clear enough to walk on, or are there icy spots I should watch out for?",
+          "response_target": "sidewalk condition",
+          "task_type": "Locational/retrieval",
+          "associated_task_id": 2,
+          "associated_context_id": 1,
+          "plausibility_score": 0.98,
+          "rationale": "Given the context of daily living and possible time pressure, safety and walkability are top concerns for BLV users. The AI description mentions snow and a walkway but doesn't specify if it's slippery or blocked, prompting a direct follow-up about hazards."
+        },
+        {
+          "rank": 2,
+          "response": "Can you tell if my car is in this photo? If so, where is it?",
+          "response_target": "car location",
+          "task_type": "Identification",
+          "associated_task_id": 4,
+          "associated_context_id": 1,
+          "plausibility_score": 0.95,
+          "rationale": "Locating one's car is a frequent need, especially in familiar environments. The AI notes a red car, but doesn't confirm if it's the user's. This follow-up is highly plausible for orientation or retrieval."
+        },
+        {
+          "rank": 3,
+          "response": "Does the path look safe to use, or should I avoid it?",
+          "response_target": "path safety",
+          "task_type": "Locational/retrieval",
+          "associated_task_id": 2,
+          "associated_context_id": 1,
+          "plausibility_score": 0.93,
+          "rationale": "Safety is a primary concern, especially with visible snow and possible ice. The user may want a simple, actionable answer about whether to proceed or not."
+        },
+        {
+          "rank": 4,
+          "response": "Are there any people or animals outside right now?",
+          "response_target": "people or animals",
+          "task_type": "Description",
+          "associated_task_id": 5,
+          "associated_context_id": 1,
+          "plausibility_score": 0.9,
+          "rationale": "Checking for others in the area is common for both safety and social reasons. The AI doesn't mention people or animals, so the user may want to confirm."
+        },
+        {
+          "rank": 5,
+          "response": "Does it look like the snow has been shoveled or cleared from the walkway?",
+          "response_target": "snow removal",
+          "task_type": "Locational/retrieval",
+          "associated_task_id": 7,
+          "associated_context_id": 1,
+          "plausibility_score": 0.88,
+          "rationale": "Knowing if snow removal has occurred is important for accessibility. The AI mentions a snow-cleared road but not the walkway, prompting this follow-up."
+        },
+        {
+          "rank": 6,
+          "response": "Is there any ice on the ground that I should be careful of?",
+          "response_target": "ice on ground",
+          "task_type": "Description",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 0.85,
+          "rationale": "Ice is a specific hazard not always visible or described by AI. The user may want to clarify if it's present, especially for mobility safety."
+        },
+        {
+          "rank": 7,
+          "response": "What kind of area is this\u2014does it look like a parking lot, a park, or something else?",
+          "response_target": "area type",
+          "task_type": "Description",
+          "associated_task_id": 3,
+          "associated_context_id": 2,
+          "plausibility_score": 0.82,
+          "rationale": "If the user is unfamiliar with the environment, they may want to orient themselves by asking about the general setting."
+        },
+        {
+          "rank": 8,
+          "response": "Is the red car parked close to the sidewalk or further away?",
+          "response_target": "red car location",
+          "task_type": "Localization",
+          "associated_task_id": 4,
+          "associated_context_id": 1,
+          "plausibility_score": 0.8,
+          "rationale": "If the user is trying to find a specific car or orient themselves, knowing the car's proximity to the walkway is useful."
+        },
+        {
+          "rank": 9,
+          "response": "Does the photo show any signs or landmarks that could help me know where I am?",
+          "response_target": "signs or landmarks",
+          "task_type": "Description",
+          "associated_task_id": 3,
+          "associated_context_id": 2,
+          "plausibility_score": 0.75,
+          "rationale": "In an unfamiliar area, users often seek orientation cues. The AI doesn't mention signs, so the user may ask specifically."
+        },
+        {
+          "rank": 10,
+          "response": "Is it bright enough outside, or are there any shadows making it hard to see?",
+          "response_target": "lighting conditions",
+          "task_type": "Description",
+          "associated_task_id": 6,
+          "associated_context_id": 1,
+          "plausibility_score": 0.7,
+          "rationale": "Lighting can affect both navigation and safety, though the AI notes it's a clear day. Still, the user might want to confirm if there are visibility issues."
+        }
+      ]
+    }
+  },
+  "response_target_agent": {
+    "response_target": "snow on the grass",
+    "task_type": "Description",
+    "confidence": "high",
+    "rationale": "The participant directly asks if there is snow on the grass, making their information target explicit and focused. The question_category 'Description' supports that they want a description of the presence or absence of snow on the grass, not on other surfaces or objects.",
+    "raw_output": {
+      "response_target": "snow on the grass",
+      "task_type": "Description",
+      "confidence": "high",
+      "rationale": "The participant directly asks if there is snow on the grass, making their information target explicit and focused. The question_category 'Description' supports that they want a description of the presence or absence of snow on the grass, not on other surfaces or objects."
+    }
+  },
+  "interaction_target_agent": {
+    "turn_targets": [
+      {
+        "response_target": "snow on the grass",
+        "task_type": "Description",
+        "confidence": "high",
+        "rationale": "The participant directly asks if there is snow on the grass, making 'snow on the grass' the clear information target."
+      }
+    ],
+    "raw_output": {
+      "turn_targets": [
+        {
+          "response_target": "snow on the grass",
+          "task_type": "Description",
+          "confidence": "high",
+          "rationale": "The participant directly asks if there is snow on the grass, making 'snow on the grass' the clear information target."
+        }
+      ]
+    }
+  },
+  "final_ranked_questions": [
+    "{'rank': 1, 'response': 'Is the sidewalk clear enough to walk on, or are there icy spots I should watch out for?', 'response_target': 'sidewalk condition', 'task_type': 'Locational/retrieval', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.98, 'rationale': \"Given the context of daily living and possible time pressure, safety and walkability are top concerns for BLV users. The AI description mentions snow and a walkway but doesn't specify if it's slippery or blocked, prompting a direct follow-up about hazards.\"}",
+    "{'rank': 2, 'response': 'Can you tell if my car is in this photo? If so, where is it?', 'response_target': 'car location', 'task_type': 'Identification', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': \"Locating one's car is a frequent need, especially in familiar environments. The AI notes a red car, but doesn't confirm if it's the user's. This follow-up is highly plausible for orientation or retrieval.\"}",
+    "{'rank': 3, 'response': 'Does the path look safe to use, or should I avoid it?', 'response_target': 'path safety', 'task_type': 'Locational/retrieval', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.93, 'rationale': 'Safety is a primary concern, especially with visible snow and possible ice. The user may want a simple, actionable answer about whether to proceed or not.'}",
+    "{'rank': 4, 'response': 'Are there any people or animals outside right now?', 'response_target': 'people or animals', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 1, 'plausibility_score': 0.9, 'rationale': \"Checking for others in the area is common for both safety and social reasons. The AI doesn't mention people or animals, so the user may want to confirm.\"}",
+    "{'rank': 5, 'response': 'Does it look like the snow has been shoveled or cleared from the walkway?', 'response_target': 'snow removal', 'task_type': 'Locational/retrieval', 'associated_task_id': 7, 'associated_context_id': 1, 'plausibility_score': 0.88, 'rationale': 'Knowing if snow removal has occurred is important for accessibility. The AI mentions a snow-cleared road but not the walkway, prompting this follow-up.'}",
+    "{'rank': 6, 'response': 'Is there any ice on the ground that I should be careful of?', 'response_target': 'ice on ground', 'task_type': 'Description', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': \"Ice is a specific hazard not always visible or described by AI. The user may want to clarify if it's present, especially for mobility safety.\"}",
+    "{'rank': 7, 'response': 'What kind of area is this\u2014does it look like a parking lot, a park, or something else?', 'response_target': 'area type', 'task_type': 'Description', 'associated_task_id': 3, 'associated_context_id': 2, 'plausibility_score': 0.82, 'rationale': 'If the user is unfamiliar with the environment, they may want to orient themselves by asking about the general setting.'}",
+    "{'rank': 8, 'response': 'Is the red car parked close to the sidewalk or further away?', 'response_target': 'red car location', 'task_type': 'Localization', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.8, 'rationale': \"If the user is trying to find a specific car or orient themselves, knowing the car's proximity to the walkway is useful.\"}",
+    "{'rank': 9, 'response': 'Does the photo show any signs or landmarks that could help me know where I am?', 'response_target': 'signs or landmarks', 'task_type': 'Description', 'associated_task_id': 3, 'associated_context_id': 2, 'plausibility_score': 0.75, 'rationale': \"In an unfamiliar area, users often seek orientation cues. The AI doesn't mention signs, so the user may ask specifically.\"}",
+    "{'rank': 10, 'response': 'Is it bright enough outside, or are there any shadows making it hard to see?', 'response_target': 'lighting conditions', 'task_type': 'Description', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.7, 'rationale': \"Lighting can affect both navigation and safety, though the AI notes it's a clear day. Still, the user might want to confirm if there are visibility issues.\"}"
+  ],
+  "ground_truth_question": "Is there snow on the grass?",
+  "comparison": {
+    "ground_truth": "Is there snow on the grass?",
+    "ground_truth_response_target": "snow on the grass",
+    "ground_truth_task_type": "Description",
+    "turn_targets": [
+      {
+        "response_target": "snow on the grass",
+        "task_type": "Description",
+        "confidence": "high",
+        "rationale": "The participant directly asks if there is snow on the grass, making 'snow on the grass' the clear information target."
+      }
+    ],
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Is the sidewalk clear enough to walk on, or are there icy spots I should watch out for?",
+        "generated_response_target": "sidewalk condition",
+        "generated_task_type": "Locational/retrieval",
+        "ground_truth_response_target": "snow on the grass",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 2,
+        "generated_question": "Can you tell if my car is in this photo? If so, where is it?",
+        "generated_response_target": "car location",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "snow on the grass",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 3,
+        "generated_question": "Does the path look safe to use, or should I avoid it?",
+        "generated_response_target": "path safety",
+        "generated_task_type": "Locational/retrieval",
+        "ground_truth_response_target": "snow on the grass",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 4,
+        "generated_question": "Are there any people or animals outside right now?",
+        "generated_response_target": "people or animals",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "snow on the grass",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 5,
+        "generated_question": "Does it look like the snow has been shoveled or cleared from the walkway?",
+        "generated_response_target": "snow removal",
+        "generated_task_type": "Locational/retrieval",
+        "ground_truth_response_target": "snow on the grass",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 6,
+        "generated_question": "Is there any ice on the ground that I should be careful of?",
+        "generated_response_target": "ice on ground",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "snow on the grass",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 7,
+        "generated_question": "What kind of area is this\u2014does it look like a parking lot, a park, or something else?",
+        "generated_response_target": "area type",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "snow on the grass",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 8,
+        "generated_question": "Is the red car parked close to the sidewalk or further away?",
+        "generated_response_target": "red car location",
+        "generated_task_type": "Localization",
+        "ground_truth_response_target": "snow on the grass",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 9,
+        "generated_question": "Does the photo show any signs or landmarks that could help me know where I am?",
+        "generated_response_target": "signs or landmarks",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "snow on the grass",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 10,
+        "generated_question": "Is it bright enough outside, or are there any shadows making it hard to see?",
+        "generated_response_target": "lighting conditions",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "snow on the grass",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "Is there snow on the grass?",
+        "generated_response_target": "snow on the grass",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "snow on the grass",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 1,
+        "matched_user_turn": 1,
+        "matched_user_turn_target": "snow on the grass",
+        "matched_user_turn_score": 1,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "NA-w-text"
+      ],
+      "question_category": "Description",
+      "in_a_hurry": "no",
+      "indoor_outdoor": "outdoor",
+      "familiarity_of_environment": "yes",
+      "familiarity_of_item": "yes",
+      "surrounding_environment": "alone",
+      "environment_setting": "leisure",
+      "interaction_length": "2",
+      "task_completed": "Yes"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P5_images/image_6_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows a winter scene with a snow-covered ground and a few patches of exposed grass. In the foreground, there are some green bushes and a concrete walkway. Two large trees with bare branches are visible, one on the left and one on the right. In the background, there is a red car parked on a snow-cleared road, and further back, there are more trees and a grassy area. The sky is blue with some clouds, indicating a clear day.",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "User:Is there snow on the grass?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 4,
+        "text_usr": null,
+        "text_ai": "Be My AI:Yes, there is snow covering the grass in the image.",
+        "local_image_path": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,705 @@
+{
+  "input": {
+    "participant": "P7",
+    "source": "diary",
+    "interaction": 23,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P7/diary_data/P7.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P7/diary_data/P7_images/image_23_1.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "The image shows a person holding a package of frozen food. The package is labeled \"Great Value\" and appears to be a product of shredded potatoes. The text on the side of the package reads \"KEEP FROZEN serving suggestion\" and \"NET WT 22.5 OZ (1 LB 6.5 OZ) 638g\". The package is on a dark countertop, and the person holding it is wearing a pink shirt and black pants, with bare feet visible at the bottom of the image.",
+    "all_user_responses": [
+      "What are the cooking directions?"
+    ],
+    "question_category": "Reading, Unanswerable",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The image shows a hand holding a frozen food package on a kitchen counter, suggesting the user is at home, likely in their own kitchen. The user may be trying to read the packaging (e.g., cooking instructions, expiration date, or product type) but is unable to do so visually. The hurried framing and partial view of the package suggest the user may be multitasking or in the midst of meal preparation."
+      },
+      {
+        "context_id": 2,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user could be in a new kitchen (e.g., visiting someone, in a hotel, or recently moved) and is unfamiliar with the food items available. They are trying to identify the contents or instructions on a frozen food package. The image is not well-centered, possibly due to unfamiliarity with the environment or packaging."
+      },
+      {
+        "context_id": 3,
+        "location": "indoor",
+        "time_pressure": "in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "daily living task",
+        "rationale": "The user may be preparing food for themselves and others (e.g., family or friends) and needs to quickly check the package for allergen information, cooking time, or ingredients. The hurried, partial image suggests they may be juggling multiple tasks or conversations, leading to a less careful photo."
+      },
+      {
+        "context_id": 4,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "leisure",
+        "rationale": "The user might be exploring new food options at home, perhaps trying a new recipe or product. They are not in a rush, but want to know more about the product. The image's angle and partial view suggest they are experimenting with using a VQA system to read packaging."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The image shows a hand holding a frozen food package on a kitchen counter, suggesting the user is at home, likely in their own kitchen. The user may be trying to read the packaging (e.g., cooking instructions, expiration date, or product type) but is unable to do so visually. The hurried framing and partial view of the package suggest the user may be multitasking or in the midst of meal preparation."
+        },
+        {
+          "context_id": 2,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user could be in a new kitchen (e.g., visiting someone, in a hotel, or recently moved) and is unfamiliar with the food items available. They are trying to identify the contents or instructions on a frozen food package. The image is not well-centered, possibly due to unfamiliarity with the environment or packaging."
+        },
+        {
+          "context_id": 3,
+          "location": "indoor",
+          "time_pressure": "in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "daily living task",
+          "rationale": "The user may be preparing food for themselves and others (e.g., family or friends) and needs to quickly check the package for allergen information, cooking time, or ingredients. The hurried, partial image suggests they may be juggling multiple tasks or conversations, leading to a less careful photo."
+        },
+        {
+          "context_id": 4,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "leisure",
+          "rationale": "The user might be exploring new food options at home, perhaps trying a new recipe or product. They are not in a rush, but want to know more about the product. The image's angle and partial view suggest they are experimenting with using a VQA system to read packaging."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Reading",
+        "description": "Extracting product information such as name, brand, or type from the packaging.",
+        "confidence": "medium",
+        "rationale": "The image shows a hand holding a packaged food item, with some text visible but partially obscured or cut off. BLV users often need to confirm what product they are holding, especially if multiple similar items are present."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Reading",
+        "description": "Checking storage instructions (e.g., 'keep frozen') to ensure proper handling.",
+        "confidence": "high",
+        "rationale": "The visible text includes 'KEEP FROZEN,' suggesting the user may want to confirm storage requirements for safety or food quality."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Reading",
+        "description": "Reading the net weight or quantity of the product.",
+        "confidence": "high",
+        "rationale": "The net weight is clearly visible, and BLV users may need this information for meal planning, dietary tracking, or shopping."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Reading",
+        "description": "Extracting preparation or serving instructions.",
+        "confidence": "medium",
+        "rationale": "The phrase 'serving suggestion' is visible, and users may want to know how to prepare or serve the item, though the full instructions may not be visible in this image."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Reading",
+        "description": "Identifying allergen or ingredient information.",
+        "confidence": "low",
+        "rationale": "Ingredient and allergen information is often on food packaging, but the relevant text may not be fully visible in this image. Still, this is a common user need."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Identification",
+        "description": "Confirming the specific product (e.g., type of frozen food) before use.",
+        "confidence": "medium",
+        "rationale": "The user may want to confirm they have the correct item, especially if multiple similar packages are present in their freezer."
+      },
+      {
+        "task_id": 7,
+        "task_type": "Reading",
+        "description": "Reading the barcode or other identifying codes for inventory or shopping purposes.",
+        "confidence": "low",
+        "rationale": "A barcode is visible, and some users may use barcode information for shopping apps or inventory, though this is less common than reading product names or instructions."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Reading",
+          "description": "Extracting product information such as name, brand, or type from the packaging.",
+          "confidence": "medium",
+          "rationale": "The image shows a hand holding a packaged food item, with some text visible but partially obscured or cut off. BLV users often need to confirm what product they are holding, especially if multiple similar items are present."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Reading",
+          "description": "Checking storage instructions (e.g., 'keep frozen') to ensure proper handling.",
+          "confidence": "high",
+          "rationale": "The visible text includes 'KEEP FROZEN,' suggesting the user may want to confirm storage requirements for safety or food quality."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Reading",
+          "description": "Reading the net weight or quantity of the product.",
+          "confidence": "high",
+          "rationale": "The net weight is clearly visible, and BLV users may need this information for meal planning, dietary tracking, or shopping."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Reading",
+          "description": "Extracting preparation or serving instructions.",
+          "confidence": "medium",
+          "rationale": "The phrase 'serving suggestion' is visible, and users may want to know how to prepare or serve the item, though the full instructions may not be visible in this image."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Reading",
+          "description": "Identifying allergen or ingredient information.",
+          "confidence": "low",
+          "rationale": "Ingredient and allergen information is often on food packaging, but the relevant text may not be fully visible in this image. Still, this is a common user need."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Identification",
+          "description": "Confirming the specific product (e.g., type of frozen food) before use.",
+          "confidence": "medium",
+          "rationale": "The user may want to confirm they have the correct item, especially if multiple similar packages are present in their freezer."
+        },
+        {
+          "task_id": 7,
+          "task_type": "Reading",
+          "description": "Reading the barcode or other identifying codes for inventory or shopping purposes.",
+          "confidence": "low",
+          "rationale": "A barcode is visible, and some users may use barcode information for shopping apps or inventory, though this is less common than reading product names or instructions."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "{'rank': 1, 'response': 'Can you read the cooking instructions on this package?', 'response_target': 'cooking instructions', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': 'The user is likely preparing food and needs actionable information. Cooking instructions are often sought, and the current description does not provide them. The hurried, partial image suggests the user may not have captured the relevant side, making this a natural follow-up.'}",
+      "{'rank': 2, 'response': 'What are the ingredients in this product?', 'response_target': 'ingredients', 'task_type': 'Reading', 'associated_task_id': 5, 'associated_context_id': 3, 'plausibility_score': 0.92, 'rationale': 'Ingredient and allergen information is a common need, especially if preparing food for others. The image does not clearly show this, so the user would plausibly ask for it.'}",
+      "{'rank': 3, 'response': 'Does this package mention any allergens?', 'response_target': 'allergens', 'task_type': 'Reading', 'associated_task_id': 5, 'associated_context_id': 3, 'plausibility_score': 0.9, 'rationale': 'Allergen information is critical for safety, especially when cooking for others. The user may be in a hurry and want to confirm this quickly.'}",
+      "{'rank': 4, 'response': 'Can you tell me the expiration date?', 'response_target': 'expiration date', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.88, 'rationale': \"Expiration dates are important for food safety, and the user may not have captured this detail in the image. It's a common follow-up when the initial description omits it.\"}",
+      "{'rank': 5, 'response': 'Is this the hashbrowns or another kind of shredded potatoes?', 'response_target': 'product type', 'task_type': 'Identification', 'associated_task_id': 6, 'associated_context_id': 2, 'plausibility_score': 0.85, 'rationale': 'If the user is unfamiliar with the packaging or has similar items, confirming the exact product type is a likely need.'}",
+      "{'rank': 6, 'response': 'Can you read the barcode number for me?', 'response_target': 'barcode number', 'task_type': 'Reading', 'associated_task_id': 7, 'associated_context_id': 2, 'plausibility_score': 0.8, 'rationale': 'Some users use barcode numbers for shopping or inventory apps. The barcode is visible, so this is a plausible request, though less common.'}",
+      "{'rank': 7, 'response': 'Is there any information about how long to cook this?', 'response_target': 'cooking time', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.78, 'rationale': 'Cooking time is a specific aspect of preparation instructions, and the user may ask for it if not already provided.'}",
+      "{'rank': 8, 'response': 'Can you confirm if this is a Great Value product?', 'response_target': 'brand', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 2, 'plausibility_score': 0.75, 'rationale': 'Brand confirmation is sometimes needed, especially if the user shops by brand or is unfamiliar with the packaging.'}",
+      "{'rank': 9, 'response': 'Is there a picture of the prepared food on the package?', 'response_target': 'prepared food image', 'task_type': 'Description', 'associated_task_id': 4, 'associated_context_id': 4, 'plausibility_score': 0.7, 'rationale': 'Some users want to know what the food looks like when prepared, especially if trying something new. This is more exploratory but plausible.'}",
+      "{'rank': 10, 'response': 'Can you tell me if there are any microwave instructions?', 'response_target': 'microwave instructions', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.68, 'rationale': 'Microwave instructions are a specific preparation detail. The user may ask for this if they plan to use a microwave and the instructions are not visible.'}"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Can you read the cooking instructions on this package?",
+        "response_target": "cooking instructions",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.95,
+        "rationale": "The user is likely preparing food and needs actionable information. Cooking instructions are often sought, and the current description does not provide them. The hurried, partial image suggests the user may not have captured the relevant side, making this a natural follow-up."
+      },
+      {
+        "rank": 2,
+        "response": "What are the ingredients in this product?",
+        "response_target": "ingredients",
+        "task_type": "Reading",
+        "associated_task_id": 5,
+        "associated_context_id": 3,
+        "plausibility_score": 0.92,
+        "rationale": "Ingredient and allergen information is a common need, especially if preparing food for others. The image does not clearly show this, so the user would plausibly ask for it."
+      },
+      {
+        "rank": 3,
+        "response": "Does this package mention any allergens?",
+        "response_target": "allergens",
+        "task_type": "Reading",
+        "associated_task_id": 5,
+        "associated_context_id": 3,
+        "plausibility_score": 0.9,
+        "rationale": "Allergen information is critical for safety, especially when cooking for others. The user may be in a hurry and want to confirm this quickly."
+      },
+      {
+        "rank": 4,
+        "response": "Can you tell me the expiration date?",
+        "response_target": "expiration date",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.88,
+        "rationale": "Expiration dates are important for food safety, and the user may not have captured this detail in the image. It's a common follow-up when the initial description omits it."
+      },
+      {
+        "rank": 5,
+        "response": "Is this the hashbrowns or another kind of shredded potatoes?",
+        "response_target": "product type",
+        "task_type": "Identification",
+        "associated_task_id": 6,
+        "associated_context_id": 2,
+        "plausibility_score": 0.85,
+        "rationale": "If the user is unfamiliar with the packaging or has similar items, confirming the exact product type is a likely need."
+      },
+      {
+        "rank": 6,
+        "response": "Can you read the barcode number for me?",
+        "response_target": "barcode number",
+        "task_type": "Reading",
+        "associated_task_id": 7,
+        "associated_context_id": 2,
+        "plausibility_score": 0.8,
+        "rationale": "Some users use barcode numbers for shopping or inventory apps. The barcode is visible, so this is a plausible request, though less common."
+      },
+      {
+        "rank": 7,
+        "response": "Is there any information about how long to cook this?",
+        "response_target": "cooking time",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.78,
+        "rationale": "Cooking time is a specific aspect of preparation instructions, and the user may ask for it if not already provided."
+      },
+      {
+        "rank": 8,
+        "response": "Can you confirm if this is a Great Value product?",
+        "response_target": "brand",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 2,
+        "plausibility_score": 0.75,
+        "rationale": "Brand confirmation is sometimes needed, especially if the user shops by brand or is unfamiliar with the packaging."
+      },
+      {
+        "rank": 9,
+        "response": "Is there a picture of the prepared food on the package?",
+        "response_target": "prepared food image",
+        "task_type": "Description",
+        "associated_task_id": 4,
+        "associated_context_id": 4,
+        "plausibility_score": 0.7,
+        "rationale": "Some users want to know what the food looks like when prepared, especially if trying something new. This is more exploratory but plausible."
+      },
+      {
+        "rank": 10,
+        "response": "Can you tell me if there are any microwave instructions?",
+        "response_target": "microwave instructions",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.68,
+        "rationale": "Microwave instructions are a specific preparation detail. The user may ask for this if they plan to use a microwave and the instructions are not visible."
+      }
+    ],
+    "raw_output": {
+      "ranked_questions": [
+        {
+          "rank": 1,
+          "response": "Can you read the cooking instructions on this package?",
+          "response_target": "cooking instructions",
+          "task_type": "Reading",
+          "associated_task_id": 4,
+          "associated_context_id": 1,
+          "plausibility_score": 0.95,
+          "rationale": "The user is likely preparing food and needs actionable information. Cooking instructions are often sought, and the current description does not provide them. The hurried, partial image suggests the user may not have captured the relevant side, making this a natural follow-up."
+        },
+        {
+          "rank": 2,
+          "response": "What are the ingredients in this product?",
+          "response_target": "ingredients",
+          "task_type": "Reading",
+          "associated_task_id": 5,
+          "associated_context_id": 3,
+          "plausibility_score": 0.92,
+          "rationale": "Ingredient and allergen information is a common need, especially if preparing food for others. The image does not clearly show this, so the user would plausibly ask for it."
+        },
+        {
+          "rank": 3,
+          "response": "Does this package mention any allergens?",
+          "response_target": "allergens",
+          "task_type": "Reading",
+          "associated_task_id": 5,
+          "associated_context_id": 3,
+          "plausibility_score": 0.9,
+          "rationale": "Allergen information is critical for safety, especially when cooking for others. The user may be in a hurry and want to confirm this quickly."
+        },
+        {
+          "rank": 4,
+          "response": "Can you tell me the expiration date?",
+          "response_target": "expiration date",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 0.88,
+          "rationale": "Expiration dates are important for food safety, and the user may not have captured this detail in the image. It's a common follow-up when the initial description omits it."
+        },
+        {
+          "rank": 5,
+          "response": "Is this the hashbrowns or another kind of shredded potatoes?",
+          "response_target": "product type",
+          "task_type": "Identification",
+          "associated_task_id": 6,
+          "associated_context_id": 2,
+          "plausibility_score": 0.85,
+          "rationale": "If the user is unfamiliar with the packaging or has similar items, confirming the exact product type is a likely need."
+        },
+        {
+          "rank": 6,
+          "response": "Can you read the barcode number for me?",
+          "response_target": "barcode number",
+          "task_type": "Reading",
+          "associated_task_id": 7,
+          "associated_context_id": 2,
+          "plausibility_score": 0.8,
+          "rationale": "Some users use barcode numbers for shopping or inventory apps. The barcode is visible, so this is a plausible request, though less common."
+        },
+        {
+          "rank": 7,
+          "response": "Is there any information about how long to cook this?",
+          "response_target": "cooking time",
+          "task_type": "Reading",
+          "associated_task_id": 4,
+          "associated_context_id": 1,
+          "plausibility_score": 0.78,
+          "rationale": "Cooking time is a specific aspect of preparation instructions, and the user may ask for it if not already provided."
+        },
+        {
+          "rank": 8,
+          "response": "Can you confirm if this is a Great Value product?",
+          "response_target": "brand",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 2,
+          "plausibility_score": 0.75,
+          "rationale": "Brand confirmation is sometimes needed, especially if the user shops by brand or is unfamiliar with the packaging."
+        },
+        {
+          "rank": 9,
+          "response": "Is there a picture of the prepared food on the package?",
+          "response_target": "prepared food image",
+          "task_type": "Description",
+          "associated_task_id": 4,
+          "associated_context_id": 4,
+          "plausibility_score": 0.7,
+          "rationale": "Some users want to know what the food looks like when prepared, especially if trying something new. This is more exploratory but plausible."
+        },
+        {
+          "rank": 10,
+          "response": "Can you tell me if there are any microwave instructions?",
+          "response_target": "microwave instructions",
+          "task_type": "Reading",
+          "associated_task_id": 4,
+          "associated_context_id": 1,
+          "plausibility_score": 0.68,
+          "rationale": "Microwave instructions are a specific preparation detail. The user may ask for this if they plan to use a microwave and the instructions are not visible."
+        }
+      ]
+    }
+  },
+  "response_target_agent": {
+    "response_target": "cooking directions",
+    "task_type": "Reading, Unanswerable",
+    "confidence": "high",
+    "rationale": "The participant's question directly asks for the cooking directions, which is a clear and specific information target. The question_category 'Reading, Unanswerable' indicates that the participant is seeking to read this information but it is not available or legible in the provided image, supporting that the intent is focused on the cooking directions.",
+    "raw_output": {
+      "response_target": "cooking directions",
+      "task_type": "Reading, Unanswerable",
+      "confidence": "high",
+      "rationale": "The participant's question directly asks for the cooking directions, which is a clear and specific information target. The question_category 'Reading, Unanswerable' indicates that the participant is seeking to read this information but it is not available or legible in the provided image, supporting that the intent is focused on the cooking directions."
+    }
+  },
+  "interaction_target_agent": {
+    "turn_targets": [
+      {
+        "response_target": "cooking directions",
+        "task_type": "Reading, Unanswerable",
+        "confidence": "high",
+        "rationale": "The participant directly asks for the cooking directions, which is a clear and concise information target. The image shows a food package, supporting this intent, but the directions are not visible, matching the 'Unanswerable' category."
+      }
+    ],
+    "raw_output": {
+      "turn_targets": [
+        {
+          "response_target": "cooking directions",
+          "task_type": "Reading, Unanswerable",
+          "confidence": "high",
+          "rationale": "The participant directly asks for the cooking directions, which is a clear and concise information target. The image shows a food package, supporting this intent, but the directions are not visible, matching the 'Unanswerable' category."
+        }
+      ]
+    }
+  },
+  "final_ranked_questions": [
+    "{'rank': 1, 'response': 'Can you read the cooking instructions on this package?', 'response_target': 'cooking instructions', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': 'The user is likely preparing food and needs actionable information. Cooking instructions are often sought, and the current description does not provide them. The hurried, partial image suggests the user may not have captured the relevant side, making this a natural follow-up.'}",
+    "{'rank': 2, 'response': 'What are the ingredients in this product?', 'response_target': 'ingredients', 'task_type': 'Reading', 'associated_task_id': 5, 'associated_context_id': 3, 'plausibility_score': 0.92, 'rationale': 'Ingredient and allergen information is a common need, especially if preparing food for others. The image does not clearly show this, so the user would plausibly ask for it.'}",
+    "{'rank': 3, 'response': 'Does this package mention any allergens?', 'response_target': 'allergens', 'task_type': 'Reading', 'associated_task_id': 5, 'associated_context_id': 3, 'plausibility_score': 0.9, 'rationale': 'Allergen information is critical for safety, especially when cooking for others. The user may be in a hurry and want to confirm this quickly.'}",
+    "{'rank': 4, 'response': 'Can you tell me the expiration date?', 'response_target': 'expiration date', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.88, 'rationale': \"Expiration dates are important for food safety, and the user may not have captured this detail in the image. It's a common follow-up when the initial description omits it.\"}",
+    "{'rank': 5, 'response': 'Is this the hashbrowns or another kind of shredded potatoes?', 'response_target': 'product type', 'task_type': 'Identification', 'associated_task_id': 6, 'associated_context_id': 2, 'plausibility_score': 0.85, 'rationale': 'If the user is unfamiliar with the packaging or has similar items, confirming the exact product type is a likely need.'}",
+    "{'rank': 6, 'response': 'Can you read the barcode number for me?', 'response_target': 'barcode number', 'task_type': 'Reading', 'associated_task_id': 7, 'associated_context_id': 2, 'plausibility_score': 0.8, 'rationale': 'Some users use barcode numbers for shopping or inventory apps. The barcode is visible, so this is a plausible request, though less common.'}",
+    "{'rank': 7, 'response': 'Is there any information about how long to cook this?', 'response_target': 'cooking time', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.78, 'rationale': 'Cooking time is a specific aspect of preparation instructions, and the user may ask for it if not already provided.'}",
+    "{'rank': 8, 'response': 'Can you confirm if this is a Great Value product?', 'response_target': 'brand', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 2, 'plausibility_score': 0.75, 'rationale': 'Brand confirmation is sometimes needed, especially if the user shops by brand or is unfamiliar with the packaging.'}",
+    "{'rank': 9, 'response': 'Is there a picture of the prepared food on the package?', 'response_target': 'prepared food image', 'task_type': 'Description', 'associated_task_id': 4, 'associated_context_id': 4, 'plausibility_score': 0.7, 'rationale': 'Some users want to know what the food looks like when prepared, especially if trying something new. This is more exploratory but plausible.'}",
+    "{'rank': 10, 'response': 'Can you tell me if there are any microwave instructions?', 'response_target': 'microwave instructions', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.68, 'rationale': 'Microwave instructions are a specific preparation detail. The user may ask for this if they plan to use a microwave and the instructions are not visible.'}"
+  ],
+  "ground_truth_question": "What are the cooking directions?",
+  "comparison": {
+    "ground_truth": "What are the cooking directions?",
+    "ground_truth_response_target": "cooking directions",
+    "ground_truth_task_type": "Reading, Unanswerable",
+    "turn_targets": [
+      {
+        "response_target": "cooking directions",
+        "task_type": "Reading, Unanswerable",
+        "confidence": "high",
+        "rationale": "The participant directly asks for the cooking directions, which is a clear and concise information target. The image shows a food package, supporting this intent, but the directions are not visible, matching the 'Unanswerable' category."
+      }
+    ],
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Can you read the cooking instructions on this package?",
+        "generated_response_target": "cooking instructions",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking directions",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 2,
+        "generated_question": "What are the ingredients in this product?",
+        "generated_response_target": "ingredients",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking directions",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 3,
+        "generated_question": "Does this package mention any allergens?",
+        "generated_response_target": "allergens",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking directions",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 4,
+        "generated_question": "Can you tell me the expiration date?",
+        "generated_response_target": "expiration date",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking directions",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 5,
+        "generated_question": "Is this the hashbrowns or another kind of shredded potatoes?",
+        "generated_response_target": "product type",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "cooking directions",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 6,
+        "generated_question": "Can you read the barcode number for me?",
+        "generated_response_target": "barcode number",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking directions",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 7,
+        "generated_question": "Is there any information about how long to cook this?",
+        "generated_response_target": "cooking time",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking directions",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 8,
+        "generated_question": "Can you confirm if this is a Great Value product?",
+        "generated_response_target": "brand",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking directions",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 9,
+        "generated_question": "Is there a picture of the prepared food on the package?",
+        "generated_response_target": "prepared food image",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "cooking directions",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 10,
+        "generated_question": "Can you tell me if there are any microwave instructions?",
+        "generated_response_target": "microwave instructions",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking directions",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "What are the cooking directions?",
+        "generated_response_target": "cooking directions",
+        "generated_task_type": "Reading, Unanswerable",
+        "ground_truth_response_target": "cooking directions",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 1,
+        "matched_user_turn": 1,
+        "matched_user_turn_target": "cooking directions",
+        "matched_user_turn_score": 1,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "NA-w-text"
+      ],
+      "question_category": "Reading, Unanswerable",
+      "in_a_hurry": "no",
+      "indoor_outdoor": "indoor",
+      "familiarity_of_environment": "yes",
+      "familiarity_of_item": "yes",
+      "surrounding_environment": "alone",
+      "environment_setting": "leisure",
+      "interaction_length": "3"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P7_images/image_23_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows a person holding a package of frozen food. The package is labeled \"Great Value\" and appears to be a product of shredded potatoes. The text on the side of the package reads \"KEEP FROZEN serving suggestion\" and \"NET WT 22.5 OZ (1 LB 6.5 OZ) 638g\". The package is on a dark countertop, and the person holding it is wearing a pink shirt and black pants, with bare feet visible at the bottom of the image.",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "User:What are the cooking directions?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 4,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P7_images/image_23_4.jpg"
+      },
+      {
+        "turn": 5,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows the back of the package with cooking instructions. However, the text is too small and not fully visible in the image. You might need to take a closer picture or a higher resolution image to read the cooking directions clearly. Alternatively, you can press the \"Call a volunteer\" button for assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 6,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P7_images/image_23_6.jpg"
+      },
+      {
+        "turn": 7,
+        "text_usr": null,
+        "text_ai": "Be My AI:The cooking directions on the package are as follows:\n\nOven Instructions:\n1. Preheat oven to 450\u00b0F.\n2. Arrange frozen product in a single layer on a 11\" x 17\" baking sheet.\n3. Bake for 15-20 minutes, turning halfway through cooking time.\n\nFor food safety and quality, follow these instructions. Keep frozen until ready to use. Do not thaw.",
+        "local_image_path": null
+      }
+    ]
+  }
+}

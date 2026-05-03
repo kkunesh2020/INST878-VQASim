@@ -1,0 +1,779 @@
+{
+  "input": {
+    "participant": "P3",
+    "source": "diary",
+    "interaction": 3,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P3/diary_data/P3.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P3/diary_data/P3_images/image_3_1.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "The image shows a box of a food product on a patterned rug. The box is labeled \"Whole & Simple\" and \"Mediterranean Style Chicken Quinoa Bowl.\" It mentions that it contains brown rice, spinach, red bell peppers, and sun-dried tomatoes. The product is made in Canada. There is an image of the dish on the box, showing a bowl filled with quinoa, chicken pieces, and vegetables. The rug in the background has a blue and white zigzag pattern with fringes on the edge.",
+    "all_user_responses": [
+      "Are the cooking instructions visible?",
+      "What are the cooking instructions?",
+      "What are the instructions for cooking it in the microwave?",
+      "What are the instructions for cooking in the microwave?"
+    ],
+    "question_category": "Reading, Unanswerable",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user is likely at home (indicated by the rug and relaxed setting) and examining a food package, possibly to identify it or check ingredients. The partial capture of the box suggests uncertainty about framing, typical for BLV users. The user may not recognize this specific meal and is using VQA to confirm details before preparing or consuming it."
+      },
+      {
+        "context_id": 2,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "daily living task",
+        "rationale": "The user could be with family or roommates, quickly checking the food package before serving or cooking, possibly while multitasking. The casual setting and partial image suggest the user is not prioritizing perfect framing, possibly due to being distracted or in conversation."
+      },
+      {
+        "context_id": 3,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user might be in a new environment (e.g., visiting someone or in a temporary living situation) and is unsure about the food options available. They are using the VQA system to identify or learn about the meal, as indicated by the careful positioning of the box and the need for reading assistance."
+      },
+      {
+        "context_id": 4,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "unfamiliar people",
+        "activity_type": "professional",
+        "rationale": "The user could be in a work or volunteer setting (e.g., helping with meal prep in a community center) and needs to quickly identify or confirm the food item for someone else. The partial image and possible haste suggest the user is balancing multiple tasks or interacting with people they do not know well."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user is likely at home (indicated by the rug and relaxed setting) and examining a food package, possibly to identify it or check ingredients. The partial capture of the box suggests uncertainty about framing, typical for BLV users. The user may not recognize this specific meal and is using VQA to confirm details before preparing or consuming it."
+        },
+        {
+          "context_id": 2,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "daily living task",
+          "rationale": "The user could be with family or roommates, quickly checking the food package before serving or cooking, possibly while multitasking. The casual setting and partial image suggest the user is not prioritizing perfect framing, possibly due to being distracted or in conversation."
+        },
+        {
+          "context_id": 3,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user might be in a new environment (e.g., visiting someone or in a temporary living situation) and is unsure about the food options available. They are using the VQA system to identify or learn about the meal, as indicated by the careful positioning of the box and the need for reading assistance."
+        },
+        {
+          "context_id": 4,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "unfamiliar people",
+          "activity_type": "professional",
+          "rationale": "The user could be in a work or volunteer setting (e.g., helping with meal prep in a community center) and needs to quickly identify or confirm the food item for someone else. The partial image and possible haste suggest the user is balancing multiple tasks or interacting with people they do not know well."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Reading",
+        "description": "Extract the product name and key details from the food package (e.g., flavor, ingredients, brand).",
+        "confidence": "high",
+        "rationale": "The image prominently features a food package with visible text, suggesting the user may want to know what the item is or confirm its identity."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Reading",
+        "description": "Read preparation or cooking instructions from the package.",
+        "confidence": "medium",
+        "rationale": "BLV users often need to access preparation instructions, but the visible portion of the package may not include this information, so the user may be attempting to capture it."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Reading",
+        "description": "Check for dietary or allergen information on the package.",
+        "confidence": "medium",
+        "rationale": "Users may want to confirm if the product meets dietary needs or restrictions, though the visible text does not clearly show allergen info, making this a plausible but uncertain goal."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Identification",
+        "description": "Identify if the package is the correct meal or product before preparing or consuming it.",
+        "confidence": "high",
+        "rationale": "BLV users frequently use VQA systems to confirm product identity, especially when multiple similar packages are present."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Description",
+        "description": "Describe the appearance or contents of the food shown on the package.",
+        "confidence": "medium",
+        "rationale": "The image includes a photo of the food, so the user may want to know what the meal looks like or what ingredients are visible."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Locational/retrieval",
+        "description": "Confirm if the package is oriented correctly to read or open.",
+        "confidence": "low",
+        "rationale": "The package is partially shown and may not be fully upright, so the user could be checking orientation, though this is less likely than reading or identification."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Reading",
+          "description": "Extract the product name and key details from the food package (e.g., flavor, ingredients, brand).",
+          "confidence": "high",
+          "rationale": "The image prominently features a food package with visible text, suggesting the user may want to know what the item is or confirm its identity."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Reading",
+          "description": "Read preparation or cooking instructions from the package.",
+          "confidence": "medium",
+          "rationale": "BLV users often need to access preparation instructions, but the visible portion of the package may not include this information, so the user may be attempting to capture it."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Reading",
+          "description": "Check for dietary or allergen information on the package.",
+          "confidence": "medium",
+          "rationale": "Users may want to confirm if the product meets dietary needs or restrictions, though the visible text does not clearly show allergen info, making this a plausible but uncertain goal."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Identification",
+          "description": "Identify if the package is the correct meal or product before preparing or consuming it.",
+          "confidence": "high",
+          "rationale": "BLV users frequently use VQA systems to confirm product identity, especially when multiple similar packages are present."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Description",
+          "description": "Describe the appearance or contents of the food shown on the package.",
+          "confidence": "medium",
+          "rationale": "The image includes a photo of the food, so the user may want to know what the meal looks like or what ingredients are visible."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Locational/retrieval",
+          "description": "Confirm if the package is oriented correctly to read or open.",
+          "confidence": "low",
+          "rationale": "The package is partially shown and may not be fully upright, so the user could be checking orientation, though this is less likely than reading or identification."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "{'rank': 1, 'response': 'Can you read the cooking instructions on the box?', 'response_target': 'cooking instructions', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': \"BLV users frequently need preparation instructions, and the visible text does not include them. The user may realize the AI hasn't provided this info and ask directly, especially when not in a hurry at home.\"}",
+      "{'rank': 2, 'response': 'Does it say if there are any allergens in this meal?', 'response_target': 'allergen information', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.92, 'rationale': \"Checking for allergens is a common, safety-driven follow-up, especially with unfamiliar products. The AI description doesn't mention allergens, prompting a direct query.\"}",
+      "{'rank': 3, 'response': 'Is this the Mediterranean Style Chicken Quinoa Bowl?', 'response_target': 'product identity', 'task_type': 'Identification', 'associated_task_id': 4, 'associated_context_id': 2, 'plausibility_score': 0.9, 'rationale': 'When with others or multitasking, users often want quick confirmation of product identity, especially if preparing food for a group.'}",
+      "{'rank': 4, 'response': 'Can you tell me what the ingredients are?', 'response_target': 'ingredients list', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 3, 'plausibility_score': 0.88, 'rationale': 'In an unfamiliar environment, users may want a full ingredient list for dietary or preference reasons, especially if the AI summary seems incomplete.'}",
+      "{'rank': 5, 'response': 'Is there any information about how to prepare it in the image?', 'response_target': 'preparation information', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': 'The user may suspect the instructions are not visible or not fully captured, so they ask if any are present before retaking the photo.'}",
+      "{'rank': 6, 'response': 'Can you check if the box is upside down or sideways?', 'response_target': 'package orientation', 'task_type': 'Localization', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.8, 'rationale': 'If the user is unsure about the orientation, especially with a partial image, they may want to confirm before trying to read or open the box.'}",
+      "{'rank': 7, 'response': 'Is there a best by or expiration date visible?', 'response_target': 'expiration date', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 3, 'plausibility_score': 0.78, 'rationale': 'Checking freshness is a common concern, especially with unfamiliar or prepackaged foods, though the date may not be visible.'}",
+      "{'rank': 8, 'response': 'Can you describe what the meal looks like in the picture?', 'response_target': 'meal appearance', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 1, 'plausibility_score': 0.75, 'rationale': \"Some users want a description of the food's appearance to decide if it matches their expectations or preferences.\"}",
+      "{'rank': 9, 'response': 'Is there any nutritional information shown?', 'response_target': 'nutritional information', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.7, 'rationale': \"Nutritional info is often sought, but the description doesn't mention it, so the user may ask if any is visible.\"}",
+      "{'rank': 10, 'response': 'Can you confirm if this is a frozen meal?', 'response_target': 'product type', 'task_type': 'Identification', 'associated_task_id': 4, 'associated_context_id': 4, 'plausibility_score': 0.65, 'rationale': 'In a professional or group setting, users may need to confirm the product type quickly, though the packaging and context suggest this is likely known.'}"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Can you read the cooking instructions on the box?",
+        "response_target": "cooking instructions",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.95,
+        "rationale": "BLV users frequently need preparation instructions, and the visible text does not include them. The user may realize the AI hasn't provided this info and ask directly, especially when not in a hurry at home."
+      },
+      {
+        "rank": 2,
+        "response": "Does it say if there are any allergens in this meal?",
+        "response_target": "allergen information",
+        "task_type": "Reading",
+        "associated_task_id": 3,
+        "associated_context_id": 1,
+        "plausibility_score": 0.92,
+        "rationale": "Checking for allergens is a common, safety-driven follow-up, especially with unfamiliar products. The AI description doesn't mention allergens, prompting a direct query."
+      },
+      {
+        "rank": 3,
+        "response": "Is this the Mediterranean Style Chicken Quinoa Bowl?",
+        "response_target": "product identity",
+        "task_type": "Identification",
+        "associated_task_id": 4,
+        "associated_context_id": 2,
+        "plausibility_score": 0.9,
+        "rationale": "When with others or multitasking, users often want quick confirmation of product identity, especially if preparing food for a group."
+      },
+      {
+        "rank": 4,
+        "response": "Can you tell me what the ingredients are?",
+        "response_target": "ingredients list",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 3,
+        "plausibility_score": 0.88,
+        "rationale": "In an unfamiliar environment, users may want a full ingredient list for dietary or preference reasons, especially if the AI summary seems incomplete."
+      },
+      {
+        "rank": 5,
+        "response": "Is there any information about how to prepare it in the image?",
+        "response_target": "preparation information",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.85,
+        "rationale": "The user may suspect the instructions are not visible or not fully captured, so they ask if any are present before retaking the photo."
+      },
+      {
+        "rank": 6,
+        "response": "Can you check if the box is upside down or sideways?",
+        "response_target": "package orientation",
+        "task_type": "Localization",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 0.8,
+        "rationale": "If the user is unsure about the orientation, especially with a partial image, they may want to confirm before trying to read or open the box."
+      },
+      {
+        "rank": 7,
+        "response": "Is there a best by or expiration date visible?",
+        "response_target": "expiration date",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 3,
+        "plausibility_score": 0.78,
+        "rationale": "Checking freshness is a common concern, especially with unfamiliar or prepackaged foods, though the date may not be visible."
+      },
+      {
+        "rank": 8,
+        "response": "Can you describe what the meal looks like in the picture?",
+        "response_target": "meal appearance",
+        "task_type": "Description",
+        "associated_task_id": 5,
+        "associated_context_id": 1,
+        "plausibility_score": 0.75,
+        "rationale": "Some users want a description of the food's appearance to decide if it matches their expectations or preferences."
+      },
+      {
+        "rank": 9,
+        "response": "Is there any nutritional information shown?",
+        "response_target": "nutritional information",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.7,
+        "rationale": "Nutritional info is often sought, but the description doesn't mention it, so the user may ask if any is visible."
+      },
+      {
+        "rank": 10,
+        "response": "Can you confirm if this is a frozen meal?",
+        "response_target": "product type",
+        "task_type": "Identification",
+        "associated_task_id": 4,
+        "associated_context_id": 4,
+        "plausibility_score": 0.65,
+        "rationale": "In a professional or group setting, users may need to confirm the product type quickly, though the packaging and context suggest this is likely known."
+      }
+    ],
+    "raw_output": {
+      "ranked_questions": [
+        {
+          "rank": 1,
+          "response": "Can you read the cooking instructions on the box?",
+          "response_target": "cooking instructions",
+          "task_type": "Reading",
+          "associated_task_id": 2,
+          "associated_context_id": 1,
+          "plausibility_score": 0.95,
+          "rationale": "BLV users frequently need preparation instructions, and the visible text does not include them. The user may realize the AI hasn't provided this info and ask directly, especially when not in a hurry at home."
+        },
+        {
+          "rank": 2,
+          "response": "Does it say if there are any allergens in this meal?",
+          "response_target": "allergen information",
+          "task_type": "Reading",
+          "associated_task_id": 3,
+          "associated_context_id": 1,
+          "plausibility_score": 0.92,
+          "rationale": "Checking for allergens is a common, safety-driven follow-up, especially with unfamiliar products. The AI description doesn't mention allergens, prompting a direct query."
+        },
+        {
+          "rank": 3,
+          "response": "Is this the Mediterranean Style Chicken Quinoa Bowl?",
+          "response_target": "product identity",
+          "task_type": "Identification",
+          "associated_task_id": 4,
+          "associated_context_id": 2,
+          "plausibility_score": 0.9,
+          "rationale": "When with others or multitasking, users often want quick confirmation of product identity, especially if preparing food for a group."
+        },
+        {
+          "rank": 4,
+          "response": "Can you tell me what the ingredients are?",
+          "response_target": "ingredients list",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 3,
+          "plausibility_score": 0.88,
+          "rationale": "In an unfamiliar environment, users may want a full ingredient list for dietary or preference reasons, especially if the AI summary seems incomplete."
+        },
+        {
+          "rank": 5,
+          "response": "Is there any information about how to prepare it in the image?",
+          "response_target": "preparation information",
+          "task_type": "Reading",
+          "associated_task_id": 2,
+          "associated_context_id": 1,
+          "plausibility_score": 0.85,
+          "rationale": "The user may suspect the instructions are not visible or not fully captured, so they ask if any are present before retaking the photo."
+        },
+        {
+          "rank": 6,
+          "response": "Can you check if the box is upside down or sideways?",
+          "response_target": "package orientation",
+          "task_type": "Localization",
+          "associated_task_id": 6,
+          "associated_context_id": 1,
+          "plausibility_score": 0.8,
+          "rationale": "If the user is unsure about the orientation, especially with a partial image, they may want to confirm before trying to read or open the box."
+        },
+        {
+          "rank": 7,
+          "response": "Is there a best by or expiration date visible?",
+          "response_target": "expiration date",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 3,
+          "plausibility_score": 0.78,
+          "rationale": "Checking freshness is a common concern, especially with unfamiliar or prepackaged foods, though the date may not be visible."
+        },
+        {
+          "rank": 8,
+          "response": "Can you describe what the meal looks like in the picture?",
+          "response_target": "meal appearance",
+          "task_type": "Description",
+          "associated_task_id": 5,
+          "associated_context_id": 1,
+          "plausibility_score": 0.75,
+          "rationale": "Some users want a description of the food's appearance to decide if it matches their expectations or preferences."
+        },
+        {
+          "rank": 9,
+          "response": "Is there any nutritional information shown?",
+          "response_target": "nutritional information",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 0.7,
+          "rationale": "Nutritional info is often sought, but the description doesn't mention it, so the user may ask if any is visible."
+        },
+        {
+          "rank": 10,
+          "response": "Can you confirm if this is a frozen meal?",
+          "response_target": "product type",
+          "task_type": "Identification",
+          "associated_task_id": 4,
+          "associated_context_id": 4,
+          "plausibility_score": 0.65,
+          "rationale": "In a professional or group setting, users may need to confirm the product type quickly, though the packaging and context suggest this is likely known."
+        }
+      ]
+    }
+  },
+  "response_target_agent": {
+    "response_target": "cooking instructions",
+    "task_type": "Reading, Unanswerable",
+    "confidence": "high",
+    "rationale": "The participant's question directly asks about the visibility of the cooking instructions. The question_category is 'Reading, Unanswerable,' indicating the participant is seeking to know if the cooking instructions can be read from the image. The most direct noun phrase is 'cooking instructions.'",
+    "raw_output": {
+      "response_target": "cooking instructions",
+      "task_type": "Reading, Unanswerable",
+      "confidence": "high",
+      "rationale": "The participant's question directly asks about the visibility of the cooking instructions. The question_category is 'Reading, Unanswerable,' indicating the participant is seeking to know if the cooking instructions can be read from the image. The most direct noun phrase is 'cooking instructions.'"
+    }
+  },
+  "interaction_target_agent": {
+    "turn_targets": [
+      {
+        "response_target": "cooking instructions",
+        "task_type": "Reading, Unanswerable",
+        "confidence": "high",
+        "rationale": "The participant directly asks if the cooking instructions are visible, indicating their target is the cooking instructions."
+      },
+      {
+        "response_target": "cooking instructions",
+        "task_type": "Reading, Unanswerable",
+        "confidence": "high",
+        "rationale": "The participant asks for the cooking instructions, clearly targeting the same information."
+      },
+      {
+        "response_target": "microwave cooking instructions",
+        "task_type": "Reading, Unanswerable",
+        "confidence": "high",
+        "rationale": "The participant specifies interest in the instructions for cooking in the microwave, making this the direct target."
+      },
+      {
+        "response_target": "microwave cooking instructions",
+        "task_type": "Reading, Unanswerable",
+        "confidence": "high",
+        "rationale": "The participant repeats the request for microwave cooking instructions, so this remains the clear information target."
+      }
+    ],
+    "raw_output": {
+      "turn_targets": [
+        {
+          "response_target": "cooking instructions",
+          "task_type": "Reading",
+          "confidence": "high",
+          "rationale": "The participant directly asks if the cooking instructions are visible, indicating their target is the cooking instructions."
+        },
+        {
+          "response_target": "cooking instructions",
+          "task_type": "Reading",
+          "confidence": "high",
+          "rationale": "The participant asks for the cooking instructions, clearly targeting the same information."
+        },
+        {
+          "response_target": "microwave cooking instructions",
+          "task_type": "Reading",
+          "confidence": "high",
+          "rationale": "The participant specifies interest in the instructions for cooking in the microwave, making this the direct target."
+        },
+        {
+          "response_target": "microwave cooking instructions",
+          "task_type": "Unanswerable",
+          "confidence": "high",
+          "rationale": "The participant repeats the request for microwave cooking instructions, so this remains the clear information target."
+        }
+      ]
+    }
+  },
+  "final_ranked_questions": [
+    "{'rank': 1, 'response': 'Can you read the cooking instructions on the box?', 'response_target': 'cooking instructions', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': \"BLV users frequently need preparation instructions, and the visible text does not include them. The user may realize the AI hasn't provided this info and ask directly, especially when not in a hurry at home.\"}",
+    "{'rank': 2, 'response': 'Does it say if there are any allergens in this meal?', 'response_target': 'allergen information', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.92, 'rationale': \"Checking for allergens is a common, safety-driven follow-up, especially with unfamiliar products. The AI description doesn't mention allergens, prompting a direct query.\"}",
+    "{'rank': 3, 'response': 'Is this the Mediterranean Style Chicken Quinoa Bowl?', 'response_target': 'product identity', 'task_type': 'Identification', 'associated_task_id': 4, 'associated_context_id': 2, 'plausibility_score': 0.9, 'rationale': 'When with others or multitasking, users often want quick confirmation of product identity, especially if preparing food for a group.'}",
+    "{'rank': 4, 'response': 'Can you tell me what the ingredients are?', 'response_target': 'ingredients list', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 3, 'plausibility_score': 0.88, 'rationale': 'In an unfamiliar environment, users may want a full ingredient list for dietary or preference reasons, especially if the AI summary seems incomplete.'}",
+    "{'rank': 5, 'response': 'Is there any information about how to prepare it in the image?', 'response_target': 'preparation information', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': 'The user may suspect the instructions are not visible or not fully captured, so they ask if any are present before retaking the photo.'}",
+    "{'rank': 6, 'response': 'Can you check if the box is upside down or sideways?', 'response_target': 'package orientation', 'task_type': 'Localization', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.8, 'rationale': 'If the user is unsure about the orientation, especially with a partial image, they may want to confirm before trying to read or open the box.'}",
+    "{'rank': 7, 'response': 'Is there a best by or expiration date visible?', 'response_target': 'expiration date', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 3, 'plausibility_score': 0.78, 'rationale': 'Checking freshness is a common concern, especially with unfamiliar or prepackaged foods, though the date may not be visible.'}",
+    "{'rank': 8, 'response': 'Can you describe what the meal looks like in the picture?', 'response_target': 'meal appearance', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 1, 'plausibility_score': 0.75, 'rationale': \"Some users want a description of the food's appearance to decide if it matches their expectations or preferences.\"}",
+    "{'rank': 9, 'response': 'Is there any nutritional information shown?', 'response_target': 'nutritional information', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.7, 'rationale': \"Nutritional info is often sought, but the description doesn't mention it, so the user may ask if any is visible.\"}",
+    "{'rank': 10, 'response': 'Can you confirm if this is a frozen meal?', 'response_target': 'product type', 'task_type': 'Identification', 'associated_task_id': 4, 'associated_context_id': 4, 'plausibility_score': 0.65, 'rationale': 'In a professional or group setting, users may need to confirm the product type quickly, though the packaging and context suggest this is likely known.'}"
+  ],
+  "ground_truth_question": "Are the cooking instructions visible?",
+  "comparison": {
+    "ground_truth": "Are the cooking instructions visible?",
+    "ground_truth_response_target": "cooking instructions",
+    "ground_truth_task_type": "Reading, Unanswerable",
+    "turn_targets": [
+      {
+        "response_target": "cooking instructions",
+        "task_type": "Reading, Unanswerable",
+        "confidence": "high",
+        "rationale": "The participant directly asks if the cooking instructions are visible, indicating their target is the cooking instructions."
+      },
+      {
+        "response_target": "cooking instructions",
+        "task_type": "Reading, Unanswerable",
+        "confidence": "high",
+        "rationale": "The participant asks for the cooking instructions, clearly targeting the same information."
+      },
+      {
+        "response_target": "microwave cooking instructions",
+        "task_type": "Reading, Unanswerable",
+        "confidence": "high",
+        "rationale": "The participant specifies interest in the instructions for cooking in the microwave, making this the direct target."
+      },
+      {
+        "response_target": "microwave cooking instructions",
+        "task_type": "Reading, Unanswerable",
+        "confidence": "high",
+        "rationale": "The participant repeats the request for microwave cooking instructions, so this remains the clear information target."
+      }
+    ],
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Can you read the cooking instructions on the box?",
+        "generated_response_target": "cooking instructions",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking instructions",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 1,
+        "matched_user_turn": 1,
+        "matched_user_turn_target": "cooking instructions",
+        "matched_user_turn_score": 1,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 2,
+        "generated_question": "Does it say if there are any allergens in this meal?",
+        "generated_response_target": "allergen information",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking instructions",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 3,
+        "generated_question": "Is this the Mediterranean Style Chicken Quinoa Bowl?",
+        "generated_response_target": "product identity",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "cooking instructions",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 4,
+        "generated_question": "Can you tell me what the ingredients are?",
+        "generated_response_target": "ingredients list",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking instructions",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 5,
+        "generated_question": "Is there any information about how to prepare it in the image?",
+        "generated_response_target": "preparation information",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking instructions",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 6,
+        "generated_question": "Can you check if the box is upside down or sideways?",
+        "generated_response_target": "package orientation",
+        "generated_task_type": "Localization",
+        "ground_truth_response_target": "cooking instructions",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 7,
+        "generated_question": "Is there a best by or expiration date visible?",
+        "generated_response_target": "expiration date",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking instructions",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 8,
+        "generated_question": "Can you describe what the meal looks like in the picture?",
+        "generated_response_target": "meal appearance",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "cooking instructions",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 9,
+        "generated_question": "Is there any nutritional information shown?",
+        "generated_response_target": "nutritional information",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking instructions",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 10,
+        "generated_question": "Can you confirm if this is a frozen meal?",
+        "generated_response_target": "product type",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "cooking instructions",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "Are the cooking instructions visible?",
+        "generated_response_target": "cooking instructions",
+        "generated_task_type": "Reading, Unanswerable",
+        "ground_truth_response_target": "cooking instructions",
+        "ground_truth_task_type": "Reading, Unanswerable",
+        "target_match_score": 1,
+        "matched_user_turn": 1,
+        "matched_user_turn_target": "cooking instructions",
+        "matched_user_turn_score": 1,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "decomposition"
+      ],
+      "question_category": "Reading, Unanswerable",
+      "in_a_hurry": "no",
+      "indoor_outdoor": "indoor",
+      "familiarity_of_environment": "yes",
+      "familiarity_of_item": "no",
+      "surrounding_environment": "alone",
+      "environment_setting": "leisure",
+      "interaction_length": "5",
+      "task_completed": "Yes"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P3_images/image_3_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows a box of a food product on a patterned rug. The box is labeled \"Whole & Simple\" and \"Mediterranean Style Chicken Quinoa Bowl.\" It mentions that it contains brown rice, spinach, red bell peppers, and sun-dried tomatoes. The product is made in Canada. There is an image of the dish on the box, showing a bowl filled with quinoa, chicken pieces, and vegetables. The rug in the background has a blue and white zigzag pattern with fringes on the edge.",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "User:Are the cooking instructions visible?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 4,
+        "text_usr": null,
+        "text_ai": "Be My AI:No, the cooking instructions are not visible in this image. Only the front of the box with the product name and image is shown.",
+        "local_image_path": null
+      },
+      {
+        "turn": 5,
+        "text_usr": "User:What are the cooking instructions?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 6,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P3_images/image_3_6.jpg"
+      },
+      {
+        "turn": 7,
+        "text_usr": null,
+        "text_ai": "Be My AI:The cooking instructions for the Mediterranean Style Chicken Quinoa Bowl are as follows:\n\nConventional Oven (Cook from Frozen):\n1. Preheat oven to 375\u00b0F.\n2. Remove bowl from carton. Do not pierce or remove film.\n3. Place bowl on baking sheet on middle oven rack for 25 - 30 minutes.\n4. Halfway through cooking, peel back film, stir, and replace film for the remaining cooking time.\n5. Remove baking sheet from oven. Bowl will be hot; use caution and support bowl when removing from baking sheet.\n6. Remove film and stir thoroughly.\n7. Let stand 1 - 2 minutes before serving.",
+        "local_image_path": null
+      },
+      {
+        "turn": 8,
+        "text_usr": "User:What are the instructions for cooking it in the microwave?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 9,
+        "text_usr": null,
+        "text_ai": "Be My AI:The microwave cooking instructions are not visible in the image provided. You might need to check another part of the packaging for those details.",
+        "local_image_path": null
+      },
+      {
+        "turn": 10,
+        "text_usr": "User:What are the instructions for cooking in the microwave?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 11,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P3_images/image_3_11.jpg"
+      },
+      {
+        "turn": 12,
+        "text_usr": null,
+        "text_ai": "Be My AI:The microwave cooking instructions for the Mediterranean Style Chicken Quinoa Bowl are as follows:\n\nMicrowave (1000 watts) Recommended (Cook from Frozen):\n1. Remove bowl from carton. Do not pierce or remove film.\n2. Heat on high for 3 minutes. Peel back film and stir thoroughly.\n3. Replace film and cook on high for an additional 1 1/2 to 2 minutes.\n4. Remove from microwave, stir and let stand 1 - 2 minutes before serving. Bowl will be hot; use caution when removing from microwave.",
+        "local_image_path": null
+      }
+    ]
+  }
+}

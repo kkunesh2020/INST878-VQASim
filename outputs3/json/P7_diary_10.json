@@ -1,0 +1,755 @@
+{
+  "input": {
+    "participant": "P7",
+    "source": "diary",
+    "interaction": 10,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P7/diary_data/P7.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P7/diary_data/P7_images/image_10_1.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "The image shows a bag of Taylor Farms Sweet Kale Chopped Kit. The packaging is predominantly purple and features the following text:\n\n- \"Sweet Kale Chopped Kit\"\n- \"Broccoli, Green Cabbage, Kale, Brussels Sprouts, Pepitas, Radicchio, Cranberries\"\n- \"with Creamy Poppyseed Dressing\"\n- \"6 servings\"\n- \"Excellent Source of Vitamins C & K\"\n- \"Contains 5 Superfoods\"\n- \"Gluten Free\"\n- \"Net Wt. 12 oz (340 g)\"\n\nThere is also an image of the salad on the packaging, showing a mix of greens and other ingredients.",
+    "all_user_responses": [
+      "What are the nutritional facts?",
+      "Is this a healthy option?",
+      "Would this go well with salmon?"
+    ],
+    "question_category": "Reading, Ask for advise",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user may be at home, checking the salad kit before preparing a meal. The image is close-up and focused on the packaging, suggesting the user is verifying the product or its ingredients, possibly for dietary reasons. The setting appears familiar and there is no indication of urgency."
+      },
+      {
+        "context_id": 2,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "unfamiliar people",
+        "activity_type": "professional",
+        "rationale": "The user could be in a workplace or communal kitchen, needing to quickly identify or confirm the contents of the salad kit before a shared meal or event. The unfamiliarity with the environment and item, combined with possible social pressure, could lead to a hurried, less carefully framed photo."
+      },
+      {
+        "context_id": 3,
+        "location": "indoor",
+        "time_pressure": "in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user might be at home but dealing with a new or unfamiliar product, possibly needing to quickly check if the salad kit meets dietary restrictions (e.g., gluten free). The hurried nature could explain the less-than-perfect framing and lighting."
+      },
+      {
+        "context_id": 4,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "familiar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "leisure",
+        "rationale": "The user could be visiting a friend or family member's home, helping prepare a meal together. They may be familiar with the product but not the kitchen, leading to a careful but slightly awkward photo as they check details or ask for advice."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user may be at home, checking the salad kit before preparing a meal. The image is close-up and focused on the packaging, suggesting the user is verifying the product or its ingredients, possibly for dietary reasons. The setting appears familiar and there is no indication of urgency."
+        },
+        {
+          "context_id": 2,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "unfamiliar people",
+          "activity_type": "professional",
+          "rationale": "The user could be in a workplace or communal kitchen, needing to quickly identify or confirm the contents of the salad kit before a shared meal or event. The unfamiliarity with the environment and item, combined with possible social pressure, could lead to a hurried, less carefully framed photo."
+        },
+        {
+          "context_id": 3,
+          "location": "indoor",
+          "time_pressure": "in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user might be at home but dealing with a new or unfamiliar product, possibly needing to quickly check if the salad kit meets dietary restrictions (e.g., gluten free). The hurried nature could explain the less-than-perfect framing and lighting."
+        },
+        {
+          "context_id": 4,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "familiar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "leisure",
+          "rationale": "The user could be visiting a friend or family member's home, helping prepare a meal together. They may be familiar with the product but not the kitchen, leading to a careful but slightly awkward photo as they check details or ask for advice."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Reading",
+        "description": "Extract the product name and key ingredients from the packaging.",
+        "confidence": "high",
+        "rationale": "The image shows a food package with visible text, and BLV users often need to confirm product identity and contents for dietary, allergy, or preference reasons."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Reading",
+        "description": "Read preparation or serving instructions from the package.",
+        "confidence": "medium",
+        "rationale": "BLV users may need to know how to prepare or serve the contents, but the relevant text may not be fully visible or legible in the image."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Reading",
+        "description": "Check for dietary information such as gluten-free status or vitamin content.",
+        "confidence": "high",
+        "rationale": "The packaging highlights dietary claims (e.g., gluten free, vitamins), which are important for users with dietary restrictions or health goals."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Identification",
+        "description": "Confirm whether this is the correct salad kit for a specific recipe or meal plan.",
+        "confidence": "medium",
+        "rationale": "A user may want to ensure they have the right product, especially if multiple similar items are present or if they cannot visually distinguish them."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Ask for advice",
+        "description": "Request advice on how to use or serve the salad kit (e.g., meal ideas, pairing suggestions).",
+        "confidence": "medium",
+        "rationale": "Given the 'Ask for advice' category, the user may want suggestions on how to use the product beyond basic preparation."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Reading",
+        "description": "Determine the expiration or best-by date on the package.",
+        "confidence": "low",
+        "rationale": "Checking freshness is a common need, but the date may not be visible in the image, making this less certain."
+      },
+      {
+        "task_id": 7,
+        "task_type": "Description",
+        "description": "Get a general description of what the product is and what it contains.",
+        "confidence": "high",
+        "rationale": "BLV users often seek a summary of unfamiliar products to decide if they want to use or purchase them."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Reading",
+          "description": "Extract the product name and key ingredients from the packaging.",
+          "confidence": "high",
+          "rationale": "The image shows a food package with visible text, and BLV users often need to confirm product identity and contents for dietary, allergy, or preference reasons."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Reading",
+          "description": "Read preparation or serving instructions from the package.",
+          "confidence": "medium",
+          "rationale": "BLV users may need to know how to prepare or serve the contents, but the relevant text may not be fully visible or legible in the image."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Reading",
+          "description": "Check for dietary information such as gluten-free status or vitamin content.",
+          "confidence": "high",
+          "rationale": "The packaging highlights dietary claims (e.g., gluten free, vitamins), which are important for users with dietary restrictions or health goals."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Identification",
+          "description": "Confirm whether this is the correct salad kit for a specific recipe or meal plan.",
+          "confidence": "medium",
+          "rationale": "A user may want to ensure they have the right product, especially if multiple similar items are present or if they cannot visually distinguish them."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Ask for advice",
+          "description": "Request advice on how to use or serve the salad kit (e.g., meal ideas, pairing suggestions).",
+          "confidence": "medium",
+          "rationale": "Given the 'Ask for advice' category, the user may want suggestions on how to use the product beyond basic preparation."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Reading",
+          "description": "Determine the expiration or best-by date on the package.",
+          "confidence": "low",
+          "rationale": "Checking freshness is a common need, but the date may not be visible in the image, making this less certain."
+        },
+        {
+          "task_id": 7,
+          "task_type": "Description",
+          "description": "Get a general description of what the product is and what it contains.",
+          "confidence": "high",
+          "rationale": "BLV users often seek a summary of unfamiliar products to decide if they want to use or purchase them."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "{'rank': 1, 'response': 'Can you read the preparation instructions for this salad kit?', 'response_target': 'preparation instructions', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': 'BLV users often need to know how to prepare packaged foods, and instructions are frequently missed or unclear in AI summaries. The user is likely at home, not rushed, and focused on meal prep.'}",
+      "{'rank': 2, 'response': 'Is there an expiration or best-by date visible on the package?', 'response_target': 'expiration or best-by date', 'task_type': 'Reading', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.9, 'rationale': 'Checking freshness is a common and important need, especially before eating. The date is rarely included in AI summaries and may be hard to find on the package.'}",
+      "{'rank': 3, 'response': 'Does this salad kit contain any allergens like nuts or dairy?', 'response_target': 'allergen information', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 3, 'plausibility_score': 0.88, 'rationale': 'Allergen information is critical for many users, and the AI summary may not list all possible allergens. The user may be unfamiliar with the product and in a hurry.'}",
+      "{'rank': 4, 'response': 'Can you suggest what I could add to this salad to make it a full meal?', 'response_target': 'meal suggestions', 'task_type': 'Ask for advice', 'associated_task_id': 5, 'associated_context_id': 4, 'plausibility_score': 0.85, 'rationale': 'Users often seek advice on how to use a product, especially in a social or leisure context. The AI summary does not provide meal ideas.'}",
+      "{'rank': 5, 'response': 'Is this salad kit gluten free?', 'response_target': 'gluten free status', 'task_type': 'Verification', 'associated_task_id': 3, 'associated_context_id': 3, 'plausibility_score': 0.83, 'rationale': 'Gluten free status is important for dietary restrictions. Even though the AI mentions it, users may want explicit confirmation due to possible errors or omissions.'}",
+      "{'rank': 6, 'response': 'Can you confirm the full list of ingredients? I want to make sure nothing is missing.', 'response_target': 'full ingredient list', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.8, 'rationale': 'AI summaries often condense or miss ingredients, so users may want the complete list, especially for dietary or allergy reasons.'}",
+      "{'rank': 7, 'response': 'Is this the right salad kit for the recipe I\u2019m making with kale and cranberries?', 'response_target': 'product identification', 'task_type': 'Identification', 'associated_task_id': 4, 'associated_context_id': 2, 'plausibility_score': 0.78, 'rationale': 'In a professional or group setting, users may need to quickly confirm they have the correct product for a specific recipe.'}",
+      "{'rank': 8, 'response': 'How many servings does this bag have?', 'response_target': 'serving size', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.75, 'rationale': 'Serving size is useful for meal planning, especially if preparing food for others. The AI mentions it, but users may want to confirm.'}",
+      "{'rank': 9, 'response': 'Can you describe what the salad looks like inside the bag?', 'response_target': 'salad appearance', 'task_type': 'Description', 'associated_task_id': 7, 'associated_context_id': 4, 'plausibility_score': 0.7, 'rationale': 'Users may want a more detailed visual description, especially if they are unfamiliar with the product or serving to others.'}",
+      "{'rank': 10, 'response': 'Is there any information about vitamins or health benefits on the package?', 'response_target': 'vitamin and health information', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.68, 'rationale': 'Health-conscious users may want to confirm vitamin content or health claims, even if the AI mentions some details.'}"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Can you read the preparation instructions for this salad kit?",
+        "response_target": "preparation instructions",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.95,
+        "rationale": "BLV users often need to know how to prepare packaged foods, and instructions are frequently missed or unclear in AI summaries. The user is likely at home, not rushed, and focused on meal prep."
+      },
+      {
+        "rank": 2,
+        "response": "Is there an expiration or best-by date visible on the package?",
+        "response_target": "expiration or best-by date",
+        "task_type": "Reading",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 0.9,
+        "rationale": "Checking freshness is a common and important need, especially before eating. The date is rarely included in AI summaries and may be hard to find on the package."
+      },
+      {
+        "rank": 3,
+        "response": "Does this salad kit contain any allergens like nuts or dairy?",
+        "response_target": "allergen information",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 3,
+        "plausibility_score": 0.88,
+        "rationale": "Allergen information is critical for many users, and the AI summary may not list all possible allergens. The user may be unfamiliar with the product and in a hurry."
+      },
+      {
+        "rank": 4,
+        "response": "Can you suggest what I could add to this salad to make it a full meal?",
+        "response_target": "meal suggestions",
+        "task_type": "Ask for advice",
+        "associated_task_id": 5,
+        "associated_context_id": 4,
+        "plausibility_score": 0.85,
+        "rationale": "Users often seek advice on how to use a product, especially in a social or leisure context. The AI summary does not provide meal ideas."
+      },
+      {
+        "rank": 5,
+        "response": "Is this salad kit gluten free?",
+        "response_target": "gluten free status",
+        "task_type": "Verification",
+        "associated_task_id": 3,
+        "associated_context_id": 3,
+        "plausibility_score": 0.83,
+        "rationale": "Gluten free status is important for dietary restrictions. Even though the AI mentions it, users may want explicit confirmation due to possible errors or omissions."
+      },
+      {
+        "rank": 6,
+        "response": "Can you confirm the full list of ingredients? I want to make sure nothing is missing.",
+        "response_target": "full ingredient list",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.8,
+        "rationale": "AI summaries often condense or miss ingredients, so users may want the complete list, especially for dietary or allergy reasons."
+      },
+      {
+        "rank": 7,
+        "response": "Is this the right salad kit for the recipe I\u2019m making with kale and cranberries?",
+        "response_target": "product identification",
+        "task_type": "Identification",
+        "associated_task_id": 4,
+        "associated_context_id": 2,
+        "plausibility_score": 0.78,
+        "rationale": "In a professional or group setting, users may need to quickly confirm they have the correct product for a specific recipe."
+      },
+      {
+        "rank": 8,
+        "response": "How many servings does this bag have?",
+        "response_target": "serving size",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.75,
+        "rationale": "Serving size is useful for meal planning, especially if preparing food for others. The AI mentions it, but users may want to confirm."
+      },
+      {
+        "rank": 9,
+        "response": "Can you describe what the salad looks like inside the bag?",
+        "response_target": "salad appearance",
+        "task_type": "Description",
+        "associated_task_id": 7,
+        "associated_context_id": 4,
+        "plausibility_score": 0.7,
+        "rationale": "Users may want a more detailed visual description, especially if they are unfamiliar with the product or serving to others."
+      },
+      {
+        "rank": 10,
+        "response": "Is there any information about vitamins or health benefits on the package?",
+        "response_target": "vitamin and health information",
+        "task_type": "Reading",
+        "associated_task_id": 3,
+        "associated_context_id": 1,
+        "plausibility_score": 0.68,
+        "rationale": "Health-conscious users may want to confirm vitamin content or health claims, even if the AI mentions some details."
+      }
+    ],
+    "raw_output": {
+      "ranked_questions": [
+        {
+          "rank": 1,
+          "response": "Can you read the preparation instructions for this salad kit?",
+          "response_target": "preparation instructions",
+          "task_type": "Reading",
+          "associated_task_id": 2,
+          "associated_context_id": 1,
+          "plausibility_score": 0.95,
+          "rationale": "BLV users often need to know how to prepare packaged foods, and instructions are frequently missed or unclear in AI summaries. The user is likely at home, not rushed, and focused on meal prep."
+        },
+        {
+          "rank": 2,
+          "response": "Is there an expiration or best-by date visible on the package?",
+          "response_target": "expiration or best-by date",
+          "task_type": "Reading",
+          "associated_task_id": 6,
+          "associated_context_id": 1,
+          "plausibility_score": 0.9,
+          "rationale": "Checking freshness is a common and important need, especially before eating. The date is rarely included in AI summaries and may be hard to find on the package."
+        },
+        {
+          "rank": 3,
+          "response": "Does this salad kit contain any allergens like nuts or dairy?",
+          "response_target": "allergen information",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 3,
+          "plausibility_score": 0.88,
+          "rationale": "Allergen information is critical for many users, and the AI summary may not list all possible allergens. The user may be unfamiliar with the product and in a hurry."
+        },
+        {
+          "rank": 4,
+          "response": "Can you suggest what I could add to this salad to make it a full meal?",
+          "response_target": "meal suggestions",
+          "task_type": "Ask for advice",
+          "associated_task_id": 5,
+          "associated_context_id": 4,
+          "plausibility_score": 0.85,
+          "rationale": "Users often seek advice on how to use a product, especially in a social or leisure context. The AI summary does not provide meal ideas."
+        },
+        {
+          "rank": 5,
+          "response": "Is this salad kit gluten free?",
+          "response_target": "gluten free status",
+          "task_type": "Verification",
+          "associated_task_id": 3,
+          "associated_context_id": 3,
+          "plausibility_score": 0.83,
+          "rationale": "Gluten free status is important for dietary restrictions. Even though the AI mentions it, users may want explicit confirmation due to possible errors or omissions."
+        },
+        {
+          "rank": 6,
+          "response": "Can you confirm the full list of ingredients? I want to make sure nothing is missing.",
+          "response_target": "full ingredient list",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 0.8,
+          "rationale": "AI summaries often condense or miss ingredients, so users may want the complete list, especially for dietary or allergy reasons."
+        },
+        {
+          "rank": 7,
+          "response": "Is this the right salad kit for the recipe I\u2019m making with kale and cranberries?",
+          "response_target": "product identification",
+          "task_type": "Identification",
+          "associated_task_id": 4,
+          "associated_context_id": 2,
+          "plausibility_score": 0.78,
+          "rationale": "In a professional or group setting, users may need to quickly confirm they have the correct product for a specific recipe."
+        },
+        {
+          "rank": 8,
+          "response": "How many servings does this bag have?",
+          "response_target": "serving size",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 0.75,
+          "rationale": "Serving size is useful for meal planning, especially if preparing food for others. The AI mentions it, but users may want to confirm."
+        },
+        {
+          "rank": 9,
+          "response": "Can you describe what the salad looks like inside the bag?",
+          "response_target": "salad appearance",
+          "task_type": "Description",
+          "associated_task_id": 7,
+          "associated_context_id": 4,
+          "plausibility_score": 0.7,
+          "rationale": "Users may want a more detailed visual description, especially if they are unfamiliar with the product or serving to others."
+        },
+        {
+          "rank": 10,
+          "response": "Is there any information about vitamins or health benefits on the package?",
+          "response_target": "vitamin and health information",
+          "task_type": "Reading",
+          "associated_task_id": 3,
+          "associated_context_id": 1,
+          "plausibility_score": 0.68,
+          "rationale": "Health-conscious users may want to confirm vitamin content or health claims, even if the AI mentions some details."
+        }
+      ]
+    }
+  },
+  "response_target_agent": {
+    "response_target": "nutritional facts",
+    "task_type": "Reading, Ask for advise",
+    "confidence": "high",
+    "rationale": "The participant directly asks for the nutritional facts, which is a standard request for information typically found on packaged food. The question_category 'Reading, Ask for advise' supports that they want to know the specific nutritional information from the packaging.",
+    "raw_output": {
+      "response_target": "nutritional facts",
+      "task_type": "Reading, Ask for advise",
+      "confidence": "high",
+      "rationale": "The participant directly asks for the nutritional facts, which is a standard request for information typically found on packaged food. The question_category 'Reading, Ask for advise' supports that they want to know the specific nutritional information from the packaging."
+    }
+  },
+  "interaction_target_agent": {
+    "turn_targets": [
+      {
+        "response_target": "nutritional facts",
+        "task_type": "Reading, Ask for advise",
+        "confidence": "high",
+        "rationale": "The participant directly asks for the nutritional facts, which is a standard request for information typically found on food packaging."
+      },
+      {
+        "response_target": "healthiness",
+        "task_type": "Reading, Ask for advise",
+        "confidence": "high",
+        "rationale": "The participant asks if this is a healthy option, indicating they want advice on the healthiness of the product."
+      },
+      {
+        "response_target": "compatibility with salmon",
+        "task_type": "Reading, Ask for advise",
+        "confidence": "high",
+        "rationale": "The participant asks if the item would go well with salmon, seeking advice on food pairing."
+      }
+    ],
+    "raw_output": {
+      "turn_targets": [
+        {
+          "response_target": "nutritional facts",
+          "task_type": "Reading",
+          "confidence": "high",
+          "rationale": "The participant directly asks for the nutritional facts, which is a standard request for information typically found on food packaging."
+        },
+        {
+          "response_target": "healthiness",
+          "task_type": "Ask for advise",
+          "confidence": "high",
+          "rationale": "The participant asks if this is a healthy option, indicating they want advice on the healthiness of the product."
+        },
+        {
+          "response_target": "compatibility with salmon",
+          "task_type": "Ask for advise",
+          "confidence": "high",
+          "rationale": "The participant asks if the item would go well with salmon, seeking advice on food pairing."
+        }
+      ]
+    }
+  },
+  "final_ranked_questions": [
+    "{'rank': 1, 'response': 'Can you read the preparation instructions for this salad kit?', 'response_target': 'preparation instructions', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': 'BLV users often need to know how to prepare packaged foods, and instructions are frequently missed or unclear in AI summaries. The user is likely at home, not rushed, and focused on meal prep.'}",
+    "{'rank': 2, 'response': 'Is there an expiration or best-by date visible on the package?', 'response_target': 'expiration or best-by date', 'task_type': 'Reading', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.9, 'rationale': 'Checking freshness is a common and important need, especially before eating. The date is rarely included in AI summaries and may be hard to find on the package.'}",
+    "{'rank': 3, 'response': 'Does this salad kit contain any allergens like nuts or dairy?', 'response_target': 'allergen information', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 3, 'plausibility_score': 0.88, 'rationale': 'Allergen information is critical for many users, and the AI summary may not list all possible allergens. The user may be unfamiliar with the product and in a hurry.'}",
+    "{'rank': 4, 'response': 'Can you suggest what I could add to this salad to make it a full meal?', 'response_target': 'meal suggestions', 'task_type': 'Ask for advice', 'associated_task_id': 5, 'associated_context_id': 4, 'plausibility_score': 0.85, 'rationale': 'Users often seek advice on how to use a product, especially in a social or leisure context. The AI summary does not provide meal ideas.'}",
+    "{'rank': 5, 'response': 'Is this salad kit gluten free?', 'response_target': 'gluten free status', 'task_type': 'Verification', 'associated_task_id': 3, 'associated_context_id': 3, 'plausibility_score': 0.83, 'rationale': 'Gluten free status is important for dietary restrictions. Even though the AI mentions it, users may want explicit confirmation due to possible errors or omissions.'}",
+    "{'rank': 6, 'response': 'Can you confirm the full list of ingredients? I want to make sure nothing is missing.', 'response_target': 'full ingredient list', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.8, 'rationale': 'AI summaries often condense or miss ingredients, so users may want the complete list, especially for dietary or allergy reasons.'}",
+    "{'rank': 7, 'response': 'Is this the right salad kit for the recipe I\u2019m making with kale and cranberries?', 'response_target': 'product identification', 'task_type': 'Identification', 'associated_task_id': 4, 'associated_context_id': 2, 'plausibility_score': 0.78, 'rationale': 'In a professional or group setting, users may need to quickly confirm they have the correct product for a specific recipe.'}",
+    "{'rank': 8, 'response': 'How many servings does this bag have?', 'response_target': 'serving size', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.75, 'rationale': 'Serving size is useful for meal planning, especially if preparing food for others. The AI mentions it, but users may want to confirm.'}",
+    "{'rank': 9, 'response': 'Can you describe what the salad looks like inside the bag?', 'response_target': 'salad appearance', 'task_type': 'Description', 'associated_task_id': 7, 'associated_context_id': 4, 'plausibility_score': 0.7, 'rationale': 'Users may want a more detailed visual description, especially if they are unfamiliar with the product or serving to others.'}",
+    "{'rank': 10, 'response': 'Is there any information about vitamins or health benefits on the package?', 'response_target': 'vitamin and health information', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.68, 'rationale': 'Health-conscious users may want to confirm vitamin content or health claims, even if the AI mentions some details.'}"
+  ],
+  "ground_truth_question": "What are the nutritional facts?",
+  "comparison": {
+    "ground_truth": "What are the nutritional facts?",
+    "ground_truth_response_target": "nutritional facts",
+    "ground_truth_task_type": "Reading, Ask for advise",
+    "turn_targets": [
+      {
+        "response_target": "nutritional facts",
+        "task_type": "Reading, Ask for advise",
+        "confidence": "high",
+        "rationale": "The participant directly asks for the nutritional facts, which is a standard request for information typically found on food packaging."
+      },
+      {
+        "response_target": "healthiness",
+        "task_type": "Reading, Ask for advise",
+        "confidence": "high",
+        "rationale": "The participant asks if this is a healthy option, indicating they want advice on the healthiness of the product."
+      },
+      {
+        "response_target": "compatibility with salmon",
+        "task_type": "Reading, Ask for advise",
+        "confidence": "high",
+        "rationale": "The participant asks if the item would go well with salmon, seeking advice on food pairing."
+      }
+    ],
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Can you read the preparation instructions for this salad kit?",
+        "generated_response_target": "preparation instructions",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "nutritional facts",
+        "ground_truth_task_type": "Reading, Ask for advise",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 2,
+        "generated_question": "Is there an expiration or best-by date visible on the package?",
+        "generated_response_target": "expiration or best-by date",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "nutritional facts",
+        "ground_truth_task_type": "Reading, Ask for advise",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 3,
+        "generated_question": "Does this salad kit contain any allergens like nuts or dairy?",
+        "generated_response_target": "allergen information",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "nutritional facts",
+        "ground_truth_task_type": "Reading, Ask for advise",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 4,
+        "generated_question": "Can you suggest what I could add to this salad to make it a full meal?",
+        "generated_response_target": "meal suggestions",
+        "generated_task_type": "Ask for advice",
+        "ground_truth_response_target": "nutritional facts",
+        "ground_truth_task_type": "Reading, Ask for advise",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 5,
+        "generated_question": "Is this salad kit gluten free?",
+        "generated_response_target": "gluten free status",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "nutritional facts",
+        "ground_truth_task_type": "Reading, Ask for advise",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 6,
+        "generated_question": "Can you confirm the full list of ingredients? I want to make sure nothing is missing.",
+        "generated_response_target": "full ingredient list",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "nutritional facts",
+        "ground_truth_task_type": "Reading, Ask for advise",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 7,
+        "generated_question": "Is this the right salad kit for the recipe I\u2019m making with kale and cranberries?",
+        "generated_response_target": "product identification",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "nutritional facts",
+        "ground_truth_task_type": "Reading, Ask for advise",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 8,
+        "generated_question": "How many servings does this bag have?",
+        "generated_response_target": "serving size",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "nutritional facts",
+        "ground_truth_task_type": "Reading, Ask for advise",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 9,
+        "generated_question": "Can you describe what the salad looks like inside the bag?",
+        "generated_response_target": "salad appearance",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "nutritional facts",
+        "ground_truth_task_type": "Reading, Ask for advise",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 10,
+        "generated_question": "Is there any information about vitamins or health benefits on the package?",
+        "generated_response_target": "vitamin and health information",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "nutritional facts",
+        "ground_truth_task_type": "Reading, Ask for advise",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "What are the nutritional facts?",
+        "generated_response_target": "nutritional facts",
+        "generated_task_type": "Reading, Ask for advise",
+        "ground_truth_response_target": "nutritional facts",
+        "ground_truth_task_type": "Reading, Ask for advise",
+        "target_match_score": 1,
+        "matched_user_turn": 1,
+        "matched_user_turn_target": "nutritional facts",
+        "matched_user_turn_score": 1,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "NA-w-text"
+      ],
+      "question_category": "Reading, Ask for advise",
+      "in_a_hurry": "no",
+      "indoor_outdoor": "indoor",
+      "familiarity_of_environment": "yes",
+      "familiarity_of_item": "yes",
+      "surrounding_environment": "familiar",
+      "environment_setting": "leisure",
+      "interaction_length": "4"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P7_images/image_10_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows a bag of Taylor Farms Sweet Kale Chopped Kit. The packaging is predominantly purple and features the following text:\n\n- \"Sweet Kale Chopped Kit\"\n- \"Broccoli, Green Cabbage, Kale, Brussels Sprouts, Pepitas, Radicchio, Cranberries\"\n- \"with Creamy Poppyseed Dressing\"\n- \"6 servings\"\n- \"Excellent Source of Vitamins C & K\"\n- \"Contains 5 Superfoods\"\n- \"Gluten Free\"\n- \"Net Wt. 12 oz (340 g)\"\n\nThere is also an image of the salad on the packaging, showing a mix of greens and other ingredients.",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "User:What are the nutritional facts?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 4,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P7_images/image_10_4.jpg"
+      },
+      {
+        "turn": 5,
+        "text_usr": null,
+        "text_ai": "Be My AI:The nutritional facts on the package are as follows:\n\n- Serving Size: 1 cup (100g)\n- Calories: 180\n- Total Fat: 11g (14% Daily Value)\n- Saturated Fat: 1g (5% Daily Value)\n- Trans Fat: 0g\n- Cholesterol: 0mg (0% Daily Value)\n- Sodium: 250mg (11% Daily Value)\n- Total Carbohydrate: 18g (7% Daily Value)\n- Dietary Fiber: 4g (14% Daily Value)\n- Total Sugars: 12g (Includes 9g Added Sugars, 18% Daily Value)\n- Protein: 4g\n- Vitamin D: 0mcg (0% Daily Value)\n- Calcium: 48mg (4% Daily Value)\n- Iron: 1mg (6% Daily Value)\n- Potassium: 185mg (4% Daily Value)\n\nPlease note that the percentages are based on a 2,000 calorie diet.",
+        "local_image_path": null
+      },
+      {
+        "turn": 6,
+        "text_usr": "User:Is this a healthy option?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 7,
+        "text_usr": null,
+        "text_ai": "Be My AI:The Sweet Kale Chopped Kit can be considered a healthy option for several reasons:\n\n- It contains a variety of vegetables like broccoli, green cabbage, kale, and Brussels sprouts, which are rich in vitamins and minerals.\n- It is an excellent source of Vitamins C and K.\n- It provides dietary fiber, which is beneficial for digestion.\n- It is gluten-free.\n\nHowever, it also contains 12g of total sugars, including 9g of added sugars, and 11g of total fat per serving, which might be a consideration if you are monitoring your sugar or fat intake. The creamy poppyseed dressing likely contributes to these values.\n\nAs with any food, it's important to consider your overall dietary needs and preferences. If you have specific dietary concerns, you might want to adjust the portion size or use less dressing. For personalized advice, consulting with a nutritionist or healthcare provider would be beneficial.",
+        "local_image_path": null
+      },
+      {
+        "turn": 8,
+        "text_usr": "User:Would this go well with salmon?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 9,
+        "text_usr": null,
+        "text_ai": "Be My AI:Yes, the Sweet Kale Chopped Kit would pair well with salmon. The fresh and crunchy vegetables in the salad, along with the creamy poppyseed dressing, can complement the rich and flavorful taste of salmon. The combination would make for a nutritious and balanced meal, providing a good mix of protein, healthy fats, and fiber. You might consider grilling or baking the salmon for a delicious and healthy pairing.",
+        "local_image_path": null
+      }
+    ]
+  }
+}

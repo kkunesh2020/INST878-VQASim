@@ -1,0 +1,674 @@
+{
+  "input": {
+    "participant": "P6",
+    "source": "diary",
+    "interaction": 5,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P6/diary_data/P6.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P6/diary_data/P6_images/image_5_1.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "The image shows a computer screen displaying a message about updates. The text on the screen reads: \"Updates are underway. 23% complete. Please keep your computer on.\" There is a circular loading icon above the text, indicating that the update process is in progress. The background of the screen is dark.",
+    "all_user_responses": [
+      "Does it say how long the update will take?"
+    ],
+    "question_category": "Description, Identification",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "indoor",
+        "time_pressure": "in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "professional",
+        "rationale": "The user may be at home or in a personal office, urgently needing to use their computer for work but encountering an update screen. As a BLV user, they may not be able to read the progress and take a photo to check the update status. The urgency is plausible if they have a meeting or deadline."
+      },
+      {
+        "context_id": 2,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user could be at home, performing routine maintenance or checking on their computer's status. They may be curious about the update progress and use a VQA system to confirm what is displayed, without any immediate time pressure."
+      },
+      {
+        "context_id": 3,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "unfamiliar people",
+        "activity_type": "professional",
+        "rationale": "The user might be in a shared workspace, library, or at a friend's or colleague's place, trying to use an unfamiliar computer. They may not know if the update is progressing or stuck, and may feel some urgency if others are waiting or if they need to use the device soon."
+      },
+      {
+        "context_id": 4,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "daily living task",
+        "rationale": "The user could be helping a family member or friend with their computer at home. They may not be familiar with this specific device or update process, so they take a photo to get information, possibly discussing the situation with someone they trust."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "indoor",
+          "time_pressure": "in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "professional",
+          "rationale": "The user may be at home or in a personal office, urgently needing to use their computer for work but encountering an update screen. As a BLV user, they may not be able to read the progress and take a photo to check the update status. The urgency is plausible if they have a meeting or deadline."
+        },
+        {
+          "context_id": 2,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user could be at home, performing routine maintenance or checking on their computer's status. They may be curious about the update progress and use a VQA system to confirm what is displayed, without any immediate time pressure."
+        },
+        {
+          "context_id": 3,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "unfamiliar people",
+          "activity_type": "professional",
+          "rationale": "The user might be in a shared workspace, library, or at a friend's or colleague's place, trying to use an unfamiliar computer. They may not know if the update is progressing or stuck, and may feel some urgency if others are waiting or if they need to use the device soon."
+        },
+        {
+          "context_id": 4,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "daily living task",
+          "rationale": "The user could be helping a family member or friend with their computer at home. They may not be familiar with this specific device or update process, so they take a photo to get information, possibly discussing the situation with someone they trust."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Reading",
+        "description": "Determine the exact progress and status message displayed on the computer screen during an update.",
+        "confidence": "high",
+        "rationale": "The image shows a screen with visible text about updates, which is a common scenario where BLV users need to know the progress or specific instructions (e.g., '23% complete', 'Please keep your computer on')."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Description",
+        "description": "Understand what is currently happening on the computer (e.g., is it updating, restarting, or showing an error?).",
+        "confidence": "high",
+        "rationale": "BLV users may not be able to see the screen and want to know the general state of the device, especially during processes that take time or require user patience."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Identification",
+        "description": "Identify if the computer is safe to turn off or if any user action is required.",
+        "confidence": "medium",
+        "rationale": "Users may be unsure if they can power off the device or need to take action, especially if the message is ambiguous or partially visible."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Reading",
+        "description": "Extract any warnings or important instructions from the update screen.",
+        "confidence": "medium",
+        "rationale": "Update screens sometimes display warnings (e.g., 'Do not turn off your computer'), which are critical for the user to know."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Description",
+        "description": "Confirm that the computer is functioning normally and not displaying an error or crash screen.",
+        "confidence": "medium",
+        "rationale": "BLV users may want reassurance that the device is updating as expected and not stuck or malfunctioning, especially if the screen is unclear or partially visible."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Identification",
+        "description": "Determine if the update process is progressing or stuck at a certain percentage.",
+        "confidence": "medium",
+        "rationale": "If the user has been waiting for a while, they may want to know if the percentage is changing or if the update is stalled."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Reading",
+          "description": "Determine the exact progress and status message displayed on the computer screen during an update.",
+          "confidence": "high",
+          "rationale": "The image shows a screen with visible text about updates, which is a common scenario where BLV users need to know the progress or specific instructions (e.g., '23% complete', 'Please keep your computer on')."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Description",
+          "description": "Understand what is currently happening on the computer (e.g., is it updating, restarting, or showing an error?).",
+          "confidence": "high",
+          "rationale": "BLV users may not be able to see the screen and want to know the general state of the device, especially during processes that take time or require user patience."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Identification",
+          "description": "Identify if the computer is safe to turn off or if any user action is required.",
+          "confidence": "medium",
+          "rationale": "Users may be unsure if they can power off the device or need to take action, especially if the message is ambiguous or partially visible."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Reading",
+          "description": "Extract any warnings or important instructions from the update screen.",
+          "confidence": "medium",
+          "rationale": "Update screens sometimes display warnings (e.g., 'Do not turn off your computer'), which are critical for the user to know."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Description",
+          "description": "Confirm that the computer is functioning normally and not displaying an error or crash screen.",
+          "confidence": "medium",
+          "rationale": "BLV users may want reassurance that the device is updating as expected and not stuck or malfunctioning, especially if the screen is unclear or partially visible."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Identification",
+          "description": "Determine if the update process is progressing or stuck at a certain percentage.",
+          "confidence": "medium",
+          "rationale": "If the user has been waiting for a while, they may want to know if the percentage is changing or if the update is stalled."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "{'rank': 1, 'response': 'Is there any warning about turning off the computer?', 'response_target': 'warning about turning off the computer', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.98, 'rationale': \"A user in a hurry, especially in a professional context, will want to know if it's safe to power off or if there are critical warnings. This is a high-priority, need-driven follow-up.\"}",
+      "{'rank': 2, 'response': 'Can you tell me if the update is still progressing?', 'response_target': 'update progress', 'task_type': 'Identification', 'associated_task_id': 6, 'associated_context_id': 3, 'plausibility_score': 0.95, 'rationale': 'If the user is unsure whether the update is stuck, especially in an unfamiliar environment, they may want confirmation that progress is ongoing.'}",
+      "{'rank': 3, 'response': 'Does it say how long the update might take?', 'response_target': 'estimated update time', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.92, 'rationale': 'A user under time pressure may want to estimate how long they\u2019ll be waiting, even if the screen doesn\u2019t provide this info directly.'}",
+      "{'rank': 4, 'response': 'Is there any error message or does it look normal?', 'response_target': 'error message or normal status', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 3, 'plausibility_score': 0.9, 'rationale': 'In an unfamiliar setting, the user may want reassurance that nothing is wrong and the update is proceeding as expected.'}",
+      "{'rank': 5, 'response': 'What exactly does the message on the screen say?', 'response_target': 'message on the screen', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 2, 'plausibility_score': 0.88, 'rationale': 'A user may want the verbatim text, especially if they didn\u2019t catch it the first time or if the AI summary was unclear.'}",
+      "{'rank': 6, 'response': 'Do I need to do anything right now?', 'response_target': 'required user action', 'task_type': 'Identification', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': 'A user in a hurry may want to know if any action is required or if they can just wait.'}",
+      "{'rank': 7, 'response': 'Is the percentage changing or stuck at 23%?', 'response_target': 'percentage progress', 'task_type': 'Identification', 'associated_task_id': 6, 'associated_context_id': 3, 'plausibility_score': 0.82, 'rationale': 'If the user has been waiting, they may want to know if the update is stalled, especially if the AI didn\u2019t mention movement.'}",
+      "{'rank': 8, 'response': 'Does the screen say when I can use the computer again?', 'response_target': 'time to use computer', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.8, 'rationale': 'A user may want to know when the device will be available, especially if they have work to do.'}",
+      "{'rank': 9, 'response': 'Is there anything else on the screen besides the update message?', 'response_target': 'other screen content', 'task_type': 'Description', 'associated_task_id': 2, 'associated_context_id': 2, 'plausibility_score': 0.78, 'rationale': 'A user may want to know if there are icons, buttons, or other information present that the AI didn\u2019t mention.'}",
+      "{'rank': 10, 'response': 'Can you double-check if it says not to turn off the computer?', 'response_target': 'instruction about turning off computer', 'task_type': 'Verification', 'associated_task_id': 4, 'associated_context_id': 4, 'plausibility_score': 0.75, 'rationale': 'If the user is helping someone else or is unsure, they may want explicit confirmation of critical instructions.'}"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Is there any warning about turning off the computer?",
+        "response_target": "warning about turning off the computer",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.98,
+        "rationale": "A user in a hurry, especially in a professional context, will want to know if it's safe to power off or if there are critical warnings. This is a high-priority, need-driven follow-up."
+      },
+      {
+        "rank": 2,
+        "response": "Can you tell me if the update is still progressing?",
+        "response_target": "update progress",
+        "task_type": "Identification",
+        "associated_task_id": 6,
+        "associated_context_id": 3,
+        "plausibility_score": 0.95,
+        "rationale": "If the user is unsure whether the update is stuck, especially in an unfamiliar environment, they may want confirmation that progress is ongoing."
+      },
+      {
+        "rank": 3,
+        "response": "Does it say how long the update might take?",
+        "response_target": "estimated update time",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.92,
+        "rationale": "A user under time pressure may want to estimate how long they\u2019ll be waiting, even if the screen doesn\u2019t provide this info directly."
+      },
+      {
+        "rank": 4,
+        "response": "Is there any error message or does it look normal?",
+        "response_target": "error message or normal status",
+        "task_type": "Description",
+        "associated_task_id": 5,
+        "associated_context_id": 3,
+        "plausibility_score": 0.9,
+        "rationale": "In an unfamiliar setting, the user may want reassurance that nothing is wrong and the update is proceeding as expected."
+      },
+      {
+        "rank": 5,
+        "response": "What exactly does the message on the screen say?",
+        "response_target": "message on the screen",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 2,
+        "plausibility_score": 0.88,
+        "rationale": "A user may want the verbatim text, especially if they didn\u2019t catch it the first time or if the AI summary was unclear."
+      },
+      {
+        "rank": 6,
+        "response": "Do I need to do anything right now?",
+        "response_target": "required user action",
+        "task_type": "Identification",
+        "associated_task_id": 3,
+        "associated_context_id": 1,
+        "plausibility_score": 0.85,
+        "rationale": "A user in a hurry may want to know if any action is required or if they can just wait."
+      },
+      {
+        "rank": 7,
+        "response": "Is the percentage changing or stuck at 23%?",
+        "response_target": "percentage progress",
+        "task_type": "Identification",
+        "associated_task_id": 6,
+        "associated_context_id": 3,
+        "plausibility_score": 0.82,
+        "rationale": "If the user has been waiting, they may want to know if the update is stalled, especially if the AI didn\u2019t mention movement."
+      },
+      {
+        "rank": 8,
+        "response": "Does the screen say when I can use the computer again?",
+        "response_target": "time to use computer",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.8,
+        "rationale": "A user may want to know when the device will be available, especially if they have work to do."
+      },
+      {
+        "rank": 9,
+        "response": "Is there anything else on the screen besides the update message?",
+        "response_target": "other screen content",
+        "task_type": "Description",
+        "associated_task_id": 2,
+        "associated_context_id": 2,
+        "plausibility_score": 0.78,
+        "rationale": "A user may want to know if there are icons, buttons, or other information present that the AI didn\u2019t mention."
+      },
+      {
+        "rank": 10,
+        "response": "Can you double-check if it says not to turn off the computer?",
+        "response_target": "instruction about turning off computer",
+        "task_type": "Verification",
+        "associated_task_id": 4,
+        "associated_context_id": 4,
+        "plausibility_score": 0.75,
+        "rationale": "If the user is helping someone else or is unsure, they may want explicit confirmation of critical instructions."
+      }
+    ],
+    "raw_output": {
+      "ranked_questions": [
+        {
+          "rank": 1,
+          "response": "Is there any warning about turning off the computer?",
+          "response_target": "warning about turning off the computer",
+          "task_type": "Reading",
+          "associated_task_id": 4,
+          "associated_context_id": 1,
+          "plausibility_score": 0.98,
+          "rationale": "A user in a hurry, especially in a professional context, will want to know if it's safe to power off or if there are critical warnings. This is a high-priority, need-driven follow-up."
+        },
+        {
+          "rank": 2,
+          "response": "Can you tell me if the update is still progressing?",
+          "response_target": "update progress",
+          "task_type": "Identification",
+          "associated_task_id": 6,
+          "associated_context_id": 3,
+          "plausibility_score": 0.95,
+          "rationale": "If the user is unsure whether the update is stuck, especially in an unfamiliar environment, they may want confirmation that progress is ongoing."
+        },
+        {
+          "rank": 3,
+          "response": "Does it say how long the update might take?",
+          "response_target": "estimated update time",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 0.92,
+          "rationale": "A user under time pressure may want to estimate how long they\u2019ll be waiting, even if the screen doesn\u2019t provide this info directly."
+        },
+        {
+          "rank": 4,
+          "response": "Is there any error message or does it look normal?",
+          "response_target": "error message or normal status",
+          "task_type": "Description",
+          "associated_task_id": 5,
+          "associated_context_id": 3,
+          "plausibility_score": 0.9,
+          "rationale": "In an unfamiliar setting, the user may want reassurance that nothing is wrong and the update is proceeding as expected."
+        },
+        {
+          "rank": 5,
+          "response": "What exactly does the message on the screen say?",
+          "response_target": "message on the screen",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 2,
+          "plausibility_score": 0.88,
+          "rationale": "A user may want the verbatim text, especially if they didn\u2019t catch it the first time or if the AI summary was unclear."
+        },
+        {
+          "rank": 6,
+          "response": "Do I need to do anything right now?",
+          "response_target": "required user action",
+          "task_type": "Identification",
+          "associated_task_id": 3,
+          "associated_context_id": 1,
+          "plausibility_score": 0.85,
+          "rationale": "A user in a hurry may want to know if any action is required or if they can just wait."
+        },
+        {
+          "rank": 7,
+          "response": "Is the percentage changing or stuck at 23%?",
+          "response_target": "percentage progress",
+          "task_type": "Identification",
+          "associated_task_id": 6,
+          "associated_context_id": 3,
+          "plausibility_score": 0.82,
+          "rationale": "If the user has been waiting, they may want to know if the update is stalled, especially if the AI didn\u2019t mention movement."
+        },
+        {
+          "rank": 8,
+          "response": "Does the screen say when I can use the computer again?",
+          "response_target": "time to use computer",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 0.8,
+          "rationale": "A user may want to know when the device will be available, especially if they have work to do."
+        },
+        {
+          "rank": 9,
+          "response": "Is there anything else on the screen besides the update message?",
+          "response_target": "other screen content",
+          "task_type": "Description",
+          "associated_task_id": 2,
+          "associated_context_id": 2,
+          "plausibility_score": 0.78,
+          "rationale": "A user may want to know if there are icons, buttons, or other information present that the AI didn\u2019t mention."
+        },
+        {
+          "rank": 10,
+          "response": "Can you double-check if it says not to turn off the computer?",
+          "response_target": "instruction about turning off computer",
+          "task_type": "Verification",
+          "associated_task_id": 4,
+          "associated_context_id": 4,
+          "plausibility_score": 0.75,
+          "rationale": "If the user is helping someone else or is unsure, they may want explicit confirmation of critical instructions."
+        }
+      ]
+    }
+  },
+  "response_target_agent": {
+    "response_target": "estimated update duration",
+    "task_type": "Description, Identification",
+    "confidence": "high",
+    "rationale": "The participant is asking if the screen provides information about how long the update will take, which directly targets the presence or absence of an estimated duration for the update process.",
+    "raw_output": {
+      "response_target": "estimated update duration",
+      "task_type": "Description, Identification",
+      "confidence": "high",
+      "rationale": "The participant is asking if the screen provides information about how long the update will take, which directly targets the presence or absence of an estimated duration for the update process."
+    }
+  },
+  "interaction_target_agent": {
+    "turn_targets": [
+      {
+        "response_target": "estimated update duration",
+        "task_type": "Description, Identification",
+        "confidence": "high",
+        "rationale": "The participant is asking if the screen provides information about how long the update will take, which directly targets the estimated update duration."
+      }
+    ],
+    "raw_output": {
+      "turn_targets": [
+        {
+          "response_target": "estimated update duration",
+          "task_type": "Description, Identification",
+          "confidence": "high",
+          "rationale": "The participant is asking if the screen provides information about how long the update will take, which directly targets the estimated update duration."
+        }
+      ]
+    }
+  },
+  "final_ranked_questions": [
+    "{'rank': 1, 'response': 'Is there any warning about turning off the computer?', 'response_target': 'warning about turning off the computer', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.98, 'rationale': \"A user in a hurry, especially in a professional context, will want to know if it's safe to power off or if there are critical warnings. This is a high-priority, need-driven follow-up.\"}",
+    "{'rank': 2, 'response': 'Can you tell me if the update is still progressing?', 'response_target': 'update progress', 'task_type': 'Identification', 'associated_task_id': 6, 'associated_context_id': 3, 'plausibility_score': 0.95, 'rationale': 'If the user is unsure whether the update is stuck, especially in an unfamiliar environment, they may want confirmation that progress is ongoing.'}",
+    "{'rank': 3, 'response': 'Does it say how long the update might take?', 'response_target': 'estimated update time', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.92, 'rationale': 'A user under time pressure may want to estimate how long they\u2019ll be waiting, even if the screen doesn\u2019t provide this info directly.'}",
+    "{'rank': 4, 'response': 'Is there any error message or does it look normal?', 'response_target': 'error message or normal status', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 3, 'plausibility_score': 0.9, 'rationale': 'In an unfamiliar setting, the user may want reassurance that nothing is wrong and the update is proceeding as expected.'}",
+    "{'rank': 5, 'response': 'What exactly does the message on the screen say?', 'response_target': 'message on the screen', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 2, 'plausibility_score': 0.88, 'rationale': 'A user may want the verbatim text, especially if they didn\u2019t catch it the first time or if the AI summary was unclear.'}",
+    "{'rank': 6, 'response': 'Do I need to do anything right now?', 'response_target': 'required user action', 'task_type': 'Identification', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': 'A user in a hurry may want to know if any action is required or if they can just wait.'}",
+    "{'rank': 7, 'response': 'Is the percentage changing or stuck at 23%?', 'response_target': 'percentage progress', 'task_type': 'Identification', 'associated_task_id': 6, 'associated_context_id': 3, 'plausibility_score': 0.82, 'rationale': 'If the user has been waiting, they may want to know if the update is stalled, especially if the AI didn\u2019t mention movement.'}",
+    "{'rank': 8, 'response': 'Does the screen say when I can use the computer again?', 'response_target': 'time to use computer', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.8, 'rationale': 'A user may want to know when the device will be available, especially if they have work to do.'}",
+    "{'rank': 9, 'response': 'Is there anything else on the screen besides the update message?', 'response_target': 'other screen content', 'task_type': 'Description', 'associated_task_id': 2, 'associated_context_id': 2, 'plausibility_score': 0.78, 'rationale': 'A user may want to know if there are icons, buttons, or other information present that the AI didn\u2019t mention.'}",
+    "{'rank': 10, 'response': 'Can you double-check if it says not to turn off the computer?', 'response_target': 'instruction about turning off computer', 'task_type': 'Verification', 'associated_task_id': 4, 'associated_context_id': 4, 'plausibility_score': 0.75, 'rationale': 'If the user is helping someone else or is unsure, they may want explicit confirmation of critical instructions.'}"
+  ],
+  "ground_truth_question": "Does it say how long the update will take?",
+  "comparison": {
+    "ground_truth": "Does it say how long the update will take?",
+    "ground_truth_response_target": "estimated update duration",
+    "ground_truth_task_type": "Description, Identification",
+    "turn_targets": [
+      {
+        "response_target": "estimated update duration",
+        "task_type": "Description, Identification",
+        "confidence": "high",
+        "rationale": "The participant is asking if the screen provides information about how long the update will take, which directly targets the estimated update duration."
+      }
+    ],
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Is there any warning about turning off the computer?",
+        "generated_response_target": "warning about turning off the computer",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "estimated update duration",
+        "ground_truth_task_type": "Description, Identification",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 2,
+        "generated_question": "Can you tell me if the update is still progressing?",
+        "generated_response_target": "update progress",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "estimated update duration",
+        "ground_truth_task_type": "Description, Identification",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0.5
+      },
+      {
+        "rank": 3,
+        "generated_question": "Does it say how long the update might take?",
+        "generated_response_target": "estimated update time",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "estimated update duration",
+        "ground_truth_task_type": "Description, Identification",
+        "target_match_score": 0.5,
+        "matched_user_turn": 1,
+        "matched_user_turn_target": "estimated update duration",
+        "matched_user_turn_score": 0.5,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 4,
+        "generated_question": "Is there any error message or does it look normal?",
+        "generated_response_target": "error message or normal status",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "estimated update duration",
+        "ground_truth_task_type": "Description, Identification",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0.5
+      },
+      {
+        "rank": 5,
+        "generated_question": "What exactly does the message on the screen say?",
+        "generated_response_target": "message on the screen",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "estimated update duration",
+        "ground_truth_task_type": "Description, Identification",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 6,
+        "generated_question": "Do I need to do anything right now?",
+        "generated_response_target": "required user action",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "estimated update duration",
+        "ground_truth_task_type": "Description, Identification",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0.5
+      },
+      {
+        "rank": 7,
+        "generated_question": "Is the percentage changing or stuck at 23%?",
+        "generated_response_target": "percentage progress",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "estimated update duration",
+        "ground_truth_task_type": "Description, Identification",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0.5
+      },
+      {
+        "rank": 8,
+        "generated_question": "Does the screen say when I can use the computer again?",
+        "generated_response_target": "time to use computer",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "estimated update duration",
+        "ground_truth_task_type": "Description, Identification",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 9,
+        "generated_question": "Is there anything else on the screen besides the update message?",
+        "generated_response_target": "other screen content",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "estimated update duration",
+        "ground_truth_task_type": "Description, Identification",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0.5
+      },
+      {
+        "rank": 10,
+        "generated_question": "Can you double-check if it says not to turn off the computer?",
+        "generated_response_target": "instruction about turning off computer",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "estimated update duration",
+        "ground_truth_task_type": "Description, Identification",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "Does it say how long the update will take?",
+        "generated_response_target": "estimated update duration",
+        "generated_task_type": "Description, Identification",
+        "ground_truth_response_target": "estimated update duration",
+        "ground_truth_task_type": "Description, Identification",
+        "target_match_score": 1,
+        "matched_user_turn": 1,
+        "matched_user_turn_target": "estimated update duration",
+        "matched_user_turn_score": 1,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "NA-w-text"
+      ],
+      "question_category": "Description, Identification",
+      "in_a_hurry": "no",
+      "indoor_outdoor": "indoor",
+      "familiarity_of_environment": "yes",
+      "familiarity_of_item": "yes",
+      "surrounding_environment": "alone",
+      "environment_setting": "leisure",
+      "interaction_length": "4",
+      "task_completed": "Yes"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P6_images/image_5_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows a computer screen displaying a message about updates. The text on the screen reads: \"Updates are underway. 23% complete. Please keep your computer on.\" There is a circular loading icon above the text, indicating that the update process is in progress. The background of the screen is dark.",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "User:Does it say how long the update will take?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 4,
+        "text_usr": null,
+        "text_ai": "Be My AI:There was an error processing your request. Please try again later. (code: 8)",
+        "local_image_path": null
+      }
+    ]
+  }
+}

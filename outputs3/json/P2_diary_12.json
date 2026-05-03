@@ -1,0 +1,676 @@
+{
+  "input": {
+    "participant": "P2",
+    "source": "diary",
+    "interaction": 12,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P2/diary_data/P2.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P2/diary_data/P2_images/image_12_1.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "The image shows the control panel of a washing machine. On the left side, there is a dial labeled \"Cycles\" with various options around it, including \"Bulky/Bedding,\" \"Heavy Duty,\" \"Colors,\" \"Casual,\" \"Soak,\" \"Rinse & Spin,\" \"Express,\" \"Delicates,\" and \"Workout Wear.\" The dial is currently pointing to an option, but the exact position is not clear due to the lighting.\n\nTo the right of the dial, there are several green indicator lights. The panel has buttons labeled \"Start/Pause\" and \"Cancel.\" The \"Start/Pause\" button is illuminated, indicating that the machine is either in operation or paused. The green lights are likely indicating the current status or settings of the washing machine.",
+    "all_user_responses": [
+      "So from the braille dot, going around clockwise can you tell me what all the settings are. I am looking for work out."
+    ],
+    "question_category": "Reading",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The image shows a washing machine control panel with some illuminated buttons, suggesting the user is checking the status or settings. The photo is slightly blurry and off-center, consistent with a BLV user quickly capturing an image to confirm cycle selection or progress. The user is likely at home or in a familiar laundry area, possibly multitasking or needing quick feedback."
+      },
+      {
+        "context_id": 2,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user may be in a new apartment, hotel, or shared laundry facility, trying to read and understand an unfamiliar washing machine's controls. The unclear image and bright indicator lights suggest difficulty in reading the panel, motivating the user to seek assistance from a VQA system to interpret the settings."
+      },
+      {
+        "context_id": 3,
+        "location": "indoor",
+        "time_pressure": "in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "unfamiliar people",
+        "activity_type": "daily living task",
+        "rationale": "The user could be in a communal laundry room (e.g., in a dorm or apartment building) with other residents present. They may be rushing to finish laundry before someone else needs the machine, and are unsure if the current cycle is complete or which settings are active, prompting a quick photo for AI assistance."
+      },
+      {
+        "context_id": 4,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "daily living task",
+        "rationale": "The user might be doing laundry with a family member or roommate, using the VQA system to confirm settings or explain the machine's status to someone else. The relaxed pace allows for collaborative problem-solving, and the image is taken to double-check details that are hard to see."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The image shows a washing machine control panel with some illuminated buttons, suggesting the user is checking the status or settings. The photo is slightly blurry and off-center, consistent with a BLV user quickly capturing an image to confirm cycle selection or progress. The user is likely at home or in a familiar laundry area, possibly multitasking or needing quick feedback."
+        },
+        {
+          "context_id": 2,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user may be in a new apartment, hotel, or shared laundry facility, trying to read and understand an unfamiliar washing machine's controls. The unclear image and bright indicator lights suggest difficulty in reading the panel, motivating the user to seek assistance from a VQA system to interpret the settings."
+        },
+        {
+          "context_id": 3,
+          "location": "indoor",
+          "time_pressure": "in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "unfamiliar people",
+          "activity_type": "daily living task",
+          "rationale": "The user could be in a communal laundry room (e.g., in a dorm or apartment building) with other residents present. They may be rushing to finish laundry before someone else needs the machine, and are unsure if the current cycle is complete or which settings are active, prompting a quick photo for AI assistance."
+        },
+        {
+          "context_id": 4,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "daily living task",
+          "rationale": "The user might be doing laundry with a family member or roommate, using the VQA system to confirm settings or explain the machine's status to someone else. The relaxed pace allows for collaborative problem-solving, and the image is taken to double-check details that are hard to see."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Reading",
+        "description": "Determine which cycle or setting is currently selected on the washing machine.",
+        "confidence": "high",
+        "rationale": "The image shows a washing machine control panel with a dial and illuminated indicators. BLV users often need to confirm the selected cycle, which is difficult due to tactile similarity and lack of accessible feedback."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Reading",
+        "description": "Read the status indicators or lights to find out if the washing machine is running, paused, or complete.",
+        "confidence": "high",
+        "rationale": "The bright indicator lights suggest the user may want to know the current operational status, which is not always accessible via touch or sound."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Reading",
+        "description": "Extract any warning or error messages displayed on the washing machine panel.",
+        "confidence": "medium",
+        "rationale": "BLV users may be concerned about missed visual alerts or errors, especially if the machine is not behaving as expected."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Reading",
+        "description": "Identify the text labels for each cycle or button to create tactile or audio labels for future use.",
+        "confidence": "medium",
+        "rationale": "Users may be documenting the panel layout to improve independent use later, especially if they are new to the appliance."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Reading",
+        "description": "Check if the washing machine lid is locked or if a specific safety indicator is active.",
+        "confidence": "medium",
+        "rationale": "Some machines display lid lock or safety status visually, which is important for safe operation but inaccessible non-visually."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Reading",
+        "description": "Read the timer or remaining time display, if present, to estimate when the cycle will finish.",
+        "confidence": "low",
+        "rationale": "If the machine has a digital timer, the user may want to know how much time is left, but the image does not clearly show a timer, making this less certain."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Reading",
+          "description": "Determine which cycle or setting is currently selected on the washing machine.",
+          "confidence": "high",
+          "rationale": "The image shows a washing machine control panel with a dial and illuminated indicators. BLV users often need to confirm the selected cycle, which is difficult due to tactile similarity and lack of accessible feedback."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Reading",
+          "description": "Read the status indicators or lights to find out if the washing machine is running, paused, or complete.",
+          "confidence": "high",
+          "rationale": "The bright indicator lights suggest the user may want to know the current operational status, which is not always accessible via touch or sound."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Reading",
+          "description": "Extract any warning or error messages displayed on the washing machine panel.",
+          "confidence": "medium",
+          "rationale": "BLV users may be concerned about missed visual alerts or errors, especially if the machine is not behaving as expected."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Reading",
+          "description": "Identify the text labels for each cycle or button to create tactile or audio labels for future use.",
+          "confidence": "medium",
+          "rationale": "Users may be documenting the panel layout to improve independent use later, especially if they are new to the appliance."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Reading",
+          "description": "Check if the washing machine lid is locked or if a specific safety indicator is active.",
+          "confidence": "medium",
+          "rationale": "Some machines display lid lock or safety status visually, which is important for safe operation but inaccessible non-visually."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Reading",
+          "description": "Read the timer or remaining time display, if present, to estimate when the cycle will finish.",
+          "confidence": "low",
+          "rationale": "If the machine has a digital timer, the user may want to know how much time is left, but the image does not clearly show a timer, making this less certain."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "{'rank': 1, 'response': 'Can you tell which cycle the dial is actually set to?', 'response_target': 'selected cycle', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.98, 'rationale': 'Cycle selection is a primary concern for BLV users, especially when the AI description admits uncertainty due to lighting. This is a direct, high-urgency follow-up, especially in familiar or hurried contexts.'}",
+      "{'rank': 2, 'response': 'Is the machine currently running or paused?', 'response_target': 'machine status', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': \"Knowing if the machine is running or paused is a common, urgent need, especially if the user is multitasking or in a hurry. The illuminated 'Start/Pause' button creates ambiguity.\"}",
+      "{'rank': 3, 'response': 'Are there any error or warning messages showing?', 'response_target': 'error or warning messages', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 2, 'plausibility_score': 0.92, 'rationale': \"BLV users often worry about missing visual alerts. The question is plausible in both familiar and unfamiliar environments, especially if the machine isn't behaving as expected.\"}",
+      "{'rank': 4, 'response': 'Which indicator lights are on, and what do they mean?', 'response_target': 'indicator lights', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 2, 'plausibility_score': 0.9, 'rationale': \"The AI notes multiple green lights but doesn't specify their meaning. Users often need clarification, especially with unfamiliar machines.\"}",
+      "{'rank': 5, 'response': 'Can you read out all the cycle options around the dial?', 'response_target': 'cycle options', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 2, 'plausibility_score': 0.88, 'rationale': 'Users may want to label or memorize the dial for future use, especially if new to the machine. The question is plausible in a documentation or learning context.'}",
+      "{'rank': 6, 'response': 'Is there a light or message showing that the lid is locked?', 'response_target': 'lid lock indicator', 'task_type': 'Reading', 'associated_task_id': 5, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': 'Safety is a concern, and some users may want to confirm the lid status before opening or starting the machine.'}",
+      "{'rank': 7, 'response': 'Can you tell if the cycle is almost done or how much time is left?', 'response_target': 'remaining time', 'task_type': 'Reading', 'associated_task_id': 6, 'associated_context_id': 3, 'plausibility_score': 0.82, 'rationale': 'While the image may not clearly show a timer, users in a hurry often ask about remaining time, hoping the AI can infer from lights or other cues.'}",
+      "{'rank': 8, 'response': 'Is the dial pointing more towards Heavy Duty or Colors?', 'response_target': 'dial position', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.8, 'rationale': \"If the AI can't be precise, users may ask for a relative position between two likely options, reflecting uncertainty and need for practical guidance.\"}",
+      "{'rank': 9, 'response': 'Can you describe the layout of the buttons and lights for me?', 'response_target': 'panel layout', 'task_type': 'Description', 'associated_task_id': 4, 'associated_context_id': 2, 'plausibility_score': 0.75, 'rationale': 'Some users want a spatial description to create mental or tactile maps, especially if planning to label the machine.'}",
+      "{'rank': 10, 'response': 'Is there anything unusual or unexpected on the display?', 'response_target': 'display anomalies', 'task_type': 'Verification', 'associated_task_id': 3, 'associated_context_id': 2, 'plausibility_score': 0.7, 'rationale': \"A general check for anomalies is plausible, especially if the user suspects something is wrong but can't identify it visually.\"}"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Can you tell which cycle the dial is actually set to?",
+        "response_target": "selected cycle",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.98,
+        "rationale": "Cycle selection is a primary concern for BLV users, especially when the AI description admits uncertainty due to lighting. This is a direct, high-urgency follow-up, especially in familiar or hurried contexts."
+      },
+      {
+        "rank": 2,
+        "response": "Is the machine currently running or paused?",
+        "response_target": "machine status",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.95,
+        "rationale": "Knowing if the machine is running or paused is a common, urgent need, especially if the user is multitasking or in a hurry. The illuminated 'Start/Pause' button creates ambiguity."
+      },
+      {
+        "rank": 3,
+        "response": "Are there any error or warning messages showing?",
+        "response_target": "error or warning messages",
+        "task_type": "Reading",
+        "associated_task_id": 3,
+        "associated_context_id": 2,
+        "plausibility_score": 0.92,
+        "rationale": "BLV users often worry about missing visual alerts. The question is plausible in both familiar and unfamiliar environments, especially if the machine isn't behaving as expected."
+      },
+      {
+        "rank": 4,
+        "response": "Which indicator lights are on, and what do they mean?",
+        "response_target": "indicator lights",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 2,
+        "plausibility_score": 0.9,
+        "rationale": "The AI notes multiple green lights but doesn't specify their meaning. Users often need clarification, especially with unfamiliar machines."
+      },
+      {
+        "rank": 5,
+        "response": "Can you read out all the cycle options around the dial?",
+        "response_target": "cycle options",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 2,
+        "plausibility_score": 0.88,
+        "rationale": "Users may want to label or memorize the dial for future use, especially if new to the machine. The question is plausible in a documentation or learning context."
+      },
+      {
+        "rank": 6,
+        "response": "Is there a light or message showing that the lid is locked?",
+        "response_target": "lid lock indicator",
+        "task_type": "Reading",
+        "associated_task_id": 5,
+        "associated_context_id": 1,
+        "plausibility_score": 0.85,
+        "rationale": "Safety is a concern, and some users may want to confirm the lid status before opening or starting the machine."
+      },
+      {
+        "rank": 7,
+        "response": "Can you tell if the cycle is almost done or how much time is left?",
+        "response_target": "remaining time",
+        "task_type": "Reading",
+        "associated_task_id": 6,
+        "associated_context_id": 3,
+        "plausibility_score": 0.82,
+        "rationale": "While the image may not clearly show a timer, users in a hurry often ask about remaining time, hoping the AI can infer from lights or other cues."
+      },
+      {
+        "rank": 8,
+        "response": "Is the dial pointing more towards Heavy Duty or Colors?",
+        "response_target": "dial position",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.8,
+        "rationale": "If the AI can't be precise, users may ask for a relative position between two likely options, reflecting uncertainty and need for practical guidance."
+      },
+      {
+        "rank": 9,
+        "response": "Can you describe the layout of the buttons and lights for me?",
+        "response_target": "panel layout",
+        "task_type": "Description",
+        "associated_task_id": 4,
+        "associated_context_id": 2,
+        "plausibility_score": 0.75,
+        "rationale": "Some users want a spatial description to create mental or tactile maps, especially if planning to label the machine."
+      },
+      {
+        "rank": 10,
+        "response": "Is there anything unusual or unexpected on the display?",
+        "response_target": "display anomalies",
+        "task_type": "Verification",
+        "associated_task_id": 3,
+        "associated_context_id": 2,
+        "plausibility_score": 0.7,
+        "rationale": "A general check for anomalies is plausible, especially if the user suspects something is wrong but can't identify it visually."
+      }
+    ],
+    "raw_output": {
+      "ranked_questions": [
+        {
+          "rank": 1,
+          "response": "Can you tell which cycle the dial is actually set to?",
+          "response_target": "selected cycle",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 0.98,
+          "rationale": "Cycle selection is a primary concern for BLV users, especially when the AI description admits uncertainty due to lighting. This is a direct, high-urgency follow-up, especially in familiar or hurried contexts."
+        },
+        {
+          "rank": 2,
+          "response": "Is the machine currently running or paused?",
+          "response_target": "machine status",
+          "task_type": "Reading",
+          "associated_task_id": 2,
+          "associated_context_id": 1,
+          "plausibility_score": 0.95,
+          "rationale": "Knowing if the machine is running or paused is a common, urgent need, especially if the user is multitasking or in a hurry. The illuminated 'Start/Pause' button creates ambiguity."
+        },
+        {
+          "rank": 3,
+          "response": "Are there any error or warning messages showing?",
+          "response_target": "error or warning messages",
+          "task_type": "Reading",
+          "associated_task_id": 3,
+          "associated_context_id": 2,
+          "plausibility_score": 0.92,
+          "rationale": "BLV users often worry about missing visual alerts. The question is plausible in both familiar and unfamiliar environments, especially if the machine isn't behaving as expected."
+        },
+        {
+          "rank": 4,
+          "response": "Which indicator lights are on, and what do they mean?",
+          "response_target": "indicator lights",
+          "task_type": "Reading",
+          "associated_task_id": 2,
+          "associated_context_id": 2,
+          "plausibility_score": 0.9,
+          "rationale": "The AI notes multiple green lights but doesn't specify their meaning. Users often need clarification, especially with unfamiliar machines."
+        },
+        {
+          "rank": 5,
+          "response": "Can you read out all the cycle options around the dial?",
+          "response_target": "cycle options",
+          "task_type": "Reading",
+          "associated_task_id": 4,
+          "associated_context_id": 2,
+          "plausibility_score": 0.88,
+          "rationale": "Users may want to label or memorize the dial for future use, especially if new to the machine. The question is plausible in a documentation or learning context."
+        },
+        {
+          "rank": 6,
+          "response": "Is there a light or message showing that the lid is locked?",
+          "response_target": "lid lock indicator",
+          "task_type": "Reading",
+          "associated_task_id": 5,
+          "associated_context_id": 1,
+          "plausibility_score": 0.85,
+          "rationale": "Safety is a concern, and some users may want to confirm the lid status before opening or starting the machine."
+        },
+        {
+          "rank": 7,
+          "response": "Can you tell if the cycle is almost done or how much time is left?",
+          "response_target": "remaining time",
+          "task_type": "Reading",
+          "associated_task_id": 6,
+          "associated_context_id": 3,
+          "plausibility_score": 0.82,
+          "rationale": "While the image may not clearly show a timer, users in a hurry often ask about remaining time, hoping the AI can infer from lights or other cues."
+        },
+        {
+          "rank": 8,
+          "response": "Is the dial pointing more towards Heavy Duty or Colors?",
+          "response_target": "dial position",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 0.8,
+          "rationale": "If the AI can't be precise, users may ask for a relative position between two likely options, reflecting uncertainty and need for practical guidance."
+        },
+        {
+          "rank": 9,
+          "response": "Can you describe the layout of the buttons and lights for me?",
+          "response_target": "panel layout",
+          "task_type": "Description",
+          "associated_task_id": 4,
+          "associated_context_id": 2,
+          "plausibility_score": 0.75,
+          "rationale": "Some users want a spatial description to create mental or tactile maps, especially if planning to label the machine."
+        },
+        {
+          "rank": 10,
+          "response": "Is there anything unusual or unexpected on the display?",
+          "response_target": "display anomalies",
+          "task_type": "Verification",
+          "associated_task_id": 3,
+          "associated_context_id": 2,
+          "plausibility_score": 0.7,
+          "rationale": "A general check for anomalies is plausible, especially if the user suspects something is wrong but can't identify it visually."
+        }
+      ]
+    }
+  },
+  "response_target_agent": {
+    "response_target": "washer cycle settings around the dial",
+    "task_type": "Reading",
+    "confidence": "high",
+    "rationale": "The participant asks for all the settings around the dial, starting from the braille dot and moving clockwise, specifically mentioning they are looking for 'work out.' This indicates their information target is the list of washer cycle settings as labeled around the dial.",
+    "raw_output": {
+      "response_target": "washer cycle settings around the dial",
+      "task_type": "Reading",
+      "confidence": "high",
+      "rationale": "The participant asks for all the settings around the dial, starting from the braille dot and moving clockwise, specifically mentioning they are looking for 'work out.' This indicates their information target is the list of washer cycle settings as labeled around the dial."
+    }
+  },
+  "interaction_target_agent": {
+    "turn_targets": [
+      {
+        "response_target": "washer cycle settings around the dial",
+        "task_type": "Reading",
+        "confidence": "high",
+        "rationale": "The participant asks for all the settings around the dial, starting from the braille dot and moving clockwise, with specific interest in 'work out.' The direct noun phrase is 'washer cycle settings around the dial.'"
+      }
+    ],
+    "raw_output": {
+      "turn_targets": [
+        {
+          "response_target": "washer cycle settings around the dial",
+          "task_type": "Reading",
+          "confidence": "high",
+          "rationale": "The participant asks for all the settings around the dial, starting from the braille dot and moving clockwise, with specific interest in 'work out.' The direct noun phrase is 'washer cycle settings around the dial.'"
+        }
+      ]
+    }
+  },
+  "final_ranked_questions": [
+    "{'rank': 1, 'response': 'Can you tell which cycle the dial is actually set to?', 'response_target': 'selected cycle', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.98, 'rationale': 'Cycle selection is a primary concern for BLV users, especially when the AI description admits uncertainty due to lighting. This is a direct, high-urgency follow-up, especially in familiar or hurried contexts.'}",
+    "{'rank': 2, 'response': 'Is the machine currently running or paused?', 'response_target': 'machine status', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': \"Knowing if the machine is running or paused is a common, urgent need, especially if the user is multitasking or in a hurry. The illuminated 'Start/Pause' button creates ambiguity.\"}",
+    "{'rank': 3, 'response': 'Are there any error or warning messages showing?', 'response_target': 'error or warning messages', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 2, 'plausibility_score': 0.92, 'rationale': \"BLV users often worry about missing visual alerts. The question is plausible in both familiar and unfamiliar environments, especially if the machine isn't behaving as expected.\"}",
+    "{'rank': 4, 'response': 'Which indicator lights are on, and what do they mean?', 'response_target': 'indicator lights', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 2, 'plausibility_score': 0.9, 'rationale': \"The AI notes multiple green lights but doesn't specify their meaning. Users often need clarification, especially with unfamiliar machines.\"}",
+    "{'rank': 5, 'response': 'Can you read out all the cycle options around the dial?', 'response_target': 'cycle options', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 2, 'plausibility_score': 0.88, 'rationale': 'Users may want to label or memorize the dial for future use, especially if new to the machine. The question is plausible in a documentation or learning context.'}",
+    "{'rank': 6, 'response': 'Is there a light or message showing that the lid is locked?', 'response_target': 'lid lock indicator', 'task_type': 'Reading', 'associated_task_id': 5, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': 'Safety is a concern, and some users may want to confirm the lid status before opening or starting the machine.'}",
+    "{'rank': 7, 'response': 'Can you tell if the cycle is almost done or how much time is left?', 'response_target': 'remaining time', 'task_type': 'Reading', 'associated_task_id': 6, 'associated_context_id': 3, 'plausibility_score': 0.82, 'rationale': 'While the image may not clearly show a timer, users in a hurry often ask about remaining time, hoping the AI can infer from lights or other cues.'}",
+    "{'rank': 8, 'response': 'Is the dial pointing more towards Heavy Duty or Colors?', 'response_target': 'dial position', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.8, 'rationale': \"If the AI can't be precise, users may ask for a relative position between two likely options, reflecting uncertainty and need for practical guidance.\"}",
+    "{'rank': 9, 'response': 'Can you describe the layout of the buttons and lights for me?', 'response_target': 'panel layout', 'task_type': 'Description', 'associated_task_id': 4, 'associated_context_id': 2, 'plausibility_score': 0.75, 'rationale': 'Some users want a spatial description to create mental or tactile maps, especially if planning to label the machine.'}",
+    "{'rank': 10, 'response': 'Is there anything unusual or unexpected on the display?', 'response_target': 'display anomalies', 'task_type': 'Verification', 'associated_task_id': 3, 'associated_context_id': 2, 'plausibility_score': 0.7, 'rationale': \"A general check for anomalies is plausible, especially if the user suspects something is wrong but can't identify it visually.\"}"
+  ],
+  "ground_truth_question": "So from the braille dot, going around clockwise can you tell me what all the settings are. I am looking for work out.",
+  "comparison": {
+    "ground_truth": "So from the braille dot, going around clockwise can you tell me what all the settings are. I am looking for work out.",
+    "ground_truth_response_target": "washer cycle settings around the dial",
+    "ground_truth_task_type": "Reading",
+    "turn_targets": [
+      {
+        "response_target": "washer cycle settings around the dial",
+        "task_type": "Reading",
+        "confidence": "high",
+        "rationale": "The participant asks for all the settings around the dial, starting from the braille dot and moving clockwise, with specific interest in 'work out.' The direct noun phrase is 'washer cycle settings around the dial.'"
+      }
+    ],
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Can you tell which cycle the dial is actually set to?",
+        "generated_response_target": "selected cycle",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "washer cycle settings around the dial",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 2,
+        "generated_question": "Is the machine currently running or paused?",
+        "generated_response_target": "machine status",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "washer cycle settings around the dial",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 3,
+        "generated_question": "Are there any error or warning messages showing?",
+        "generated_response_target": "error or warning messages",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "washer cycle settings around the dial",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 4,
+        "generated_question": "Which indicator lights are on, and what do they mean?",
+        "generated_response_target": "indicator lights",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "washer cycle settings around the dial",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 5,
+        "generated_question": "Can you read out all the cycle options around the dial?",
+        "generated_response_target": "cycle options",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "washer cycle settings around the dial",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 6,
+        "generated_question": "Is there a light or message showing that the lid is locked?",
+        "generated_response_target": "lid lock indicator",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "washer cycle settings around the dial",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 7,
+        "generated_question": "Can you tell if the cycle is almost done or how much time is left?",
+        "generated_response_target": "remaining time",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "washer cycle settings around the dial",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 8,
+        "generated_question": "Is the dial pointing more towards Heavy Duty or Colors?",
+        "generated_response_target": "dial position",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "washer cycle settings around the dial",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 9,
+        "generated_question": "Can you describe the layout of the buttons and lights for me?",
+        "generated_response_target": "panel layout",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "washer cycle settings around the dial",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 10,
+        "generated_question": "Is there anything unusual or unexpected on the display?",
+        "generated_response_target": "display anomalies",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "washer cycle settings around the dial",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "So from the braille dot, going around clockwise can you tell me what all the settings are. I am looking for work out.",
+        "generated_response_target": "washer cycle settings around the dial",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "washer cycle settings around the dial",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 1,
+        "matched_user_turn": 1,
+        "matched_user_turn_target": "washer cycle settings around the dial",
+        "matched_user_turn_score": 1,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "decomposition",
+        "style",
+        "intention"
+      ],
+      "question_category": "Reading",
+      "in_a_hurry": "no",
+      "indoor_outdoor": "indoor",
+      "familiarity_of_environment": "yes",
+      "familiarity_of_item": "yes",
+      "surrounding_environment": "alone",
+      "environment_setting": "leisure",
+      "interaction_length": "2",
+      "task_completed": "Participant think it is completed, but we think not due to incorrect information"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P2_images/image_12_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows the control panel of a washing machine. On the left side, there is a dial labeled \"Cycles\" with various options around it, including \"Bulky/Bedding,\" \"Heavy Duty,\" \"Colors,\" \"Casual,\" \"Soak,\" \"Rinse & Spin,\" \"Express,\" \"Delicates,\" and \"Workout Wear.\" The dial is currently pointing to an option, but the exact position is not clear due to the lighting.\n\nTo the right of the dial, there are several green indicator lights. The panel has buttons labeled \"Start/Pause\" and \"Cancel.\" The \"Start/Pause\" button is illuminated, indicating that the machine is either in operation or paused. The green lights are likely indicating the current status or settings of the washing machine.",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "User:So from the braille dot, going around clockwise can you tell me what all the settings are. I am looking for work out.",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 4,
+        "text_usr": null,
+        "text_ai": "Be My AI:Starting from the braille dot and going clockwise around the dial, the settings are as follows:\n\n- Bulky/Bedding\n- Heavy Duty\n- Colors\n- Casual\n- Soak\n- Rinse & Spin\n- Express\n- Delicates\n- Workout Wear\n\nThe \"Workout Wear\" setting is located just before the starting point of the braille dot when moving clockwise.",
+        "local_image_path": null
+      }
+    ]
+  }
+}

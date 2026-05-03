@@ -1,0 +1,751 @@
+{
+  "input": {
+    "participant": "P11",
+    "source": "diary",
+    "interaction": 26,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P11/diary_data/P11.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P11/diary_data/P11_images/image_26_1.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "A smartphone screen displaying a cleaning app interface. At the top, it shows the time as 12:08 and the battery icon indicates a charge level. The app is named \"Abby\" and shows \"Clean in progress\" with a battery level of 60%. Below, there is a map of a house with labeled rooms: Family Room, Kitchen, Dining Room, Living Room, and Foyer. A path is marked in purple, indicating the cleaning route. At the bottom, there are three buttons: \"Go to Dock\" in red, \"Find Robot\" with a location icon, and \"Pause\" with a pause icon.",
+    "all_user_responses": [
+      "Based upon the graphical depiction of the room, layout and the progress of the vacuum, can you tell me how much has been done and what still needs to be done?",
+      "Is there any indication of vacuum error, for example, that it\u2019s clogged or stopped in someway and requires my attention?",
+      "This is helpful, because I\u2019m using this AI with the goal of learning the status of the vacuuming of our middle level of the house\u2026 The most widely used by our family. I was able to accomplish my goal using this app."
+    ],
+    "question_category": "Description",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user is likely monitoring or controlling a robot vacuum in their own home, as indicated by the labeled rooms and the 'clean in progress' status. They are probably familiar with both the environment and the device, and are performing a routine cleaning task without urgency."
+      },
+      {
+        "context_id": 2,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "unfamiliar people",
+        "activity_type": "professional",
+        "rationale": "The user could be in a new environment, such as a client's home or a demonstration space, trying to understand or demonstrate the robot vacuum's cleaning progress. They may be with clients or colleagues and under some time pressure to ensure the device works as expected."
+      },
+      {
+        "context_id": 3,
+        "location": "indoor",
+        "time_pressure": "in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user may be in their own home but using a new or recently updated robot vacuum app, trying to quickly check cleaning status or battery level before leaving or starting another task. The unfamiliarity is with the app interface or device, not the environment."
+      },
+      {
+        "context_id": 4,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "familiar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "leisure",
+        "rationale": "The user might be visiting a friend or family member's home, helping them set up or monitor their robot vacuum. The environment is unfamiliar, but the device is familiar, and the activity is casual and collaborative."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user is likely monitoring or controlling a robot vacuum in their own home, as indicated by the labeled rooms and the 'clean in progress' status. They are probably familiar with both the environment and the device, and are performing a routine cleaning task without urgency."
+        },
+        {
+          "context_id": 2,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "unfamiliar people",
+          "activity_type": "professional",
+          "rationale": "The user could be in a new environment, such as a client's home or a demonstration space, trying to understand or demonstrate the robot vacuum's cleaning progress. They may be with clients or colleagues and under some time pressure to ensure the device works as expected."
+        },
+        {
+          "context_id": 3,
+          "location": "indoor",
+          "time_pressure": "in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user may be in their own home but using a new or recently updated robot vacuum app, trying to quickly check cleaning status or battery level before leaving or starting another task. The unfamiliarity is with the app interface or device, not the environment."
+        },
+        {
+          "context_id": 4,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "familiar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "leisure",
+          "rationale": "The user might be visiting a friend or family member's home, helping them set up or monitor their robot vacuum. The environment is unfamiliar, but the device is familiar, and the activity is casual and collaborative."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Description",
+        "description": "Determine the current status of the cleaning robot (e.g., is it cleaning, paused, or docked?)",
+        "confidence": "high",
+        "rationale": "The screen shows a cleaning app interface with a status bar ('Clean in progress'), which is a likely focus for a BLV user wanting to know what the robot is currently doing."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Description",
+        "description": "Understand which rooms or areas the robot is cleaning or has cleaned",
+        "confidence": "medium",
+        "rationale": "The map highlights labeled rooms, suggesting the user may want to know which areas are included in the cleaning process or have been covered."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Identification",
+        "description": "Identify the robot's current location within the home",
+        "confidence": "medium",
+        "rationale": "The map includes a small robot icon, which may indicate the robot's position. A BLV user might want to know where the robot is to avoid tripping or to retrieve it."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Reading",
+        "description": "Check the robot's battery level",
+        "confidence": "high",
+        "rationale": "The battery percentage (60%) is displayed, and a BLV user may want to know if the robot has enough charge to finish cleaning."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Description",
+        "description": "Get an overview of the available controls or options for the robot",
+        "confidence": "medium",
+        "rationale": "The interface shows buttons like 'Go to Dock', 'Find Robot', and 'Pause', which a BLV user may want described to understand what actions they can take."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Identification",
+        "description": "Verify which robot or device is currently selected (e.g., 'Abby')",
+        "confidence": "low",
+        "rationale": "The name 'Abby' is shown, possibly indicating the selected device. If the user has multiple robots, they may want to confirm which one is active."
+      },
+      {
+        "task_id": 7,
+        "task_type": "Locational/retrieval",
+        "description": "Determine if the robot is stuck or needs assistance",
+        "confidence": "low",
+        "rationale": "If the robot's icon is stationary or in an unusual location, the user may want to know if it requires help, especially if cleaning progress seems stalled."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Description",
+          "description": "Determine the current status of the cleaning robot (e.g., is it cleaning, paused, or docked?)",
+          "confidence": "high",
+          "rationale": "The screen shows a cleaning app interface with a status bar ('Clean in progress'), which is a likely focus for a BLV user wanting to know what the robot is currently doing."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Description",
+          "description": "Understand which rooms or areas the robot is cleaning or has cleaned",
+          "confidence": "medium",
+          "rationale": "The map highlights labeled rooms, suggesting the user may want to know which areas are included in the cleaning process or have been covered."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Identification",
+          "description": "Identify the robot's current location within the home",
+          "confidence": "medium",
+          "rationale": "The map includes a small robot icon, which may indicate the robot's position. A BLV user might want to know where the robot is to avoid tripping or to retrieve it."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Reading",
+          "description": "Check the robot's battery level",
+          "confidence": "high",
+          "rationale": "The battery percentage (60%) is displayed, and a BLV user may want to know if the robot has enough charge to finish cleaning."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Description",
+          "description": "Get an overview of the available controls or options for the robot",
+          "confidence": "medium",
+          "rationale": "The interface shows buttons like 'Go to Dock', 'Find Robot', and 'Pause', which a BLV user may want described to understand what actions they can take."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Identification",
+          "description": "Verify which robot or device is currently selected (e.g., 'Abby')",
+          "confidence": "low",
+          "rationale": "The name 'Abby' is shown, possibly indicating the selected device. If the user has multiple robots, they may want to confirm which one is active."
+        },
+        {
+          "task_id": 7,
+          "task_type": "Locational/retrieval",
+          "description": "Determine if the robot is stuck or needs assistance",
+          "confidence": "low",
+          "rationale": "If the robot's icon is stationary or in an unusual location, the user may want to know if it requires help, especially if cleaning progress seems stalled."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "{'rank': 1, 'response': 'Which room is the robot in right now?', 'response_target': \"robot's current location\", 'task_type': 'Identification', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': \"Knowing the robot's exact location is a common, safety-driven need for BLV users, especially in their own home. The map may be unclear or the icon hard to interpret, so a direct question is likely.\"}",
+      "{'rank': 2, 'response': 'Has the robot finished cleaning any rooms yet?', 'response_target': 'cleaned rooms', 'task_type': 'Description', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.92, 'rationale': 'Users often want to know progress by room, especially if they are waiting for a specific area to be cleaned. The map may not clearly indicate completed areas.'}",
+      "{'rank': 3, 'response': 'Is the robot stuck anywhere?', 'response_target': \"robot's stuck status\", 'task_type': 'Locational/retrieval', 'associated_task_id': 7, 'associated_context_id': 1, 'plausibility_score': 0.9, 'rationale': \"If the robot hasn't moved or the path looks odd, users may worry it's stuck. This is a practical concern, especially if the map is ambiguous.\"}",
+      "{'rank': 4, 'response': 'What are the available buttons or controls on this screen?', 'response_target': 'available controls', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 3, 'plausibility_score': 0.88, 'rationale': 'BLV users often need explicit confirmation of actionable controls, since button labels or icons may be missed or unclear in the image.'}",
+      "{'rank': 5, 'response': 'How much battery does the robot have left?', 'response_target': \"robot's battery level\", 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 3, 'plausibility_score': 0.85, 'rationale': 'Battery status is critical for planning, especially if the user is about to leave or needs to know if the robot can finish cleaning.'}",
+      "{'rank': 6, 'response': 'Which rooms are currently being cleaned?', 'response_target': 'rooms being cleaned', 'task_type': 'Description', 'associated_task_id': 2, 'associated_context_id': 2, 'plausibility_score': 0.83, 'rationale': 'In a less familiar or professional context, users may want to confirm which areas are actively being cleaned, especially if the map is hard to interpret.'}",
+      "{'rank': 7, 'response': \"Is the robot named Abby the one that's cleaning right now?\", 'response_target': 'active robot', 'task_type': 'Identification', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.8, 'rationale': \"If the user has multiple robots or is unsure which device is active, confirming the robot's identity is a reasonable follow-up.\"}",
+      "{'rank': 8, 'response': 'Can you tell me if the cleaning is almost done?', 'response_target': 'cleaning progress', 'task_type': 'Description', 'associated_task_id': 1, 'associated_context_id': 3, 'plausibility_score': 0.78, 'rationale': 'Users in a hurry or unfamiliar with the app may want a summary of how much cleaning remains, which may not be clear from the interface.'}",
+      "{'rank': 9, 'response': 'Is there a way to pause or stop the cleaning from this screen?', 'response_target': 'pause/stop controls', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 4, 'plausibility_score': 0.75, 'rationale': 'Users may want to confirm if they can control the robot directly, especially if helping someone else or if the interface is unfamiliar.'}",
+      "{'rank': 10, 'response': 'Are all the rooms on the map labeled, or am I missing any?', 'response_target': 'room labels', 'task_type': 'Verification', 'associated_task_id': 2, 'associated_context_id': 4, 'plausibility_score': 0.7, 'rationale': 'If the user suspects the image may be incomplete or unclear, they may want to verify that all relevant rooms are visible and labeled.'}"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Which room is the robot in right now?",
+        "response_target": "robot's current location",
+        "task_type": "Identification",
+        "associated_task_id": 3,
+        "associated_context_id": 1,
+        "plausibility_score": 0.95,
+        "rationale": "Knowing the robot's exact location is a common, safety-driven need for BLV users, especially in their own home. The map may be unclear or the icon hard to interpret, so a direct question is likely."
+      },
+      {
+        "rank": 2,
+        "response": "Has the robot finished cleaning any rooms yet?",
+        "response_target": "cleaned rooms",
+        "task_type": "Description",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.92,
+        "rationale": "Users often want to know progress by room, especially if they are waiting for a specific area to be cleaned. The map may not clearly indicate completed areas."
+      },
+      {
+        "rank": 3,
+        "response": "Is the robot stuck anywhere?",
+        "response_target": "robot's stuck status",
+        "task_type": "Locational/retrieval",
+        "associated_task_id": 7,
+        "associated_context_id": 1,
+        "plausibility_score": 0.9,
+        "rationale": "If the robot hasn't moved or the path looks odd, users may worry it's stuck. This is a practical concern, especially if the map is ambiguous."
+      },
+      {
+        "rank": 4,
+        "response": "What are the available buttons or controls on this screen?",
+        "response_target": "available controls",
+        "task_type": "Description",
+        "associated_task_id": 5,
+        "associated_context_id": 3,
+        "plausibility_score": 0.88,
+        "rationale": "BLV users often need explicit confirmation of actionable controls, since button labels or icons may be missed or unclear in the image."
+      },
+      {
+        "rank": 5,
+        "response": "How much battery does the robot have left?",
+        "response_target": "robot's battery level",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 3,
+        "plausibility_score": 0.85,
+        "rationale": "Battery status is critical for planning, especially if the user is about to leave or needs to know if the robot can finish cleaning."
+      },
+      {
+        "rank": 6,
+        "response": "Which rooms are currently being cleaned?",
+        "response_target": "rooms being cleaned",
+        "task_type": "Description",
+        "associated_task_id": 2,
+        "associated_context_id": 2,
+        "plausibility_score": 0.83,
+        "rationale": "In a less familiar or professional context, users may want to confirm which areas are actively being cleaned, especially if the map is hard to interpret."
+      },
+      {
+        "rank": 7,
+        "response": "Is the robot named Abby the one that's cleaning right now?",
+        "response_target": "active robot",
+        "task_type": "Identification",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 0.8,
+        "rationale": "If the user has multiple robots or is unsure which device is active, confirming the robot's identity is a reasonable follow-up."
+      },
+      {
+        "rank": 8,
+        "response": "Can you tell me if the cleaning is almost done?",
+        "response_target": "cleaning progress",
+        "task_type": "Description",
+        "associated_task_id": 1,
+        "associated_context_id": 3,
+        "plausibility_score": 0.78,
+        "rationale": "Users in a hurry or unfamiliar with the app may want a summary of how much cleaning remains, which may not be clear from the interface."
+      },
+      {
+        "rank": 9,
+        "response": "Is there a way to pause or stop the cleaning from this screen?",
+        "response_target": "pause/stop controls",
+        "task_type": "Description",
+        "associated_task_id": 5,
+        "associated_context_id": 4,
+        "plausibility_score": 0.75,
+        "rationale": "Users may want to confirm if they can control the robot directly, especially if helping someone else or if the interface is unfamiliar."
+      },
+      {
+        "rank": 10,
+        "response": "Are all the rooms on the map labeled, or am I missing any?",
+        "response_target": "room labels",
+        "task_type": "Verification",
+        "associated_task_id": 2,
+        "associated_context_id": 4,
+        "plausibility_score": 0.7,
+        "rationale": "If the user suspects the image may be incomplete or unclear, they may want to verify that all relevant rooms are visible and labeled."
+      }
+    ],
+    "raw_output": {
+      "ranked_questions": [
+        {
+          "rank": 1,
+          "response": "Which room is the robot in right now?",
+          "response_target": "robot's current location",
+          "task_type": "Identification",
+          "associated_task_id": 3,
+          "associated_context_id": 1,
+          "plausibility_score": 0.95,
+          "rationale": "Knowing the robot's exact location is a common, safety-driven need for BLV users, especially in their own home. The map may be unclear or the icon hard to interpret, so a direct question is likely."
+        },
+        {
+          "rank": 2,
+          "response": "Has the robot finished cleaning any rooms yet?",
+          "response_target": "cleaned rooms",
+          "task_type": "Description",
+          "associated_task_id": 2,
+          "associated_context_id": 1,
+          "plausibility_score": 0.92,
+          "rationale": "Users often want to know progress by room, especially if they are waiting for a specific area to be cleaned. The map may not clearly indicate completed areas."
+        },
+        {
+          "rank": 3,
+          "response": "Is the robot stuck anywhere?",
+          "response_target": "robot's stuck status",
+          "task_type": "Locational/retrieval",
+          "associated_task_id": 7,
+          "associated_context_id": 1,
+          "plausibility_score": 0.9,
+          "rationale": "If the robot hasn't moved or the path looks odd, users may worry it's stuck. This is a practical concern, especially if the map is ambiguous."
+        },
+        {
+          "rank": 4,
+          "response": "What are the available buttons or controls on this screen?",
+          "response_target": "available controls",
+          "task_type": "Description",
+          "associated_task_id": 5,
+          "associated_context_id": 3,
+          "plausibility_score": 0.88,
+          "rationale": "BLV users often need explicit confirmation of actionable controls, since button labels or icons may be missed or unclear in the image."
+        },
+        {
+          "rank": 5,
+          "response": "How much battery does the robot have left?",
+          "response_target": "robot's battery level",
+          "task_type": "Reading",
+          "associated_task_id": 4,
+          "associated_context_id": 3,
+          "plausibility_score": 0.85,
+          "rationale": "Battery status is critical for planning, especially if the user is about to leave or needs to know if the robot can finish cleaning."
+        },
+        {
+          "rank": 6,
+          "response": "Which rooms are currently being cleaned?",
+          "response_target": "rooms being cleaned",
+          "task_type": "Description",
+          "associated_task_id": 2,
+          "associated_context_id": 2,
+          "plausibility_score": 0.83,
+          "rationale": "In a less familiar or professional context, users may want to confirm which areas are actively being cleaned, especially if the map is hard to interpret."
+        },
+        {
+          "rank": 7,
+          "response": "Is the robot named Abby the one that's cleaning right now?",
+          "response_target": "active robot",
+          "task_type": "Identification",
+          "associated_task_id": 6,
+          "associated_context_id": 1,
+          "plausibility_score": 0.8,
+          "rationale": "If the user has multiple robots or is unsure which device is active, confirming the robot's identity is a reasonable follow-up."
+        },
+        {
+          "rank": 8,
+          "response": "Can you tell me if the cleaning is almost done?",
+          "response_target": "cleaning progress",
+          "task_type": "Description",
+          "associated_task_id": 1,
+          "associated_context_id": 3,
+          "plausibility_score": 0.78,
+          "rationale": "Users in a hurry or unfamiliar with the app may want a summary of how much cleaning remains, which may not be clear from the interface."
+        },
+        {
+          "rank": 9,
+          "response": "Is there a way to pause or stop the cleaning from this screen?",
+          "response_target": "pause/stop controls",
+          "task_type": "Description",
+          "associated_task_id": 5,
+          "associated_context_id": 4,
+          "plausibility_score": 0.75,
+          "rationale": "Users may want to confirm if they can control the robot directly, especially if helping someone else or if the interface is unfamiliar."
+        },
+        {
+          "rank": 10,
+          "response": "Are all the rooms on the map labeled, or am I missing any?",
+          "response_target": "room labels",
+          "task_type": "Verification",
+          "associated_task_id": 2,
+          "associated_context_id": 4,
+          "plausibility_score": 0.7,
+          "rationale": "If the user suspects the image may be incomplete or unclear, they may want to verify that all relevant rooms are visible and labeled."
+        }
+      ]
+    }
+  },
+  "response_target_agent": {
+    "response_target": "vacuum cleaning progress and remaining areas",
+    "task_type": "Description",
+    "confidence": "high",
+    "rationale": "The participant is asking for a description of how much of the cleaning task has been completed and what still remains, based on the graphical depiction of the room layout and the vacuum's progress. The information target is the current status of the vacuum's cleaning progress and the areas that are yet to be cleaned.",
+    "raw_output": {
+      "response_target": "vacuum cleaning progress and remaining areas",
+      "task_type": "Description",
+      "confidence": "high",
+      "rationale": "The participant is asking for a description of how much of the cleaning task has been completed and what still remains, based on the graphical depiction of the room layout and the vacuum's progress. The information target is the current status of the vacuum's cleaning progress and the areas that are yet to be cleaned."
+    }
+  },
+  "interaction_target_agent": {
+    "turn_targets": [
+      {
+        "response_target": "vacuum cleaning progress and remaining areas",
+        "task_type": "Description",
+        "confidence": "high",
+        "rationale": "The participant asks about how much has been done and what still needs to be done, directly targeting the vacuum's progress and unfinished areas."
+      },
+      {
+        "response_target": "vacuum error or attention needed",
+        "task_type": "Description",
+        "confidence": "high",
+        "rationale": "The participant asks if there is any indication of vacuum error or if it requires attention, focusing on error status or alerts."
+      },
+      {
+        "response_target": "vacuuming status of middle level",
+        "task_type": "Description",
+        "confidence": "high",
+        "rationale": "The participant confirms their goal was to learn the vacuuming status of the middle level, which is the main information target for this turn."
+      }
+    ],
+    "raw_output": {
+      "turn_targets": [
+        {
+          "response_target": "vacuum cleaning progress and remaining areas",
+          "task_type": "Description",
+          "confidence": "high",
+          "rationale": "The participant asks about how much has been done and what still needs to be done, directly targeting the vacuum's progress and unfinished areas."
+        },
+        {
+          "response_target": "vacuum error or attention needed",
+          "task_type": "Description",
+          "confidence": "high",
+          "rationale": "The participant asks if there is any indication of vacuum error or if it requires attention, focusing on error status or alerts."
+        },
+        {
+          "response_target": "vacuuming status of middle level",
+          "task_type": "Description",
+          "confidence": "high",
+          "rationale": "The participant confirms their goal was to learn the vacuuming status of the middle level, which is the main information target for this turn."
+        }
+      ]
+    }
+  },
+  "final_ranked_questions": [
+    "{'rank': 1, 'response': 'Which room is the robot in right now?', 'response_target': \"robot's current location\", 'task_type': 'Identification', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': \"Knowing the robot's exact location is a common, safety-driven need for BLV users, especially in their own home. The map may be unclear or the icon hard to interpret, so a direct question is likely.\"}",
+    "{'rank': 2, 'response': 'Has the robot finished cleaning any rooms yet?', 'response_target': 'cleaned rooms', 'task_type': 'Description', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.92, 'rationale': 'Users often want to know progress by room, especially if they are waiting for a specific area to be cleaned. The map may not clearly indicate completed areas.'}",
+    "{'rank': 3, 'response': 'Is the robot stuck anywhere?', 'response_target': \"robot's stuck status\", 'task_type': 'Locational/retrieval', 'associated_task_id': 7, 'associated_context_id': 1, 'plausibility_score': 0.9, 'rationale': \"If the robot hasn't moved or the path looks odd, users may worry it's stuck. This is a practical concern, especially if the map is ambiguous.\"}",
+    "{'rank': 4, 'response': 'What are the available buttons or controls on this screen?', 'response_target': 'available controls', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 3, 'plausibility_score': 0.88, 'rationale': 'BLV users often need explicit confirmation of actionable controls, since button labels or icons may be missed or unclear in the image.'}",
+    "{'rank': 5, 'response': 'How much battery does the robot have left?', 'response_target': \"robot's battery level\", 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 3, 'plausibility_score': 0.85, 'rationale': 'Battery status is critical for planning, especially if the user is about to leave or needs to know if the robot can finish cleaning.'}",
+    "{'rank': 6, 'response': 'Which rooms are currently being cleaned?', 'response_target': 'rooms being cleaned', 'task_type': 'Description', 'associated_task_id': 2, 'associated_context_id': 2, 'plausibility_score': 0.83, 'rationale': 'In a less familiar or professional context, users may want to confirm which areas are actively being cleaned, especially if the map is hard to interpret.'}",
+    "{'rank': 7, 'response': \"Is the robot named Abby the one that's cleaning right now?\", 'response_target': 'active robot', 'task_type': 'Identification', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.8, 'rationale': \"If the user has multiple robots or is unsure which device is active, confirming the robot's identity is a reasonable follow-up.\"}",
+    "{'rank': 8, 'response': 'Can you tell me if the cleaning is almost done?', 'response_target': 'cleaning progress', 'task_type': 'Description', 'associated_task_id': 1, 'associated_context_id': 3, 'plausibility_score': 0.78, 'rationale': 'Users in a hurry or unfamiliar with the app may want a summary of how much cleaning remains, which may not be clear from the interface.'}",
+    "{'rank': 9, 'response': 'Is there a way to pause or stop the cleaning from this screen?', 'response_target': 'pause/stop controls', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 4, 'plausibility_score': 0.75, 'rationale': 'Users may want to confirm if they can control the robot directly, especially if helping someone else or if the interface is unfamiliar.'}",
+    "{'rank': 10, 'response': 'Are all the rooms on the map labeled, or am I missing any?', 'response_target': 'room labels', 'task_type': 'Verification', 'associated_task_id': 2, 'associated_context_id': 4, 'plausibility_score': 0.7, 'rationale': 'If the user suspects the image may be incomplete or unclear, they may want to verify that all relevant rooms are visible and labeled.'}"
+  ],
+  "ground_truth_question": "Based upon the graphical depiction of the room, layout and the progress of the vacuum, can you tell me how much has been done and what still needs to be done?",
+  "comparison": {
+    "ground_truth": "Based upon the graphical depiction of the room, layout and the progress of the vacuum, can you tell me how much has been done and what still needs to be done?",
+    "ground_truth_response_target": "vacuum cleaning progress and remaining areas",
+    "ground_truth_task_type": "Description",
+    "turn_targets": [
+      {
+        "response_target": "vacuum cleaning progress and remaining areas",
+        "task_type": "Description",
+        "confidence": "high",
+        "rationale": "The participant asks about how much has been done and what still needs to be done, directly targeting the vacuum's progress and unfinished areas."
+      },
+      {
+        "response_target": "vacuum error or attention needed",
+        "task_type": "Description",
+        "confidence": "high",
+        "rationale": "The participant asks if there is any indication of vacuum error or if it requires attention, focusing on error status or alerts."
+      },
+      {
+        "response_target": "vacuuming status of middle level",
+        "task_type": "Description",
+        "confidence": "high",
+        "rationale": "The participant confirms their goal was to learn the vacuuming status of the middle level, which is the main information target for this turn."
+      }
+    ],
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Which room is the robot in right now?",
+        "generated_response_target": "robot's current location",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "vacuum cleaning progress and remaining areas",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 2,
+        "generated_question": "Has the robot finished cleaning any rooms yet?",
+        "generated_response_target": "cleaned rooms",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "vacuum cleaning progress and remaining areas",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 3,
+        "generated_question": "Is the robot stuck anywhere?",
+        "generated_response_target": "robot's stuck status",
+        "generated_task_type": "Locational/retrieval",
+        "ground_truth_response_target": "vacuum cleaning progress and remaining areas",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 4,
+        "generated_question": "What are the available buttons or controls on this screen?",
+        "generated_response_target": "available controls",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "vacuum cleaning progress and remaining areas",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 5,
+        "generated_question": "How much battery does the robot have left?",
+        "generated_response_target": "robot's battery level",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "vacuum cleaning progress and remaining areas",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 6,
+        "generated_question": "Which rooms are currently being cleaned?",
+        "generated_response_target": "rooms being cleaned",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "vacuum cleaning progress and remaining areas",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 7,
+        "generated_question": "Is the robot named Abby the one that's cleaning right now?",
+        "generated_response_target": "active robot",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "vacuum cleaning progress and remaining areas",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 8,
+        "generated_question": "Can you tell me if the cleaning is almost done?",
+        "generated_response_target": "cleaning progress",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "vacuum cleaning progress and remaining areas",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0.5,
+        "matched_user_turn": 1,
+        "matched_user_turn_target": "vacuum cleaning progress and remaining areas",
+        "matched_user_turn_score": 0.5,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 9,
+        "generated_question": "Is there a way to pause or stop the cleaning from this screen?",
+        "generated_response_target": "pause/stop controls",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "vacuum cleaning progress and remaining areas",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 10,
+        "generated_question": "Are all the rooms on the map labeled, or am I missing any?",
+        "generated_response_target": "room labels",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "vacuum cleaning progress and remaining areas",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "Based upon the graphical depiction of the room, layout and the progress of the vacuum, can you tell me how much has been done and what still needs to be done?",
+        "generated_response_target": "vacuum cleaning progress and remaining areas",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "vacuum cleaning progress and remaining areas",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 1,
+        "matched_user_turn": 1,
+        "matched_user_turn_target": "vacuum cleaning progress and remaining areas",
+        "matched_user_turn_score": 1,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "decomposition",
+        "feedback"
+      ],
+      "question_category": "Description",
+      "in_a_hurry": "no",
+      "indoor_outdoor": "indoor",
+      "familiarity_of_environment": "yes",
+      "familiarity_of_item": "yes",
+      "surrounding_environment": "alone",
+      "environment_setting": "leisure",
+      "interaction_length": "4",
+      "task_completed": "Yes"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P11_images/image_26_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:A smartphone screen displaying a cleaning app interface. At the top, it shows the time as 12:08 and the battery icon indicates a charge level. The app is named \"Abby\" and shows \"Clean in progress\" with a battery level of 60%. Below, there is a map of a house with labeled rooms: Family Room, Kitchen, Dining Room, Living Room, and Foyer. A path is marked in purple, indicating the cleaning route. At the bottom, there are three buttons: \"Go to Dock\" in red, \"Find Robot\" with a location icon, and \"Pause\" with a pause icon.",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "User:Based upon the graphical depiction of the room, layout and the progress of the vacuum, can you tell me how much has been done and what still needs to be done?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 4,
+        "text_usr": null,
+        "text_ai": "Be My AI:The map shows that the vacuum has already cleaned the Family Room, Kitchen, Dining Room, and Living Room, as these areas are highlighted in purple with a path indicating the cleaning route. The Foyer also appears to be included in the cleaning path, suggesting it has been cleaned or is in progress. It seems that most of the mapped areas have been covered, but without specific indicators of completion for each room, it's difficult to determine if any small sections within these rooms still need attention.",
+        "local_image_path": null
+      },
+      {
+        "turn": 5,
+        "text_usr": "User:Is there any indication of vacuum error, for example, that it\u2019s clogged or stopped in someway and requires my attention?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 6,
+        "text_usr": null,
+        "text_ai": "Be My AI:There is no indication on the screen of any errors or alerts suggesting that the vacuum is clogged or has stopped. The status shows \"Clean in progress,\" which implies that the vacuum is operating normally without requiring immediate attention.",
+        "local_image_path": null
+      },
+      {
+        "turn": 7,
+        "text_usr": "User:This is helpful, because I\u2019m using this AI with the goal of learning the status of the vacuuming of our middle level of the house\u2026 The most widely used by our family. I was able to accomplish my goal using this app.",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 8,
+        "text_usr": null,
+        "text_ai": "Be My AI:That's great to hear! It's wonderful that the app helps you keep track of the cleaning status for such an important area of your home. If you have any more questions or need further assistance, feel free to ask!",
+        "local_image_path": null
+      }
+    ]
+  }
+}

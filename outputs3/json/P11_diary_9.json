@@ -1,0 +1,757 @@
+{
+  "input": {
+    "participant": "P11",
+    "source": "diary",
+    "interaction": 9,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P11/diary_data/P11.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P11/diary_data/P11_images/image_9_1.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "A package of sliced salami, neatly arranged in overlapping layers. The slices are circular and have a marbled appearance with a mix of red and white specks. The salami is sealed in clear plastic packaging. In the background, there are hints of other packaged items, including a green package with some text and a partial barcode visible.",
+    "all_user_responses": [
+      "When I scanned food items, my primary interest is checking the expiration date",
+      "Check the expiration date again, I\u2019m quite sure this package is not already two years old",
+      "OK, this is the backside of the package, please look on this side for the correct expiration date"
+    ],
+    "question_category": "Reading",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user may be at home, checking the contents of their refrigerator or pantry to identify a package of sliced meat. The image is close-up and focused on the food item, suggesting the user is familiar with both the environment and the object, and is likely performing a routine task such as meal preparation or inventory."
+      },
+      {
+        "context_id": 2,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "unfamiliar people",
+        "activity_type": "professional",
+        "rationale": "The user could be in a workplace or communal kitchen, possibly as part of a food service or catering job, needing to quickly identify a food item for a task. The packaging and arrangement suggest a commercial setting, and the user may be unfamiliar with the specific brands or products present."
+      },
+      {
+        "context_id": 3,
+        "location": "indoor",
+        "time_pressure": "in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "daily living task",
+        "rationale": "The user might be preparing food for a group (such as family or friends) and needs to quickly confirm the type or expiration date of the sliced meat. The image includes some text and barcodes, indicating the user may be trying to read a label or date, possibly under time pressure while others wait."
+      },
+      {
+        "context_id": 4,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "familiar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "leisure",
+        "rationale": "The user could be in a new environment, such as a friend\u2019s house or a rental, and is exploring the available food options for a casual meal or snack. They recognize the item as sliced meat but want to confirm details like flavor or brand, taking their time to investigate."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user may be at home, checking the contents of their refrigerator or pantry to identify a package of sliced meat. The image is close-up and focused on the food item, suggesting the user is familiar with both the environment and the object, and is likely performing a routine task such as meal preparation or inventory."
+        },
+        {
+          "context_id": 2,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "unfamiliar people",
+          "activity_type": "professional",
+          "rationale": "The user could be in a workplace or communal kitchen, possibly as part of a food service or catering job, needing to quickly identify a food item for a task. The packaging and arrangement suggest a commercial setting, and the user may be unfamiliar with the specific brands or products present."
+        },
+        {
+          "context_id": 3,
+          "location": "indoor",
+          "time_pressure": "in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "daily living task",
+          "rationale": "The user might be preparing food for a group (such as family or friends) and needs to quickly confirm the type or expiration date of the sliced meat. The image includes some text and barcodes, indicating the user may be trying to read a label or date, possibly under time pressure while others wait."
+        },
+        {
+          "context_id": 4,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "familiar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "leisure",
+          "rationale": "The user could be in a new environment, such as a friend\u2019s house or a rental, and is exploring the available food options for a casual meal or snack. They recognize the item as sliced meat but want to confirm details like flavor or brand, taking their time to investigate."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Reading",
+        "description": "Extract the expiration or 'best by' date from the package.",
+        "confidence": "high",
+        "rationale": "BLV users often need to check food safety, and the date is partially visible but may be hard to read or incomplete due to glare or angle."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Reading",
+        "description": "Read the nutrition facts or serving size information.",
+        "confidence": "medium",
+        "rationale": "Some nutrition information is visible but partially obscured or cut off, suggesting the user may want to know calories, servings, or dietary content."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Reading",
+        "description": "Identify the product name or type of meat on the packaging.",
+        "confidence": "medium",
+        "rationale": "The product appears to be deli meat, but the label is not fully visible; the user may want confirmation of what the package contains."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Reading",
+        "description": "Read preparation or storage instructions from the package.",
+        "confidence": "low",
+        "rationale": "Some users may want to know how to store or use the product, but this information is likely not visible in the current image."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Reading",
+        "description": "Extract allergen or ingredient information from the package.",
+        "confidence": "low",
+        "rationale": "Allergen and ingredient lists are important for safety, but the relevant text is likely not captured in this image."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Reading",
+        "description": "Read the barcode number for inventory or shopping purposes.",
+        "confidence": "medium",
+        "rationale": "A barcode is visible, and some users may want to scan or record it for shopping, inventory, or accessibility app use."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Reading",
+          "description": "Extract the expiration or 'best by' date from the package.",
+          "confidence": "high",
+          "rationale": "BLV users often need to check food safety, and the date is partially visible but may be hard to read or incomplete due to glare or angle."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Reading",
+          "description": "Read the nutrition facts or serving size information.",
+          "confidence": "medium",
+          "rationale": "Some nutrition information is visible but partially obscured or cut off, suggesting the user may want to know calories, servings, or dietary content."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Reading",
+          "description": "Identify the product name or type of meat on the packaging.",
+          "confidence": "medium",
+          "rationale": "The product appears to be deli meat, but the label is not fully visible; the user may want confirmation of what the package contains."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Reading",
+          "description": "Read preparation or storage instructions from the package.",
+          "confidence": "low",
+          "rationale": "Some users may want to know how to store or use the product, but this information is likely not visible in the current image."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Reading",
+          "description": "Extract allergen or ingredient information from the package.",
+          "confidence": "low",
+          "rationale": "Allergen and ingredient lists are important for safety, but the relevant text is likely not captured in this image."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Reading",
+          "description": "Read the barcode number for inventory or shopping purposes.",
+          "confidence": "medium",
+          "rationale": "A barcode is visible, and some users may want to scan or record it for shopping, inventory, or accessibility app use."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "{'rank': 1, 'response': 'Can you read the expiration date on this package?', 'response_target': 'expiration date', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 3, 'plausibility_score': 0.98, 'rationale': 'Checking the expiration date is a common, safety-driven need, especially when the user is preparing food for others and may be in a hurry. The date is partially visible but could be hard to read due to glare or angle, making this a highly plausible follow-up.'}",
+      "{'rank': 2, 'response': 'What kind of meat is this? Can you read the product name?', 'response_target': 'product name', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.93, 'rationale': 'Users often want to confirm exactly what type of meat they have, especially if the label is not fully visible. This is a routine, need-driven question in a familiar environment.'}",
+      "{'rank': 3, 'response': 'Can you read the nutrition facts or serving size?', 'response_target': 'nutrition facts', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.9, 'rationale': 'Nutrition information is often sought for dietary reasons. The user may want to know calories or serving size, especially if preparing a meal.'}",
+      "{'rank': 4, 'response': 'Is there an ingredient list visible?', 'response_target': 'ingredient list', 'task_type': 'Reading', 'associated_task_id': 5, 'associated_context_id': 4, 'plausibility_score': 0.85, 'rationale': 'Ingredient and allergen information is important for safety, especially in unfamiliar environments or for users with dietary restrictions, though the image may not capture this well.'}",
+      "{'rank': 5, 'response': 'Can you read the barcode number for me?', 'response_target': 'barcode number', 'task_type': 'Reading', 'associated_task_id': 6, 'associated_context_id': 2, 'plausibility_score': 0.8, 'rationale': 'Barcode reading is useful for inventory or shopping apps, especially in professional or unfamiliar contexts. The barcode is partially visible, making this a plausible request.'}",
+      "{'rank': 6, 'response': 'Are there any storage instructions on the package?', 'response_target': 'storage instructions', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 4, 'plausibility_score': 0.75, 'rationale': 'Storage instructions may be relevant for users in unfamiliar environments, though this information is likely not visible in the current image.'}",
+      "{'rank': 7, 'response': 'Does the package mention any allergens?', 'response_target': 'allergen information', 'task_type': 'Reading', 'associated_task_id': 5, 'associated_context_id': 3, 'plausibility_score': 0.7, 'rationale': 'Allergen information is a safety concern, especially when preparing food for a group, but may not be visible in this image.'}",
+      "{'rank': 8, 'response': 'Can you confirm if this is salami or another type of deli meat?', 'response_target': 'type of meat', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.68, 'rationale': 'Visual ambiguity or incomplete labeling may prompt the user to seek confirmation of the meat type, especially if the description is uncertain.'}",
+      "{'rank': 9, 'response': 'Is there a brand name visible on the package?', 'response_target': 'brand name', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 2, 'plausibility_score': 0.65, 'rationale': 'Brand identification can be important in professional or unfamiliar settings, though the label may be obscured.'}",
+      "{'rank': 10, 'response': 'How many servings are in this package?', 'response_target': 'servings per container', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.6, 'rationale': 'Serving size is a common question for meal planning, but may be less urgent than expiration or product identification.'}"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Can you read the expiration date on this package?",
+        "response_target": "expiration date",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 3,
+        "plausibility_score": 0.98,
+        "rationale": "Checking the expiration date is a common, safety-driven need, especially when the user is preparing food for others and may be in a hurry. The date is partially visible but could be hard to read due to glare or angle, making this a highly plausible follow-up."
+      },
+      {
+        "rank": 2,
+        "response": "What kind of meat is this? Can you read the product name?",
+        "response_target": "product name",
+        "task_type": "Reading",
+        "associated_task_id": 3,
+        "associated_context_id": 1,
+        "plausibility_score": 0.93,
+        "rationale": "Users often want to confirm exactly what type of meat they have, especially if the label is not fully visible. This is a routine, need-driven question in a familiar environment."
+      },
+      {
+        "rank": 3,
+        "response": "Can you read the nutrition facts or serving size?",
+        "response_target": "nutrition facts",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.9,
+        "rationale": "Nutrition information is often sought for dietary reasons. The user may want to know calories or serving size, especially if preparing a meal."
+      },
+      {
+        "rank": 4,
+        "response": "Is there an ingredient list visible?",
+        "response_target": "ingredient list",
+        "task_type": "Reading",
+        "associated_task_id": 5,
+        "associated_context_id": 4,
+        "plausibility_score": 0.85,
+        "rationale": "Ingredient and allergen information is important for safety, especially in unfamiliar environments or for users with dietary restrictions, though the image may not capture this well."
+      },
+      {
+        "rank": 5,
+        "response": "Can you read the barcode number for me?",
+        "response_target": "barcode number",
+        "task_type": "Reading",
+        "associated_task_id": 6,
+        "associated_context_id": 2,
+        "plausibility_score": 0.8,
+        "rationale": "Barcode reading is useful for inventory or shopping apps, especially in professional or unfamiliar contexts. The barcode is partially visible, making this a plausible request."
+      },
+      {
+        "rank": 6,
+        "response": "Are there any storage instructions on the package?",
+        "response_target": "storage instructions",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 4,
+        "plausibility_score": 0.75,
+        "rationale": "Storage instructions may be relevant for users in unfamiliar environments, though this information is likely not visible in the current image."
+      },
+      {
+        "rank": 7,
+        "response": "Does the package mention any allergens?",
+        "response_target": "allergen information",
+        "task_type": "Reading",
+        "associated_task_id": 5,
+        "associated_context_id": 3,
+        "plausibility_score": 0.7,
+        "rationale": "Allergen information is a safety concern, especially when preparing food for a group, but may not be visible in this image."
+      },
+      {
+        "rank": 8,
+        "response": "Can you confirm if this is salami or another type of deli meat?",
+        "response_target": "type of meat",
+        "task_type": "Reading",
+        "associated_task_id": 3,
+        "associated_context_id": 1,
+        "plausibility_score": 0.68,
+        "rationale": "Visual ambiguity or incomplete labeling may prompt the user to seek confirmation of the meat type, especially if the description is uncertain."
+      },
+      {
+        "rank": 9,
+        "response": "Is there a brand name visible on the package?",
+        "response_target": "brand name",
+        "task_type": "Reading",
+        "associated_task_id": 3,
+        "associated_context_id": 2,
+        "plausibility_score": 0.65,
+        "rationale": "Brand identification can be important in professional or unfamiliar settings, though the label may be obscured."
+      },
+      {
+        "rank": 10,
+        "response": "How many servings are in this package?",
+        "response_target": "servings per container",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.6,
+        "rationale": "Serving size is a common question for meal planning, but may be less urgent than expiration or product identification."
+      }
+    ],
+    "raw_output": {
+      "ranked_questions": [
+        {
+          "rank": 1,
+          "response": "Can you read the expiration date on this package?",
+          "response_target": "expiration date",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 3,
+          "plausibility_score": 0.98,
+          "rationale": "Checking the expiration date is a common, safety-driven need, especially when the user is preparing food for others and may be in a hurry. The date is partially visible but could be hard to read due to glare or angle, making this a highly plausible follow-up."
+        },
+        {
+          "rank": 2,
+          "response": "What kind of meat is this? Can you read the product name?",
+          "response_target": "product name",
+          "task_type": "Reading",
+          "associated_task_id": 3,
+          "associated_context_id": 1,
+          "plausibility_score": 0.93,
+          "rationale": "Users often want to confirm exactly what type of meat they have, especially if the label is not fully visible. This is a routine, need-driven question in a familiar environment."
+        },
+        {
+          "rank": 3,
+          "response": "Can you read the nutrition facts or serving size?",
+          "response_target": "nutrition facts",
+          "task_type": "Reading",
+          "associated_task_id": 2,
+          "associated_context_id": 1,
+          "plausibility_score": 0.9,
+          "rationale": "Nutrition information is often sought for dietary reasons. The user may want to know calories or serving size, especially if preparing a meal."
+        },
+        {
+          "rank": 4,
+          "response": "Is there an ingredient list visible?",
+          "response_target": "ingredient list",
+          "task_type": "Reading",
+          "associated_task_id": 5,
+          "associated_context_id": 4,
+          "plausibility_score": 0.85,
+          "rationale": "Ingredient and allergen information is important for safety, especially in unfamiliar environments or for users with dietary restrictions, though the image may not capture this well."
+        },
+        {
+          "rank": 5,
+          "response": "Can you read the barcode number for me?",
+          "response_target": "barcode number",
+          "task_type": "Reading",
+          "associated_task_id": 6,
+          "associated_context_id": 2,
+          "plausibility_score": 0.8,
+          "rationale": "Barcode reading is useful for inventory or shopping apps, especially in professional or unfamiliar contexts. The barcode is partially visible, making this a plausible request."
+        },
+        {
+          "rank": 6,
+          "response": "Are there any storage instructions on the package?",
+          "response_target": "storage instructions",
+          "task_type": "Reading",
+          "associated_task_id": 4,
+          "associated_context_id": 4,
+          "plausibility_score": 0.75,
+          "rationale": "Storage instructions may be relevant for users in unfamiliar environments, though this information is likely not visible in the current image."
+        },
+        {
+          "rank": 7,
+          "response": "Does the package mention any allergens?",
+          "response_target": "allergen information",
+          "task_type": "Reading",
+          "associated_task_id": 5,
+          "associated_context_id": 3,
+          "plausibility_score": 0.7,
+          "rationale": "Allergen information is a safety concern, especially when preparing food for a group, but may not be visible in this image."
+        },
+        {
+          "rank": 8,
+          "response": "Can you confirm if this is salami or another type of deli meat?",
+          "response_target": "type of meat",
+          "task_type": "Reading",
+          "associated_task_id": 3,
+          "associated_context_id": 1,
+          "plausibility_score": 0.68,
+          "rationale": "Visual ambiguity or incomplete labeling may prompt the user to seek confirmation of the meat type, especially if the description is uncertain."
+        },
+        {
+          "rank": 9,
+          "response": "Is there a brand name visible on the package?",
+          "response_target": "brand name",
+          "task_type": "Reading",
+          "associated_task_id": 3,
+          "associated_context_id": 2,
+          "plausibility_score": 0.65,
+          "rationale": "Brand identification can be important in professional or unfamiliar settings, though the label may be obscured."
+        },
+        {
+          "rank": 10,
+          "response": "How many servings are in this package?",
+          "response_target": "servings per container",
+          "task_type": "Reading",
+          "associated_task_id": 2,
+          "associated_context_id": 1,
+          "plausibility_score": 0.6,
+          "rationale": "Serving size is a common question for meal planning, but may be less urgent than expiration or product identification."
+        }
+      ]
+    }
+  },
+  "response_target_agent": {
+    "response_target": "expiration date",
+    "task_type": "Reading",
+    "confidence": "high",
+    "rationale": "The participant explicitly states their primary interest is checking the expiration date when scanning food items. The question_category is 'Reading', which aligns with seeking out printed information such as dates on packaging. The information target is directly stated and unambiguous.",
+    "raw_output": {
+      "response_target": "expiration date",
+      "task_type": "Reading",
+      "confidence": "high",
+      "rationale": "The participant explicitly states their primary interest is checking the expiration date when scanning food items. The question_category is 'Reading', which aligns with seeking out printed information such as dates on packaging. The information target is directly stated and unambiguous."
+    }
+  },
+  "interaction_target_agent": {
+    "turn_targets": [
+      {
+        "response_target": "expiration date",
+        "task_type": "Reading",
+        "confidence": "high",
+        "rationale": "The participant explicitly states their primary interest is checking the expiration date when scanning food items."
+      },
+      {
+        "response_target": "expiration date",
+        "task_type": "Reading",
+        "confidence": "high",
+        "rationale": "The participant asks to check the expiration date again, indicating that this is the specific information they want confirmed."
+      },
+      {
+        "response_target": "expiration date on the backside",
+        "task_type": "Reading",
+        "confidence": "medium",
+        "rationale": "The participant clarifies that the correct expiration date should be on the backside of the package, focusing the request on that location."
+      }
+    ],
+    "raw_output": {
+      "turn_targets": [
+        {
+          "response_target": "expiration date",
+          "task_type": "Reading",
+          "confidence": "high",
+          "rationale": "The participant explicitly states their primary interest is checking the expiration date when scanning food items."
+        },
+        {
+          "response_target": "expiration date",
+          "task_type": "Reading",
+          "confidence": "high",
+          "rationale": "The participant asks to check the expiration date again, indicating that this is the specific information they want confirmed."
+        },
+        {
+          "response_target": "expiration date on the backside",
+          "task_type": "Reading",
+          "confidence": "medium",
+          "rationale": "The participant clarifies that the correct expiration date should be on the backside of the package, focusing the request on that location."
+        }
+      ]
+    }
+  },
+  "final_ranked_questions": [
+    "{'rank': 1, 'response': 'Can you read the expiration date on this package?', 'response_target': 'expiration date', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 3, 'plausibility_score': 0.98, 'rationale': 'Checking the expiration date is a common, safety-driven need, especially when the user is preparing food for others and may be in a hurry. The date is partially visible but could be hard to read due to glare or angle, making this a highly plausible follow-up.'}",
+    "{'rank': 2, 'response': 'What kind of meat is this? Can you read the product name?', 'response_target': 'product name', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.93, 'rationale': 'Users often want to confirm exactly what type of meat they have, especially if the label is not fully visible. This is a routine, need-driven question in a familiar environment.'}",
+    "{'rank': 3, 'response': 'Can you read the nutrition facts or serving size?', 'response_target': 'nutrition facts', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.9, 'rationale': 'Nutrition information is often sought for dietary reasons. The user may want to know calories or serving size, especially if preparing a meal.'}",
+    "{'rank': 4, 'response': 'Is there an ingredient list visible?', 'response_target': 'ingredient list', 'task_type': 'Reading', 'associated_task_id': 5, 'associated_context_id': 4, 'plausibility_score': 0.85, 'rationale': 'Ingredient and allergen information is important for safety, especially in unfamiliar environments or for users with dietary restrictions, though the image may not capture this well.'}",
+    "{'rank': 5, 'response': 'Can you read the barcode number for me?', 'response_target': 'barcode number', 'task_type': 'Reading', 'associated_task_id': 6, 'associated_context_id': 2, 'plausibility_score': 0.8, 'rationale': 'Barcode reading is useful for inventory or shopping apps, especially in professional or unfamiliar contexts. The barcode is partially visible, making this a plausible request.'}",
+    "{'rank': 6, 'response': 'Are there any storage instructions on the package?', 'response_target': 'storage instructions', 'task_type': 'Reading', 'associated_task_id': 4, 'associated_context_id': 4, 'plausibility_score': 0.75, 'rationale': 'Storage instructions may be relevant for users in unfamiliar environments, though this information is likely not visible in the current image.'}",
+    "{'rank': 7, 'response': 'Does the package mention any allergens?', 'response_target': 'allergen information', 'task_type': 'Reading', 'associated_task_id': 5, 'associated_context_id': 3, 'plausibility_score': 0.7, 'rationale': 'Allergen information is a safety concern, especially when preparing food for a group, but may not be visible in this image.'}",
+    "{'rank': 8, 'response': 'Can you confirm if this is salami or another type of deli meat?', 'response_target': 'type of meat', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.68, 'rationale': 'Visual ambiguity or incomplete labeling may prompt the user to seek confirmation of the meat type, especially if the description is uncertain.'}",
+    "{'rank': 9, 'response': 'Is there a brand name visible on the package?', 'response_target': 'brand name', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 2, 'plausibility_score': 0.65, 'rationale': 'Brand identification can be important in professional or unfamiliar settings, though the label may be obscured.'}",
+    "{'rank': 10, 'response': 'How many servings are in this package?', 'response_target': 'servings per container', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.6, 'rationale': 'Serving size is a common question for meal planning, but may be less urgent than expiration or product identification.'}"
+  ],
+  "ground_truth_question": "When I scanned food items, my primary interest is checking the expiration date",
+  "comparison": {
+    "ground_truth": "When I scanned food items, my primary interest is checking the expiration date",
+    "ground_truth_response_target": "expiration date",
+    "ground_truth_task_type": "Reading",
+    "turn_targets": [
+      {
+        "response_target": "expiration date",
+        "task_type": "Reading",
+        "confidence": "high",
+        "rationale": "The participant explicitly states their primary interest is checking the expiration date when scanning food items."
+      },
+      {
+        "response_target": "expiration date",
+        "task_type": "Reading",
+        "confidence": "high",
+        "rationale": "The participant asks to check the expiration date again, indicating that this is the specific information they want confirmed."
+      },
+      {
+        "response_target": "expiration date on the backside",
+        "task_type": "Reading",
+        "confidence": "medium",
+        "rationale": "The participant clarifies that the correct expiration date should be on the backside of the package, focusing the request on that location."
+      }
+    ],
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Can you read the expiration date on this package?",
+        "generated_response_target": "expiration date",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 1,
+        "matched_user_turn": 1,
+        "matched_user_turn_target": "expiration date",
+        "matched_user_turn_score": 1,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 2,
+        "generated_question": "What kind of meat is this? Can you read the product name?",
+        "generated_response_target": "product name",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 3,
+        "generated_question": "Can you read the nutrition facts or serving size?",
+        "generated_response_target": "nutrition facts",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 4,
+        "generated_question": "Is there an ingredient list visible?",
+        "generated_response_target": "ingredient list",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 5,
+        "generated_question": "Can you read the barcode number for me?",
+        "generated_response_target": "barcode number",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 6,
+        "generated_question": "Are there any storage instructions on the package?",
+        "generated_response_target": "storage instructions",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 7,
+        "generated_question": "Does the package mention any allergens?",
+        "generated_response_target": "allergen information",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 8,
+        "generated_question": "Can you confirm if this is salami or another type of deli meat?",
+        "generated_response_target": "type of meat",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 9,
+        "generated_question": "Is there a brand name visible on the package?",
+        "generated_response_target": "brand name",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 10,
+        "generated_question": "How many servings are in this package?",
+        "generated_response_target": "servings per container",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "When I scanned food items, my primary interest is checking the expiration date",
+        "generated_response_target": "expiration date",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 1,
+        "matched_user_turn": 1,
+        "matched_user_turn_target": "expiration date",
+        "matched_user_turn_score": 1,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "decomposition",
+        "intention",
+        "style",
+        "grounding(correct)"
+      ],
+      "question_category": "Reading",
+      "in_a_hurry": "yes",
+      "indoor_outdoor": "indoor",
+      "familiarity_of_environment": "yes",
+      "familiarity_of_item": "yes",
+      "surrounding_environment": "familiar",
+      "environment_setting": "leisure",
+      "interaction_length": "5",
+      "task_completed": "Yes"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P11_images/image_9_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:A package of sliced salami, neatly arranged in overlapping layers. The slices are circular and have a marbled appearance with a mix of red and white specks. The salami is sealed in clear plastic packaging. In the background, there are hints of other packaged items, including a green package with some text and a partial barcode visible.",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "User:When I scanned food items, my primary interest is checking the expiration date",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 4,
+        "text_usr": null,
+        "text_ai": "Be My AI:The expiration date visible on the package is \"Best by Apr 27 2023.\"",
+        "local_image_path": null
+      },
+      {
+        "turn": 5,
+        "text_usr": "User:Check the expiration date again, I\u2019m quite sure this package is not already two years old",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 6,
+        "text_usr": null,
+        "text_ai": "Be My AI:The expiration date on the package is \"Best by Apr 27 2024.\"",
+        "local_image_path": null
+      },
+      {
+        "turn": 7,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P11_images/image_9_7.jpg"
+      },
+      {
+        "turn": 8,
+        "text_usr": null,
+        "text_ai": "Be My AI:The expiration date on this package is \"Best by Apr 27 2024.\"",
+        "local_image_path": null
+      },
+      {
+        "turn": 9,
+        "text_usr": "User:OK, this is the backside of the package, please look on this side for the correct expiration date",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 10,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P11_images/image_9_10.jpg"
+      },
+      {
+        "turn": 11,
+        "text_usr": null,
+        "text_ai": "Be My AI:The expiration date on this side of the package is \"Sell by Apr 27 2025.\"",
+        "local_image_path": null
+      }
+    ]
+  }
+}

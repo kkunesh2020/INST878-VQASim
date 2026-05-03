@@ -1,0 +1,721 @@
+{
+  "input": {
+    "participant": "P11",
+    "source": "diary",
+    "interaction": 4,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P11/diary_data/P11.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P11/diary_data/P11_images/image_4_1.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "8:46 with a muted bell icon. \n\nHeadline: \"Delta CEO statement on Toronto crash\" by FOX Business Team | FOXBusiness. \n\nImage shows a plane lying upside down in the snow at an airport, with a large building in the background. There is a play button overlay on the image, indicating a video. \n\nCaption: \"Plane Crashes, Flips Upside Down at Toronto Pearson Airport. Footage from Mark Fitzpatrick shows the plane lying upside down, and emergency services responding. (Credit: Mark Fitzpatrick via Storyful)\"\n\nText: Delta CEO Ed Bastian spoke out on LinkedIn after a plane crash at Toronto-Pearson International Airport on Monday. \n\nQuote: \"The hearts of the entire global Delta family are with those affected by today\u2019s incident at Toronto-Pearson International Airport. I want to express my thanks to the many Delta and Endeavor team members and the first responders on site. We are...\"",
+    "all_user_responses": [
+      "From this screenshot taken from a financial news app, please just describe in the greatest possible detail the picture of the plane crash",
+      "Were the wings on the plane somehow destroyed in the accident, are there any suggestions that there was a fire in this accident? Also, estimate how big this plane was, was it a jet or a prop plane?"
+    ],
+    "question_category": "Description",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "alone",
+        "social_detail": "N/A",
+        "activity_type": "leisure",
+        "rationale": "The user may be reading news on their phone at home or in another familiar indoor setting, taking a photo to get a description of a news article about a plane crash. The user is likely familiar with their device and the news app, and is not in a hurry, possibly reading for personal interest."
+      },
+      {
+        "context_id": 2,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "unfamiliar people",
+        "activity_type": "professional",
+        "rationale": "The user could be in a waiting area (such as an airport lounge or office), trying to quickly capture and understand breaking news relevant to their travel or work. They may be surrounded by unfamiliar people and in an unfamiliar environment, possibly needing information urgently."
+      },
+      {
+        "context_id": 3,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "daily living task",
+        "rationale": "The user might be with family or friends at home, discussing current events, and takes a photo of the screen to get more details about the news story. They are in a familiar environment but may not be familiar with the specific news content."
+      },
+      {
+        "context_id": 4,
+        "location": "indoor",
+        "time_pressure": "in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "N/A",
+        "activity_type": "daily living task",
+        "rationale": "The user could be traveling or in transit, quickly snapping a photo of a news article about a plane crash to get information that might affect their travel plans. The urgency comes from needing to know if their flight or airport is impacted."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "alone",
+          "social_detail": "N/A",
+          "activity_type": "leisure",
+          "rationale": "The user may be reading news on their phone at home or in another familiar indoor setting, taking a photo to get a description of a news article about a plane crash. The user is likely familiar with their device and the news app, and is not in a hurry, possibly reading for personal interest."
+        },
+        {
+          "context_id": 2,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "unfamiliar people",
+          "activity_type": "professional",
+          "rationale": "The user could be in a waiting area (such as an airport lounge or office), trying to quickly capture and understand breaking news relevant to their travel or work. They may be surrounded by unfamiliar people and in an unfamiliar environment, possibly needing information urgently."
+        },
+        {
+          "context_id": 3,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "daily living task",
+          "rationale": "The user might be with family or friends at home, discussing current events, and takes a photo of the screen to get more details about the news story. They are in a familiar environment but may not be familiar with the specific news content."
+        },
+        {
+          "context_id": 4,
+          "location": "indoor",
+          "time_pressure": "in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "N/A",
+          "activity_type": "daily living task",
+          "rationale": "The user could be traveling or in transit, quickly snapping a photo of a news article about a plane crash to get information that might affect their travel plans. The urgency comes from needing to know if their flight or airport is impacted."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Description",
+        "description": "Understanding the main news story or headline shown in the image.",
+        "confidence": "high",
+        "rationale": "The image appears to be a screenshot of a news article, and BLV users often capture such images to get a summary or main point of the article, especially when they cannot easily access or navigate the text."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Reading",
+        "description": "Extracting the specific statement or response from the Delta CEO regarding the Toronto crash.",
+        "confidence": "high",
+        "rationale": "The article headline and visible text reference a statement from the Delta CEO, suggesting the user may want to know the CEO's response or official position."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Reading",
+        "description": "Identifying key details about the plane crash incident (location, what happened, who was involved).",
+        "confidence": "medium",
+        "rationale": "The article discusses a plane crash, and the user may want to extract factual details such as the location, nature of the crash, and involved parties for situational awareness or personal relevance."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Description",
+        "description": "Getting a general summary of the visible content, including any images or videos present.",
+        "confidence": "medium",
+        "rationale": "The screenshot includes a video thumbnail and partial text, so the user may want a holistic description of both visual and textual elements to understand the context."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Identification",
+        "description": "Determining if the article is about a recent or ongoing event.",
+        "confidence": "medium",
+        "rationale": "The timestamp and news format suggest recency, and the user may want to know if this is breaking news or an older incident, especially if they are concerned about travel or safety."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Reading",
+        "description": "Extracting the names of people or organizations mentioned in the article.",
+        "confidence": "medium",
+        "rationale": "The article references specific individuals and organizations, which may be important for the user to know for context or follow-up."
+      },
+      {
+        "task_id": 7,
+        "task_type": "Description",
+        "description": "Understanding the emotional tone or seriousness of the incident as conveyed in the article.",
+        "confidence": "low",
+        "rationale": "The user may want to gauge the severity or emotional impact of the event, though this is harder to infer from a partial screenshot."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Description",
+          "description": "Understanding the main news story or headline shown in the image.",
+          "confidence": "high",
+          "rationale": "The image appears to be a screenshot of a news article, and BLV users often capture such images to get a summary or main point of the article, especially when they cannot easily access or navigate the text."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Reading",
+          "description": "Extracting the specific statement or response from the Delta CEO regarding the Toronto crash.",
+          "confidence": "high",
+          "rationale": "The article headline and visible text reference a statement from the Delta CEO, suggesting the user may want to know the CEO's response or official position."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Reading",
+          "description": "Identifying key details about the plane crash incident (location, what happened, who was involved).",
+          "confidence": "medium",
+          "rationale": "The article discusses a plane crash, and the user may want to extract factual details such as the location, nature of the crash, and involved parties for situational awareness or personal relevance."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Description",
+          "description": "Getting a general summary of the visible content, including any images or videos present.",
+          "confidence": "medium",
+          "rationale": "The screenshot includes a video thumbnail and partial text, so the user may want a holistic description of both visual and textual elements to understand the context."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Identification",
+          "description": "Determining if the article is about a recent or ongoing event.",
+          "confidence": "medium",
+          "rationale": "The timestamp and news format suggest recency, and the user may want to know if this is breaking news or an older incident, especially if they are concerned about travel or safety."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Reading",
+          "description": "Extracting the names of people or organizations mentioned in the article.",
+          "confidence": "medium",
+          "rationale": "The article references specific individuals and organizations, which may be important for the user to know for context or follow-up."
+        },
+        {
+          "task_id": 7,
+          "task_type": "Description",
+          "description": "Understanding the emotional tone or seriousness of the incident as conveyed in the article.",
+          "confidence": "low",
+          "rationale": "The user may want to gauge the severity or emotional impact of the event, though this is harder to infer from a partial screenshot."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "{'rank': 1, 'response': 'Can you read the full statement from the Delta CEO?', 'response_target': 'Delta CEO statement', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.98, 'rationale': \"The article is about the Delta CEO's response, and the visible quote is cut off. BLV users often want the complete official statement, especially when the visible text is truncated.\"}",
+      "{'rank': 2, 'response': 'Is there any information about injuries or if anyone was hurt?', 'response_target': 'injury information', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 4, 'plausibility_score': 0.95, 'rationale': 'A user concerned about travel or safety would want to know the human impact of the crash, which is not clear from the visible text or image.'}",
+      "{'rank': 3, 'response': 'What does the video show? Is there anything important in it?', 'response_target': 'video content', 'task_type': 'Description', 'associated_task_id': 4, 'associated_context_id': 3, 'plausibility_score': 0.92, 'rationale': \"The video thumbnail is present, but BLV users can't access video content directly. They may want to know if the video contains unique or critical information.\"}",
+      "{'rank': 4, 'response': 'Is this a recent event or old news?', 'response_target': 'event recency', 'task_type': 'Identification', 'associated_task_id': 5, 'associated_context_id': 2, 'plausibility_score': 0.9, 'rationale': \"The timestamp says '14 hours ago,' but users may want explicit confirmation about the recency, especially if travel plans could be affected.\"}",
+      "{'rank': 5, 'response': 'Can you list all the people or organizations mentioned?', 'response_target': 'names of people or organizations', 'task_type': 'Reading', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.88, 'rationale': 'BLV users often ask for a list of key names for context or follow-up, especially when scanning news articles.'}",
+      "{'rank': 6, 'response': 'What exactly happened in the crash?', 'response_target': 'crash details', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 4, 'plausibility_score': 0.85, 'rationale': 'The headline and caption mention a crash, but details about the sequence of events or cause may not be clear from the image or partial text.'}",
+      "{'rank': 7, 'response': 'Can you summarize the main point of this article?', 'response_target': 'main news story', 'task_type': 'Description', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.83, 'rationale': 'Users often want a concise summary, especially if the article is long or the screenshot is incomplete.'}",
+      "{'rank': 8, 'response': 'Does it say if flights are delayed or the airport is closed?', 'response_target': 'airport status', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 4, 'plausibility_score': 0.8, 'rationale': 'A user in transit or with travel plans may be concerned about operational impacts, which may not be visible in the partial screenshot.'}",
+      "{'rank': 9, 'response': 'Is there any mention of what caused the crash?', 'response_target': 'crash cause', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 3, 'plausibility_score': 0.78, 'rationale': 'Understanding the cause is a common follow-up, especially if the article is about an accident.'}",
+      "{'rank': 10, 'response': 'Can you describe the image of the plane in more detail?', 'response_target': 'plane image', 'task_type': 'Description', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.75, 'rationale': \"Some users may want more visual context about the crash scene, especially if the AI's initial description was brief or unclear.\"}"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Can you read the full statement from the Delta CEO?",
+        "response_target": "Delta CEO statement",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.98,
+        "rationale": "The article is about the Delta CEO's response, and the visible quote is cut off. BLV users often want the complete official statement, especially when the visible text is truncated."
+      },
+      {
+        "rank": 2,
+        "response": "Is there any information about injuries or if anyone was hurt?",
+        "response_target": "injury information",
+        "task_type": "Reading",
+        "associated_task_id": 3,
+        "associated_context_id": 4,
+        "plausibility_score": 0.95,
+        "rationale": "A user concerned about travel or safety would want to know the human impact of the crash, which is not clear from the visible text or image."
+      },
+      {
+        "rank": 3,
+        "response": "What does the video show? Is there anything important in it?",
+        "response_target": "video content",
+        "task_type": "Description",
+        "associated_task_id": 4,
+        "associated_context_id": 3,
+        "plausibility_score": 0.92,
+        "rationale": "The video thumbnail is present, but BLV users can't access video content directly. They may want to know if the video contains unique or critical information."
+      },
+      {
+        "rank": 4,
+        "response": "Is this a recent event or old news?",
+        "response_target": "event recency",
+        "task_type": "Identification",
+        "associated_task_id": 5,
+        "associated_context_id": 2,
+        "plausibility_score": 0.9,
+        "rationale": "The timestamp says '14 hours ago,' but users may want explicit confirmation about the recency, especially if travel plans could be affected."
+      },
+      {
+        "rank": 5,
+        "response": "Can you list all the people or organizations mentioned?",
+        "response_target": "names of people or organizations",
+        "task_type": "Reading",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 0.88,
+        "rationale": "BLV users often ask for a list of key names for context or follow-up, especially when scanning news articles."
+      },
+      {
+        "rank": 6,
+        "response": "What exactly happened in the crash?",
+        "response_target": "crash details",
+        "task_type": "Reading",
+        "associated_task_id": 3,
+        "associated_context_id": 4,
+        "plausibility_score": 0.85,
+        "rationale": "The headline and caption mention a crash, but details about the sequence of events or cause may not be clear from the image or partial text."
+      },
+      {
+        "rank": 7,
+        "response": "Can you summarize the main point of this article?",
+        "response_target": "main news story",
+        "task_type": "Description",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.83,
+        "rationale": "Users often want a concise summary, especially if the article is long or the screenshot is incomplete."
+      },
+      {
+        "rank": 8,
+        "response": "Does it say if flights are delayed or the airport is closed?",
+        "response_target": "airport status",
+        "task_type": "Reading",
+        "associated_task_id": 3,
+        "associated_context_id": 4,
+        "plausibility_score": 0.8,
+        "rationale": "A user in transit or with travel plans may be concerned about operational impacts, which may not be visible in the partial screenshot."
+      },
+      {
+        "rank": 9,
+        "response": "Is there any mention of what caused the crash?",
+        "response_target": "crash cause",
+        "task_type": "Reading",
+        "associated_task_id": 3,
+        "associated_context_id": 3,
+        "plausibility_score": 0.78,
+        "rationale": "Understanding the cause is a common follow-up, especially if the article is about an accident."
+      },
+      {
+        "rank": 10,
+        "response": "Can you describe the image of the plane in more detail?",
+        "response_target": "plane image",
+        "task_type": "Description",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.75,
+        "rationale": "Some users may want more visual context about the crash scene, especially if the AI's initial description was brief or unclear."
+      }
+    ],
+    "raw_output": {
+      "ranked_questions": [
+        {
+          "rank": 1,
+          "response": "Can you read the full statement from the Delta CEO?",
+          "response_target": "Delta CEO statement",
+          "task_type": "Reading",
+          "associated_task_id": 2,
+          "associated_context_id": 1,
+          "plausibility_score": 0.98,
+          "rationale": "The article is about the Delta CEO's response, and the visible quote is cut off. BLV users often want the complete official statement, especially when the visible text is truncated."
+        },
+        {
+          "rank": 2,
+          "response": "Is there any information about injuries or if anyone was hurt?",
+          "response_target": "injury information",
+          "task_type": "Reading",
+          "associated_task_id": 3,
+          "associated_context_id": 4,
+          "plausibility_score": 0.95,
+          "rationale": "A user concerned about travel or safety would want to know the human impact of the crash, which is not clear from the visible text or image."
+        },
+        {
+          "rank": 3,
+          "response": "What does the video show? Is there anything important in it?",
+          "response_target": "video content",
+          "task_type": "Description",
+          "associated_task_id": 4,
+          "associated_context_id": 3,
+          "plausibility_score": 0.92,
+          "rationale": "The video thumbnail is present, but BLV users can't access video content directly. They may want to know if the video contains unique or critical information."
+        },
+        {
+          "rank": 4,
+          "response": "Is this a recent event or old news?",
+          "response_target": "event recency",
+          "task_type": "Identification",
+          "associated_task_id": 5,
+          "associated_context_id": 2,
+          "plausibility_score": 0.9,
+          "rationale": "The timestamp says '14 hours ago,' but users may want explicit confirmation about the recency, especially if travel plans could be affected."
+        },
+        {
+          "rank": 5,
+          "response": "Can you list all the people or organizations mentioned?",
+          "response_target": "names of people or organizations",
+          "task_type": "Reading",
+          "associated_task_id": 6,
+          "associated_context_id": 1,
+          "plausibility_score": 0.88,
+          "rationale": "BLV users often ask for a list of key names for context or follow-up, especially when scanning news articles."
+        },
+        {
+          "rank": 6,
+          "response": "What exactly happened in the crash?",
+          "response_target": "crash details",
+          "task_type": "Reading",
+          "associated_task_id": 3,
+          "associated_context_id": 4,
+          "plausibility_score": 0.85,
+          "rationale": "The headline and caption mention a crash, but details about the sequence of events or cause may not be clear from the image or partial text."
+        },
+        {
+          "rank": 7,
+          "response": "Can you summarize the main point of this article?",
+          "response_target": "main news story",
+          "task_type": "Description",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 0.83,
+          "rationale": "Users often want a concise summary, especially if the article is long or the screenshot is incomplete."
+        },
+        {
+          "rank": 8,
+          "response": "Does it say if flights are delayed or the airport is closed?",
+          "response_target": "airport status",
+          "task_type": "Reading",
+          "associated_task_id": 3,
+          "associated_context_id": 4,
+          "plausibility_score": 0.8,
+          "rationale": "A user in transit or with travel plans may be concerned about operational impacts, which may not be visible in the partial screenshot."
+        },
+        {
+          "rank": 9,
+          "response": "Is there any mention of what caused the crash?",
+          "response_target": "crash cause",
+          "task_type": "Reading",
+          "associated_task_id": 3,
+          "associated_context_id": 3,
+          "plausibility_score": 0.78,
+          "rationale": "Understanding the cause is a common follow-up, especially if the article is about an accident."
+        },
+        {
+          "rank": 10,
+          "response": "Can you describe the image of the plane in more detail?",
+          "response_target": "plane image",
+          "task_type": "Description",
+          "associated_task_id": 4,
+          "associated_context_id": 1,
+          "plausibility_score": 0.75,
+          "rationale": "Some users may want more visual context about the crash scene, especially if the AI's initial description was brief or unclear."
+        }
+      ]
+    }
+  },
+  "response_target_agent": {
+    "response_target": "picture of the plane crash",
+    "task_type": "Description",
+    "confidence": "high",
+    "rationale": "The participant explicitly asks for a detailed description of the picture of the plane crash in the screenshot. The question is direct and focused on the visual depiction of the crash, not on other elements such as the article text or headline. The question_category 'Description' supports this interpretation.",
+    "raw_output": {
+      "response_target": "picture of the plane crash",
+      "task_type": "Description",
+      "confidence": "high",
+      "rationale": "The participant explicitly asks for a detailed description of the picture of the plane crash in the screenshot. The question is direct and focused on the visual depiction of the crash, not on other elements such as the article text or headline. The question_category 'Description' supports this interpretation."
+    }
+  },
+  "interaction_target_agent": {
+    "turn_targets": [
+      {
+        "response_target": "picture of the plane crash",
+        "task_type": "Description",
+        "confidence": "high",
+        "rationale": "The participant explicitly asks for a detailed description of the picture of the plane crash, making this the direct information target."
+      },
+      {
+        "response_target": "condition of the wings, evidence of fire, and estimated size/type of the plane",
+        "task_type": "Description",
+        "confidence": "medium",
+        "rationale": "The participant asks about three specific aspects: whether the wings were destroyed, signs of fire, and the size/type of the plane. These are all visual details that may or may not be clearly visible, especially given possible image quality issues, so a medium confidence is appropriate."
+      }
+    ],
+    "raw_output": {
+      "turn_targets": [
+        {
+          "response_target": "picture of the plane crash",
+          "task_type": "Description",
+          "confidence": "high",
+          "rationale": "The participant explicitly asks for a detailed description of the picture of the plane crash, making this the direct information target."
+        },
+        {
+          "response_target": "condition of the wings, evidence of fire, and estimated size/type of the plane",
+          "task_type": "Description",
+          "confidence": "medium",
+          "rationale": "The participant asks about three specific aspects: whether the wings were destroyed, signs of fire, and the size/type of the plane. These are all visual details that may or may not be clearly visible, especially given possible image quality issues, so a medium confidence is appropriate."
+        }
+      ]
+    }
+  },
+  "final_ranked_questions": [
+    "{'rank': 1, 'response': 'Can you read the full statement from the Delta CEO?', 'response_target': 'Delta CEO statement', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 1, 'plausibility_score': 0.98, 'rationale': \"The article is about the Delta CEO's response, and the visible quote is cut off. BLV users often want the complete official statement, especially when the visible text is truncated.\"}",
+    "{'rank': 2, 'response': 'Is there any information about injuries or if anyone was hurt?', 'response_target': 'injury information', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 4, 'plausibility_score': 0.95, 'rationale': 'A user concerned about travel or safety would want to know the human impact of the crash, which is not clear from the visible text or image.'}",
+    "{'rank': 3, 'response': 'What does the video show? Is there anything important in it?', 'response_target': 'video content', 'task_type': 'Description', 'associated_task_id': 4, 'associated_context_id': 3, 'plausibility_score': 0.92, 'rationale': \"The video thumbnail is present, but BLV users can't access video content directly. They may want to know if the video contains unique or critical information.\"}",
+    "{'rank': 4, 'response': 'Is this a recent event or old news?', 'response_target': 'event recency', 'task_type': 'Identification', 'associated_task_id': 5, 'associated_context_id': 2, 'plausibility_score': 0.9, 'rationale': \"The timestamp says '14 hours ago,' but users may want explicit confirmation about the recency, especially if travel plans could be affected.\"}",
+    "{'rank': 5, 'response': 'Can you list all the people or organizations mentioned?', 'response_target': 'names of people or organizations', 'task_type': 'Reading', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.88, 'rationale': 'BLV users often ask for a list of key names for context or follow-up, especially when scanning news articles.'}",
+    "{'rank': 6, 'response': 'What exactly happened in the crash?', 'response_target': 'crash details', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 4, 'plausibility_score': 0.85, 'rationale': 'The headline and caption mention a crash, but details about the sequence of events or cause may not be clear from the image or partial text.'}",
+    "{'rank': 7, 'response': 'Can you summarize the main point of this article?', 'response_target': 'main news story', 'task_type': 'Description', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.83, 'rationale': 'Users often want a concise summary, especially if the article is long or the screenshot is incomplete.'}",
+    "{'rank': 8, 'response': 'Does it say if flights are delayed or the airport is closed?', 'response_target': 'airport status', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 4, 'plausibility_score': 0.8, 'rationale': 'A user in transit or with travel plans may be concerned about operational impacts, which may not be visible in the partial screenshot.'}",
+    "{'rank': 9, 'response': 'Is there any mention of what caused the crash?', 'response_target': 'crash cause', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 3, 'plausibility_score': 0.78, 'rationale': 'Understanding the cause is a common follow-up, especially if the article is about an accident.'}",
+    "{'rank': 10, 'response': 'Can you describe the image of the plane in more detail?', 'response_target': 'plane image', 'task_type': 'Description', 'associated_task_id': 4, 'associated_context_id': 1, 'plausibility_score': 0.75, 'rationale': \"Some users may want more visual context about the crash scene, especially if the AI's initial description was brief or unclear.\"}"
+  ],
+  "ground_truth_question": "From this screenshot taken from a financial news app, please just describe in the greatest possible detail the picture of the plane crash",
+  "comparison": {
+    "ground_truth": "From this screenshot taken from a financial news app, please just describe in the greatest possible detail the picture of the plane crash",
+    "ground_truth_response_target": "picture of the plane crash",
+    "ground_truth_task_type": "Description",
+    "turn_targets": [
+      {
+        "response_target": "picture of the plane crash",
+        "task_type": "Description",
+        "confidence": "high",
+        "rationale": "The participant explicitly asks for a detailed description of the picture of the plane crash, making this the direct information target."
+      },
+      {
+        "response_target": "condition of the wings, evidence of fire, and estimated size/type of the plane",
+        "task_type": "Description",
+        "confidence": "medium",
+        "rationale": "The participant asks about three specific aspects: whether the wings were destroyed, signs of fire, and the size/type of the plane. These are all visual details that may or may not be clearly visible, especially given possible image quality issues, so a medium confidence is appropriate."
+      }
+    ],
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Can you read the full statement from the Delta CEO?",
+        "generated_response_target": "Delta CEO statement",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "picture of the plane crash",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 2,
+        "generated_question": "Is there any information about injuries or if anyone was hurt?",
+        "generated_response_target": "injury information",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "picture of the plane crash",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 3,
+        "generated_question": "What does the video show? Is there anything important in it?",
+        "generated_response_target": "video content",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "picture of the plane crash",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 4,
+        "generated_question": "Is this a recent event or old news?",
+        "generated_response_target": "event recency",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "picture of the plane crash",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 5,
+        "generated_question": "Can you list all the people or organizations mentioned?",
+        "generated_response_target": "names of people or organizations",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "picture of the plane crash",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 6,
+        "generated_question": "What exactly happened in the crash?",
+        "generated_response_target": "crash details",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "picture of the plane crash",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 7,
+        "generated_question": "Can you summarize the main point of this article?",
+        "generated_response_target": "main news story",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "picture of the plane crash",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 8,
+        "generated_question": "Does it say if flights are delayed or the airport is closed?",
+        "generated_response_target": "airport status",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "picture of the plane crash",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 9,
+        "generated_question": "Is there any mention of what caused the crash?",
+        "generated_response_target": "crash cause",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "picture of the plane crash",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 10,
+        "generated_question": "Can you describe the image of the plane in more detail?",
+        "generated_response_target": "plane image",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "picture of the plane crash",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "From this screenshot taken from a financial news app, please just describe in the greatest possible detail the picture of the plane crash",
+        "generated_response_target": "picture of the plane crash",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "picture of the plane crash",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 1,
+        "matched_user_turn": 1,
+        "matched_user_turn_target": "picture of the plane crash",
+        "matched_user_turn_score": 1,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "style",
+        "decomposition",
+        "grounding"
+      ],
+      "question_category": "Description",
+      "in_a_hurry": "no",
+      "indoor_outdoor": "indoor",
+      "familiarity_of_environment": "yes",
+      "familiarity_of_item": "no",
+      "surrounding_environment": "alone",
+      "environment_setting": "leisure",
+      "interaction_length": "3",
+      "task_completed": "Yes"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P11_images/image_4_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:8:46 with a muted bell icon. \n\nHeadline: \"Delta CEO statement on Toronto crash\" by FOX Business Team | FOXBusiness. \n\nImage shows a plane lying upside down in the snow at an airport, with a large building in the background. There is a play button overlay on the image, indicating a video. \n\nCaption: \"Plane Crashes, Flips Upside Down at Toronto Pearson Airport. Footage from Mark Fitzpatrick shows the plane lying upside down, and emergency services responding. (Credit: Mark Fitzpatrick via Storyful)\"\n\nText: Delta CEO Ed Bastian spoke out on LinkedIn after a plane crash at Toronto-Pearson International Airport on Monday. \n\nQuote: \"The hearts of the entire global Delta family are with those affected by today\u2019s incident at Toronto-Pearson International Airport. I want to express my thanks to the many Delta and Endeavor team members and the first responders on site. We are...\"",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "User:From this screenshot taken from a financial news app, please just describe in the greatest possible detail the picture of the plane crash",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 4,
+        "text_usr": null,
+        "text_ai": "Be My AI:The picture shows a snowy scene at an airport. A plane is lying upside down on the snow-covered ground. The fuselage of the plane is visible, with the tail section on the left side of the image. The plane appears to be a small passenger aircraft. In the background, there is a large, white building with vertical lines, possibly a hangar or terminal. The sky is overcast, and there is a light mist or fog in the air, adding to the cold, wintry atmosphere. There are no visible people or emergency vehicles in the immediate vicinity of the plane in this image.",
+        "local_image_path": null
+      },
+      {
+        "turn": 5,
+        "text_usr": "User:Were the wings on the plane somehow destroyed in the accident, are there any suggestions that there was a fire in this accident? Also, estimate how big this plane was, was it a jet or a prop plane?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 6,
+        "text_usr": null,
+        "text_ai": "Be My AI:The wings of the plane appear to be damaged or partially destroyed, as they are not clearly visible in their entirety. There are no visible signs of fire, such as burn marks or smoke, in the image. The plane seems to be a small passenger jet, rather than a propeller plane, based on the size and shape of the fuselage. The aircraft is likely a regional jet, which typically accommodates fewer passengers than larger commercial jets.",
+        "local_image_path": null
+      }
+    ]
+  }
+}

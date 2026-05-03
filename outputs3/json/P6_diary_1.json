@@ -1,0 +1,808 @@
+{
+  "input": {
+    "participant": "P6",
+    "source": "diary",
+    "interaction": 1,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P6/diary_data/P6.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P6/diary_data/P6_images/image_1_1.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "The image shows a packet of McCormick Brown Gravy mix. The packaging is primarily brown with a red top. It features an image of mashed potatoes with brown gravy and green beans on a plate. The text on the packet reads \"McCormick Brown Gravy\" with \"with McCormick Spices | No Artificial Flavors\" below it. In the bottom left corner, it says \"Gravy Mix\" and in the bottom right corner, it states \"Net Wt 0.87 oz (24g)\". The packet is placed on a countertop with a speckled pattern.",
+    "all_user_responses": [
+      "Directions",
+      "How many carbs?",
+      "What other nutrition?",
+      "How many servings does it make?",
+      "I\u2019d rather not call a volunteer, do you have any tips so I can get all the information from a picture?"
+    ],
+    "question_category": "Reading",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user may be in their own kitchen, trying to quickly identify a packet while cooking. The image is off-center and partially cut off, suggesting possible haste or difficulty positioning the packet for the camera. The user may not be familiar with this specific packet (e.g., new purchase or similar-feeling packets), prompting them to seek confirmation."
+      },
+      {
+        "context_id": 2,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "unfamiliar people",
+        "activity_type": "professional",
+        "rationale": "The user could be in a communal or instructional kitchen (e.g., cooking class, group home, or training setting), unfamiliar with both the environment and the specific item. They may be documenting or verifying ingredients as part of a structured activity, with others present but not personally known."
+      },
+      {
+        "context_id": 3,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "leisure",
+        "rationale": "The user might be cooking with family or friends at home, preparing a meal together. They are familiar with both the kitchen and the item, but may want to confirm the packet (e.g., to avoid confusion with similar packets or to double-check instructions). The casual, slightly askew image suggests a relaxed but active environment."
+      },
+      {
+        "context_id": 4,
+        "location": "indoor",
+        "time_pressure": "in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user could be in a temporary or new living situation (e.g., hotel, friend's house, or recently moved), quickly trying to identify a food packet while cooking alone. The off-center, partial image may reflect both unfamiliarity and urgency."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user may be in their own kitchen, trying to quickly identify a packet while cooking. The image is off-center and partially cut off, suggesting possible haste or difficulty positioning the packet for the camera. The user may not be familiar with this specific packet (e.g., new purchase or similar-feeling packets), prompting them to seek confirmation."
+        },
+        {
+          "context_id": 2,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "unfamiliar people",
+          "activity_type": "professional",
+          "rationale": "The user could be in a communal or instructional kitchen (e.g., cooking class, group home, or training setting), unfamiliar with both the environment and the specific item. They may be documenting or verifying ingredients as part of a structured activity, with others present but not personally known."
+        },
+        {
+          "context_id": 3,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "leisure",
+          "rationale": "The user might be cooking with family or friends at home, preparing a meal together. They are familiar with both the kitchen and the item, but may want to confirm the packet (e.g., to avoid confusion with similar packets or to double-check instructions). The casual, slightly askew image suggests a relaxed but active environment."
+        },
+        {
+          "context_id": 4,
+          "location": "indoor",
+          "time_pressure": "in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user could be in a temporary or new living situation (e.g., hotel, friend's house, or recently moved), quickly trying to identify a food packet while cooking alone. The off-center, partial image may reflect both unfamiliarity and urgency."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Reading",
+        "description": "Extract the product name and brand from the package.",
+        "confidence": "high",
+        "rationale": "The image shows a food package, and BLV users often need to confirm what product they are holding, especially if multiple similar packages are present."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Reading",
+        "description": "Read the preparation or cooking instructions on the package.",
+        "confidence": "medium",
+        "rationale": "BLV users frequently need to access preparation instructions, but the image may not show the back or full text, so the user might be checking if instructions are visible."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Reading",
+        "description": "Read the expiration or best-by date on the package.",
+        "confidence": "low",
+        "rationale": "Checking expiration dates is a common need, but the visible part of the package does not clearly show a date, so this is less likely unless the user was unsure of the package orientation."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Reading",
+        "description": "Read the net weight or quantity information.",
+        "confidence": "medium",
+        "rationale": "The net weight is partially visible, and users may want to confirm how much product is in the package for recipe planning or dietary reasons."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Reading",
+        "description": "Read the list of ingredients or allergen information.",
+        "confidence": "low",
+        "rationale": "Ingredient and allergen information is important for safety, but this information is typically on the back or side of packages, which may not be visible in this image."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Reading",
+        "description": "Confirm that the package is for brown gravy and not another similar product (e.g., taco seasoning, au jus mix).",
+        "confidence": "high",
+        "rationale": "Packages for similar products often look alike, and BLV users may want to confirm they have the correct one before use."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Reading",
+          "description": "Extract the product name and brand from the package.",
+          "confidence": "high",
+          "rationale": "The image shows a food package, and BLV users often need to confirm what product they are holding, especially if multiple similar packages are present."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Reading",
+          "description": "Read the preparation or cooking instructions on the package.",
+          "confidence": "medium",
+          "rationale": "BLV users frequently need to access preparation instructions, but the image may not show the back or full text, so the user might be checking if instructions are visible."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Reading",
+          "description": "Read the expiration or best-by date on the package.",
+          "confidence": "low",
+          "rationale": "Checking expiration dates is a common need, but the visible part of the package does not clearly show a date, so this is less likely unless the user was unsure of the package orientation."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Reading",
+          "description": "Read the net weight or quantity information.",
+          "confidence": "medium",
+          "rationale": "The net weight is partially visible, and users may want to confirm how much product is in the package for recipe planning or dietary reasons."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Reading",
+          "description": "Read the list of ingredients or allergen information.",
+          "confidence": "low",
+          "rationale": "Ingredient and allergen information is important for safety, but this information is typically on the back or side of packages, which may not be visible in this image."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Reading",
+          "description": "Confirm that the package is for brown gravy and not another similar product (e.g., taco seasoning, au jus mix).",
+          "confidence": "high",
+          "rationale": "Packages for similar products often look alike, and BLV users may want to confirm they have the correct one before use."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "Is this definitely brown gravy mix?",
+      "Can you read the cooking instructions?",
+      "What brand is this?",
+      "How much is in this packet?",
+      "Does it say anything about allergens?",
+      "Can you tell me the expiration date?",
+      "Is this McCormick brand?",
+      "Are there any instructions visible on the front?",
+      "Is this packet open or sealed?",
+      "Can you list the ingredients?"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Is this definitely brown gravy mix?",
+        "response_target": "product type",
+        "task_type": "Verification",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 1.0,
+        "rationale": "Given the context of possible haste and unfamiliarity with the packet, confirming the product type is a high-priority, realistic follow-up. The user may want to avoid mixing up similar packets."
+      },
+      {
+        "rank": 2,
+        "response": "Can you read the cooking instructions?",
+        "response_target": "cooking instructions",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.95,
+        "rationale": "Instructions are often needed for immediate use, especially if the user is cooking. The front image may not show them, but the user might check if any are visible."
+      },
+      {
+        "rank": 3,
+        "response": "What brand is this?",
+        "response_target": "brand",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.9,
+        "rationale": "Brand confirmation is common when handling unfamiliar or similar-feeling packets, especially if the user is unsure or can't distinguish by touch."
+      },
+      {
+        "rank": 4,
+        "response": "How much is in this packet?",
+        "response_target": "net weight",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.85,
+        "rationale": "Knowing the quantity is practical for recipe planning. The net weight is partially visible, so the user may want confirmation."
+      },
+      {
+        "rank": 5,
+        "response": "Does it say anything about allergens?",
+        "response_target": "allergen information",
+        "task_type": "Reading",
+        "associated_task_id": 5,
+        "associated_context_id": 2,
+        "plausibility_score": 0.8,
+        "rationale": "Allergen information is critical for some users, especially in unfamiliar or communal settings, even if the image likely doesn't show it."
+      },
+      {
+        "rank": 6,
+        "response": "Can you tell me the expiration date?",
+        "response_target": "expiration date",
+        "task_type": "Reading",
+        "associated_task_id": 3,
+        "associated_context_id": 4,
+        "plausibility_score": 0.7,
+        "rationale": "Expiration dates are important for food safety, though the image probably doesn't show it. The user might ask just in case."
+      },
+      {
+        "rank": 7,
+        "response": "Is this McCormick brand?",
+        "response_target": "brand",
+        "task_type": "Verification",
+        "associated_task_id": 1,
+        "associated_context_id": 3,
+        "plausibility_score": 0.68,
+        "rationale": "If the user is familiar with the brand but wants to double-check, especially in a social or relaxed setting, this is a plausible follow-up."
+      },
+      {
+        "rank": 8,
+        "response": "Are there any instructions visible on the front?",
+        "response_target": "visible instructions",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.65,
+        "rationale": "If the user knows instructions are usually on the back but hopes for a summary or quick tip on the front, this is a reasonable question."
+      },
+      {
+        "rank": 9,
+        "response": "Is this packet open or sealed?",
+        "response_target": "packet seal status",
+        "task_type": "Verification",
+        "associated_task_id": 6,
+        "associated_context_id": 4,
+        "plausibility_score": 0.6,
+        "rationale": "In a hurry or unfamiliar environment, the user may want to confirm if the packet is still sealed, though the image may not show this clearly."
+      },
+      {
+        "rank": 10,
+        "response": "Can you list the ingredients?",
+        "response_target": "ingredients list",
+        "task_type": "Reading",
+        "associated_task_id": 5,
+        "associated_context_id": 2,
+        "plausibility_score": 0.55,
+        "rationale": "Ingredient lists are important for dietary needs, but the user may ask even if the image likely doesn't show the back of the packet."
+      }
+    ],
+    "raw_output": [
+      {
+        "rank": 1,
+        "response": "Is this definitely brown gravy mix?",
+        "response_target": "product type",
+        "task_type": "Verification",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 1.0,
+        "rationale": "Given the context of possible haste and unfamiliarity with the packet, confirming the product type is a high-priority, realistic follow-up. The user may want to avoid mixing up similar packets."
+      },
+      {
+        "rank": 2,
+        "response": "Can you read the cooking instructions?",
+        "response_target": "cooking instructions",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.95,
+        "rationale": "Instructions are often needed for immediate use, especially if the user is cooking. The front image may not show them, but the user might check if any are visible."
+      },
+      {
+        "rank": 3,
+        "response": "What brand is this?",
+        "response_target": "brand",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.9,
+        "rationale": "Brand confirmation is common when handling unfamiliar or similar-feeling packets, especially if the user is unsure or can't distinguish by touch."
+      },
+      {
+        "rank": 4,
+        "response": "How much is in this packet?",
+        "response_target": "net weight",
+        "task_type": "Reading",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.85,
+        "rationale": "Knowing the quantity is practical for recipe planning. The net weight is partially visible, so the user may want confirmation."
+      },
+      {
+        "rank": 5,
+        "response": "Does it say anything about allergens?",
+        "response_target": "allergen information",
+        "task_type": "Reading",
+        "associated_task_id": 5,
+        "associated_context_id": 2,
+        "plausibility_score": 0.8,
+        "rationale": "Allergen information is critical for some users, especially in unfamiliar or communal settings, even if the image likely doesn't show it."
+      },
+      {
+        "rank": 6,
+        "response": "Can you tell me the expiration date?",
+        "response_target": "expiration date",
+        "task_type": "Reading",
+        "associated_task_id": 3,
+        "associated_context_id": 4,
+        "plausibility_score": 0.7,
+        "rationale": "Expiration dates are important for food safety, though the image probably doesn't show it. The user might ask just in case."
+      },
+      {
+        "rank": 7,
+        "response": "Is this McCormick brand?",
+        "response_target": "brand",
+        "task_type": "Verification",
+        "associated_task_id": 1,
+        "associated_context_id": 3,
+        "plausibility_score": 0.68,
+        "rationale": "If the user is familiar with the brand but wants to double-check, especially in a social or relaxed setting, this is a plausible follow-up."
+      },
+      {
+        "rank": 8,
+        "response": "Are there any instructions visible on the front?",
+        "response_target": "visible instructions",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.65,
+        "rationale": "If the user knows instructions are usually on the back but hopes for a summary or quick tip on the front, this is a reasonable question."
+      },
+      {
+        "rank": 9,
+        "response": "Is this packet open or sealed?",
+        "response_target": "packet seal status",
+        "task_type": "Verification",
+        "associated_task_id": 6,
+        "associated_context_id": 4,
+        "plausibility_score": 0.6,
+        "rationale": "In a hurry or unfamiliar environment, the user may want to confirm if the packet is still sealed, though the image may not show this clearly."
+      },
+      {
+        "rank": 10,
+        "response": "Can you list the ingredients?",
+        "response_target": "ingredients list",
+        "task_type": "Reading",
+        "associated_task_id": 5,
+        "associated_context_id": 2,
+        "plausibility_score": 0.55,
+        "rationale": "Ingredient lists are important for dietary needs, but the user may ask even if the image likely doesn't show the back of the packet."
+      }
+    ]
+  },
+  "response_target_agent": {
+    "response_target": "cooking directions",
+    "task_type": "Reading",
+    "confidence": "high",
+    "rationale": "The participant's question is 'Directions' and the question_category is 'Reading', indicating they want to know the cooking or preparation instructions from the packaging. This is a common need for food products like gravy mix, and the request is direct and unambiguous.",
+    "raw_output": {
+      "response_target": "cooking directions",
+      "task_type": "Reading",
+      "confidence": "high",
+      "rationale": "The participant's question is 'Directions' and the question_category is 'Reading', indicating they want to know the cooking or preparation instructions from the packaging. This is a common need for food products like gravy mix, and the request is direct and unambiguous."
+    }
+  },
+  "interaction_target_agent": {
+    "turn_targets": [
+      {
+        "response_target": "directions",
+        "task_type": "Reading",
+        "confidence": "high",
+        "rationale": "The participant directly asks for 'Directions,' which refers to preparation or cooking instructions typically found on the packaging."
+      },
+      {
+        "response_target": "carbohydrates",
+        "task_type": "Reading",
+        "confidence": "high",
+        "rationale": "The participant asks 'How many carbs?', clearly targeting the carbohydrate content information from the nutrition label."
+      },
+      {
+        "response_target": "other nutrition information",
+        "task_type": "Reading",
+        "confidence": "high",
+        "rationale": "The participant asks for 'What other nutrition?', seeking additional nutritional details beyond carbohydrates."
+      },
+      {
+        "response_target": "number of servings",
+        "task_type": "Reading",
+        "confidence": "high",
+        "rationale": "The participant asks 'How many servings does it make?', directly targeting the serving size or number of servings information."
+      },
+      {
+        "response_target": "tips for getting all information from a picture",
+        "task_type": "Reading",
+        "confidence": "high",
+        "rationale": "The participant requests tips for independently extracting all needed information from a picture, indicating a need for strategies or guidance."
+      }
+    ],
+    "raw_output": {
+      "turn_targets": [
+        {
+          "response_target": "directions",
+          "task_type": "Reading",
+          "confidence": "high",
+          "rationale": "The participant directly asks for 'Directions,' which refers to preparation or cooking instructions typically found on the packaging."
+        },
+        {
+          "response_target": "carbohydrates",
+          "task_type": "Reading",
+          "confidence": "high",
+          "rationale": "The participant asks 'How many carbs?', clearly targeting the carbohydrate content information from the nutrition label."
+        },
+        {
+          "response_target": "other nutrition information",
+          "task_type": "Reading",
+          "confidence": "high",
+          "rationale": "The participant asks for 'What other nutrition?', seeking additional nutritional details beyond carbohydrates."
+        },
+        {
+          "response_target": "number of servings",
+          "task_type": "Reading",
+          "confidence": "high",
+          "rationale": "The participant asks 'How many servings does it make?', directly targeting the serving size or number of servings information."
+        },
+        {
+          "response_target": "tips for getting all information from a picture",
+          "task_type": "Reading",
+          "confidence": "high",
+          "rationale": "The participant requests tips for independently extracting all needed information from a picture, indicating a need for strategies or guidance."
+        }
+      ]
+    }
+  },
+  "final_ranked_questions": [
+    "Is this definitely brown gravy mix?",
+    "Can you read the cooking instructions?",
+    "What brand is this?",
+    "How much is in this packet?",
+    "Does it say anything about allergens?",
+    "Can you tell me the expiration date?",
+    "Is this McCormick brand?",
+    "Are there any instructions visible on the front?",
+    "Is this packet open or sealed?",
+    "Can you list the ingredients?"
+  ],
+  "ground_truth_question": "Directions",
+  "comparison": {
+    "ground_truth": "Directions",
+    "ground_truth_response_target": "cooking directions",
+    "ground_truth_task_type": "Reading",
+    "turn_targets": [
+      {
+        "response_target": "directions",
+        "task_type": "Reading",
+        "confidence": "high",
+        "rationale": "The participant directly asks for 'Directions,' which refers to preparation or cooking instructions typically found on the packaging."
+      },
+      {
+        "response_target": "carbohydrates",
+        "task_type": "Reading",
+        "confidence": "high",
+        "rationale": "The participant asks 'How many carbs?', clearly targeting the carbohydrate content information from the nutrition label."
+      },
+      {
+        "response_target": "other nutrition information",
+        "task_type": "Reading",
+        "confidence": "high",
+        "rationale": "The participant asks for 'What other nutrition?', seeking additional nutritional details beyond carbohydrates."
+      },
+      {
+        "response_target": "number of servings",
+        "task_type": "Reading",
+        "confidence": "high",
+        "rationale": "The participant asks 'How many servings does it make?', directly targeting the serving size or number of servings information."
+      },
+      {
+        "response_target": "tips for getting all information from a picture",
+        "task_type": "Reading",
+        "confidence": "high",
+        "rationale": "The participant requests tips for independently extracting all needed information from a picture, indicating a need for strategies or guidance."
+      }
+    ],
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Is this definitely brown gravy mix?",
+        "generated_response_target": "product type",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "cooking directions",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 2,
+        "generated_question": "Can you read the cooking instructions?",
+        "generated_response_target": "cooking instructions",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking directions",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 3,
+        "generated_question": "What brand is this?",
+        "generated_response_target": "brand",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking directions",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 4,
+        "generated_question": "How much is in this packet?",
+        "generated_response_target": "net weight",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking directions",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 5,
+        "generated_question": "Does it say anything about allergens?",
+        "generated_response_target": "allergen information",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking directions",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 6,
+        "generated_question": "Can you tell me the expiration date?",
+        "generated_response_target": "expiration date",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking directions",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 7,
+        "generated_question": "Is this McCormick brand?",
+        "generated_response_target": "brand",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "cooking directions",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 8,
+        "generated_question": "Are there any instructions visible on the front?",
+        "generated_response_target": "visible instructions",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking directions",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 9,
+        "generated_question": "Is this packet open or sealed?",
+        "generated_response_target": "packet seal status",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "cooking directions",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 10,
+        "generated_question": "Can you list the ingredients?",
+        "generated_response_target": "ingredients list",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking directions",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "Directions",
+        "generated_response_target": "cooking directions",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cooking directions",
+        "ground_truth_task_type": "Reading",
+        "target_match_score": 1,
+        "matched_user_turn": 1,
+        "matched_user_turn_target": "directions",
+        "matched_user_turn_score": 0.5,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "decomposition"
+      ],
+      "question_category": "Reading",
+      "in_a_hurry": "no",
+      "indoor_outdoor": "indoor",
+      "familiarity_of_environment": "yes",
+      "familiarity_of_item": "yes",
+      "surrounding_environment": "alone",
+      "environment_setting": "leisure",
+      "interaction_length": "7",
+      "task_completed": "Yes"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P6_images/image_1_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows a packet of McCormick Brown Gravy mix. The packaging is primarily brown with a red top. It features an image of mashed potatoes with brown gravy and green beans on a plate. The text on the packet reads \"McCormick Brown Gravy\" with \"with McCormick Spices | No Artificial Flavors\" below it. In the bottom left corner, it says \"Gravy Mix\" and in the bottom right corner, it states \"Net Wt 0.87 oz (24g)\". The packet is placed on a countertop with a speckled pattern.",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "User:Directions",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 4,
+        "text_usr": null,
+        "text_ai": "Be My AI:The directions on the packet are not visible in the image. If you need the preparation instructions, you might find them on the back of the packet. Alternatively, you could press the \"Call a volunteer\" button for further assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 5,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P6_images/image_1_5.jpg"
+      },
+      {
+        "turn": 6,
+        "text_usr": null,
+        "text_ai": "Be My AI:The text on the packet is a bit blurry, but here is what I can make out:\n\nYou Will Need:\n1 pkg McCormick Gravy Mix\n1 cup cold water\n\nStove Top Directions:\n1. Stir water gradually into Gravy Mix with whisk in small saucepan.\n2. Stirring frequently, cook on medium heat until gravy comes to boil. Reduce heat and simmer 1 minute. (Gravy will thicken upon standing.)\n\nMicrowave Directions:\n1. Stir water into Gravy Mix in 1 1/2-quart microwavable bowl.\n2. Microwave on high 2 to 3 minutes or until thickened, stirring after each minute. Microwave ovens vary; time is approximate.\n\nPlease note that some parts of the text might be unclear due to the image quality. If you need precise instructions, you might want to press the \"Call a volunteer\" button for further assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 7,
+        "text_usr": "User:How many carbs?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 8,
+        "text_usr": null,
+        "text_ai": "Be My AI:The image shows the nutrition facts, but it's a bit blurry. It looks like the total carbohydrates per serving are 4 grams. If you need to confirm this information, you might want to press the \"Call a volunteer\" button for further assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 9,
+        "text_usr": "User:What other nutrition?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 10,
+        "text_usr": null,
+        "text_ai": "Be My AI:From what I can make out in the image, here are the nutrition facts per serving:\n\n- Calories: 20\n- Total Fat: 0.5g\n- Sodium: 230mg\n- Total Carbohydrates: 4g\n- Protein: 0g\n\nPlease note that some details might be unclear due to the image quality. If you need precise information, you might want to press the \"Call a volunteer\" button for further assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 11,
+        "text_usr": "User:How many servings does it make?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 12,
+        "text_usr": null,
+        "text_ai": "Be My AI:The packet indicates that it makes 1 cup of gravy, but the specific number of servings is not clearly visible in the image. If you need exact details, you might want to press the \"Call a volunteer\" button for further assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 13,
+        "text_usr": "User:I\u2019d rather not call a volunteer, do you have any tips so I can get all the information from a picture?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 14,
+        "text_usr": null,
+        "text_ai": "Be My AI:To capture all the information clearly in a picture, try the following tips:\n\n1. Ensure good lighting: Take the picture in a well-lit area to reduce shadows and improve clarity.\n2. Hold the camera steady: Keep your hand steady or use a stable surface to avoid blurriness.\n3. Get closer: Move closer to the text to ensure it's readable, but make sure the entire area of interest is in the frame.\n4. Focus: Make sure the camera is focused on the text. Most smartphones allow you to tap the screen to focus.\n5. Avoid glare: Adjust the angle to prevent light reflections on glossy surfaces.\n6. Take multiple shots: Capture several images from different angles or distances to increase the chance of getting a clear shot.\n\nIf you try these tips and still have difficulty, feel free to share another picture, and I'll do my best to help!",
+        "local_image_path": null
+      }
+    ]
+  }
+}

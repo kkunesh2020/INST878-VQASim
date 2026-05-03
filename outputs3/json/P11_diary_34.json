@@ -1,0 +1,718 @@
+{
+  "input": {
+    "participant": "P11",
+    "source": "diary",
+    "interaction": 34,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P11/diary_data/P11.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P11/diary_data/P11_images/image_34_1.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "Cleaning report from Monday, February 24 at 12:53 AM. The map shows the cleaned area highlighted in light blue with a purple outline. The cleaned area is 589 square feet, and the cleaning runtime was 69 minutes. The top left corner shows the time as 9:25 with a muted bell icon, indicating notifications are off.",
+    "all_user_responses": [
+      "Discounting the area occupied by furnishings throughout my middle level of my home, does this cleaning report suggest that everything else was in that clean by the robot vacuum?",
+      "This report is very helpful to confirm the vacuuming I initiated at the time I went to bed last night"
+    ],
+    "question_category": "Description",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The image shows a cleaning report from what appears to be a robot vacuum app, likely taken at home. The user is probably checking the cleaning status of their own space, suggesting familiarity with both the environment and the device. The time of day (late night) and the detailed report imply a routine check rather than urgency."
+      },
+      {
+        "context_id": 2,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "unfamiliar people",
+        "activity_type": "professional",
+        "rationale": "The user might be in a new environment, such as a hotel, office, or someone else's home, possibly as a cleaner or technician. They could be using an unfamiliar cleaning robot and documenting its performance for a report or to show to a supervisor or client, possibly with others present."
+      },
+      {
+        "context_id": 3,
+        "location": "indoor",
+        "time_pressure": "in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user may be at home but using a new or recently updated cleaning device/app. They could be in a hurry to check if the cleaning is complete before moving on to another task, leading them to quickly capture the screen for later reference or to ask for help interpreting the results."
+      },
+      {
+        "context_id": 4,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "leisure",
+        "rationale": "The user might be sharing the cleaning report with family or housemates, perhaps to demonstrate the cleaning coverage or to coordinate household chores. The relaxed timing and familiar context suggest a non-urgent, collaborative activity."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The image shows a cleaning report from what appears to be a robot vacuum app, likely taken at home. The user is probably checking the cleaning status of their own space, suggesting familiarity with both the environment and the device. The time of day (late night) and the detailed report imply a routine check rather than urgency."
+        },
+        {
+          "context_id": 2,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "unfamiliar people",
+          "activity_type": "professional",
+          "rationale": "The user might be in a new environment, such as a hotel, office, or someone else's home, possibly as a cleaner or technician. They could be using an unfamiliar cleaning robot and documenting its performance for a report or to show to a supervisor or client, possibly with others present."
+        },
+        {
+          "context_id": 3,
+          "location": "indoor",
+          "time_pressure": "in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user may be at home but using a new or recently updated cleaning device/app. They could be in a hurry to check if the cleaning is complete before moving on to another task, leading them to quickly capture the screen for later reference or to ask for help interpreting the results."
+        },
+        {
+          "context_id": 4,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "leisure",
+          "rationale": "The user might be sharing the cleaning report with family or housemates, perhaps to demonstrate the cleaning coverage or to coordinate household chores. The relaxed timing and familiar context suggest a non-urgent, collaborative activity."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Description",
+        "description": "Understand the overall results of a recent cleaning session (e.g., what was cleaned, how much area, how long it took).",
+        "confidence": "high",
+        "rationale": "The image is a cleaning report from a robot vacuum app, showing a map, cleaned area, and runtime. A BLV user may want a summary of this information to know if the cleaning was successful."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Reading",
+        "description": "Extract specific numerical data such as the cleaned area (in square feet) and runtime (in minutes).",
+        "confidence": "high",
+        "rationale": "The image contains key metrics (589 ft\u00b2, 69 min) that are important for tracking cleaning efficiency or comparing sessions."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Description",
+        "description": "Determine if the cleaning covered all intended areas or if any sections were missed.",
+        "confidence": "medium",
+        "rationale": "The map may be incomplete, rotated, or unclear, but the user may want to know if the robot vacuum missed any rooms or areas."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Identification",
+        "description": "Identify the date and time of the last cleaning session.",
+        "confidence": "high",
+        "rationale": "The report includes a timestamp (Mon, Feb 24, 12:53 AM), which could be relevant for scheduling or confirming recent activity."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Description",
+        "description": "Verify that the cleaning robot completed its job and returned to its base.",
+        "confidence": "medium",
+        "rationale": "The map shows a robot icon, possibly indicating the base location. The user may want confirmation that the cleaning cycle finished properly."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Locational/retrieval",
+        "description": "Locate the robot vacuum on the map in case it needs to be retrieved or checked.",
+        "confidence": "medium",
+        "rationale": "The presence of a robot icon on the map suggests the user may want to know where the device is currently located."
+      },
+      {
+        "task_id": 7,
+        "task_type": "Description",
+        "description": "Understand the meaning of map symbols or colors (e.g., what the shaded areas or outlines represent).",
+        "confidence": "low",
+        "rationale": "The map may use colors or symbols that are not accessible to BLV users, so they may want an explanation of these elements."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Description",
+          "description": "Understand the overall results of a recent cleaning session (e.g., what was cleaned, how much area, how long it took).",
+          "confidence": "high",
+          "rationale": "The image is a cleaning report from a robot vacuum app, showing a map, cleaned area, and runtime. A BLV user may want a summary of this information to know if the cleaning was successful."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Reading",
+          "description": "Extract specific numerical data such as the cleaned area (in square feet) and runtime (in minutes).",
+          "confidence": "high",
+          "rationale": "The image contains key metrics (589 ft\u00b2, 69 min) that are important for tracking cleaning efficiency or comparing sessions."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Description",
+          "description": "Determine if the cleaning covered all intended areas or if any sections were missed.",
+          "confidence": "medium",
+          "rationale": "The map may be incomplete, rotated, or unclear, but the user may want to know if the robot vacuum missed any rooms or areas."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Identification",
+          "description": "Identify the date and time of the last cleaning session.",
+          "confidence": "high",
+          "rationale": "The report includes a timestamp (Mon, Feb 24, 12:53 AM), which could be relevant for scheduling or confirming recent activity."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Description",
+          "description": "Verify that the cleaning robot completed its job and returned to its base.",
+          "confidence": "medium",
+          "rationale": "The map shows a robot icon, possibly indicating the base location. The user may want confirmation that the cleaning cycle finished properly."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Locational/retrieval",
+          "description": "Locate the robot vacuum on the map in case it needs to be retrieved or checked.",
+          "confidence": "medium",
+          "rationale": "The presence of a robot icon on the map suggests the user may want to know where the device is currently located."
+        },
+        {
+          "task_id": 7,
+          "task_type": "Description",
+          "description": "Understand the meaning of map symbols or colors (e.g., what the shaded areas or outlines represent).",
+          "confidence": "low",
+          "rationale": "The map may use colors or symbols that are not accessible to BLV users, so they may want an explanation of these elements."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "Does the map show any areas that weren't cleaned or look like they were missed?",
+      "Can you tell if the cleaning robot finished and returned to its base?",
+      "Where is the robot vacuum located on the map right now?",
+      "What do the different colors or outlines on the map mean?",
+      "Is there a way to tell which rooms were cleaned based on this map?",
+      "Can you confirm the date and time of this cleaning session?",
+      "Is the cleaned area measurement accurate, or could part of the map be missing?",
+      "Are there any error messages or alerts shown on this report?",
+      "Can you read out the cleaned area and runtime again, just to be sure?",
+      "Is there a summary or key takeaway from this cleaning report?"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Does the map show any areas that weren't cleaned or look like they were missed?",
+        "response_target": "missed areas",
+        "task_type": "Description",
+        "associated_task_id": 3,
+        "associated_context_id": 1,
+        "plausibility_score": 0.95,
+        "rationale": "A BLV user may want to confirm that all intended areas were cleaned, especially since the map could be unclear or incomplete. This is a common, practical follow-up after a cleaning session."
+      },
+      {
+        "rank": 2,
+        "response": "Can you tell if the cleaning robot finished and returned to its base?",
+        "response_target": "robot completion status",
+        "task_type": "Description",
+        "associated_task_id": 5,
+        "associated_context_id": 1,
+        "plausibility_score": 0.92,
+        "rationale": "Knowing whether the robot completed its job and docked is a key concern for users, especially if they can't visually confirm it. The map may not make this clear."
+      },
+      {
+        "rank": 3,
+        "response": "Where is the robot vacuum located on the map right now?",
+        "response_target": "robot location",
+        "task_type": "Locational/retrieval",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 0.9,
+        "rationale": "If the robot icon is present, a user may want to know its current location, especially if they need to retrieve or check on it."
+      },
+      {
+        "rank": 4,
+        "response": "What do the different colors or outlines on the map mean?",
+        "response_target": "map colors and outlines",
+        "task_type": "Description",
+        "associated_task_id": 7,
+        "associated_context_id": 1,
+        "plausibility_score": 0.85,
+        "rationale": "BLV users often need clarification on color-coded or symbolic map elements, as these are not accessible through screen readers."
+      },
+      {
+        "rank": 5,
+        "response": "Is there a way to tell which rooms were cleaned based on this map?",
+        "response_target": "cleaned rooms",
+        "task_type": "Description",
+        "associated_task_id": 3,
+        "associated_context_id": 1,
+        "plausibility_score": 0.83,
+        "rationale": "Users may want to know if specific rooms or zones were covered, especially if the map is ambiguous or the app doesn't label rooms clearly."
+      },
+      {
+        "rank": 6,
+        "response": "Can you confirm the date and time of this cleaning session?",
+        "response_target": "cleaning session date and time",
+        "task_type": "Identification",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.8,
+        "rationale": "Verifying the timestamp is important for tracking cleaning schedules, especially if the user can't read the screen directly."
+      },
+      {
+        "rank": 7,
+        "response": "Is the cleaned area measurement accurate, or could part of the map be missing?",
+        "response_target": "cleaned area accuracy",
+        "task_type": "Verification",
+        "associated_task_id": 2,
+        "associated_context_id": 3,
+        "plausibility_score": 0.78,
+        "rationale": "If the image is unclear or partially captured, the user may question whether the reported area reflects the full cleaning."
+      },
+      {
+        "rank": 8,
+        "response": "Are there any error messages or alerts shown on this report?",
+        "response_target": "error messages or alerts",
+        "task_type": "Verification",
+        "associated_task_id": 5,
+        "associated_context_id": 3,
+        "plausibility_score": 0.75,
+        "rationale": "Users may want to know if there were issues during cleaning, which might not be obvious from the main report."
+      },
+      {
+        "rank": 9,
+        "response": "Can you read out the cleaned area and runtime again, just to be sure?",
+        "response_target": "cleaned area and runtime",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.7,
+        "rationale": "Users sometimes ask for key numbers to be repeated, especially if the initial output was missed or unclear."
+      },
+      {
+        "rank": 10,
+        "response": "Is there a summary or key takeaway from this cleaning report?",
+        "response_target": "cleaning report summary",
+        "task_type": "Description",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.68,
+        "rationale": "Some users may want a concise summary, though this is less specific than other follow-ups and may overlap with the initial description."
+      }
+    ],
+    "raw_output": [
+      {
+        "rank": 1,
+        "response": "Does the map show any areas that weren't cleaned or look like they were missed?",
+        "response_target": "missed areas",
+        "task_type": "Description",
+        "associated_task_id": 3,
+        "associated_context_id": 1,
+        "plausibility_score": 0.95,
+        "rationale": "A BLV user may want to confirm that all intended areas were cleaned, especially since the map could be unclear or incomplete. This is a common, practical follow-up after a cleaning session."
+      },
+      {
+        "rank": 2,
+        "response": "Can you tell if the cleaning robot finished and returned to its base?",
+        "response_target": "robot completion status",
+        "task_type": "Description",
+        "associated_task_id": 5,
+        "associated_context_id": 1,
+        "plausibility_score": 0.92,
+        "rationale": "Knowing whether the robot completed its job and docked is a key concern for users, especially if they can't visually confirm it. The map may not make this clear."
+      },
+      {
+        "rank": 3,
+        "response": "Where is the robot vacuum located on the map right now?",
+        "response_target": "robot location",
+        "task_type": "Locational/retrieval",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 0.9,
+        "rationale": "If the robot icon is present, a user may want to know its current location, especially if they need to retrieve or check on it."
+      },
+      {
+        "rank": 4,
+        "response": "What do the different colors or outlines on the map mean?",
+        "response_target": "map colors and outlines",
+        "task_type": "Description",
+        "associated_task_id": 7,
+        "associated_context_id": 1,
+        "plausibility_score": 0.85,
+        "rationale": "BLV users often need clarification on color-coded or symbolic map elements, as these are not accessible through screen readers."
+      },
+      {
+        "rank": 5,
+        "response": "Is there a way to tell which rooms were cleaned based on this map?",
+        "response_target": "cleaned rooms",
+        "task_type": "Description",
+        "associated_task_id": 3,
+        "associated_context_id": 1,
+        "plausibility_score": 0.83,
+        "rationale": "Users may want to know if specific rooms or zones were covered, especially if the map is ambiguous or the app doesn't label rooms clearly."
+      },
+      {
+        "rank": 6,
+        "response": "Can you confirm the date and time of this cleaning session?",
+        "response_target": "cleaning session date and time",
+        "task_type": "Identification",
+        "associated_task_id": 4,
+        "associated_context_id": 1,
+        "plausibility_score": 0.8,
+        "rationale": "Verifying the timestamp is important for tracking cleaning schedules, especially if the user can't read the screen directly."
+      },
+      {
+        "rank": 7,
+        "response": "Is the cleaned area measurement accurate, or could part of the map be missing?",
+        "response_target": "cleaned area accuracy",
+        "task_type": "Verification",
+        "associated_task_id": 2,
+        "associated_context_id": 3,
+        "plausibility_score": 0.78,
+        "rationale": "If the image is unclear or partially captured, the user may question whether the reported area reflects the full cleaning."
+      },
+      {
+        "rank": 8,
+        "response": "Are there any error messages or alerts shown on this report?",
+        "response_target": "error messages or alerts",
+        "task_type": "Verification",
+        "associated_task_id": 5,
+        "associated_context_id": 3,
+        "plausibility_score": 0.75,
+        "rationale": "Users may want to know if there were issues during cleaning, which might not be obvious from the main report."
+      },
+      {
+        "rank": 9,
+        "response": "Can you read out the cleaned area and runtime again, just to be sure?",
+        "response_target": "cleaned area and runtime",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 1,
+        "plausibility_score": 0.7,
+        "rationale": "Users sometimes ask for key numbers to be repeated, especially if the initial output was missed or unclear."
+      },
+      {
+        "rank": 10,
+        "response": "Is there a summary or key takeaway from this cleaning report?",
+        "response_target": "cleaning report summary",
+        "task_type": "Description",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.68,
+        "rationale": "Some users may want a concise summary, though this is less specific than other follow-ups and may overlap with the initial description."
+      }
+    ]
+  },
+  "response_target_agent": {
+    "response_target": "cleaned areas excluding areas with furnishings",
+    "task_type": "Description",
+    "confidence": "high",
+    "rationale": "The participant is asking whether the cleaning report indicates that all accessible areas (excluding those blocked by furnishings) were cleaned by the robot vacuum. The question focuses on the extent of cleaning coverage, specifically discounting areas occupied by furniture, which aligns with the 'Description' category.",
+    "raw_output": {
+      "response_target": "cleaned areas excluding areas with furnishings",
+      "task_type": "Description",
+      "confidence": "high",
+      "rationale": "The participant is asking whether the cleaning report indicates that all accessible areas (excluding those blocked by furnishings) were cleaned by the robot vacuum. The question focuses on the extent of cleaning coverage, specifically discounting areas occupied by furniture, which aligns with the 'Description' category."
+    }
+  },
+  "interaction_target_agent": {
+    "turn_targets": [
+      {
+        "response_target": "cleaning coverage",
+        "task_type": "Description",
+        "confidence": "high",
+        "rationale": "The participant is asking if the cleaning report suggests that all areas, except those blocked by furnishings, were cleaned by the robot vacuum. The direct information target is the extent of cleaning coverage."
+      },
+      {
+        "response_target": "vacuuming confirmation",
+        "task_type": "Description",
+        "confidence": "medium",
+        "rationale": "The participant is expressing that the report is helpful for confirming the vacuuming they initiated, so the information target is confirmation that the vacuuming occurred as intended."
+      }
+    ],
+    "raw_output": {
+      "turn_targets": [
+        {
+          "response_target": "cleaning coverage",
+          "task_type": "Description",
+          "confidence": "high",
+          "rationale": "The participant is asking if the cleaning report suggests that all areas, except those blocked by furnishings, were cleaned by the robot vacuum. The direct information target is the extent of cleaning coverage."
+        },
+        {
+          "response_target": "vacuuming confirmation",
+          "task_type": "Description",
+          "confidence": "medium",
+          "rationale": "The participant is expressing that the report is helpful for confirming the vacuuming they initiated, so the information target is confirmation that the vacuuming occurred as intended."
+        }
+      ]
+    }
+  },
+  "final_ranked_questions": [
+    "Does the map show any areas that weren't cleaned or look like they were missed?",
+    "Can you tell if the cleaning robot finished and returned to its base?",
+    "Where is the robot vacuum located on the map right now?",
+    "What do the different colors or outlines on the map mean?",
+    "Is there a way to tell which rooms were cleaned based on this map?",
+    "Can you confirm the date and time of this cleaning session?",
+    "Is the cleaned area measurement accurate, or could part of the map be missing?",
+    "Are there any error messages or alerts shown on this report?",
+    "Can you read out the cleaned area and runtime again, just to be sure?",
+    "Is there a summary or key takeaway from this cleaning report?"
+  ],
+  "ground_truth_question": "Discounting the area occupied by furnishings throughout my middle level of my home, does this cleaning report suggest that everything else was in that clean by the robot vacuum?",
+  "comparison": {
+    "ground_truth": "Discounting the area occupied by furnishings throughout my middle level of my home, does this cleaning report suggest that everything else was in that clean by the robot vacuum?",
+    "ground_truth_response_target": "cleaned areas excluding areas with furnishings",
+    "ground_truth_task_type": "Description",
+    "turn_targets": [
+      {
+        "response_target": "cleaning coverage",
+        "task_type": "Description",
+        "confidence": "high",
+        "rationale": "The participant is asking if the cleaning report suggests that all areas, except those blocked by furnishings, were cleaned by the robot vacuum. The direct information target is the extent of cleaning coverage."
+      },
+      {
+        "response_target": "vacuuming confirmation",
+        "task_type": "Description",
+        "confidence": "medium",
+        "rationale": "The participant is expressing that the report is helpful for confirming the vacuuming they initiated, so the information target is confirmation that the vacuuming occurred as intended."
+      }
+    ],
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Does the map show any areas that weren't cleaned or look like they were missed?",
+        "generated_response_target": "missed areas",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "cleaned areas excluding areas with furnishings",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 2,
+        "generated_question": "Can you tell if the cleaning robot finished and returned to its base?",
+        "generated_response_target": "robot completion status",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "cleaned areas excluding areas with furnishings",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 3,
+        "generated_question": "Where is the robot vacuum located on the map right now?",
+        "generated_response_target": "robot location",
+        "generated_task_type": "Locational/retrieval",
+        "ground_truth_response_target": "cleaned areas excluding areas with furnishings",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 4,
+        "generated_question": "What do the different colors or outlines on the map mean?",
+        "generated_response_target": "map colors and outlines",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "cleaned areas excluding areas with furnishings",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 5,
+        "generated_question": "Is there a way to tell which rooms were cleaned based on this map?",
+        "generated_response_target": "cleaned rooms",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "cleaned areas excluding areas with furnishings",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 6,
+        "generated_question": "Can you confirm the date and time of this cleaning session?",
+        "generated_response_target": "cleaning session date and time",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "cleaned areas excluding areas with furnishings",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 7,
+        "generated_question": "Is the cleaned area measurement accurate, or could part of the map be missing?",
+        "generated_response_target": "cleaned area accuracy",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "cleaned areas excluding areas with furnishings",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 8,
+        "generated_question": "Are there any error messages or alerts shown on this report?",
+        "generated_response_target": "error messages or alerts",
+        "generated_task_type": "Verification",
+        "ground_truth_response_target": "cleaned areas excluding areas with furnishings",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 9,
+        "generated_question": "Can you read out the cleaned area and runtime again, just to be sure?",
+        "generated_response_target": "cleaned area and runtime",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "cleaned areas excluding areas with furnishings",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 10,
+        "generated_question": "Is there a summary or key takeaway from this cleaning report?",
+        "generated_response_target": "cleaning report summary",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "cleaned areas excluding areas with furnishings",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "Discounting the area occupied by furnishings throughout my middle level of my home, does this cleaning report suggest that everything else was in that clean by the robot vacuum?",
+        "generated_response_target": "cleaned areas excluding areas with furnishings",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "cleaned areas excluding areas with furnishings",
+        "ground_truth_task_type": "Description",
+        "target_match_score": 1,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "grounding",
+        "feedback"
+      ],
+      "question_category": "Description",
+      "in_a_hurry": "no",
+      "indoor_outdoor": "indoor",
+      "familiarity_of_environment": "yes",
+      "familiarity_of_item": "yes",
+      "surrounding_environment": "alone",
+      "environment_setting": "leisure",
+      "interaction_length": "3",
+      "task_completed": "Yes"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P11_images/image_34_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:Cleaning report from Monday, February 24 at 12:53 AM. The map shows the cleaned area highlighted in light blue with a purple outline. The cleaned area is 589 square feet, and the cleaning runtime was 69 minutes. The top left corner shows the time as 9:25 with a muted bell icon, indicating notifications are off.",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "User:Discounting the area occupied by furnishings throughout my middle level of my home, does this cleaning report suggest that everything else was in that clean by the robot vacuum?",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 4,
+        "text_usr": null,
+        "text_ai": "Be My AI:Yes, the cleaning report suggests that the robot vacuum cleaned the entire accessible area of the middle level of your home, excluding the spaces occupied by furnishings or any other obstacles that the vacuum couldn't navigate around. The light blue area on the map represents the sections that were cleaned.",
+        "local_image_path": null
+      },
+      {
+        "turn": 5,
+        "text_usr": "User:This report is very helpful to confirm the vacuuming I initiated at the time I went to bed last night",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 6,
+        "text_usr": null,
+        "text_ai": "Be My AI:I'm glad the report is helpful for you. It seems like the vacuum did its job while you were asleep, covering a significant area. If you have any more questions or need further assistance, feel free to ask!",
+        "local_image_path": null
+      }
+    ]
+  }
+}

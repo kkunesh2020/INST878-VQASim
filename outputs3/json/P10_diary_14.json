@@ -1,0 +1,712 @@
+{
+  "input": {
+    "participant": "P10",
+    "source": "diary",
+    "interaction": 14,
+    "json_file": "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P10/diary_data/P10.json",
+    "image_paths": [
+      "/Users/katiekunesh/Desktop/26s/INST878/INST878-VQASim/participant_data/P10/diary_data/P10_images/image_14_1.jpg"
+    ],
+    "missing_image_paths": [],
+    "description": "A package of Marketside Taco Salad kit. The packaging is predominantly blue and green with images of tortilla chips and shredded cheese. The text on the package reads \"Taco Salad\" and mentions that it includes a vegetable blend, seasoned tortilla chips, taco cheese blend, crispy red bell peppers, and crispy onions with taco ranch dressing. It also notes that there are 130 calories per serving. The net weight is 7.6 ounces (215 grams) for the salad and toppings, with the dressing weighing 2.2 ounces (65 milliliters). The package is placed on a dark surface, and part of a person's clothing is visible at the bottom of the image.",
+    "all_user_responses": [
+      "What is the expiration date"
+    ],
+    "question_category": "Unanswerable, Reading",
+    "optional_prompt": {
+      "demographics_enabled": false,
+      "fewshot_enabled": false
+    }
+  },
+  "context_agent": {
+    "contexts": [
+      {
+        "context_id": 1,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user may be at home or in a familiar kitchen, trying to identify the contents or nutritional information of a salad kit they haven't used before. The image is somewhat off-center and partially obscured, suggesting the user may be unfamiliar with the packaging and is relying on the VQA system for confirmation."
+      },
+      {
+        "context_id": 2,
+        "location": "indoor",
+        "time_pressure": "maybe in a hurry",
+        "environment_familiarity": "unfamiliar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "with others",
+        "social_detail": "unfamiliar people",
+        "activity_type": "leisure",
+        "rationale": "The user could be at a social gathering or event (e.g., potluck, work lunch) in an unfamiliar place, trying to quickly determine if a salad kit is suitable for their dietary needs or preferences. The hurried, partial image reflects possible time pressure and unfamiliarity with both the environment and the item."
+      },
+      {
+        "context_id": 3,
+        "location": "indoor",
+        "time_pressure": "not in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "familiar",
+        "social_context": "with others",
+        "social_detail": "familiar people",
+        "activity_type": "daily living task",
+        "rationale": "The user may be preparing a meal with family or friends at home, double-checking the salad kit to confirm its type or ingredients. The relaxed framing and partial view suggest a casual, collaborative context where the user is comfortable and not rushed."
+      },
+      {
+        "context_id": 4,
+        "location": "indoor",
+        "time_pressure": "in a hurry",
+        "environment_familiarity": "familiar",
+        "object_familiarity": "unfamiliar",
+        "social_context": "alone",
+        "social_detail": "",
+        "activity_type": "daily living task",
+        "rationale": "The user might be quickly grabbing lunch or preparing a meal before heading out, needing to confirm the product type or check for allergens. The hurried, imperfect photo suggests they may not have time to carefully frame the shot."
+      }
+    ],
+    "raw_output": {
+      "contexts": [
+        {
+          "context_id": 1,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user may be at home or in a familiar kitchen, trying to identify the contents or nutritional information of a salad kit they haven't used before. The image is somewhat off-center and partially obscured, suggesting the user may be unfamiliar with the packaging and is relying on the VQA system for confirmation."
+        },
+        {
+          "context_id": 2,
+          "location": "indoor",
+          "time_pressure": "maybe in a hurry",
+          "environment_familiarity": "unfamiliar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "with others",
+          "social_detail": "unfamiliar people",
+          "activity_type": "leisure",
+          "rationale": "The user could be at a social gathering or event (e.g., potluck, work lunch) in an unfamiliar place, trying to quickly determine if a salad kit is suitable for their dietary needs or preferences. The hurried, partial image reflects possible time pressure and unfamiliarity with both the environment and the item."
+        },
+        {
+          "context_id": 3,
+          "location": "indoor",
+          "time_pressure": "not in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "familiar",
+          "social_context": "with others",
+          "social_detail": "familiar people",
+          "activity_type": "daily living task",
+          "rationale": "The user may be preparing a meal with family or friends at home, double-checking the salad kit to confirm its type or ingredients. The relaxed framing and partial view suggest a casual, collaborative context where the user is comfortable and not rushed."
+        },
+        {
+          "context_id": 4,
+          "location": "indoor",
+          "time_pressure": "in a hurry",
+          "environment_familiarity": "familiar",
+          "object_familiarity": "unfamiliar",
+          "social_context": "alone",
+          "social_detail": "",
+          "activity_type": "daily living task",
+          "rationale": "The user might be quickly grabbing lunch or preparing a meal before heading out, needing to confirm the product type or check for allergens. The hurried, imperfect photo suggests they may not have time to carefully frame the shot."
+        }
+      ]
+    }
+  },
+  "task_agent": {
+    "tasks": [
+      {
+        "task_id": 1,
+        "task_type": "Reading",
+        "description": "Extract the product name and main label information from the package.",
+        "confidence": "high",
+        "rationale": "BLV users often need to confirm what a product is, especially when packaging is similar. The image shows a food package with visible text, suggesting the user wants to know the product name and type."
+      },
+      {
+        "task_id": 2,
+        "task_type": "Reading",
+        "description": "Read the nutritional information, such as calories per serving.",
+        "confidence": "medium",
+        "rationale": "The calorie information is visible on the package. BLV users may want to check nutritional details for dietary reasons, but the image may not capture the full nutrition label."
+      },
+      {
+        "task_id": 3,
+        "task_type": "Reading",
+        "description": "Identify the net weight and serving size of the product.",
+        "confidence": "medium",
+        "rationale": "The net weight is partially visible. Users may want to know how much product is in the package, but the image may not show the entire label."
+      },
+      {
+        "task_id": 4,
+        "task_type": "Identification",
+        "description": "Confirm whether this is the correct salad kit (e.g., taco salad) before preparing or purchasing.",
+        "confidence": "high",
+        "rationale": "BLV users often need to verify product type to avoid mistakes, especially with similar packaging. The image focuses on the product name area."
+      },
+      {
+        "task_id": 5,
+        "task_type": "Description",
+        "description": "Describe the visible ingredients or components shown on the package.",
+        "confidence": "medium",
+        "rationale": "The package shows images of salad components. The user may want to know what is included, but the image may not show all details."
+      },
+      {
+        "task_id": 6,
+        "task_type": "Reading",
+        "description": "Check for allergen or dietary information on the package.",
+        "confidence": "low",
+        "rationale": "Allergen information is often important, but may not be visible in this image. The user may have intended to capture it, but the image may not include that section."
+      },
+      {
+        "task_id": 7,
+        "task_type": "Reading",
+        "description": "Read preparation or usage instructions for the salad kit.",
+        "confidence": "low",
+        "rationale": "Preparation instructions are often on the back or side of the package, which may not be visible here. The user may have attempted to capture this information."
+      }
+    ],
+    "raw_output": {
+      "tasks": [
+        {
+          "task_id": 1,
+          "task_type": "Reading",
+          "description": "Extract the product name and main label information from the package.",
+          "confidence": "high",
+          "rationale": "BLV users often need to confirm what a product is, especially when packaging is similar. The image shows a food package with visible text, suggesting the user wants to know the product name and type."
+        },
+        {
+          "task_id": 2,
+          "task_type": "Reading",
+          "description": "Read the nutritional information, such as calories per serving.",
+          "confidence": "medium",
+          "rationale": "The calorie information is visible on the package. BLV users may want to check nutritional details for dietary reasons, but the image may not capture the full nutrition label."
+        },
+        {
+          "task_id": 3,
+          "task_type": "Reading",
+          "description": "Identify the net weight and serving size of the product.",
+          "confidence": "medium",
+          "rationale": "The net weight is partially visible. Users may want to know how much product is in the package, but the image may not show the entire label."
+        },
+        {
+          "task_id": 4,
+          "task_type": "Identification",
+          "description": "Confirm whether this is the correct salad kit (e.g., taco salad) before preparing or purchasing.",
+          "confidence": "high",
+          "rationale": "BLV users often need to verify product type to avoid mistakes, especially with similar packaging. The image focuses on the product name area."
+        },
+        {
+          "task_id": 5,
+          "task_type": "Description",
+          "description": "Describe the visible ingredients or components shown on the package.",
+          "confidence": "medium",
+          "rationale": "The package shows images of salad components. The user may want to know what is included, but the image may not show all details."
+        },
+        {
+          "task_id": 6,
+          "task_type": "Reading",
+          "description": "Check for allergen or dietary information on the package.",
+          "confidence": "low",
+          "rationale": "Allergen information is often important, but may not be visible in this image. The user may have intended to capture it, but the image may not include that section."
+        },
+        {
+          "task_id": 7,
+          "task_type": "Reading",
+          "description": "Read preparation or usage instructions for the salad kit.",
+          "confidence": "low",
+          "rationale": "Preparation instructions are often on the back or side of the package, which may not be visible here. The user may have attempted to capture this information."
+        }
+      ]
+    }
+  },
+  "question_agent": {
+    "ranked_questions": [
+      "{'rank': 1, 'response': 'Does the package say if there are any allergens like dairy or nuts?', 'response_target': 'allergen information', 'task_type': 'Reading', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': 'Allergen information is critical for many users, and the description does not mention it. The user may be unfamiliar with the product and want to confirm safety before eating.'}",
+      "{'rank': 2, 'response': 'Can you read the full list of ingredients on the package?', 'response_target': 'ingredients list', 'task_type': 'Reading', 'associated_task_id': 5, 'associated_context_id': 1, 'plausibility_score': 0.92, 'rationale': 'The user may want to know all ingredients for dietary or allergy reasons, especially since the description only summarizes visible components.'}",
+      "{'rank': 3, 'response': 'Is this definitely the taco salad kit?', 'response_target': 'product type', 'task_type': 'Identification', 'associated_task_id': 4, 'associated_context_id': 4, 'plausibility_score': 0.9, 'rationale': 'Quick verification is common, especially if the user is in a hurry or unsure if the package matches what they need.'}",
+      "{'rank': 4, 'response': 'Are there any preparation instructions visible?', 'response_target': 'preparation instructions', 'task_type': 'Reading', 'associated_task_id': 7, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': 'Preparation instructions are often sought, but may not be visible in the image. The user may want to confirm if they need to do anything special.'}",
+      "{'rank': 5, 'response': 'How many servings are in this package?', 'response_target': 'serving size', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.83, 'rationale': 'Serving size is important for meal planning, and the user may not be able to find this info from the description.'}",
+      "{'rank': 6, 'response': 'Can you confirm the calorie count per serving?', 'response_target': 'calorie information', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 2, 'plausibility_score': 0.8, 'rationale': 'The description mentions 130 calories, but the user may want confirmation or clarification, especially if dietary needs are a concern.'}",
+      "{'rank': 7, 'response': 'What is the net weight of the salad kit?', 'response_target': 'net weight', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.78, 'rationale': 'Net weight is partially visible, but the user may want to confirm the exact amount, especially if the image is unclear.'}",
+      "{'rank': 8, 'response': 'Are there any other types of salad kits visible in the image?', 'response_target': 'other salad kits', 'task_type': 'Identification', 'associated_task_id': 4, 'associated_context_id': 3, 'plausibility_score': 0.7, 'rationale': 'If shopping or meal prepping, the user may want to know if there are other options present, though the image seems focused on one package.'}",
+      "{'rank': 9, 'response': 'Can you describe what the salad looks like on the package?', 'response_target': 'salad appearance', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 3, 'plausibility_score': 0.65, 'rationale': 'The user may want a visual description to help identify or compare the product, especially if shopping with others.'}",
+      "{'rank': 10, 'response': 'Is there a best by or expiration date visible?', 'response_target': 'expiration date', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.6, 'rationale': 'Checking freshness is common, but the image and description do not mention a date, so the user may ask just in case.'}"
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "response": "Does the package say if there are any allergens like dairy or nuts?",
+        "response_target": "allergen information",
+        "task_type": "Reading",
+        "associated_task_id": 6,
+        "associated_context_id": 1,
+        "plausibility_score": 0.95,
+        "rationale": "Allergen information is critical for many users, and the description does not mention it. The user may be unfamiliar with the product and want to confirm safety before eating."
+      },
+      {
+        "rank": 2,
+        "response": "Can you read the full list of ingredients on the package?",
+        "response_target": "ingredients list",
+        "task_type": "Reading",
+        "associated_task_id": 5,
+        "associated_context_id": 1,
+        "plausibility_score": 0.92,
+        "rationale": "The user may want to know all ingredients for dietary or allergy reasons, especially since the description only summarizes visible components."
+      },
+      {
+        "rank": 3,
+        "response": "Is this definitely the taco salad kit?",
+        "response_target": "product type",
+        "task_type": "Identification",
+        "associated_task_id": 4,
+        "associated_context_id": 4,
+        "plausibility_score": 0.9,
+        "rationale": "Quick verification is common, especially if the user is in a hurry or unsure if the package matches what they need."
+      },
+      {
+        "rank": 4,
+        "response": "Are there any preparation instructions visible?",
+        "response_target": "preparation instructions",
+        "task_type": "Reading",
+        "associated_task_id": 7,
+        "associated_context_id": 1,
+        "plausibility_score": 0.85,
+        "rationale": "Preparation instructions are often sought, but may not be visible in the image. The user may want to confirm if they need to do anything special."
+      },
+      {
+        "rank": 5,
+        "response": "How many servings are in this package?",
+        "response_target": "serving size",
+        "task_type": "Reading",
+        "associated_task_id": 3,
+        "associated_context_id": 1,
+        "plausibility_score": 0.83,
+        "rationale": "Serving size is important for meal planning, and the user may not be able to find this info from the description."
+      },
+      {
+        "rank": 6,
+        "response": "Can you confirm the calorie count per serving?",
+        "response_target": "calorie information",
+        "task_type": "Reading",
+        "associated_task_id": 2,
+        "associated_context_id": 2,
+        "plausibility_score": 0.8,
+        "rationale": "The description mentions 130 calories, but the user may want confirmation or clarification, especially if dietary needs are a concern."
+      },
+      {
+        "rank": 7,
+        "response": "What is the net weight of the salad kit?",
+        "response_target": "net weight",
+        "task_type": "Reading",
+        "associated_task_id": 3,
+        "associated_context_id": 1,
+        "plausibility_score": 0.78,
+        "rationale": "Net weight is partially visible, but the user may want to confirm the exact amount, especially if the image is unclear."
+      },
+      {
+        "rank": 8,
+        "response": "Are there any other types of salad kits visible in the image?",
+        "response_target": "other salad kits",
+        "task_type": "Identification",
+        "associated_task_id": 4,
+        "associated_context_id": 3,
+        "plausibility_score": 0.7,
+        "rationale": "If shopping or meal prepping, the user may want to know if there are other options present, though the image seems focused on one package."
+      },
+      {
+        "rank": 9,
+        "response": "Can you describe what the salad looks like on the package?",
+        "response_target": "salad appearance",
+        "task_type": "Description",
+        "associated_task_id": 5,
+        "associated_context_id": 3,
+        "plausibility_score": 0.65,
+        "rationale": "The user may want a visual description to help identify or compare the product, especially if shopping with others."
+      },
+      {
+        "rank": 10,
+        "response": "Is there a best by or expiration date visible?",
+        "response_target": "expiration date",
+        "task_type": "Reading",
+        "associated_task_id": 1,
+        "associated_context_id": 1,
+        "plausibility_score": 0.6,
+        "rationale": "Checking freshness is common, but the image and description do not mention a date, so the user may ask just in case."
+      }
+    ],
+    "raw_output": {
+      "ranked_questions": [
+        {
+          "rank": 1,
+          "response": "Does the package say if there are any allergens like dairy or nuts?",
+          "response_target": "allergen information",
+          "task_type": "Reading",
+          "associated_task_id": 6,
+          "associated_context_id": 1,
+          "plausibility_score": 0.95,
+          "rationale": "Allergen information is critical for many users, and the description does not mention it. The user may be unfamiliar with the product and want to confirm safety before eating."
+        },
+        {
+          "rank": 2,
+          "response": "Can you read the full list of ingredients on the package?",
+          "response_target": "ingredients list",
+          "task_type": "Reading",
+          "associated_task_id": 5,
+          "associated_context_id": 1,
+          "plausibility_score": 0.92,
+          "rationale": "The user may want to know all ingredients for dietary or allergy reasons, especially since the description only summarizes visible components."
+        },
+        {
+          "rank": 3,
+          "response": "Is this definitely the taco salad kit?",
+          "response_target": "product type",
+          "task_type": "Identification",
+          "associated_task_id": 4,
+          "associated_context_id": 4,
+          "plausibility_score": 0.9,
+          "rationale": "Quick verification is common, especially if the user is in a hurry or unsure if the package matches what they need."
+        },
+        {
+          "rank": 4,
+          "response": "Are there any preparation instructions visible?",
+          "response_target": "preparation instructions",
+          "task_type": "Reading",
+          "associated_task_id": 7,
+          "associated_context_id": 1,
+          "plausibility_score": 0.85,
+          "rationale": "Preparation instructions are often sought, but may not be visible in the image. The user may want to confirm if they need to do anything special."
+        },
+        {
+          "rank": 5,
+          "response": "How many servings are in this package?",
+          "response_target": "serving size",
+          "task_type": "Reading",
+          "associated_task_id": 3,
+          "associated_context_id": 1,
+          "plausibility_score": 0.83,
+          "rationale": "Serving size is important for meal planning, and the user may not be able to find this info from the description."
+        },
+        {
+          "rank": 6,
+          "response": "Can you confirm the calorie count per serving?",
+          "response_target": "calorie information",
+          "task_type": "Reading",
+          "associated_task_id": 2,
+          "associated_context_id": 2,
+          "plausibility_score": 0.8,
+          "rationale": "The description mentions 130 calories, but the user may want confirmation or clarification, especially if dietary needs are a concern."
+        },
+        {
+          "rank": 7,
+          "response": "What is the net weight of the salad kit?",
+          "response_target": "net weight",
+          "task_type": "Reading",
+          "associated_task_id": 3,
+          "associated_context_id": 1,
+          "plausibility_score": 0.78,
+          "rationale": "Net weight is partially visible, but the user may want to confirm the exact amount, especially if the image is unclear."
+        },
+        {
+          "rank": 8,
+          "response": "Are there any other types of salad kits visible in the image?",
+          "response_target": "other salad kits",
+          "task_type": "Identification",
+          "associated_task_id": 4,
+          "associated_context_id": 3,
+          "plausibility_score": 0.7,
+          "rationale": "If shopping or meal prepping, the user may want to know if there are other options present, though the image seems focused on one package."
+        },
+        {
+          "rank": 9,
+          "response": "Can you describe what the salad looks like on the package?",
+          "response_target": "salad appearance",
+          "task_type": "Description",
+          "associated_task_id": 5,
+          "associated_context_id": 3,
+          "plausibility_score": 0.65,
+          "rationale": "The user may want a visual description to help identify or compare the product, especially if shopping with others."
+        },
+        {
+          "rank": 10,
+          "response": "Is there a best by or expiration date visible?",
+          "response_target": "expiration date",
+          "task_type": "Reading",
+          "associated_task_id": 1,
+          "associated_context_id": 1,
+          "plausibility_score": 0.6,
+          "rationale": "Checking freshness is common, but the image and description do not mention a date, so the user may ask just in case."
+        }
+      ]
+    }
+  },
+  "response_target_agent": {
+    "response_target": "expiration date",
+    "task_type": "Unanswerable, Reading",
+    "confidence": "high",
+    "rationale": "The participant's question directly asks for the expiration date, which is a specific piece of information typically found on packaged food. The question_category confirms this is a reading task, but the image does not clearly show the expiration date, making it unanswerable. The information target remains the expiration date.",
+    "raw_output": {
+      "response_target": "expiration date",
+      "task_type": "Unanswerable, Reading",
+      "confidence": "high",
+      "rationale": "The participant's question directly asks for the expiration date, which is a specific piece of information typically found on packaged food. The question_category confirms this is a reading task, but the image does not clearly show the expiration date, making it unanswerable. The information target remains the expiration date."
+    }
+  },
+  "interaction_target_agent": {
+    "turn_targets": [
+      {
+        "response_target": "expiration date",
+        "task_type": "Unanswerable, Reading",
+        "confidence": "high",
+        "rationale": "The participant directly asks for the expiration date, which is a specific piece of information typically found on food packaging. The question is clear and focused on this detail."
+      }
+    ],
+    "raw_output": {
+      "turn_targets": [
+        {
+          "response_target": "expiration date",
+          "task_type": "Unanswerable, Reading",
+          "confidence": "high",
+          "rationale": "The participant directly asks for the expiration date, which is a specific piece of information typically found on food packaging. The question is clear and focused on this detail."
+        }
+      ]
+    }
+  },
+  "final_ranked_questions": [
+    "{'rank': 1, 'response': 'Does the package say if there are any allergens like dairy or nuts?', 'response_target': 'allergen information', 'task_type': 'Reading', 'associated_task_id': 6, 'associated_context_id': 1, 'plausibility_score': 0.95, 'rationale': 'Allergen information is critical for many users, and the description does not mention it. The user may be unfamiliar with the product and want to confirm safety before eating.'}",
+    "{'rank': 2, 'response': 'Can you read the full list of ingredients on the package?', 'response_target': 'ingredients list', 'task_type': 'Reading', 'associated_task_id': 5, 'associated_context_id': 1, 'plausibility_score': 0.92, 'rationale': 'The user may want to know all ingredients for dietary or allergy reasons, especially since the description only summarizes visible components.'}",
+    "{'rank': 3, 'response': 'Is this definitely the taco salad kit?', 'response_target': 'product type', 'task_type': 'Identification', 'associated_task_id': 4, 'associated_context_id': 4, 'plausibility_score': 0.9, 'rationale': 'Quick verification is common, especially if the user is in a hurry or unsure if the package matches what they need.'}",
+    "{'rank': 4, 'response': 'Are there any preparation instructions visible?', 'response_target': 'preparation instructions', 'task_type': 'Reading', 'associated_task_id': 7, 'associated_context_id': 1, 'plausibility_score': 0.85, 'rationale': 'Preparation instructions are often sought, but may not be visible in the image. The user may want to confirm if they need to do anything special.'}",
+    "{'rank': 5, 'response': 'How many servings are in this package?', 'response_target': 'serving size', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.83, 'rationale': 'Serving size is important for meal planning, and the user may not be able to find this info from the description.'}",
+    "{'rank': 6, 'response': 'Can you confirm the calorie count per serving?', 'response_target': 'calorie information', 'task_type': 'Reading', 'associated_task_id': 2, 'associated_context_id': 2, 'plausibility_score': 0.8, 'rationale': 'The description mentions 130 calories, but the user may want confirmation or clarification, especially if dietary needs are a concern.'}",
+    "{'rank': 7, 'response': 'What is the net weight of the salad kit?', 'response_target': 'net weight', 'task_type': 'Reading', 'associated_task_id': 3, 'associated_context_id': 1, 'plausibility_score': 0.78, 'rationale': 'Net weight is partially visible, but the user may want to confirm the exact amount, especially if the image is unclear.'}",
+    "{'rank': 8, 'response': 'Are there any other types of salad kits visible in the image?', 'response_target': 'other salad kits', 'task_type': 'Identification', 'associated_task_id': 4, 'associated_context_id': 3, 'plausibility_score': 0.7, 'rationale': 'If shopping or meal prepping, the user may want to know if there are other options present, though the image seems focused on one package.'}",
+    "{'rank': 9, 'response': 'Can you describe what the salad looks like on the package?', 'response_target': 'salad appearance', 'task_type': 'Description', 'associated_task_id': 5, 'associated_context_id': 3, 'plausibility_score': 0.65, 'rationale': 'The user may want a visual description to help identify or compare the product, especially if shopping with others.'}",
+    "{'rank': 10, 'response': 'Is there a best by or expiration date visible?', 'response_target': 'expiration date', 'task_type': 'Reading', 'associated_task_id': 1, 'associated_context_id': 1, 'plausibility_score': 0.6, 'rationale': 'Checking freshness is common, but the image and description do not mention a date, so the user may ask just in case.'}"
+  ],
+  "ground_truth_question": "What is the expiration date",
+  "comparison": {
+    "ground_truth": "What is the expiration date",
+    "ground_truth_response_target": "expiration date",
+    "ground_truth_task_type": "Unanswerable, Reading",
+    "turn_targets": [
+      {
+        "response_target": "expiration date",
+        "task_type": "Unanswerable, Reading",
+        "confidence": "high",
+        "rationale": "The participant directly asks for the expiration date, which is a specific piece of information typically found on food packaging. The question is clear and focused on this detail."
+      }
+    ],
+    "per_question_scores": [
+      {
+        "rank": 1,
+        "generated_question": "Does the package say if there are any allergens like dairy or nuts?",
+        "generated_response_target": "allergen information",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Unanswerable, Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 2,
+        "generated_question": "Can you read the full list of ingredients on the package?",
+        "generated_response_target": "ingredients list",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Unanswerable, Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 3,
+        "generated_question": "Is this definitely the taco salad kit?",
+        "generated_response_target": "product type",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Unanswerable, Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 4,
+        "generated_question": "Are there any preparation instructions visible?",
+        "generated_response_target": "preparation instructions",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Unanswerable, Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 5,
+        "generated_question": "How many servings are in this package?",
+        "generated_response_target": "serving size",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Unanswerable, Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 6,
+        "generated_question": "Can you confirm the calorie count per serving?",
+        "generated_response_target": "calorie information",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Unanswerable, Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 7,
+        "generated_question": "What is the net weight of the salad kit?",
+        "generated_response_target": "net weight",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Unanswerable, Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": 8,
+        "generated_question": "Are there any other types of salad kits visible in the image?",
+        "generated_response_target": "other salad kits",
+        "generated_task_type": "Identification",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Unanswerable, Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 9,
+        "generated_question": "Can you describe what the salad looks like on the package?",
+        "generated_response_target": "salad appearance",
+        "generated_task_type": "Description",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Unanswerable, Reading",
+        "target_match_score": 0,
+        "matched_user_turn": null,
+        "matched_user_turn_target": "",
+        "matched_user_turn_score": 0,
+        "task_type_match_score": 0
+      },
+      {
+        "rank": 10,
+        "generated_question": "Is there a best by or expiration date visible?",
+        "generated_response_target": "expiration date",
+        "generated_task_type": "Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Unanswerable, Reading",
+        "target_match_score": 1,
+        "matched_user_turn": 1,
+        "matched_user_turn_target": "expiration date",
+        "matched_user_turn_score": 1,
+        "task_type_match_score": 1
+      },
+      {
+        "rank": "ground_truth",
+        "generated_question": "What is the expiration date",
+        "generated_response_target": "expiration date",
+        "generated_task_type": "Unanswerable, Reading",
+        "ground_truth_response_target": "expiration date",
+        "ground_truth_task_type": "Unanswerable, Reading",
+        "target_match_score": 1,
+        "matched_user_turn": 1,
+        "matched_user_turn_target": "expiration date",
+        "matched_user_turn_score": 1,
+        "task_type_match_score": 1
+      }
+    ]
+  },
+  "raw_interaction": {
+    "annotations": {
+      "customization_technique_used": [
+        "NA-w-text"
+      ],
+      "question_category": "Unanswerable, Reading",
+      "in_a_hurry": "no",
+      "indoor_outdoor": "indoor",
+      "familiarity_of_environment": "yes",
+      "familiarity_of_item": "yes",
+      "surrounding_environment": "alone",
+      "environment_setting": "leisure",
+      "interaction_length": "4",
+      "task_completed": "No"
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P10_images/image_14_1.jpg"
+      },
+      {
+        "turn": 2,
+        "text_usr": null,
+        "text_ai": "Be My AI:A package of Marketside Taco Salad kit. The packaging is predominantly blue and green with images of tortilla chips and shredded cheese. The text on the package reads \"Taco Salad\" and mentions that it includes a vegetable blend, seasoned tortilla chips, taco cheese blend, crispy red bell peppers, and crispy onions with taco ranch dressing. It also notes that there are 130 calories per serving. The net weight is 7.6 ounces (215 grams) for the salad and toppings, with the dressing weighing 2.2 ounces (65 milliliters). The package is placed on a dark surface, and part of a person's clothing is visible at the bottom of the image.",
+        "local_image_path": null
+      },
+      {
+        "turn": 3,
+        "text_usr": "User:What is the expiration date",
+        "text_ai": null,
+        "local_image_path": null
+      },
+      {
+        "turn": 4,
+        "text_usr": null,
+        "text_ai": "Be My AI:The expiration date is not visible in the image. You might want to check other parts of the package for the date or press the \"Call a volunteer\" button for further assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 5,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P10_images/image_14_5.jpg"
+      },
+      {
+        "turn": 6,
+        "text_usr": null,
+        "text_ai": "Be My AI:The expiration date is not visible in this image either. It might be located on a different part of the package. You may need to check the top or bottom edges of the package or consider pressing the \"Call a volunteer\" button for further assistance.",
+        "local_image_path": null
+      },
+      {
+        "turn": 7,
+        "text_usr": "",
+        "text_ai": null,
+        "local_image_path": "P10_images/image_14_7.jpg"
+      },
+      {
+        "turn": 8,
+        "text_usr": null,
+        "text_ai": "Be My AI:The expiration date on the package is February 24, 2024.",
+        "local_image_path": null
+      }
+    ]
+  }
+}
