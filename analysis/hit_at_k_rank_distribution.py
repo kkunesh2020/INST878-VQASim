@@ -21,17 +21,17 @@ METRICS = {
     "category": {
         "label": "Category",
         "score_field": "task_type_match_score",
-        "color": "#dfc27d",
+        "color": "#a6611a",
     },
     "target": {
         "label": "Target",
         "score_field": "target_match_score",
-        "color": "#80cdc1",
+        "color": "#01665e",
     },
     "matched_user_turn": {
         "label": "Any-Turn Target",
         "score_field": "matched_user_turn_score",
-        "color": "#018571",
+        "color": "#5ab4ac",
     },
 }
 
@@ -40,6 +40,7 @@ INPUT_DIR = ROOT / "aggregated-outputs"
 OUTPUT_CSV_PATH = ROOT / "analysis" / "hit_at_k_rank_distribution_counts.csv"
 OUTPUT_CATEGORY_PNG_PATH = ROOT / "analysis" / "hit_at_k_rank_distribution_category.png"
 OUTPUT_TARGETS_PNG_PATH = ROOT / "analysis" / "hit_at_k_rank_distribution_targets.png"
+OUTPUT_LINES_PNG_PATH = ROOT / "analysis" / "hit_at_k_rank_distribution_lines.png"
 MPLCONFIGDIR = Path("/private/tmp") / "inst878-vqasim-matplotlib-cache"
 
 
@@ -186,12 +187,47 @@ def plot_target_distributions(counts_df: pd.DataFrame) -> None:
     plt.close(fig)
 
 
+def plot_line_distribution(counts_df: pd.DataFrame) -> None:
+    import matplotlib.pyplot as plt
+
+    markers = {
+        "category": "o",
+        "target": "s",
+        "matched_user_turn": "x",
+    }
+    fig, ax = plt.subplots(figsize=(7.2, 4.4))
+
+    for metric, spec in METRICS.items():
+        metric_df = counts_df[counts_df["metric"] == metric].sort_values("rank")
+        ax.plot(
+            metric_df["rank"],
+            metric_df["match_count"],
+            color=spec["color"],
+            marker=markers[metric],
+            markersize=5,
+            linewidth=1.0,
+            label=spec["label"],
+        )
+
+    max_count = int(counts_df["match_count"].max())
+    ax.set_xlabel("Rank")
+    ax.set_ylabel("Number of matches")
+    ax.set_xticks(RANKS)
+    ax.set_xlim(0.75, 10.25)
+    ax.set_ylim(0, max_count + max(1, int(max_count * 0.1)))
+    ax.legend(frameon=True)
+    fig.tight_layout()
+    fig.savefig(OUTPUT_LINES_PNG_PATH, dpi=300, bbox_inches="tight")
+    plt.close(fig)
+
+
 def plot_rank_distribution(counts_df: pd.DataFrame) -> None:
     MPLCONFIGDIR.mkdir(parents=True, exist_ok=True)
     os.environ.setdefault("MPLCONFIGDIR", str(MPLCONFIGDIR))
 
     plot_category_distribution(counts_df)
     plot_target_distributions(counts_df)
+    plot_line_distribution(counts_df)
 
 
 def main() -> None:
@@ -204,7 +240,8 @@ def main() -> None:
     print(
         f"Saved rank distribution for {len(participants)} participants and "
         f"{successful_interactions} successful interactions to {OUTPUT_CSV_PATH}; "
-        f"plots to {OUTPUT_CATEGORY_PNG_PATH} and {OUTPUT_TARGETS_PNG_PATH}"
+        f"plots to {OUTPUT_CATEGORY_PNG_PATH}, {OUTPUT_TARGETS_PNG_PATH}, "
+        f"and {OUTPUT_LINES_PNG_PATH}"
     )
 
 
