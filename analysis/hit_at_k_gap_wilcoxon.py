@@ -29,11 +29,16 @@ COMPARISONS = {
     "3_to_10": (3, 10),
 }
 ALTERNATIVE = "greater"
+ALPHA = 0.05
+GAP_CORRECTION_METHOD = "Holm within metric across 3 comparisons"
+TARGET_ANYTURN_CORRECTION_METHOD = "Holm across k for target vs any-turn target"
 
 ROOT = Path(__file__).resolve().parents[1]
 INPUT_DIR = ROOT / "aggregated-outputs"
 OUTPUT_GAPS_PATH = ROOT / "analysis" / "hit_at_k_participant_gaps.csv"
 OUTPUT_SUMMARY_PATH = ROOT / "analysis" / "hit_at_k_gap_wilcoxon.csv"
+OUTPUT_TARGET_ANYTURN_GAPS_PATH = ROOT / "analysis" / "hit_at_k_target_vs_anyturn_participant_gaps.csv"
+OUTPUT_TARGET_ANYTURN_SUMMARY_PATH = ROOT / "analysis" / "hit_at_k_target_vs_anyturn_wilcoxon.csv"
 
 
 def participant_id(path: Path) -> str:
@@ -130,6 +135,32 @@ def build_gap_dataframe(hit_df: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def build_target_vs_anyturn_dataframe(hit_df: pd.DataFrame) -> pd.DataFrame:
+    rows: list[dict[str, Any]] = []
+
+    for participant, group in hit_df.groupby("participant", sort=False):
+        values = {
+            (row.metric, int(row.k)): float(row.hit_at_k)
+            for row in group.itertuples(index=False)
+        }
+        for k in K_VALUES:
+            target = values.get(("target", k))
+            anyturn = values.get(("matched_user_turn", k))
+            if target is None or anyturn is None:
+                raise ValueError(f"{participant} is missing target or any-turn Hit@{k}")
+            rows.append(
+                {
+                    "participant": participant,
+                    "k": k,
+                    "target_hit_at_k": target,
+                    "anyturn_hit_at_k": anyturn,
+                    "gap": anyturn - target,
+                }
+            )
+
+    return pd.DataFrame(rows)
+
+
 def run_wilcoxon(gaps: pd.Series) -> tuple[float, float, str]:
     if (gaps == 0).all():
         return math.nan, math.nan, "all paired differences are zero; Wilcoxon test not run"
@@ -165,20 +196,91 @@ def build_summary_dataframe(gap_df: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def build_target_vs_anyturn_summary_dataframe(gap_df: pd.DataFrame) -> pd.DataFrame:
+    rows: list[dict[str, Any]] = []
+
+    for k, group in gap_df.groupby("k", sort=False):
+        gaps = group["gap"]
+        statistic, p_value, note = run_wilcoxon(gaps)
+        rows.append(
+            {
+                "k": int(k),
+                "comparison": "anyturn_target_vs_target",
+                "n_participants": int(gaps.count()),
+                "mean_gap": float(gaps.mean()),
+                "std_gap": float(gaps.std(ddof=1)),
+                "median_gap": float(gaps.median()),
+                "wilcoxon_statistic": statistic,
+                "p_value": p_value,
+                "alternative": ALTERNATIVE,
+                "note": note,
+            }
+        )
+
+    return pd.DataFrame(rows)
+
+
+def holm_adjust(p_values: pd.Series) -> pd.Series:
+    adjusted = pd.Series(math.nan, index=p_values.index, dtype="float64")
+    valid = p_values.dropna().sort_values()
+    m = len(valid)
+    running_max = 0.0
+
+    for rank, (idx, p_value) in enumerate(valid.items(), start=1):
+        raw_adjusted = (m - rank + 1) * float(p_value)
+        running_max = max(running_max, raw_adjusted)
+        adjusted.loc[idx] = min(running_max, 1.0)
+
+    return adjusted
+
+
+def add_holm_correction(
+    summary_df: pd.DataFrame,
+    *,
+    group_by: list[str] | None,
+    correction_method: str,
+) -> pd.DataFrame:
+    summary_df = summary_df.copy()
+    summary_df["p_value_holm"] = math.nan
+
+    groups = [(None, summary_df)] if group_by is None else summary_df.groupby(group_by, sort=False)
+    for _group_key, group in groups:
+        summary_df.loc[group.index, "p_value_holm"] = holm_adjust(group["p_value"])
+
+    summary_df["is_significant_holm"] = summary_df["p_value_holm"] < ALPHA
+    summary_df.loc[summary_df["p_value_holm"].isna(), "is_significant_holm"] = False
+    summary_df["correction_method"] = correction_method
+    return summary_df
+
+
 def main() -> None:
     hit_df = build_participant_hit_dataframe()
     gap_df = build_gap_dataframe(hit_df)
-    summary_df = build_summary_dataframe(gap_df)
+    summary_df = add_holm_correction(
+        build_summary_dataframe(gap_df),
+        group_by=["metric"],
+        correction_method=GAP_CORRECTION_METHOD,
+    )
+    target_anyturn_gap_df = build_target_vs_anyturn_dataframe(hit_df)
+    target_anyturn_summary_df = add_holm_correction(
+        build_target_vs_anyturn_summary_dataframe(target_anyturn_gap_df),
+        group_by=None,
+        correction_method=TARGET_ANYTURN_CORRECTION_METHOD,
+    )
 
     OUTPUT_GAPS_PATH.parent.mkdir(parents=True, exist_ok=True)
     gap_df.to_csv(OUTPUT_GAPS_PATH, index=False)
     summary_df.to_csv(OUTPUT_SUMMARY_PATH, index=False)
+    target_anyturn_gap_df.to_csv(OUTPUT_TARGET_ANYTURN_GAPS_PATH, index=False)
+    target_anyturn_summary_df.to_csv(OUTPUT_TARGET_ANYTURN_SUMMARY_PATH, index=False)
 
     participants = sorted(hit_df["participant"].unique(), key=lambda pid: int(pid[1:]))
     print(
         f"Saved gap analysis for {len(participants)} participants "
         f"({', '.join(participants)}) to {OUTPUT_SUMMARY_PATH}; "
-        f"participant gaps to {OUTPUT_GAPS_PATH}"
+        f"participant gaps to {OUTPUT_GAPS_PATH}; "
+        f"target-vs-anyturn summary to {OUTPUT_TARGET_ANYTURN_SUMMARY_PATH}; "
+        f"target-vs-anyturn gaps to {OUTPUT_TARGET_ANYTURN_GAPS_PATH}"
     )
 
 
